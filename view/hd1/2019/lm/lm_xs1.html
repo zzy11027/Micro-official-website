@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>福田奥铃&福康杯 2019线上勒芒赛</title>
+	<link rel="stylesheet" href="__INDEX__/hd1/2019/lm/css/gerenzhongxinbaoming.css">
+	<link rel="stylesheet" href="__INDEX__/hd1/2019/lm/css/swiper.min.css">
+	<script src='__INDEX__/hd1/2019/lm/js/swiper.min.js'></script>
+	<script src='__INDEX__/hd1/2019/lm/js/jquery.min.js'></script>
+	<script src="__INDEX__/hd1/2019/lm/js/register_messages.js"></script>
+	<script src="__INDEX__/hd1/2019/lm/js/select.js"></script>
+	<script>
+		var _hmt = _hmt || [];
+		(function() {
+			var hm = document.createElement("script");
+			hm.src = "https://hm.baidu.com/hm.js?4b35b9696537f6518e4cdcdeeee51ff6";
+			var s = document.getElementsByTagName("script")[0]; 
+			s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+</head>
+	<style>
+		input::-webkit-input-placeholder { /* WebKit browsers */ 
+
+color: #000; 
+
+} 
+
+input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */ 
+
+color: #000; 
+
+} 
+
+input::-moz-placeholder { /* Mozilla Firefox 19+ */ 
+
+color: #000; 
+
+} 
+
+input:-ms-input-placeholder { /* Internet Explorer 10+ */ 
+
+color: #000; 
+
+} 
+	
+	
+	
+	
+	</style>
+<body>
+		<img src="__INDEX__/hd1/2019/lm/img/grzxbmcs/beijing.jpg" alt="" class="bja">
+
+	<div class="warp">
+		<div class="swiper-container swiper-container1 ">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide banner">
+					<img src="__INDEX__/hd1/2019/lm/img/grzxbmcs/banner.jpg" alt="">
+				</div>
+				<!-- <div class="swiper-slide banner">
+					<img src="__INDEX__/hd1/2019/lm/img/grzxbmcs/banner.png" alt="">
+				</div>
+				<div class="swiper-slide banner">
+					<img src="__INDEX__/hd1/2019/lm/img/grzxbmcs/banner.png" alt="">
+				</div> -->
+			</div>
+			<div class="swiper-pagination"></div>
+
+			<div class="swiper-button-prev left"></div>
+			<!--左箭头。如果放置在swiper-container外面，需要自定义样式。-->
+			<div class="swiper-button-next right"></div>
+			<!--右箭头。如果放置在swiper-container外面，需要自定义样式。-->
+			
+		</div>
+		<div class="content">
+			<div class="kongjian">
+				<div class="imgs img">
+					<a href="{:url('hd1/lm_xs')}"> <img src="__INDEX__/hd1/2019/lm/img/kj/saishizhongxin1.png" alt=""></a>
+					<a href="{:url('hd1/lm')}"><img src="__INDEX__/hd1/2019/lm/img/kj/chengjibang1.png" alt=""></a>
+					<img src="__INDEX__/hd1/2019/lm/img/kj/gerenzhongxin2.png" alt="">
+					<!-- <a href="{:url('hd1/index')}"><img src="__INDEX__/hd1/2019/lm/img/kj/aolinglemangsai1.png" alt=""></a> -->
+				</div>
+			</div>
+			<div class="zhandian">
+				<div class="imgs">
+					<img class="w100" src="__INDEX__/hd1/2019/lm/img/grzxbmcs/zhandian.jpg" alt="">
+				</div>
+<!-- 				<div class="imgs baoming">
+					<img src="__INDEX__/hd1/2019/lm/img/grzx/wodecjd.png" alt="">
+				</div> -->
+			</div>
+			<div class="xinxi">
+				<p>
+					<span><input style="color:#000;" class="name" type="text" placeholder="请输入您的姓名" id="in"></span>
+				</p>
+				<p>
+					<span><input style="color:#000;" class="phone" type="text" placeholder="请输入您的电话" id="in1"></span>
+				</p>
+				<p class="duan">
+					<span><input  type="text" class="layui-input" style="color:#000; width: 35%;position: absolute; left: 0;"
+							placeholder="短信验证码" onfocus="if(value=='短信验证码') {value=''}"
+							onblur="if (value=='') {value='短信验证码'}" placeholder="短信验证码" id="in2" lay-verify="yzm"
+							style="width: 60%;" name="yzm"></span>
+					<!-- <span class="yanzheng"><input style="color:#000;" type="button" style="color:#000" ></span> -->
+				</p>
+				<p>
+					<span><input style="color:#000;" type="text" placeholder="请输入您的车架号" id="in3"></span>
+				</p>
+				<p>
+					<span><input style="color:#000;" type="text" placeholder="请输入您的车牌号" id="in5"></span>
+				</p>
+
+				<p>
+			        <select name="province"  class="province" onchange="getCitys()" id="in7" style="color: #000;background: #fff;border-radius: 5px;">
+			        	<option value="100">请选择省份</option>
+				        <script type="text/javascript"> 
+				            for(var i=0;i<provinceArr.length;i++)    
+				            {
+				                document.write("<option value='"+i+"'>"+provinceArr[i]+"</option>");
+				                
+				            }
+				        </script>
+			        </select>
+				</p>
+				<p>
+			        <select name="city" id="city" class="city" style="color: #000;background: #fff;border-radius: 5px;">
+						<option value="0">请选择城市</option>
+			        </select>
+				</p>
+				<p>
+						<select name="" id="bang" style="border-radius: 5px;">
+								<option value="1" class="yq">油耗榜</option>
+								<option value="1" class="yq">人气榜</option>
+								<option value="1" class="yq">里程榜</option>
+						</select>
+				</p>
+
+				<a  onclick="tjgzs()">
+					*报名参赛前请确保您的奥铃爱车已安装并激活了iFoton车联网系统
+					<img src="__INDEX__/hd1/2019/lm/img/grzxbmcs/read.png" alt="" style="margin-top: 20px;">
+				</a>
+				<p class="tijiao">
+					<span>
+						<img class="tijiaoimg w100" src="__INDEX__/hd1/2019/lm/img/grzxbmcs/tijiao.png" alt=""
+							onclick="tjs()">
+					</span>
+					<span>
+						<img class="w100" src="__INDEX__/hd1/2019/lm/img/grzxbmcs/yuedubisaiguize.png" alt="" onclick="tjgz()">
+					</span>
+				</p>
+				<div class="fasongyanzhengma " onclick="send_capicha_regist()" id="in6">
+					发送验证码
+				</div>
+			</div>
+			<div class="biaodan biaodaner" style="display:none">
+				<img src="__INDEX__/hd1/2019/lm/img/grzx/biaodan.png" alt="" class="biaodantu">
+			</div>
+			<div class="jiangli" style="margin-top:127px;">
+				<p><img src="__INDEX__/hd1/2019/lm/img/grzxbmcs/saishijiangli.png" alt="" class="saishijiangli"></p>
+				<p><img class="w100" src="__INDEX__/hd1/2019/lm/img/grzxbmcs/biaoge.png" alt=""></p>
+				<img src="__INDEX__/hd1/2019/lm/img/grzxbmcs/guidaodingbu.png" alt="" class="gotop">
+			</div>
+
+<!-- 			<div class="swiper-container swiper-container1 ">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide che ">
+						<div>
+							<img class="w100" src="__INDEX__/hd1/2019/lm/img/grzxbmcs/tu1.png" alt="">
+							<a href="http://aoling.douyar.cc/index/testdrive/index.html?id=1"><span>预约试驾</span></a>
+						</div>
+						<div>
+							<img class="w100" src="__INDEX__/hd1/2019/lm/img/grzxbmcs/tu2.png" alt="">
+							<a href="http://aoling.douyar.cc/index/testdrive/index.html?id=1"><span>预约试驾</span></a>
+						</div>
+						<div>
+							<img class="w100" src="__INDEX__/hd1/2019/lm/img/grzxbmcs/tu3.png" alt="">
+							<a href="http://aoling.douyar.cc/index/testdrive/index.html?id=1"><span>预约试驾</span></a>
+						</div>
+					</div>
+					<div class="swiper-slide che">
+						<div>
+							<img class="w100" src="__INDEX__/hd1/2019/lm/img/grzxbmcs/tu1.png" alt="">
+							<a href="http://aoling.douyar.cc/index/testdrive/index.html?id=1"><span>预约试驾</span></a>
+						</div>
+						<div>
+							<img class="w100" src="__INDEX__/hd1/2019/lm/img/grzxbmcs/tu2.png" alt="">
+							<a href="http://aoling.douyar.cc/index/testdrive/index.html?id=1"><span>预约试驾</span></a>
+						</div>
+						<div>
+							<img class="w100" src="__INDEX__/hd1/2019/lm/img/grzxbmcs/tu3.png" alt="">
+							<a href="http://aoling.douyar.cc/index/testdrive/index.html?id=1"><span>预约试驾</span></a>
+						</div>
+					</div>
+					<div class="swiper-slide che">
+						<div>
+							<img class="w100" src="__INDEX__/hd1/2019/lm/img/grzxbmcs/tu1.png" alt="">
+							<a href="http://aoling.douyar.cc/index/testdrive/index.html?id=1"><span>预约试驾</span></a>
+						</div>
+						<div>
+							<img class="w100" src="__INDEX__/hd1/2019/lm/img/grzxbmcs/tu2.png" alt="">
+							<a href="http://aoling.douyar.cc/index/testdrive/index.html?id=1"><span>预约试驾</span></a>
+						</div>
+						<div>
+							<img class="w100" src="__INDEX__/hd1/2019/lm/img/grzxbmcs/tu3.png" alt="">
+							<a href="http://aoling.douyar.cc/index/testdrive/index.html?id=1"><span>预约试驾</span></a>
+						</div>
+					</div>
+				</div>
+			</div> -->
+		</div>
+		<div class="tc tc1" style="display:none;">
+			<div class="z">
+				<h1 style="font-size:15px; color: #fff; text-align: center;">活动规则</h1>
+				<p>1、使用福田智科车联网系统的用户通过授权后可直接参与活动，后台每日滚动更新数据，按30天/周期进行评比，每期比赛中，奥铃将根据里程、油耗、人气、盈利四个分类进行排名。月平均里程最高、百公里油耗最低、邀请朋友点赞自己成绩最多的和平均年盈利额最高的前三名将分别获得里程之星、节油之星、人气之星、盈利之星，按冠亚季军分别给予奖励。最高可获得购车现金券2000元；</p>
+				<p>2、活动期间，每日均会设置幸运之星奖励，参与活动且每日登陆活动页面的客户可点击抽奖，即有机会获取千元购车代金券、666元服务维修保养红包及红包等多重幸运好礼。</p> 
+			</div>
+		</div>
+
+		<div class="tc tcs" style="display:none;">
+			<div class="z" style="overflow: auto;">
+				<h1 style="font-size:15px; color: #fff; text-align: center;">活动规则</h1>
+				<p>用户提醒：在参加“福田奥铃&福康杯2019勒芒赛”之前请仔细阅读本声明的全部声明，用户一旦进行线上授权，即表示用户无条件地接受本声明，用户应严格遵守本声明和相关法律规定。
+一、隐私权声明
+将依据本隐私权政策和相关法律规定收集、使用和披露用户会收集车辆运行数据(如车辆VIN码、行驶轨迹、位置、速度、发动机油耗、扭矩等，客户在报名之前，务必仔细阅读本隐私权政策。客户登录且报名，即视为用户授权许可福田奥铃汽车通过以下规则收集并使用上述信息。
+1、用户车辆信息采集及使用:
+“福田奥铃&福康杯2019”勒芒赛驾驶员联赛需要登录界面提供车牌号、企业名称等车辆运营信息，此信息只作为“福田奥铃&福康杯2019勒芒赛”驾驶员联赛的奖励凭证，不会作外用。
+2、信息的批露:
+福田奥铃会在以下情况批露车辆运营信息:
+1)活动期间，“福田奥铃&福康杯2019勒芒赛”驾驶员联赛分行业前十名，会通过各平台进行公示您的车辆信息、行驶速度、服务数据、出勤天数、行驶里程等涉及车辆运行状况的数据，公示的个人信息不包括电话。
+2)法律法规或司法与政府部门要求根据人民法院、政府机关或法律法规的要求福田奥铃向其披露用户车辆信息。
+二、“福田奥铃&福康杯2019勒芒赛”驾驶员联赛报名要求:
+参赛赛手没有任何重大违法、违规记录，不会违反任何相关法律法规(尤其包括商业贿赂及不正常竞争相关法规)与福田奥铃汽车公司“福田奥铃&福康杯2019勒芒赛”驾驶员联赛管理管理规定，同时售车奖励所得不会用于任何违法活动。如违反本承诺，视为自动放弃比赛及任何未付的费用及利益。
+三、免责条款:
+福田奥铃汽车已经采取了必要技术保障措施，保护您的资料以防止其丢失、被滥用、受到未授权访问或泄漏、被篡改或毁坏。但福田奥铃汽车对于第三方通过非法手段导致您个人信息的泄漏，或者不正当使用您个人信息的行为不承担责任。
+
+
+本人已阅读并接受本告知函内容</p>
+			</div>
+		</div>
+	</div>
+	
+	<script>
+		var mySwiper = new Swiper('.swiper-container1', {
+			autoplay: true, //可选选项，自动滑动
+			pagination: {
+				el: '.swiper-pagination',
+			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			}
+		})
+		// var mySwiper3 = new Swiper('.swiper-container3', {
+		// 	effect: 'coverflow',
+		// 	observer: true,
+		// 	observeParents: true,
+		// 	slidesPerView: 1,
+		// 	centeredSlides: true,
+		// 	coverflowEffect: {
+		// 		rotate: 100,
+		// 		stretch: 0,
+		// 		depth: 0,
+		// 		modifier: 2,
+		// 		slideShadows: true
+		// 	},
+		// })
+		$('.gotop').click(function () {
+			$('html , body').animate({
+				scrollTop: 0
+			}, 'slow');
+		})
+
+		var yz;
+
+		function tjs() {
+			var name = $('#in').val(); //名字
+			var phone = $('#in1').val(); //手机号
+			var yz = $('#in2').val(); //验证
+			var che = $('#in3').val(); //车架号
+			var che1 = $('#in5').val(); //车牌号
+			var options=$("#in7 option:selected").text(); //获取选中的项
+			var b=$("#bang option:selected").text(); //获取选中的项
+			var city=$("#city option:selected").text(); //获取选中的项
+			if (name == '') {
+				alert("请输入您的姓名");
+				return false;
+			}
+			if (phone == '') {
+				alert('请输入您的电话！')
+				return;
+			}
+			var reg = /^0?1[3|4|5|7|8][0-9]\d{8}$/;
+			if (!reg.test(phone)) {
+				alert("请输入正确的手机号");
+				return false;
+			}
+			if (yz == '') {
+				alert("请输入验证码");
+				return false;
+			}
+
+			if (che == '') {
+				alert("请输入您的车架号");
+				return false;
+			}
+			if (che1 == '') {
+				alert("请输入您的车牌号");
+				return false;
+			}
+			$.ajax({
+				type: "POST",
+				url: "{:url('hd/lz')}",
+				data: {
+					phone: phone, //手机号
+					yz: yz, //验证码
+					name: name, //名字
+					che: che, //车架号
+					che1: che1 ,//车牌号
+					options: options, //站期
+					city: city, //站期
+					type: 1, //站期
+					b: b, //站期
+				},
+				dataType: "json",
+				success: function (data) {
+					if (data == 1) {
+						alert('请输入姓名');
+						return false;
+					}
+					if (data == 2) {
+						alert('请输入电话');
+						return false;
+					}
+					if (data == 3) {
+						alert('验证码不正确');
+						return false;
+					}
+					if (data == 4) {
+						alert('验证码不正确');
+						return false;
+					}
+					if (data == 6) {
+						alert('vin错误');
+						return false;
+					}
+					if (data == 7) {
+						alert('vin已存在');
+						return false;
+					}
+					if (data == 8) {
+						alert('留资成功');
+						//    location.reload();
+						$('.biaodaner').show();
+
+						// return false;
+					}
+
+				}
+			});
+		}
+		// $('.tijiaoimg').click(function(){
+		// 	var name = $('.name').val(),
+		// 		phone = $('.phone').val();
+		// 		if(name ==''||phone ==''){
+		// 			alert('姓名或手机号为空')
+		// 		}else if(!isPhoneNo(phone)){
+		// 			alert('手机号格式不正确')
+		// 		}else{
+		// 			alert('格式正确提交成功')
+		// 			$(location).attr('href', 'file:///C:/Users/Administrator/Desktop/index/xianshangpc/gerenzhongxin.html');
+
+		// 		}
+		// })
+		// function isPhoneNo(phone) { 
+		// 	var pattern = /^1[34578]\d{9}$/; 
+		// 	return pattern.test(phone); 
+		// }
+		function tjgz(){
+			$('.tc1').show();
+		}
+		$('.tc1').click(function(){
+			$('.tc1').hide();
+		})
+
+		function tjgzs(){
+			$('.tcs').show();
+		}
+		$('.tcs').click(function(){
+			$('.tcs').hide();
+		})
+		        //省市联动
+function getCitys(){
+    var provincesobj=document.getElementById("in7");
+    var cityobj=document.getElementById("city");
+    var index=provincesobj.selectedIndex;
+    var value=provincesobj[index].value;;
+    var cityName=cityArr[value];
+    cityobj.length=1;
+    for(var i=1;i<cityArr[value].length;i++){
+        cityobj.options[cityobj.options.length]=new Option(cityName[i],i);
+    }
+}
+	</script>
+</body>
+
+</html>

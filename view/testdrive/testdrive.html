@@ -1,0 +1,227 @@
+<!-- 奥铃官网       首页开始 -->
+<!doctype html>
+<html lang="en">
+
+<head>
+	{include file="public/resource" /}
+	<link rel="stylesheet" href="__INDEX__/css/yysj.css">
+</head>
+
+<body>
+	<!-- header -->
+	{include file="public/header" /}
+	<!-- 内容区 -->
+	<div id="container">
+		<!-- banner -->
+		<div class="swiper-container swiper-container1" style="">
+			<div class="swiper-wrapper swiper-wrapper1">
+				<div class="swiper-slide swiper-slide1"><a href=""><img src="__INDEX__/img/index/banner.jpg" alt=""
+							class="scale-big"></a></div>
+			</div>
+		</div>
+
+		<img src="__INDEX__/img/yysj/{$id}.png" alt="" class="yysj">
+
+		<div class="drive layui-form">
+			<div class="driveS">
+				{if $id==1}
+				<p>试驾信息</p>
+				{else/}
+				<p>购车信息</p>
+				{/if}
+				<input type="hidden" name="type" id="type" value="{$id}">
+				<input type="hidden" name="login_type" id="login_type" value="{$login_type}">
+				<span>*为必填项。您的信息我们将会完全保密，请放心填写</span>
+				<!-- 选择车系 -->
+				<div class="public public0" style="display: none;">
+					<span>*请选择车系:</span>
+					<select name="cx" id="cx">
+						{foreach name="cx" item="vo" }
+						<option value="{$vo['name']}">{$vo['name']}</option>
+						{/foreach}
+					</select>
+				</div>
+				<!-- 所在城市 -->
+				<div class="public public1" style="display: none;">
+					<span>*所在城市:</span>
+					<select name="province" id="province" lay-filter="getCity" lay-verify="province">
+						<option value="0">请选择省份</option>
+						{foreach name="province" item="vc" }
+						<option value="{$vc['id']}">{$vc['name']}</option>
+						{/foreach}
+					</select>
+					<select value="city" name="city" id="city" lay-filter="getJxs" lay-verify="city">
+						<option value="0">请选择城市</option>
+					</select>
+				</div>
+				<!-- 所在城市 -->
+				<div class="public public2" style="display: none;">
+					<span>经销商名称:</span>
+					<select name="jxs" id="jxs" lay-verify="jxs" lay-filter="jxs">
+						<option value="0">请选择经销商</option>
+					</select>
+				</div>
+				<!-- 个人信息  111111111111111-->
+				<div class="public public3">
+					<span>*姓名:</span>
+					<input type="text" name="name" class="layui-input" required lay-verify="required">
+					<!-- <input type="radio" name="sex" value="先生" title="先生" checked> -->
+					<!-- <input type="radio" name="sex" value="女士" title="女士"> -->
+				</div>
+				<!-- 个人信息  222222222222222-->
+				<div class="public public4">
+					<span>*联系方式:</span>
+					<input type="text" name="phone" class="layui-input" lay-verify="phone">
+				</div>
+				<!-- 个人信息  333333333333333-->
+				<!-- 	<div class="public public5">
+				<span></span>
+				<input type="text"  class="layui-input">
+				<span class="heng">-</span>
+				<input type="text"  class="layui-input">
+			</div> -->
+				<!-- 描述需求 -->
+				<div class="public public6"  style="display: none;">
+					<span>*计划购车时间:</span>
+					<input type="radio" name="time" value="一周后" title="一周后">
+					<input type="radio" name="time" value="半月后" title="半月后">
+					<input type="radio" name="time" value="一月后" title="一月后" checked>
+				</div>
+
+				<div class="public public7"  style="display: none;">
+					<span>*计划购车时间:</span>
+					<input type="radio" name="time" value="三个月后" title="三个月后">
+					<input type="radio" name="time" value="半年后" title="半年后">
+					<input type="radio" name="time" value="一年后" title="一年后">
+				</div>
+				<button class="layui-btn" lay-submit lay-filter="tj">立即提交</button>
+			</div>
+		</div>
+		<!-- footer -->
+		{include file="public/footer" /}
+		<script src="__INDEX__/js/index.js"></script>
+		<script>
+			$(document).ready(function () {
+				var province, city, jxs;
+				// $("#myCar").vc3dEye({
+				// 	imagePath:"images/",
+				// 	totalImages:51,
+				// 	imageExtension:"png"
+				// });
+
+				layui.use('form', function () {
+					var form = layui.form;
+
+					//各种基于事件的操作，下面会有进一步介绍
+					form.on('select(getCity)', function (data) {
+						province = $(this).text();
+						$.ajax({
+							type: 'POST',
+							dataType: 'json',
+							url: '{:url('Testdrive/getCity')}',
+							data: {
+								province: data.value,
+							},
+							success: function (data) {
+								var quname_html = "<option value='0'>请选择城市</option>";
+								for (var i = 0; i < data.length; i++) {
+									quname_html += "<option value='" + data[i].id + "'>" +
+										data[i].name + "</option>";
+								}
+								$("#city").html(quname_html);
+								form.render();
+							}
+						});
+					});
+
+
+					form.on('select(getJxs)', function (data) {
+						city = $(this).text();
+						$.ajax({
+							type: 'POST',
+							dataType: 'json',
+							url: '{:url('Testdrive/getjxs')}',
+							data: {
+								city: data.value,
+							},
+							success: function (data) {
+								var quname_html = "<option value='0'>请选择经销商</option>";
+								for (var i = 0; i < data.length; i++) {
+									quname_html += "<option value='" + data[i].id + "'>" +
+										data[i].name + "</option>";
+								}
+								$("#jxs").html(quname_html);
+								form.render();
+							}
+						});
+					});
+
+					form.on('select(jxs)', function (data) {
+						jxs = $(this).text();
+
+					});
+					//自定义验证规则  
+					form.verify({
+						// province: function (value) {
+						// 	if (value == 0) {
+						// 		return '请选择省份';
+						// 	}
+						// },
+						// city: function (value) {
+						// 	if (value == 0) {
+						// 		return '请选择城市';
+						// 	}
+						// },
+						// jxs: function (value) {
+						// 	if (value == 0) {
+						// 		return '请选择经销商';
+						// 	}
+						// },
+						phone: [/^1[3|4|5|7|8]\d{9}$/, '手机必须11位，只能是数字！']
+					});
+
+
+
+					//监听提交
+					form.on('submit(tj)', function (data) {
+						var login_type = $('#login_type').val();
+						// if(login_type==1){
+						// 	layer.msg('请登录', {icon: 6,time: 2000});
+						// 	location.href = 'http://aoling.douyar.cc/index/login/index.html';
+						// }
+
+						$.ajax({
+							type: 'POST',
+							dataType: 'json',
+							url: '{:url('Testdrive/tj')}',
+							data: {
+								id:'',
+								cx: '',
+								province: '',
+								city: '',
+								jxs: '',
+								name: data.field.name,
+								sex: '',
+								phone: data.field.phone,
+								time: ''
+							},
+							success: function (data) {
+								if (data == 1) {
+									layer.msg('请等待客服人员与您联系', {
+										icon: 6,
+										time: 2000,
+										end: function () {
+											location.reload()
+										}
+									});
+								}
+							}
+						});
+					});
+
+				});
+			});
+		</script>
+</body>
+
+</html>

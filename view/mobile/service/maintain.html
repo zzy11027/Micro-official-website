@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {include file="mobile/public/resource" /}
+    <link rel="stylesheet" href="__INDEX__/mobile/css/yybx.css">
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=Paih4rKh7L5676TD9zxnmsWgOgYdU4aG">
+        //v2.0版本的引用方式：src="http://api.map.baidu.com/api?v=2.0&ak=您的密钥"
+    </script>
+</head>
+
+<body>
+    {include file="mobile/public/header" /}
+    <div class="banner" style="padding-top: 3rem;"><img src="__INDEX__/mobile/img/dgsm/banner.png"></div>
+    <div class="main" id="bbb" name="bbb">
+        <div class="d_center">
+            <img src="__INDEX__/mobile/img/wyfw/yywb.png" style="width: ">
+        </div>
+    </div>
+    <div class="banner">
+
+        <!-- <p id="m_p1"><span>*</span>为必选项。您的信息我们将会完全保密,请您放心填写</p> -->
+        <div class="yy layui-form">
+            <div class="sle1 sles">
+                <span>业务类型:</span>
+                <select name="type" id="type" lay-verify="type">
+                    <option value="0">请选择</option>
+                    <option value="维修">维修</option>
+                    <option value="保养">保养</option>
+                </select>
+            </div>
+            <div class="sle2 sles types">
+                <span>品&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;牌:</span>
+                <select name="brand" id="brand" lay-verify="brand">
+                    <option value="0">请选择</option>
+                    {volist name="product_cate" id="vo"}
+                        <option value="{$vo['id']}">{$vo['name']}</option>
+                    {/volist}
+                    <option value="奥铃专用车">奥铃专用车</option>
+                </select>
+            </div>
+            <div class="sle3 sles">
+                <span></span>
+                <input type="text" class="layui-input" name="vin" id="vin" placeholder="车辆vin号">
+                <input type="text" class="sel-right layui-input" name="cp" id="cp" placeholder="车牌号">
+            </div>
+            <div class="sle4">
+                <span>地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;址:</span>
+                <select name="province" id="province" lay-filter="getCity" lay-verify="province">
+                        <option value="0">请选择省份</option>
+                        {foreach name="province" item="vc" }
+                        <option value="{$vc['id']}">{$vc['name']}</option>
+                        {/foreach}
+                </select>
+                <select name="city" id="city" lay-filter="getJxs" lay-verify="city">
+                        <option value="0">请选择城市</option>
+                </select>
+            </div>
+            <div class="sles">
+                <span id="myself">个人信息:</span>
+                <input type="text" placeholder="姓名" name="name" id="name" class="layui-input">
+                <input type="text" class="layui-input" name="phone" id="phone" placeholder="手机号" lay-verify="phone">
+            </div>
+<!--             <div class="sle6">
+                <span></span>
+                <input type="text" class="layui-input" placeholder="区号">
+                <span class="line" class="">-</span>
+                <input type="text" class="layui-input" placeholder="号码">
+            </div> -->
+<!--             <div class="sle7 sles">
+                <span></span>
+                <input type="text" class="layui-input" name="wx" id="wx" placeholder="微信" lay-verify="wx">
+                <input type="text" class="sel-right layui-input" name="qq" id="qq" placeholder="QQ">
+            </div> -->
+            <div class="sle8">
+                <span>描述需求:</span>
+                    <textarea name="content" id="content" cols="30" rows="10" class="layui-textarea" lay-verify="content"></textarea>
+            </div>
+            <div class="sle9 sles">
+                <span>预约时间:</span>
+               <input type="text" class="layui-input" id="test1" name="test1">
+                <!-- <input type="text" class="sel-right layui-input"> -->
+            </div>
+            <button class="layui-btn" lay-submit lay-filter="tj"  id="aaa" name="aaa">立即提交</button>
+
+        </div>
+    </div>
+    <div class="main">
+        <div class="d_center">
+            <a href="" id="aaa" name="aaa" style="display: block;"><img src="__INDEX__/mobile/img/wyfw/fwcx.png" style="width: 69%;"></a>
+        </div>
+    </div>
+    <div class="lz layui-form">
+        <div class="psw">
+            <p>
+                <span>省份：</span>
+                    <select name="province1" id="province1" lay-filter="getCity1" lay-verify="province1">
+                        <option value="0">请选择省份</option>
+                        {foreach name="province" item="vc" }
+                        <option value="{$vc['id']}">{$vc['name']}</option>
+                        {/foreach}
+                    </select>
+            </p>
+            <p>
+                <span>城市：</span>
+               <select  name="city1" id="city1" lay-filter="getJxs1" lay-verify="city1">
+                        <option value="0">请选择城市</option>
+                        </select>
+                    </select>
+            </p>
+          <!--   <p id="m_p2">
+                <span>区/县：</span>
+                <select id="suo1" onchange="this.parentNode.nextSibling.value=this.value">
+                    <option value="国  有" style="color:red">请选择</option>
+                    <option value="独  资">昌平</option>
+                    <option value="中外合资">海淀</option>
+                    <option value="国内合资">朝阳 </option>
+                    <option value="个体户">石景山</option>
+                    <option value="其  他">大兴</option>
+                </select>
+            </p> -->
+        </div>
+    </div>
+    <div id="d_box">
+        <h4>北京市八通华瑞汽车销售有限公司</h4>
+        <p>地址：北京市房山区琉璃河镇琉璃河管厂福田汽车</p>
+        <p>电话：13426061318</p>
+    </div>
+    <div class="box">
+        <div id="ditu">
+
+        </div>
+    </div>
+    {include file="mobile/public/footer" /}
+
+<script type="text/javascript">
+// var heig = $('body').height();
+// var bi = 1100/heig;
+// var bis = bi.toFixed(2);
+// window.onload = function(){
+//     $('html,body').animate({scrollTop:heig*bis},'10');
+// }
+var map = new BMap.Map("ditu");
+map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);
+var myGeo = new BMap.Geocoder();//百度地图  多点标记
+var keyword;//百度地图  多点标记
+map.addControl(new BMap.MapTypeControl({
+    mapTypes: [
+        BMAP_NORMAL_MAP,
+        BMAP_HYBRID_MAP
+    ]
+}));
+map.setCurrentCity("北京");
+map.enableScrollWheelZoom(true);
+map.addControl(new BMap.NavigationControl());
+map.addControl(new BMap.OverviewMapControl());
+map.addControl(new BMap.OverviewMapControl({
+    isOpen: true,
+    anchor: BMAP_ANCHOR_BOTTOM_RIGHT
+}));
+var localSearch = new BMap.LocalSearch(map);
+localSearch.enableAutoViewport();
+layui.use('laydate', function(){
+  var laydate = layui.laydate;
+  //执行一个laydate实例
+  laydate.render({
+    elem: '#test1' //指定元素
+  });
+});
+layui.use('form', function(){   
+var form = layui.form;
+//各种基于事件的操作，下面会有进一步介绍
+form.on('select(getCity)', function (data) {
+    province = $(this).text();
+    $.ajax({
+        type: 'POST',
+        dataType: 'json',
+        url: '{:url('Testdrive/getCity')}',
+        data: {
+            province: data.value,
+        },
+        success: function (data) {
+            console.log(data)
+            var quname_html = "<option value='0'>请选择城市</option>";
+            for (var i = 0; i < data.length; i++) {
+                quname_html += "<option value='" + data[i].id + "'>" +
+                    data[i].name + "</option>";
+            }
+            $("#city").html(quname_html);
+            form.render();
+        }
+    });
+});
+//上面的   城市
+form.on('select(getJxs)', function (data) {
+    city = $(this).text();
+    console.log(city);
+})
+
+//监听提交
+form.on('submit(tj)', function (data) {
+    console.log(data);
+    $.ajax({
+        type: 'POST',
+        dataType: 'json',
+        url: '{:url('Service/maintain')}',
+        data: {
+            type: data.field.type,
+            province: province,
+            city: city,
+            brand: data.field.brand,
+            vin: data.field.vin,
+            cp: data.field.cp,
+            name: data.field.name,
+            phone:data.field.phone,
+            wx:data.field.wx,
+            qq:data.field.qq,
+            content:data.field.content,
+            date:data.field.test1
+        },
+        success: function (data) {
+            if (data == 1) {
+                layer.msg('提交成功,请等待客服人员与您联系', {
+                    icon: 6,
+                    time: 2000,
+                    end: function () {
+                        location.href = 'http://aoling.douyar.cc/';
+                    }
+                });
+            }
+        }
+    });
+});
+//各种基于事件的操作，下面会有进一步介绍
+form.on('select(getCity1)', function (data) {
+    province = $(this).text();
+    $.ajax({
+        type: 'POST',
+        dataType: 'json',
+        url: '{:url('Testdrive/getCity')}',
+        data: {
+            province: data.value,
+        },
+        success: function (data) {
+            
+            var quname_html = "<option value='0'>请选择城市</option>";
+            for (var i = 0; i < data.length; i++) {
+                quname_html += "<option value='" + data[i].id + "'>" +
+                    data[i].name + "</option>";
+            }
+            $("#city1").html(quname_html);
+            form.render();
+        }
+    });
+});
+form.on('select(getJxs1)', function (data) {
+    city = $(this).text();
+    $.ajax({
+        type: 'POST',
+        dataType: 'json',
+        url: '{:url('Testdrive/getjxs')}',
+        data: {
+            city: data.value,
+        },
+        success: function (data) {
+        	$('#d_box').empty();
+            index = 0;//百度地图  多点标记
+            var arr=[];//百度地图  多点标记
+            var quname_html = "<option value='0'>请选择经销商</option>";
+            for (var i = 0; i < data.length; i++) {
+                arr.push(data[i].name);//百度地图  多点标记
+                quname_html += "<option value='" + data[i].id + "'>" +
+                    data[i].name + "</option>";
+            var contai = $('<h4>'+data[0].name+'</h4><p>地址：'+data[0].jsxdz+'</p><p>电话：'+data[0].phone+'</p>');
+            $('#d_box').append(contai);
+            }
+            $("#jxs").html(quname_html);
+            form.render();
+            map.clearOverlays();//百度地图  多点标记
+            keyword = arr;//百度地图  多点标记
+            bdGEO();//百度地图  多点标记
+        }
+    });
+});
+//百度地图  多点标记   START.................................................
+function bdGEO(){
+    var add = keyword[index];
+    geocodeSearch(add);
+    index++;
+}
+function geocodeSearch(add){
+    if(index < keyword.length){
+        setTimeout(function(){
+            bdGEO();
+        },400)
+    } 
+    myGeo.getPoint(add, function(point){
+        if (point) {
+            console.log(point);
+            var address = new BMap.Point(point.lng, point.lat);
+            addMarker(point);
+            // addMarker(address,new BMap.Label(index+":"+add,{offset:new BMap.Size(20,-10)}));
+        }
+    }, "");
+}
+function addMarker(point,label){
+    var marker = new BMap.Marker(new BMap.Point(point.lng, point.lat));
+    map.centerAndZoom(point, 13);
+    map.addOverlay(marker);
+}
+//百度地图   END.................................................
+
+form.on('select(jxs)', function (data) {
+    jxs = $(this).text();
+
+});
+//自定义验证规则  
+form.verify({
+    type:function(value){
+        if (value == 0) {
+            return '请选择业务类型';
+        }
+    },
+    brand:function(value){
+        if (value == 0) {
+            return '请选择品牌';
+        }
+    },
+    province: function (value) {
+        if (value == 0) {
+            return '请选择省份';
+        }
+    },
+    city: function (value) {
+        if (value == 0) {
+            return '请选择城市';
+        }
+    },
+    jxs: function (value) {
+        if (value == 0) {
+            return '请选择经销商';
+        }
+    },
+    phone: [/^1[3|4|5|7|8]\d{9}$/, '手机必须11位，只能是数字！'],
+    wx: function (value) {
+        if (value == '') {
+            return '请填写微信号';
+        }
+    },
+    content: function (value) {
+        if (value == '') {
+            return '请填描述您的需求';
+        }
+    },
+});
+//各种基于事件的操作，下面会有进一步介绍
+});
+
+
+
+
+
+
+</script>
+</body>
+
+</html>

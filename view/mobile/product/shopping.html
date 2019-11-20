@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {include file="mobile/public/resource" /}
+    <link rel="stylesheet" href="__INDEX__/mobile/css/dgsm.css">
+
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=Paih4rKh7L5676TD9zxnmsWgOgYdU4aG">
+        //v2.0版本的引用方式：src="http://api.map.baidu.com/api?v=2.0&ak=您的密钥"
+    </script>
+</head>
+
+<body>
+    
+    {include file="mobile/public/header" /}
+    <div class="banner"><img src="__INDEX__/mobile/img/dgsm/banner.jpg" style="margin-top:2.4rem;"></div>
+    <div class="main">
+        <div class="d_center">
+            <p>导购说明</p>
+            <div class="im"><img src="__INDEX__/mobile/img/chongzhimima/dgsm.png"></div>
+            <p id="m_p">PASSWORD RESET</p>
+        </div>
+    </div>
+    <div class="banner">
+        <img src="__INDEX__/mobile/img/cpdg/tu2.png">
+        <a href="/index/product/made.html"><img src="/public/static/index/img/cpdg/dz.png" alt="" id="dzdz"></a>
+    </div>
+    <div class="main">
+        <div class="d_center">
+            <p>经销商查询</p>
+            <div class="im"><img src="__INDEX__/mobile/img/chongzhimima/dgsm.png"></div>
+            <p id="m_p">PASSWORD RESET</p>
+        </div>
+    </div>
+    <div class="lz layui-form">
+        <div class="psw">
+            <p>
+                <span>省份：</span>
+               <select name="province" id="province" lay-filter="getCity" lay-verify="province">
+                        <option value="0">请选择省份</option>
+                        {foreach name="province" item="vc" }
+                        <option value="{$vc['id']}">{$vc['name']}</option>
+                        {/foreach}
+                </select>
+            </p>
+            <p>
+                <span>城市：</span>
+                <select value="city" name="city" id="city" lay-filter="getJxs" lay-verify="city">
+                        <option value="0">请选择城市</option>
+                </select>
+            </p>
+         <!--    <p id="m_p2">
+                <span>区/县：</span>
+                <select id="suo1" onchange="this.parentNode.nextSibling.value=this.value">
+                    <option value="国  有" style="color:red">请选择</option>
+                    <option value="独  资">昌平</option>
+                    <option value="中外合资">海淀</option>
+                    <option value="国内合资">朝阳 </option>
+                    <option value="个体户">石景山</option>
+                    <option value="其  他">大兴</option>
+                </select>
+            </p> -->
+        </div>
+    </div>
+    <div id="d_box">
+        <h4>北京市八通华瑞汽车销售有限公司</h4>
+        <p>地址：北京市房山区琉璃河镇琉璃河管厂福田汽车</p>
+        <p>电话：13426061318</p>
+    </div>
+    <div class="box">
+        <div id="ditu">
+
+        </div>
+    </div>
+    {include file="mobile/public/footer" /}
+
+
+
+    <script type="text/javascript">
+        var map = new BMap.Map("ditu");
+        var myGeo = new BMap.Geocoder();//百度地图  多点标记
+        var keyword;//百度地图  多点标记
+        // 创建地图实例  
+        var point = new BMap.Point(116.404, 39.915);
+        // 创建点坐标  
+        map.centerAndZoom(point, 15);
+        // 初始化地图，设置中心点坐标和地图级别  
+        //添加地图类型控件
+        map.addControl(new BMap.MapTypeControl({
+            mapTypes: [
+                BMAP_NORMAL_MAP,
+                BMAP_HYBRID_MAP
+            ]
+        }));
+        map.setCurrentCity("北京"); // 设置地图显示的城市 此项是必须设置的
+        map.enableScrollWheelZoom(true); //开启鼠标滚轮缩放
+        map.centerAndZoom(new BMap.Point(10, 60), 15);
+        map.addControl(new BMap.NavigationControl()); //添加默认缩放平移控件
+        map.addControl(new BMap.OverviewMapControl()); //添加默认缩略地图控件
+        map.addControl(new BMap.OverviewMapControl({
+            isOpen: true,
+            anchor: BMAP_ANCHOR_BOTTOM_RIGHT
+        }));
+        var localSearch = new BMap.LocalSearch(map);
+        localSearch.enableAutoViewport(); //允许自动调节窗体大小
+        var heig = $('body').height();
+        var bi = 400/heig;
+        var bis = bi.toFixed(2);
+        window.onload = function(){
+            if(window.location.href == 'http://aoling.douyar.cc/index/product/shopping.html#jxs'){
+                $('html,body').animate({scrollTop:heig*bis},'10');
+            }
+        }
+
+layui.use('form', function(){
+  var form = layui.form;
+  
+  //各种基于事件的操作，下面会有进一步介绍
+					form.on('select(getCity)', function (data) {
+						province = $(this).text();
+						$.ajax({
+							type: 'POST',
+							dataType: 'json',
+							url: '{:url('Testdrive/getCity')}',
+							data: {
+								province: data.value,
+							},
+							success: function (data) {
+								var quname_html = "<option value='0'>请选择城市</option>";
+								for (var i = 0; i < data.length; i++) {
+									quname_html += "<option value='" + data[i].id + "'>" +
+										data[i].name + "</option>";
+								}
+								$("#city").html(quname_html);
+								form.render();
+							}
+						});
+					});
+
+
+					form.on('select(getJxs)', function (data) {
+						city = $(this).text();
+						$.ajax({
+							type: 'POST',
+							dataType: 'json',
+							url: '{:url('Testdrive/getjxs')}',
+							data: {
+								city: data.value,
+							},
+							success: function (data) {
+                                $('#d_box').empty();
+                                index = 0;//百度地图  多点标记
+                                var arr=[];//百度地图  多点标记
+                                var quname_html = "<option value='0'>请选择经销商</option>";
+                                for (var i = 0; i < data.length; i++) {
+                                    arr.push(data[i].name);//百度地图  多点标记
+                                    quname_html += "<option value='" + data[i].id + "'>" +
+                                        data[i].name + "</option>";
+                                var contai = $('<h4>'+data[0].name+'</h4><p>地址：'+data[0].jsxdz+'</p><p>电话：'+data[0].phone+'</p>');
+                                $('#d_box').append(contai);
+                                }
+                                $("#jxs").html(quname_html);
+                                form.render();
+                                map.clearOverlays();//百度地图  多点标记
+                                keyword = arr;//百度地图  多点标记
+                                bdGEO();//百度地图  多点标记
+                            }
+						});
+					});
+
+					form.on('select(jxs)', function (data) {
+						jxs = $(this).text();
+
+					});
+					//自定义验证规则  
+					form.verify({
+						province: function (value) {
+							if (value == 0) {
+								return '请选择省份';
+							}
+						},
+						city: function (value) {
+							if (value == 0) {
+								return '请选择城市';
+							}
+						},
+						jxs: function (value) {
+							if (value == 0) {
+								return '请选择经销商';
+							}
+						},
+						phone: [/^1[3|4|5|7|8]\d{9}$/, '手机必须11位，只能是数字！']
+					});
+});
+
+   
+ //百度地图  多点标记   START.................................................
+function bdGEO(){
+    var add = keyword[index];
+    geocodeSearch(add);
+    index++;
+}
+function geocodeSearch(add){
+    if(index < keyword.length){
+        setTimeout(function(){
+            bdGEO();
+        },400)
+    } 
+    myGeo.getPoint(add, function(point){
+        if (point) {
+            console.log(point);
+            var address = new BMap.Point(point.lng, point.lat);
+            addMarker(point);
+            // addMarker(address,new BMap.Label(index+":"+add,{offset:new BMap.Size(20,-10)}));
+        }
+    }, "");
+}
+function addMarker(point,label){
+    var marker = new BMap.Marker(new BMap.Point(point.lng, point.lat));
+    map.centerAndZoom(point, 13);
+    map.addOverlay(marker);
+}
+//百度地图   END.................................................   
+
+
+    </script>
+</body>
+
+</html>

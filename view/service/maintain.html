@@ -1,0 +1,356 @@
+<!-- 奥铃官网       首页开始 -->
+<!doctype html>
+<html lang="en">
+<head>
+{include file="public/resource" /}	
+	<link rel="stylesheet" href="__INDEX__/css/wyfws.css">
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=I5g6BoXhoFL3ZBfN8xkqGQHXrHtaLvPi"></script>
+</head>
+<body>
+	 {include file="public/header" /}	
+<!-- header -->
+<div id="container">
+		<!-- banner -->
+		<div class="swiper-container swiper-container1" style="">
+		    <div class="swiper-wrapper swiper-wrapper1">
+		        <div class="swiper-slide swiper-slide1"><a href=""><img src="__INDEX__/img/wyfw/banner.jpg" alt="" class="scale-big"></a></div>
+		    </div>
+		</div>
+
+		<!-- 预约维保-->
+		<img src="__INDEX__/img/wyfw/yywb.png" alt=""  class="yywb">
+	
+		<div class="yy layui-form">
+			<p>为必选项。您的信息我们将会完全保密，请您放心填写</p>
+			<div class="sle1 sles">
+				<span>请选择业务类型:</span>
+				<select name="type" id="type" lay-verify="type">
+					<option value="0">请选择</option>
+					<option value="维修">维修</option>
+					<option value="保养">保养</option>
+				</select>
+			</div>
+			<div class="sle2 sles types">
+				<span>请选择品牌:</span>
+				<select name="brand" id="brand" lay-verify="brand">
+					<option value="0">请选择</option>
+					{volist name="product_cate" id="vo"}
+						<option value="{$vo['id']}">{$vo['name']}</option>
+					{/volist}
+				</select>
+			</div>
+			<div class="sle3 sles">
+				<span></span>
+				<input type="text" class="layui-input" name="vin" id="vin" placeholder="车辆vin号">
+				<input type="text" class="sel-right layui-input" name="cp" id="cp" placeholder="车牌号">
+			</div>
+			<div class="sle4">
+				<span>您所在的位置:</span>
+				<select name="province" id="province" lay-filter="getCity" lay-verify="province">
+						<option value="0">请选择省份</option>
+						{foreach name="province" item="vc" }
+						<option value="{$vc['id']}">{$vc['name']}</option>
+						{/foreach}
+				</select>
+				<select name="city" id="city" lay-filter="getJxs" lay-verify="city">
+						<option value="0">请选择城市</option>
+				</select>
+				<!-- <select name="" id="">
+					<option value="0">请选择</option>
+				</select> -->
+			</div>
+			<div class="sle5 sles">
+				<span>个人信息:</span>
+				<input type="text" placeholder="姓名" name="name" id="name" class="layui-input">
+			</div>
+			<div class="sle6">
+				<span></span>
+				<input type="text" class="layui-input" name="phone" id="phone" placeholder="手机号" lay-verify="phone">
+				<!-- <input type="text" class="layui-input" placeholder="区号">
+				<span class="line" class="">-</span>
+				<input type="text" class="layui-input" placeholder="号码"> -->
+			</div>
+			<div class="sle7 sles">
+				<span></span>
+				<input type="text" class="layui-input" name="wx" id="wx" placeholder="微信" lay-verify="wx">
+				<input type="text" class="sel-right layui-input" name="qq" id="qq" placeholder="QQ">
+			</div>
+			<div class="sle8">
+				<span>请描述您的需求:</span>
+				<textarea name="content" id="content" cols="30" rows="10" class="layui-textarea" lay-verify="content"></textarea>
+			</div>
+			<div class="sle9 sles">
+				<span>预约时间:</span>
+				<input type="text" class="layui-input" id="test1" name="test1">
+			<!-- 	<input type="text" class="sel-right layui-input"> -->
+			</div>
+			<button class="layui-btn" lay-submit lay-filter="tj" style="    margin: 0 auto;margin-top: 30px;display: block;background: #0065B3!important">立即提交</button>
+		</div>
+		
+	
+
+
+		<!-- 经销商查询-->
+		<div class="bord"><img src="__INDEX__/img/wyfw/fws.png" alt=""  class="fws"></div>
+
+		<!-- 地图  -->
+		<div class="map">
+			<!-- 地图 -->
+			<div id="allmap" style="width:60%;height:100%;margin: 0 auto;"></div>
+			<!-- 留资 -->
+			<div class="map-r">
+				<div class="lz layui-form">
+					<div class="provice coms">
+						<span>省份:</span>
+						<select name="province1" id="province1" lay-filter="getCity1" lay-verify="province1">
+						<option value="0">请选择省份</option>
+						{foreach name="province" item="vc" }
+						<option value="{$vc['id']}">{$vc['name']}</option>
+						{/foreach}
+					</select>
+					</div>
+					<div class="city coms">
+						<span>城市:</span>
+						<select  name="city1" id="city1" lay-filter="getJxs1" lay-verify="city1">
+						<option value="0">请选择城市</option>
+						</select>
+					</select>
+					</div>
+<!-- 					<div class="county coms">
+						<span>区县:</span>
+						<select name="" id="">
+							<option value="0">请选择</option>
+						</select>
+					</div> -->
+				</div>
+
+				<div class="contai">
+					<div class="list">
+						<h3></h3>
+						<h4></h4>
+						<h4></h4>
+					</div>
+				</div>
+			</div>
+		</div>
+</div>
+ {include file="public/footer" /}	
+<!-- footer -->
+<script>
+var province,city;
+// 百度地图API功能
+var map = new BMap.Map("allmap");    // 创建Map实例
+var myGeo = new BMap.Geocoder();//百度地图  多点标记
+var keyword;//百度地图  多点标记
+//添加地图类型控件
+map.addControl(new BMap.MapTypeControl({
+	mapTypes:[
+        BMAP_NORMAL_MAP,
+        BMAP_HYBRID_MAP
+    ]}));	  
+map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
+map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);
+map.addControl(new BMap.NavigationControl());  //添加默认缩放平移控件
+map.addControl(new BMap.OverviewMapControl()); //添加默认缩略地图控件
+map.addControl(new BMap.OverviewMapControl({ isOpen: true, anchor: BMAP_ANCHOR_BOTTOM_RIGHT }));
+var localSearch = new BMap.LocalSearch(map);
+localSearch.enableAutoViewport(); //允许自动调节窗体大小
+layui.use('laydate', function(){
+  var laydate = layui.laydate;
+  //执行一个laydate实例
+  laydate.render({
+    elem: '#test1' //指定元素
+  });
+});
+layui.use('form', function(){
+  var form = layui.form;
+
+//各种基于事件的操作，下面会有进一步介绍
+form.on('select(getCity)', function (data) {
+	province = $(this).text();
+	$.ajax({
+		type: 'POST',
+		dataType: 'json',
+		url: '{:url('Testdrive/getCity')}',
+		data: {
+			province: data.value,
+		},
+		success: function (data) {
+			var quname_html = "<option value='0'>请选择城市</option>";
+			for (var i = 0; i < data.length; i++) {
+				quname_html += "<option value='" + data[i].id + "'>" +
+					data[i].name + "</option>";
+			}
+			$("#city").html(quname_html);
+			form.render();
+		}
+	});
+});
+//上面的   城市
+form.on('select(getJxs)', function (data) {
+	city = $(this).text();
+	console.log(city);
+})
+//监听提交
+form.on('submit(tj)', function (data) {
+	$.ajax({
+		type: 'POST',
+		dataType: 'json',
+		url: '{:url('Service/maintain')}',
+		data: {
+			type: data.field.type,
+			province: province,
+			city: city,
+			brand: data.field.brand,
+			vin: data.field.vin,
+			cp: data.field.cp,
+			name: data.field.name,
+			phone:data.field.phone,
+			wx:data.field.wx,
+			qq:data.field.qq,
+			content:data.field.content,
+			date:data.field.test1
+		},
+		success: function (data) {
+			if (data == 1) {
+				layer.msg('提交成功,请等待客服人员与您联系', {
+					icon: 6,
+					time: 2000,
+					end: function () {
+						location.reload()
+					}
+				});
+			}
+		}
+	});
+});
+//各种基于事件的操作，下面会有进一步介绍
+form.on('select(getCity1)', function (data) {
+	province = $(this).text();
+	$.ajax({
+		type: 'POST',
+		dataType: 'json',
+		url: '{:url('Testdrive/getCity')}',
+		data: {
+			province: data.value,
+		},
+		success: function (data) {
+			var quname_html = "<option value='0'>请选择城市</option>";
+			for (var i = 0; i < data.length; i++) {
+				quname_html += "<option value='" + data[i].id + "'>" +
+					data[i].name + "</option>";
+			}
+			$("#city1").html(quname_html);
+			form.render();
+		}
+	});
+});
+
+
+form.on('select(getJxs1)', function (data) {
+	city = $(this).text();
+	$.ajax({
+		type: 'POST',
+		dataType: 'json',
+		url: '{:url('Testdrive/getjxs')}',
+		data: {
+			city: data.value,
+		},
+		success: function (data) {
+			index = 0;//百度地图  多点标记
+            var arr=[];//百度地图  多点标记
+			var quname_html = "<option value='0'>请选择经销商</option>";
+			$('.list').empty();
+			for (var i = 0; i < data.length; i++) {
+				arr.push(data[i].name);//百度地图  多点标记
+				quname_html += "<option value='" + data[i].id + "'>" +
+					data[i].name + "</option>";
+
+				var contai = $('<h3>'+data[i].name+'</h3><h4>地址：'+data[i].jsxdz+'</h4><h4>电话：'+data[i].phone+'</h4>');
+				$('.list').append(contai);
+			}
+			$("#jxs").html(quname_html);
+			form.render();
+			map.clearOverlays();//百度地图  多点标记
+            keyword = arr;//百度地图  多点标记
+            bdGEO();//百度地图  多点标记
+		}
+	});
+});
+//百度地图  多点标记   START.................................................
+function bdGEO(){
+    var add = keyword[index];
+    geocodeSearch(add);
+    index++;
+}
+function geocodeSearch(add){
+    if(index < keyword.length){
+        setTimeout(function(){
+            bdGEO();
+        },400)
+    } 
+    myGeo.getPoint(add, function(point){
+        if (point) {
+            console.log(point);
+            var address = new BMap.Point(point.lng, point.lat);
+            addMarker(point);
+            // addMarker(address,new BMap.Label(index+":"+add,{offset:new BMap.Size(20,-10)}));
+        }
+    }, "");
+}
+function addMarker(point,label){
+    var marker = new BMap.Marker(new BMap.Point(point.lng, point.lat));
+    map.centerAndZoom(point, 13);
+    map.addOverlay(marker);
+}
+//百度地图   END.................................................
+form.on('select(jxs)', function (data) {
+	jxs = $(this).text();
+
+});
+//自定义验证规则  
+form.verify({
+	type:function(value){
+		if (value == 0) {
+			return '请选择业务类型';
+		}
+	},
+	brand:function(value){
+		if (value == 0) {
+			return '请选择品牌';
+		}
+	},
+	province: function (value) {
+		if (value == 0) {
+			return '请选择省份';
+		}
+	},
+	city: function (value) {
+		if (value == 0) {
+			return '请选择城市';
+		}
+	},
+	jxs: function (value) {
+		if (value == 0) {
+			return '请选择经销商';
+		}
+	},
+	phone: [/^1[3|4|5|7|8]\d{9}$/, '手机必须11位，只能是数字！'],
+	wx: function (value) {
+		if (value == '') {
+			return '请填写微信号';
+		}
+	},
+	content: function (value) {
+		if (value == '') {
+			return '请填描述您的需求';
+		}
+	},
+});
+//各种基于事件的操作，下面会有进一步介绍
+});
+
+</script>
+</body>
+</html>

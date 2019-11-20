@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<link rel="stylesheet" href="__INDEX__/mobile/css/alzx.css">
+	{include file="mobile/public/resource" /}
+</head>
+
+<body>
+	{include file="mobile/public/header" /}
+	<div class="a_banner">
+		<img src="__INDEX__/mobile/img/zx/newbanner.jpg">
+	</div>
+	<ul class="al">
+		{volist name="news_cate" id="vo"}
+		<li><a href="{:url('News/index')}?id={$vo.id}"> {$vo['name']}</a></li>
+		{/volist}
+	</ul>
+	<div class="btn3">
+		<div class="info">
+				{volist name="list" id="vo"}
+			<div class="a_mian">
+			<a href="{:url('News/show')}?id={$vo['id']}">
+				<div class="a_mian_ry1">
+					<img src="{$vo['img1']}">
+					<h1>{$vo['title']}</h1>
+					<p>时间：{$vo['add_date']}</p>
+					<p>{$vo['description']}</p>
+<!-- 					<p class="p2">
+					<button class="btn1">更多 ＞</button>
+					</p> -->
+				</div>
+			</a>
+			</div>
+			{/volist}
+		</div>
+	</div>
+	{include file="mobile/public/footer" /}
+</body>
+<script>
+	// layui.use('laypage', function () {
+	// 	var laypage = layui.laypage;
+
+	// 	//执行一个laypage实例
+	// 	laypage.render({
+	// 		elem: 'test1', //注意，这里的 test1 是 ID，不用加 # 号
+	// 		count: 50 //数据总数，从服务端得到
+	// 	});
+	// });
+
+	// $(".btn1").click(function () {
+	// 	location.href = './dtzk.html';
+	// });
+	// $('.al li').click(function () {
+	// 	alert(1111);
+	// 	var i = $(this).index();
+	// 	console.log(i);
+	// 	$('.btn3').children().eq(i).show().siblings().hide();
+	// });
+</script>
+
+</html>

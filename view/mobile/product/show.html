@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {include file="mobile/public/resource" /}
+    <link rel="stylesheet" href="__INDEX__/mobile/css/cxzt.css">
+    <link rel="stylesheet" href="__INDEX__/mobile/css/threesixty.css">
+    <script type="text/javascript" src="__INDEX__/mobile/js/jquery.threesixty.js"></script>
+    <script type="text/javascript" src="__INDEX__/mobile/js/LayerFunction.js"></script>
+</head>
+
+<body>
+    <div class="containers" style="display: none;">
+        <div class="con_img">
+            <img src="/public/static/index/img/cxzt/close.png" alt="" class="img_one">
+            <img src="/public/static/index/img/cxzt/143cang.jpg" alt="" class="img_two">
+        </div>
+    </div>
+
+    {include file="mobile/public/header" /}
+    <div>
+
+    </div>
+    <!-- 360度车展 -->
+    <div class="box">
+<!--         <h1 style="    text-align: center;
+        line-height: 2.375rem;
+        font-size: 0.9063rem;
+        color: #5f5f5f;
+        margin-top: 0rem;
+        position: absolute;
+        top: 11%;
+        left: 0;
+        right: 0;
+        margin: auto;" id="gfj">官方指导价
+            <span>￥90,999 -123,999</span></h1> -->
+        <img src="__INDEX__/img/cxzt/bj_cxzt.png" alt="" class="bj" style="width:100%; height:100%;">
+        <div class="threesixty-wrapper car360" >
+                <div class="threesixty" id="threesixty" data-item='page0-1-btn8' data-action='click-theme'
+                    style="height:100% !important;">
+                    <ol class="threesixty_images" style="height: 100%">
+                    </ol>
+                    <div class="spinner" style="margin-top: 0px!important;">
+                        <span>0%</span>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+
+    <div class="b_x">
+        <img id="btn" src="__INDEX__/mobile/img/cxzt/1_2.png" onclick="qie(1);"><span>|</span>
+        <img id="btn1" src="__INDEX__/mobile/img/cxzt/2_2.png" onclick="qie(2);"><span>|</span>
+        <a href="https://b23.tv/av65049179" target="_blank"><img id="btn2" src="__INDEX__/mobile/img/cxzt/3_2.png" ></a>
+    </div>
+
+
+
+
+    <div class="l_j">
+        <div class="y_main">
+            <div id="b1">
+
+                <dl>
+                    <a href="{:url('testdrive/index')}?id=2">
+                        <dt><img src="__INDEX__/mobile/img/cxzt/xiaoshou.png"></dt>
+                        <dd>立即购车</dd>
+                    </a>
+                </dl>
+                <dl>
+                    <a href="{:url('testdrive/index')}?id=1">
+                        <dt><img src="__INDEX__/mobile/img/cxzt/fxp.png"></dt>
+                        <dd>预约试驾</dd>
+                    </a>
+                </dl>
+            </div>
+            <div id="b2">
+                <dl>
+                    <a href="{:url('product/made')}">
+                        <dt><img src="__INDEX__/mobile/img/cxzt/bc.png"></dt>
+                        <dd>专属定制</dd>
+                    </a>
+                </dl>
+                <dl onclick="gun()">
+                    <dt><img src="__INDEX__/mobile/img/cxzt/ls.png"></dt>
+                    <dd>配置详情</dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="main">
+        <div class="d_center">
+            <img src="__INDEX__/mobile/img/cxzt/cxxq.png">
+        </div>
+        <div class="m_t chexing1">
+            <img src="__INDEX__/mobile/img/cxzt/dlxtp.png">
+            <img src="__INDEX__/mobile/img/cxzt/kkxtp.png">
+            <img src="__INDEX__/mobile/img/cxzt/ssxtp.png">
+        </div>
+        <div class="m_t chexing2"  style="display:none;">
+            <img src="__INDEX__/mobile/img/cxzt/dlxtp1.png">
+            <img src="__INDEX__/mobile/img/cxzt/kkxtp1.png">
+            <img src="__INDEX__/mobile/img/cxzt/ssxtp1.png">
+        </div>
+        <div class="m_t chexing3" style="display:none;">
+            <img src="__INDEX__/mobile/img/cxzt/dlxtp2.png">
+            <img src="__INDEX__/mobile/img/cxzt/kkxtp2.png">
+            <img src="__INDEX__/mobile/img/cxzt/ssxtp2.png">
+        </div>
+        <div></div>
+    </div>
+
+
+
+
+    <div id="main1">
+        <div class="d_center">
+            <img src="__INDEX__/mobile/img/cxzt/cspz.png" id="cspz">
+        </div>
+        <div class="m_b">
+            <div class="m_b1">
+<!--                 <h3>配置概况</h3>
+                <ul class="ul3" style="display:none;">
+                    <li onclick="config_Img('143super.jpg')">
+                        <h3>143马力</h3>
+                        <span>超级轻卡</span>
+                    </li>
+                    <li onclick="config_Img('143super.jpg')">
+                        <h3>143马力</h3>
+                        <span>仓栅式轻卡</span>
+                    </li>
+                    <li onclick="config_Img('143super.jpg')">
+                        <h3>150马力</h3>
+                        <span>厢式轻卡</span>
+                    </li>
+                    <li style="width:30% !important; border-right: none;" onclick="config_Img('143super.jpg')">
+                        <h3>156马力</h3>
+                        <span>5.25米仓栅式轻卡</span>
+                    </li>
+                    <li onclick="config_Img('143super.jpg')">
+                        <h3>156马力</h3>
+                        <span>栏板式轻卡</span>
+                    </li>
+                    <li onclick="config_Img('143super.jpg')">
+                        <h3>156马力</h3>
+                        <span>厢式轻卡</span>
+                    </li>
+                    <li style="border-right:none;line-height:3.0313rem; " onclick="config_Img('143super.jpg')">
+                        <span style="font-weight:600;">西南版170马力</span>
+                    </li>
+                </ul>
+
+
+
+
+                <ul class="ul1">
+                    <li onclick="config_Img('suyun15.jpg')">
+                        <h3 style="color: #0061B1">奥铃速运</h3>
+                        <span style="color: #0061B1">115马力栏板轻卡</span>
+                    </li>
+                    <li onclick="config_Img('suyun131.jpg')">
+                        <h3>奥铃速运</h3>
+                        <span>131马力栏板轻卡</span>
+                    </li>
+                </ul>
+
+
+
+
+
+                <ul class="ul2" style="display: none;">
+                    <li onclick="config_Img('jieyun1.jpg')">
+                        <h3 style="color: #0061B1">奥铃新捷运</h3>
+                        <span style="color: #0061B1">仓栅式轻卡</span>
+                    </li>
+                    <li onclick="config_Img('jieyun2.jpg')">
+                        <h3>奥铃新捷运</h3>
+                        <span>朝柴栏板轻卡</span>
+                    </li>
+                    <li onclick="config_Img('jieyun3.jpg')">
+                        <h3>奥铃新捷运</h3>
+                        <span>栏板轻卡</span>
+                    </li>
+                    <li onclick="config_Img('jieyun4.jpg')">
+                        <h3>奥铃新捷运</h3>
+                        <span>4.18栏板轻卡</span>
+                    </li>
+                </ul> -->
+            </div>
+
+            <!-- <table border="2"
+                style=" height: 3.125rem;width: 100%;; margin: 0 auto; font-size: 0.5625rem;line-height: 2.125rem;">
+                <tr>
+                    <th>Company</th>
+                    <th>Contact</th>
+                </tr>
+
+                <tr>
+                    <td>品牌</td>
+                    <td>{$sql['brand']}</td>
+                </tr>
+
+                <tr class="alt">
+                    <td>子品牌</td>
+                    <td>{$sql['zbrand']}</td>
+                </tr>
+
+                <tr>
+                    <td>排放</td>
+                    <td>{$sql['pf']}</td>
+                </tr>
+
+                <tr class="alt">
+                    <td>制动</td>
+                    <td>{$sql['zd']}</td>
+                </tr>
+
+                <tr>
+                    <td>发动机</td>
+                    <td>{$sql['fdj']}</td>
+                </tr>
+            </table> -->
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <div class="m_c">
+        <div class="d_center">
+            <img src="__INDEX__/mobile/img/cxzt/cptp.png">
+        </div>
+        <div class="m_n">
+            <p><span>内饰</span> <a>|</a> <span >配置/空间特显</span></p>  <!-- onclick="dian(1)" --> <!-- onclick="dian(2)" -->
+            <div class="swiper-container swiper-container1s" style="">
+                <div class="swiper-wrapper swiper-wrapper1 picture1-1">
+
+                    <div class="swiper-slide swiper-slide1 ">
+                        <img src="" alt="" class="scale-big">
+                    </div>
+                    <div class="swiper-slide swiper-slide1 ">
+                        <img src="" alt="" class="scale-big">
+                    </div>
+                    <div class="swiper-slide swiper-slide1 ">
+                        <img src="" alt="" class="scale-big">
+                    </div>
+                    <div class="swiper-slide swiper-slide1 ">
+                        <img src="" alt="" class="scale-big">
+                    </div>
+                    <div class="swiper-slide swiper-slide1 ">
+                        <img src="" alt="" class="scale-big">
+                    </div>
+                    <!-- <div class="swiper-slide swiper-slide1 ">
+                        <img src="" alt="" class="scale-big">
+                    </div>
+                    <div class="swiper-slide swiper-slide1 ">
+                        <img src="" alt="" class="scale-big">
+                    </div> -->
+
+
+                </div>
+            </div>
+<!--             <div class="swiper-container swiper-container1" >
+                    <div class="swiper-wrapper swiper-wrapper1 picture2-2" style="display: none;">
+    
+                        <div class="swiper-slide swiper-slide1 ">
+                            <img src="" alt="" class="scale-big">
+                        </div>
+                        <div class="swiper-slide swiper-slide1 ">
+                            <img src="" alt="" class="scale-big">
+                        </div>
+                        <div class="swiper-slide swiper-slide1 ">
+                            <img src="" alt="" class="scale-big">
+                        </div>
+                        <div class="swiper-slide swiper-slide1 ">
+                            <img src="" alt="" class="scale-big">
+                        </div>
+                        <div class="swiper-slide swiper-slide1 ">
+                            <img src="" alt="" class="scale-big">
+                        </div>
+
+    
+    
+                    </div>
+                </div> -->
+        </div>
+
+    </div>
+    <!--   <div class="banner">
+
+        <div class="d_center">
+            <img src="__INDEX__/mobile/img/cxzt/zxgc.png">
+        </div>
+
+        <p id="m_p1" style="text-align: center;padding-top: 3%;"><span
+                style="color:#0066B3;">*</span>为必选项。您的信息我们竟将会完全保密,请您放心填写</p>
+        <div class="yy layui-form">
+            <div class="sle1 sles">
+                <span>*请选择车系:</span>
+                <select name="" id="">
+                    <option value="0">请选择</option>
+                </select>
+            </div>
+            <div class="sle2 sles types">
+                <span>*所在城市:</span>
+                <select name="" id="se2">
+                    <option value="0">请选择</option>
+                </select>
+                <select name="" id="">
+                    <option value="0">请选择</option>
+                </select>
+            </div>
+           
+            <div class="sle1 sles">
+                <span>经销商名称:</span>
+                <select name="" id="">
+                    <option value="0">请选择</option>
+                </select>
+            </div>
+            <div class="sle5 sles">
+                <span>姓名:</span>
+                <input type="text" placeholder="姓名" class="layui-input">
+                <input type="radio" name="sex" value="0" title="先生">
+                <input type="radio" name="sex" value="1" title="女士" checked>
+            </div>
+            <div class="sle6">
+                <span>*联系方式：</span>
+                <input type="text" class="layui-input" placeholder="手机号">
+              
+            </div>
+         
+            <div class="sle8">
+                <span>请描述您的需求:</span>
+                <textarea name="" id="" cols="30" rows="10" class="layui-textarea"></textarea>
+            </div>
+            <div class="public public6">
+                <span>*计划购车时间:</span>
+                <input type="radio" name="sex" value="1" title="一周后" checked>
+                <input type="radio" name="sex" value="1" title="半月后" checked>
+                <input type="radio" name="sex" value="1" title="一月后" checked>
+            </div>
+
+            <div class="public public7">
+                <span>*计划购车时间:</span>
+                <input type="radio" name="sex" value="1" title="三个月后" checked>
+                <input type="radio" name="sex" value="1" title="半年后" checked>
+                <input type="radio" name="sex" value="1" title="一年后" checked>
+            </div>
+           
+            <button class="layui-btn" lay-submit lay-filter="*">立即提交</button>
+
+        </div>
+    </div>
+ -->
+
+
+
+
+
+
+
+
+
+
+    <!-- 第二个表单 预约试驾 -->
+    <!--     <div class="banner">
+
+        <div class="d_center">
+            <img src="__INDEX__/mobile/img/cxzt/sjbd.png">
+        </div>
+
+        <p id="m_p1" style="text-align: center;padding-top: 3%;"><span
+                style="color:#0066B3;">*</span>为必选项。您的信息我们竟将会完全保密,请您放心填写</p>
+        <div class="yy layui-form">
+            <div class="sle1 sles">
+                <span>*请选择车系:</span>
+                <select name="" id="">
+                    <option value="0">请选择</option>
+                </select>
+            </div>
+            <div class="sle2 sles types">
+                <span>*所在城市:</span>
+                <select name="" id="se2">
+                    <option value="0">请选择</option>
+                </select>
+                <select name="" id="">
+                    <option value="0">请选择</option>
+                </select>
+            </div>
+           
+         
+            <div class="sle1 sles">
+                <span>*经销商名称:</span>
+                <select name="" id="">
+                    <option value="0">请选择</option>
+                </select>
+            </div>
+            <div class="sle5 sles">
+                <span>*姓名</span>
+                <input type="text" placeholder="姓名" class="layui-input">
+                <input type="radio" name="sex" value="0" title="先生">
+                <input type="radio" name="sex" value="1" title="女士" checked>
+            </div>
+            <div class="sle6">
+                <span>联系方式：</span>
+                <input type="text" class="layui-input" placeholder="手机号">
+               
+            </div>
+           
+            <div class="sle8">
+                <span>请描述您的需求:</span>
+                <textarea name="" id="" cols="30" rows="10" class="layui-textarea"></textarea>
+            </div>
+            <div class="public public6">
+                <span>*计划购车时间:</span>
+                <input type="radio" name="sex" value="1" title="一周后" checked>
+                <input type="radio" name="sex" value="1" title="半月后" checked>
+                <input type="radio" name="sex" value="1" title="一月后" checked>
+            </div>
+
+            <div class="public public7">
+                <span>*计划购车时间:</span>
+                <input type="radio" name="sex" value="1" title="三个月后" checked>
+                <input type="radio" name="sex" value="1" title="半年后" checked>
+                <input type="radio" name="sex" value="1" title="一年后" checked>
+            </div>
+          
+            <button class="layui-btn" lay-submit lay-filter="*">立即提交</button>
+
+        </div>
+    </div> -->
+
+
+    {include file="mobile/public/footer" /}
+
+
+    <script src="__INDEX__/mobile/js/index.js"></script>
+    <script>
+        // var val = {$id };
+        // console.log(val);
+        // if (val == 3) {
+        //     console.log('奥铃CTS'); //奥铃CTS
+        //     $('.threesixty-wrapper').show();
+        // } else if (val == 4) {
+        //     $('.box').css("background-image", "url(__INDEX__/mobile/img/cxzt/ts.jpg)"); //奥铃TS
+        //     $('.threesixty-wrapper').hide();
+        //     $('#gfj').hide();
+        //     $('.q360').hide();
+        //     $('.banner>h2').hide();
+        //     $('.banner>span').hide();
+        // } else if (val == 5) {
+        //     $('.box').css('src', '__INDEX__/img/cxzt/jieyun.jpg'); //奥铃捷运
+        //     $('.threesixty-wrapper').hide();
+        //     $('.introduce').hide();
+        //     $('.q360').hide();
+        //     $('.banner>h2').hide();
+        //     $('.banner>span').hide();
+        // } else if (val == 7) {
+        //     $('.box').css("background-image", "url(__INDEX__/mobile/img/cxzt/xinjieyun.jpg)") //奥铃新捷运
+        //     $('.threesixty-wrapper').hide();
+        //     $('#gfj').hide();
+        //     $('.q360').hide();
+        //     $('.banner>h2').hide();
+        //     $('.banner>span').hide();
+        // }
+        var val = {$id};
+        console.log(val);
+        if (val == 3) {
+            $('.box').css('background', 'url(./img/cxzt/bj.png) no-repeat center center');
+            console.log('奥铃CTS'); //奥铃CTS
+            $('.threesixty-wrapper').show();
+            $('.ul3').css('display', 'flex');
+            $('.ul3').siblings().not('h1').hide();
+            $('.car_right').attr('src', '__INDEX__/img/cxzt/alcts.png');
+            var arr = [
+                '__INDEX__/img/cxzt/cts11.jpg',
+                // '__INDEX__/img/cxzt/cts22.jpg',
+                '__INDEX__/img/cxzt/cts33.jpg',
+                '__INDEX__/img/cxzt/cts44.jpg',
+                // '__INDEX__/img/cxzt/cts55.jpg',
+                // '__INDEX__/img/cxzt/cts66.jpg',
+                // '__INDEX__/img/cxzt/cts77.jpg',
+                '__INDEX__/img/cxzt/cts111.jpg',
+                '__INDEX__/img/cxzt/cts333.jpg',
+            ]
+            $('.picture1-1 img').each(function (index, i) {
+                console.log(index, i)
+                $(this).attr('src', arr[index]);
+            })
+            // var arr1 = [
+            //     '__INDEX__/img/cxzt/cts111.jpg',
+            //     // '__INDEX__/img/cxzt/cts222.jpg',
+            //     '__INDEX__/img/cxzt/cts333.jpg',
+            //     // '__INDEX__/img/cxzt/cts444.jpg',
+            //     // '__INDEX__/img/cxzt/cts555.jpg',
+            //     // '__INDEX__/img/cxzt/cts666.jpg',
+            //     // '__INDEX__/img/cxzt/cts777.jpg',
+            // ]
+            $('.picture2-2 img').each(function (index, i) {
+                $(this).attr('src', arr1[index]);
+            })
+
+        } else if (val == 4) {
+            $('.box').css('background', 'url()');
+            $('.bj').attr('src', '__INDEX__/img/cxzt/suyun.jpg'); //奥铃TS
+            $('.threesixty-wrapper').hide();
+            $('.introduce').hide();
+            $('.q360').hide();
+            $('.banner>h2').hide();
+            $('.banner>span').hide();
+            $('.ul1').css('display', 'flex');
+            $('.ul1').siblings().not('h1').hide();
+            $('.car_right').attr('src', '__INDEX__/img/cxzt/alsunyun.png');
+            var arr = [
+                '__INDEX__/img/cxzt/suyun11.jpg',
+                '__INDEX__/img/cxzt/suyun22.jpg',
+                '__INDEX__/img/cxzt/suyun111.jpg',
+                '__INDEX__/img/cxzt/suyun222.jpg',
+                '__INDEX__/img/cxzt/suyun333.jpg',
+                // '__INDEX__/img/cxzt/suyun33.jpg',
+                // '__INDEX__/img/cxzt/suyun44.jpg',
+                // '__INDEX__/img/cxzt/suyun55.jpg',
+                // '__INDEX__/img/cxzt/suyun66.jpg',
+                // '__INDEX__/img/cxzt/suyun77.jpg',
+            ]
+            $('.picture1-1 img').each(function (index, i) {
+                console.log(index, i)
+                $(this).attr('src', arr[index]);
+            })
+            // var arr1 = [
+            //     '__INDEX__/img/cxzt/suyun111.jpg',
+            //     '__INDEX__/img/cxzt/suyun222.jpg',
+            //     '__INDEX__/img/cxzt/suyun333.jpg',
+            //     // '__INDEX__/img/cxzt/suyun444.jpg',
+            //     // '__INDEX__/img/cxzt/suyun555.jpg',
+            //     // '__INDEX__/img/cxzt/suyun666.jpg',
+            //     // '__INDEX__/img/cxzt/suyun777.jpg',
+            // ]
+            $('.picture2-2 img').each(function (index, i) {
+                $(this).attr('src', arr1[index]);
+            })
+            $(".chexing1").hide();
+            $(".chexing2").show();
+            $(".chexing3").hide();
+            $('.m_b1').css('background-image','url(__INDEX__/img/cxzt/peibj2.png)');
+        } else if (val == 7) {
+            $('.bj').attr('src', '__INDEX__/img/cxzt/jieyunjieyun.jpg'); //奥铃新捷运
+            $('.threesixty-wrapper').hide();
+            $('.introduce').hide();
+            $('.q360').hide();
+            $('.banner>h2').hide();
+            $('.banner>span').hide();
+            $('.ul2').css('display', 'flex');
+            $('.ul2').siblings().not('h1').hide();
+            $('.car_right').attr('src', '__INDEX__/img/cxzt/aljieyun.png');
+            var arr = [
+                '__INDEX__/img/cxzt/jieyun11.jpg',
+                // '__INDEX__/img/cxzt/jieyun22.jpg',
+                '__INDEX__/img/cxzt/jieyun33.jpg',
+                '__INDEX__/img/cxzt/jieyun44.jpg',
+                '__INDEX__/img/cxzt/jieyun111.jpg',
+                '__INDEX__/img/cxzt/jieyun333.jpg',
+                // '__INDEX__/img/cxzt/jieyun55.jpg',
+                // '__INDEX__/img/cxzt/jieyun66.jpg',
+                // '__INDEX__/img/cxzt/jieyun77.jpg',
+            ]
+            $('.picture1-1 img').each(function (index, i) {
+                console.log(index, i)
+                $(this).attr('src', arr[index]);
+            })
+            $('.m_b1').css('background-image','url(__INDEX__/img/cxzt/peibj3.png)');
+            // var arr1 = [
+            //     '__INDEX__/img/cxzt/jieyun111.jpg',
+            //     // '__INDEX__/img/cxzt/jieyun222.jpg',
+            //     '__INDEX__/img/cxzt/jieyun333.jpg',
+            //     // '__INDEX__/img/cxzt/jieyun444.jpg',
+            //     // '__INDEX__/img/cxzt/jieyun555.jpg',
+            //     // '__INDEX__/img/cxzt/jieyun666.jpg',
+            //     // '__INDEX__/img/cxzt/jieyun777.jpg',
+            // ]
+            $('.picture2-2 img').each(function (index, i) {
+                $(this).attr('src', arr1[index]);
+            })
+
+            $(".chexing1").hide();
+            $(".chexing2").hide();
+            $(".chexing3").show();
+
+        }
+
+        function qie(i) {
+            if (i == 1) {
+                $("#btn").attr("src", "__INDEX__/mobile/img/cxzt/1_1.png");
+                $("#btn1").attr("src", "__INDEX__/mobile/img/cxzt/2_2.png");
+                $("#btn2").attr("src", "__INDEX__/mobile/img/cxzt/3_2.png");
+            } else if (i == 2) {
+                alert('敬请期待！');return false;
+                $("#btn").attr("src", "__INDEX__/mobile/img/cxzt/1_2.png");
+                $("#btn1").attr("src", "__INDEX__/mobile/img/cxzt/2_1.png");
+                $("#btn2").attr("src", "__INDEX__/mobile/img/cxzt/3_2.png");
+            } else if (i == 3) {
+                alert('敬请期待！');return false;
+                $("#btn").attr("src", "__INDEX__/mobile/img/cxzt/1_2.png");
+                $("#btn1").attr("src", "__INDEX__/mobile/img/cxzt/2_2.png");
+                $("#btn2").attr("src", "__INDEX__/mobile/img/cxzt/3_1.png");
+            }
+
+        }
+
+
+        $(function () {
+            var str = '/public/static/index/image1/';
+            // $("#myCar").vc0dEye({
+            // 	imagePath:str,
+            // 	totalImages:32,
+            // 	imageExtension:"png"
+            // });	
+            function initThreesixty(type) {
+                var $threeSixty = $('#threesixty');
+                $threeSixty.find("ol").empty();
+                var colors = ['White', 'Black', 'Blue', 'Red', 'Grey', 'Silver'];
+                var hasColor = colors.indexOf(type.trim());
+                var color = hasColor > -1 ? type : 'White';
+                $threeSixty.ThreeSixty({
+                    totalFrames: 32,
+                    endFrame: 32,
+                    currentFrame: 1,
+                    imgList: '.threesixty_images',
+                    progress: '.spinner',
+                    imagePath: str,
+                    filePrefix: '0-',
+                    ext: '.png',
+                    zeroPadding: true, // 1.jpg = > 01.jpg
+                    zeroBased: true, // 从0开始
+                    height: 700,
+                    width: 1280,
+                    navigation: false,
+                    responsive: true
+                });
+            }
+            initThreesixty('White');
+        })
+
+
+
+        function tj() {
+
+            var inp1 = $(".inp1").val(); //获取   input组件的  value值     
+            var inp2 = $("#selProvinces_1").find("option:selected").text(); //获取   select下拉被选中的文本直
+            var inp3 = $("#selCities_1").find("option:selected").text();
+            var inp4 = $("#apply_field6_1").find("option:selected").text();
+            var inp5 = $(".inp5").val()
+            var inp6 = $(".inp6").val();
+            var inp7 = $('.hid').val();
+            var inp8 = $('.hids').val();
+            var token = $("#token").val();
+            var openid = $("#openid").val();
+            console.log(inp1, inp2, inp3, inp4, inp5, inp6)
+            if (inp5 == "") {
+                alert("请输入您的姓名");
+                return false;
+            }
+            if (inp6 == "") {
+                alert("请输入您的电话");
+                return false;
+            }
+            var reg = /^0?1[3|4|5|7|8][0-9]\d{8}$/;
+
+            if (!reg.test(inp6)) {
+                alert("请输入正确的手机号");
+                return false;
+            }
+
+            if (inp1 == "") {
+                alert("请输入您的订车数量");
+                return false;
+            }
+            if (inp2 == "" || inp2 == '省') {
+                alert("请选择省份");
+                return false;
+            }
+            if (inp3 == "" || inp3 == '城市') {
+                alert("请选择城市");
+                return false;
+            }
+            if (inp4 == "" || inp4 == '经销商') {
+                alert("请选择经销商");
+                return false;
+            }
+            $.ajax({
+                type: 'POST',
+                dataType: 'json',
+                url: 'http://www.aumantruck.com/mobile/om1212.php?step=book',
+                data: {
+                    num: inp1,
+                    prov_id: inp2,
+                    city_id: inp3,
+                    agency_id: inp4,
+                    name: inp5,
+                    phone: inp6,
+                    car_id: inp7,
+                    openid: openid,
+                    cname: inp8,
+                },
+                beforeSend: function (request) {
+                    request.setRequestHeader("Authorization", token);
+                },
+                success: function (data) {
+
+                }
+            });
+        }
+
+
+
+
+
+
+
+
+        layui.use('form', function () {
+            var form = layui.form;
+
+            //各种基于事件的操作，下面会有进一步介绍
+        });
+        //配置表  按钮
+        $('.change_left ul').each(function (index, i) {
+            if (!$(this).is(":hidden")) {
+                $(this).find('li').click(function () {
+                    $(this).children().css('color', '#0061B1');
+                    $(this).siblings().children().css('color', '#424242');
+                    $(this).parent().show();
+                    $(this).parent().siblings().not('h1').hide();
+                })
+            }
+        })
+
+        //关闭按钮
+        $('.img_one').click(function () {
+            $('.containers').hide();
+            $('.img_two').attr('src', '');
+        })
+
+        //更改配置图片
+        function config_Img(src) {
+            $('.img_two').attr('src', '__INDEX__/img/cxzt/' + src);
+            $('.containers').show();
+        }
+
+        function look(a) {
+            $('.imgLook').empty();
+            $('.imgLook').show();
+            $copy = $(a).clone();
+            $copy.addClass('looks');
+            $('.imgLook').append($copy);
+        }
+        $('.imgLook').click(function () {
+            $(this).hide();
+        })
+
+        function dian(num) {
+            if (num == 1) {
+                $('.dian1').addClass('color1');
+                $('.dian2').removeClass('color1');
+                $('.picture1-1').show();
+                $('.picture2-2').hide();
+            } else {
+                $('.dian1').removeClass('color1');
+                $('.dian2').addClass('color1');
+                $('.picture2-2').show();
+                $('.picture1-1').hide();
+            }
+        }
+
+        function gun(){
+        	$("html,body").animate({scrollTop:1550},500);
+        }
+        //360   选车  组件
+var mySwiper2sss = new Swiper ('.swiper-container1s', {
+    prevButton:'.swiper-button-prev',
+    nextButton:'.swiper-button-next',
+    observer:true,
+    observeParents:true,
+    observeSlideChildren:true,
+}) 
+
+    </script>
+</body>
+
+</html>

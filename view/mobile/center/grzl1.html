@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   {include file="mobile/public/resource" /}    
+    <link rel="stylesheet" href="__INDEX__/mobile/css/grzl1.css">
+
+</head>
+
+<body>
+    {include file="mobile/public/header" /} 
+    <div class="z_main">
+        <div class="header">
+            <span class="xy"><a href="./gerzxsy.html"><img src="__INDEX__/mobile/img/grzxym/fhjt.png"></a></span>
+            <p class="ger">个人中心</p>
+        </div>
+        <ul class="al">
+            <li><a>个人资料</a></li>
+            <li><a>个人信息</a></li>
+            <li><a>标签信息</a></li>
+        </ul>
+        <div class="psw">
+            <p>昵称：<input type="text" placeholder="昵称" class="inp1" /></p>
+            <p>姓名：<input placeholder="姓名"></p>
+            <p id="m_p2">
+                证件类型：
+                <select id="suo1" onchange="this.parentNode.nextSibling.value=this.value">
+                    <option value="国  有">请选择</option>
+                    <option value="独  资">独 资</option>
+                    <option value="中外合资">中外合资</option>
+                    <option value="国内合资">国内合资 </option>
+                    <option value="个体户">个体户</option>
+                    <option value="其  他">其 他</option>
+                </select>
+            </p>
+            <p style="padding-left: 5%;">
+                所在省市:
+                <select id="suo2" onchange="this.parentNode.nextSibling.value=this.value">
+                    <option value="国  有">请选择</option>
+                    <option value="独  资">北京</option>
+                    <option value="中外合资">河北</option>
+                    <option value="国内合资">山西 </option>
+                    <option value="个体户">东北</option>
+                    <option value="其  他">山东</option>
+                </select>
+                <select id="suo2" onchange="this.parentNode.nextSibling.value=this.value">
+                    <option value="国  有">请选择</option>
+                    <option value="独  资">大同</option>
+                    <option value="中外合资">晋城</option>
+                    <option value="国内合资">运城 </option>
+                    <option value="个体户">临汾</option>
+                    <option value="其  他">忻州</option>
+                </select>
+                <select id="suo2" onchange="this.parentNode.nextSibling.value=this.value">
+                    <option value="国  有" style="color:red">请选择</option>
+                    <option value="独  资">昌平</option>
+                    <option value="中外合资">海淀</option>
+                    <option value="国内合资">朝阳 </option>
+                    <option value="个体户">石景山</option>
+                    <option value="其  他">大兴</option>
+                </select>
+            </p>
+            <p id="m_p2">
+                车辆用途：
+                <select id="suo1" onchange="this.parentNode.nextSibling.value=this.value">
+                    <option value="国  有">请选择</option>
+                    <option value="独  资">独 资</option>
+                    <option value="中外合资">中外合资</option>
+                    <option value="国内合资">国内合资 </option>
+                    <option value="个体户">个体户</option>
+                    <option value="其  他">其 他</option>
+                </select>
+            </p>
+            <p style="padding-left: 11%;">爱好:&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" placeholder="爱好" /></p>
+            <p style="padding-left: 6%;">个性标签：<input id="suo3" type="text" placeholder="个性标签" /></p>
+            <p style="padding-left: 6%;">出生日期：<input id="suo3" type="text" placeholder="出生日期" /></p>
+            <p style="padding-left: 6%;">证件号码：<input id="suo3" type="text" placeholder="证件号码" /></p>
+            <p id="m_p2" style="padding-left: 2%;">
+                家庭年收入：
+                <select id="suo4" onchange="this.parentNode.nextSibling.value=this.value">
+                    <option value="国  有">请选择</option>
+                    <option value="独  资">独 资</option>
+                    <option value="中外合资">中外合资</option>
+                    <option value="国内合资">国内合资 </option>
+                    <option value="个体户">个体户</option>
+                    <option value="其  他">其 他</option>
+                </select>
+            </p>
+
+        </div>
+        <p class="p2">
+            <button class="btn1" onclick="tj()">下一页 ＞</button>
+        </p>
+    </div>
+  
+
+  {include file="mobile/public/footer" /} 
+
+
+    <script>
+        function tj() {
+
+            var inp1 = $(".inp1").val(); //获取   input组件的  value值     
+            var inp2 = $("#selProvinces_1").find("option:selected").text(); //获取   select下拉被选中的文本直
+            var inp3 = $("#selCities_1").find("option:selected").text();
+            var inp4 = $("#apply_field6_1").find("option:selected").text();
+            var inp5 = $(".inp5").val()
+            var inp6 = $(".inp6").val();
+            var inp7 = $('.hid').val();
+            var inp8 = $('.hids').val();
+            var token = $("#token").val();
+            var openid = $("#openid").val();
+            console.log(inp1, inp2, inp3, inp4, inp5, inp6)
+            if (inp1 == "") {
+                alert("请输入您的姓名");
+                return false;
+            } else {
+                window.location.href = "./grzl.html"
+            }
+
+            if (inp6 == "") {
+                alert("请输入您的电话");
+                return false;
+            }
+            var reg = /^0?1[3|4|5|7|8][0-9]\d{8}$/;
+
+            if (!reg.test(inp6)) {
+                alert("请输入正确的手机号");
+                return false;
+            }
+
+            if (inp1 == "") {
+                alert("请输入您的订车数量");
+                return false;
+            }
+            if (inp2 == "" || inp2 == '省') {
+                alert("请选择省份");
+                return false;
+            }
+            if (inp3 == "" || inp3 == '城市') {
+                alert("请选择城市");
+                return false;
+            }
+            if (inp4 == "" || inp4 == '经销商') {
+                alert("请选择经销商");
+                return false;
+            }
+            $.ajax({
+                type: 'POST',
+                dataType: 'json',
+                url: 'http://www.aumantruck.com/mobile/om1212.php?step=book',
+                data: {
+                    num: inp1,
+                    prov_id: inp2,
+                    city_id: inp3,
+                    agency_id: inp4,
+                    name: inp5,
+                    phone: inp6,
+                    car_id: inp7,
+                    openid: openid,
+                    cname: inp8,
+                },
+                beforeSend: function (request) {
+                    request.setRequestHeader("Authorization", token);
+                },
+                success: function (data) {
+
+                }
+            });
+        }
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

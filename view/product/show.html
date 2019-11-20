@@ -1,0 +1,748 @@
+<!-- 奥铃官网       首页开始 -->
+<!doctype html>
+<html lang="en">
+<head>
+{include file="public/resource" /}	
+<link rel="stylesheet" href="__INDEX__/css/cxzt.css">
+<link rel="stylesheet" href="__INDEX__/css/threesixty.css">
+</head>
+<body>
+<input type="hidden" value="0" id="hiddens">
+<!-- header -->
+ {include file="public/header" /}	
+<!-- 内容区 -->
+<div class="containers">
+	<div class="con_img">
+		<img src="__INDEX__/img/cxzt/close.png" alt="" class="img_one">
+		<img src="__INDEX__/img/cxzt/suyun115.jpg" alt="" class="img_two">
+	</div>
+</div>
+<div id="container">
+		<!-- banner -->
+		<div class="banner">
+			<h2 style="display: none;">官方指导价</h2>
+			<span style="display: none;">￥99999</span>
+			<img src="__INDEX__/img/cxzt/bj_cxzt.png" alt="" class="bj">
+			<!-- 介绍 -->
+			<div class="introduce">
+				<p>奥铃CTS</p>
+				<p>奥铃CTS超级轻卡融合欧美日领先技术，</p>
+				<p>实现可靠性、舒适性、动力性和高效性的四大突破，</p>
+				<p>油耗降低10%，排放降低10%,整车运营效率提升30%</p>
+			</div>
+			<!-- 车 -->
+			<div class="threesixty-wrapper">
+				<div class="threesixty" id="threesixty" data-item='page0-1-btn8' data-action='click-theme'>
+					<!-- put your preloader here -->
+					<ol class="threesixty_images" style="height: 100%">
+					</ol>
+					<div class="spinner">
+						<span>0%</span>
+					</div>
+					<!-- end preloader -->
+				</div>
+			</div>
+			<!-- <img src="./img/cxzt/car.png" alt="" class="car"> -->
+			<!-- 查看配置详情 -->
+			<img src="__INDEX__/img/cxzt/look_details.png" class="look_details" onclick="gun()"> 
+			<!-- 导航按钮 -->
+			<div class="navigation">
+				<a href="{:url('testdrive/index')}?id=2"><img src="__INDEX__/img/cxzt/ljgc.png" alt=""></a>
+				<a href="{:url('testdrive/index')}?id=1"><img src="__INDEX__/img/cxzt/yysj.png" alt=""></a>
+				<a href="{:url('Product/made')}"><img src="__INDEX__/img/cxzt/zsdz.png" alt=""></a>
+			</div>
+			<img src="__INDEX__/img/cxzt/360q.png" class="q360" > 
+		</div>
+		<!-- 中间导航 -->
+		<div class="middle_nav">
+			<div class="middle_navs">
+				<div><img src="__INDEX__/img/cxzt/360.png" alt=""></div>
+				<!-- <div><img src="__INDEX__/img/cxzt/vr.png" alt="" onclick="alert('敬请期待！');return false;"></div> -->
+				<div><img src="__INDEX__/img/cxzt/video.png" alt="" ></div>
+			</div>
+		</div>
+		<!-- 车型详情 -->
+		<img class="cx_details" src="__INDEX__/img/cxzt/cx_details.png" alt="">
+		<!-- 车型导航跳转 -->
+		<div class="cx_pic" style="background-image: url({$sql['img2']});">
+			
+		</div>
+		<!-- 配置表 -->
+		<img class="config" src="__INDEX__/img/cxzt/canshu.png" alt="">
+		<div class="table">
+			<div class="change">
+				<div class="change_left">
+					<h1>配置概况</h1>
+					<ul class="ul1">
+						<li onclick="config_Img('suyun15.jpg')">
+							<h2  style="color: #0061B1">奥铃速运</h2>
+							<span  style="color: #0061B1">115马力栏板轻卡</span>
+						</li>
+						<li onclick="config_Img('suyun131.jpg')">
+							<h2>奥铃速运</h2>
+							<span>131马力栏板轻卡</span>
+						</li>
+					</ul>
+					<ul class="ul2" style="display: none;">
+						<li onclick="config_Img('jieyun1.jpg')">
+							<h2  style="color: #0061B1">奥铃新捷运</h2>
+							<span  style="color: #0061B1">仓栅式轻卡</span>
+						</li>
+						<li onclick="config_Img('jieyun2.jpg')">
+							<h2>奥铃新捷运</h2>
+							<span>朝柴栏板轻卡</span>
+						</li>
+						<li onclick="config_Img('jieyun3.jpg')">
+							<h2>奥铃新捷运</h2>
+							<span>栏板轻卡</span>
+						</li>
+						<li onclick="config_Img('jieyun4.jpg')">
+							<h2>奥铃新捷运</h2>
+							<span>4.18栏板轻卡</span>
+						</li>
+					</ul>
+					<ul class="ul3" style="display: none;">
+						<li onclick="config_Img('143super.jpg')">
+							<h2  style="color: #0061B1">143马力</h2>
+							<span  style="color: #0061B1">超级轻卡</span>
+						</li>
+						<li onclick="config_Img('143cang.jpg')">
+							<h2>143马力</h2>
+							<span>仓栅式轻卡</span>
+						</li>
+						<li onclick="config_Img('150xiang.jpg')">
+							<h2>150马力</h2>
+							<span>厢式轻卡</span>
+						</li>
+						<li onclick="config_Img('156cang.jpg')">
+							<h2>156马力</h2>
+							<span>5.25米仓栅式轻卡</span>
+						</li>
+						<li onclick="config_Img('156lan.jpg')">
+							<h2>156马力</h2>
+							<span>栏板式轻卡</span>
+						</li>
+						<li onclick="config_Img('156xiang.jpg')">
+							<h2>156马力</h2>
+							<span>厢式轻卡</span>
+						</li>
+						<li onclick="config_Img('xinan.jpg')">
+							<h2 style="margin-top: 10%;">西南版170马力</h2>
+							<span></span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<img src="__INDEX__/img/cxzt/alcts.png" alt="" class="car_right">
+
+		</div>
+<!-- 			<span>基本信息</span>
+			<table id="customers">
+				<tr>
+				  <th>Company</th>
+				  <th>Contact</th>
+				</tr>
+
+				<tr>
+				<td>品牌</td>
+				<td>{$sql['brand']}</td>
+				</tr>
+
+				<tr class="alt">
+				<td>子品牌</td>
+				<td>{$sql['zbrand']}</td>
+				</tr>
+
+				<tr>
+				<td>排放</td>
+				<td>{$sql['pf']}</td>
+				</tr>
+
+				<tr class="alt">
+				<td>制动</td>
+				<td>{$sql['zd']}</td>
+				</tr>
+
+				<tr>
+				<td>发动机</td>
+				<td>{$sql['fdj']}</td>
+				</tr>
+
+			
+
+			</table> -->
+	<div>
+	<!-- <div style="display: none;"> -->
+		<!-- 产品图片 -->
+		<img class="cx_picture" src="__INDEX__/img/cxzt/cptp.png" alt="">
+		<!-- 内饰/  配置/   空间特写 -->
+		<div class="trim">
+			<div class="trim_nav">
+				<div class="dian1 color1" onclick="dian(1)">内饰</div>
+				<div class="line"></div>
+				<div class="dian2" onclick="dian(2)">配置/空间特写</div>
+			</div>
+		</div>
+		<!-- picture -->
+		<div class="picture picture1-1">
+			<a  class="car_discount_first">
+				<div class="img1">
+					<!-- 此处循环background-image -->
+					<p class="img1-1" onclick="look(this)"></p>
+					<p class="img1-2" onclick="look(this)"></p>
+				</div>
+				<p class="img2" onclick="look(this)">
+					<!-- 此处循环background-image -->
+				</p>
+			</a>
+			<div class="car_discount_second">
+				<div class="img3">
+					<!-- 此处循环background-image -->
+					<p class="img3-1" onclick="look(this)"></p>
+					<p class="img3-2" onclick="look(this)"></p>
+				</div>
+				<div class="img4">
+					<!-- 此处循环background-image -->
+					<p class="img4-1" onclick="look(this)"></p>
+					<p class="img4-2" onclick="look(this)"></p>
+				</div>
+			</div>
+		</div>
+
+		<!-- picture -->
+		<div class="picture picture2-2" style="display: none;">
+			<a  class="car_discount_first">
+				<div class="img1">
+					<!-- 此处循环background-image -->
+					<p class="img1-1s" onclick="look(this)"></p>
+					<p class="img1-2s" onclick="look(this)"></p>
+				</div>
+				<p class="img2s" onclick="look(this)">
+					<!-- 此处循环background-image -->
+				</p>
+			</a>
+			<div class="car_discount_second">
+				<div class="img3">
+					<!-- 此处循环background-image -->
+					<p class="img3-1s" onclick="look(this)"></p>
+					<p class="img3-2s" onclick="look(this)"></p>
+				</div>
+				<div class="img4">
+					<!-- 此处循环background-image -->
+					<p class="img4-1s" onclick="look(this)"></p>
+					<p class="img4-2s" onclick="look(this)"></p>
+				</div>
+			</div>
+		</div>
+	</div>
+		<!-- 在线购车    预约试驾 -->
+		<div class="buy_car">
+			<img src="__INDEX__/img/cxzt/buy_car.png" alt="">
+		</div>
+		<!-- 选择车系    试驾信息 -->
+		<div class="choice-drive">
+			<div class="choice">
+				<img src="__INDEX__/img/cxzt/car.png" alt="">
+				<div class="option">
+					<p>选择车系</p>
+					{volist name="cx" id="vo"}
+	        		<div>
+						<img src="{$vo['img']}" alt="">
+						<div class="divs"></div>
+						<span>{$vo['name']}</span>
+					</div>
+	       			 {/volist}
+			
+			
+				</div>
+			</div>
+			<div class="drive">
+				<div class="driveS layui-form drive1">
+					<p>购车信息</p>
+					<span>*为必填项。您的信息我们将会完全保密，请放心填写</span>
+					<!-- 选择车系 -->
+					<div class="public public0">
+						<span>*请选择车系:</span>
+						<select name="cx" id="cx">
+							{foreach name="cx" item="vo" }
+							<option value="{$vo['name']}">{$vo['name']}</option>
+							{/foreach}
+						</select>
+					</div>
+					<!-- 所在城市 -->
+					<div class="public public1">
+						<span>*所在城市:</span>
+						<select name="province" id="province"  lay-filter="getCity" lay-verify="province">
+						 <option value="0">请选择省份</option>
+						{foreach name="province" item="vc" }
+						<option value="{$vc['id']}">{$vc['name']}</option>
+						{/foreach}
+						</select>
+						<select value="city" name="city" id="city" lay-filter="getJxs" lay-verify="city">
+		    				<option value="0" >请选择城市</option>
+						</select>
+					</div>
+					<!-- 所在城市 -->
+					<div class="public public2">
+						<span>经销商名称:</span>
+						<select name="jxs" id="jxs" lay-verify="jxs" lay-filter="jxs">
+							 <option value="0">请选择经销商</option>
+						</select>
+					</div>
+					<!-- 个人信息  111111111111111-->
+					<div class="public public3">
+						<span>*姓名:</span>
+						<input type="text" name="name" class="layui-input" required lay-verify="required">
+					      <input type="radio" name="sex" value="先生" title="先生" checked>
+					      <input type="radio" name="sex" value="女士" title="女士" >
+					</div>
+					<!-- 个人信息  222222222222222-->
+					<div class="public public4">
+						<span>*联系方式:</span>
+						<input type="text" name="phone" required  class="layui-input" lay-verify="phone">
+					</div>
+					<!-- 个人信息  333333333333333-->
+					<!-- <div class="public public5">
+						<span></span>
+						<input type="text"  class="layui-input">
+						<span class="heng">-</span>
+						<input type="text"  class="layui-input">
+					</div> -->
+					<!-- 描述需求 -->
+					<div class="public public6">
+						<span>*计划购车时间:</span>
+						<input type="radio" name="time" value="一周后" title="一周后" >
+						<input type="radio" name="time" value="半月后" title="半月后" >
+						<input type="radio" name="time" value="一月后" title="一月后" checked>
+					</div>
+
+					<div class="public public7">
+						<span>*计划购车时间:</span>
+						<input type="radio" name="time" value="三个月后" title="三个月后">
+						<input type="radio" name="time" value="半年后" title="半年后" >
+						<input type="radio" name="time" value="一年后" title="一年后">
+					</div>
+					<button class="layui-btn" lay-submit lay-filter="tj">立即提交</button>
+				</div>
+
+				<div class="driveS drive2 layui-form" style="display: none;">
+					<p>试驾信息</p>
+					<span>*为必填项。您的信息我们将会完全保密，请放心填写</span>
+					<!-- 选择车系 -->
+					<div class="public public0" style="display: none;">
+						<span>*请选择车系:</span>
+						<select name="" id="cx">
+							{foreach name="cx" item="vo" }
+							<option value="{$vo['name']}">{$vo['name']}</option>
+							{/foreach}
+						</select>
+					</div>
+					<!-- 所在城市 -->
+					<div class="public public1" style="display: none;">
+						<span>*所在城市:</span>
+						<select name="" id="province"  lay-filter="getCity" lay-verify="">
+						 <option value="0">请选择省份</option>
+						{foreach name="province" item="vc" }
+						<option value="{$vc['id']}">{$vc['name']}</option>
+						{/foreach}
+						</select>
+						<select value="city" name="" id="city" lay-filter="getJxs" lay-verify="">
+		    				<option value="0" >请选择城市</option>
+						</select>
+					</div>
+					<!-- 所在城市 -->
+					<div class="public public2" style="display: none;">
+						<span>经销商名称:</span>
+						<select name="" id="jxs" lay-verify="" lay-filter="jxs">
+							 <option value="0">请选择经销商</option>
+						</select>
+					</div>
+					<!-- 个人信息  111111111111111-->
+					<div class="public public3">
+						<span>*姓名:</span>
+						<input type="text" name="name" class="layui-input" required lay-verify="required">
+					      <!-- <input type="radio" name="" value="先生" title="先生" checked> -->
+					      <!-- <input type="radio" name="" value="女士" title="女士" > -->
+					</div>
+					<!-- 个人信息  222222222222222-->
+					<div class="public public4">
+						<span>联系方式:</span>
+						<input type="text" name="phone"  class="layui-input" lay-verify="phone">
+					</div>
+					<!-- 个人信息  333333333333333-->
+					<!-- <div class="public public5">
+						<span></span>
+						<input type="text"  class="layui-input">
+						<span class="heng">-</span>
+						<input type="text"  class="layui-input">
+					</div> -->
+					<!-- 描述需求 -->
+					<div class="public public6" style="display: none;">
+						<span>*计划购车时间:</span>
+						<input type="radio" name="" value="一周后" title="一周后" >
+						<input type="radio" name="" value="半月后" title="半月后" >
+						<input type="radio" name="" value="一月后" title="一月后" checked>
+					</div>
+
+					<div class="public public7" style="display: none;">
+						<span>*计划购车时间:</span>
+						<input type="radio" name="" value="三个月后" title="三个月后">
+						<input type="radio" name="" value="半年后" title="半年后" >
+						<input type="radio" name="" value="一年后" title="一年后">
+					</div>
+					<button class="layui-btn" lay-submit lay-filter="tjs">立即提交</button>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="imgLook"></div>
+ {include file="public/footer" /}	
+<!-- footer -->
+<script src="__INDEX__/js/index.js"></script>
+<script type="text/javascript" src="__INDEX__/js/jquery.threesixty.js"></script>
+<script>
+var val = {$id};
+console.log(val);
+if(val == 3){
+	console.log('奥铃CTS');//奥铃CTS
+	$('.threesixty-wrapper').show();
+	$('.ul3').css('display','flex');
+	$('.ul3').siblings().not('h1').hide();
+	$('.car_right').attr('src','__INDEX__/img/cxzt/alcts.png');
+	var arr = [
+		'__INDEX__/img/cxzt/cts1-1.jpg',
+		'__INDEX__/img/cxzt/cts2-2.jpg',
+		'__INDEX__/img/cxzt/cts3-3.jpg',
+		'__INDEX__/img/cxzt/cts4-4.jpg',
+		'__INDEX__/img/cxzt/cts5-5.jpg',
+		'__INDEX__/img/cxzt/cts6-6.jpg',
+		'__INDEX__/img/cxzt/cts7-7.jpg',
+	]
+	$('.picture1-1 p').each(function(index,i){
+		$(this).css('background-image','url('+arr[index]+')');
+	})
+	var arr1 = [
+		'__INDEX__/img/cxzt/cts1.jpg',
+		'__INDEX__/img/cxzt/cts2.jpg',
+		'__INDEX__/img/cxzt/cts3.jpg',
+		'__INDEX__/img/cxzt/cts4.jpg',
+		'__INDEX__/img/cxzt/cts5.jpg',
+		'__INDEX__/img/cxzt/cts6.jpg',
+		'__INDEX__/img/cxzt/cts7.jpg',
+	]
+	$('.picture2-2 p').each(function(index,i){
+		$(this).css('background-image','url('+arr1[index]+')');
+	})
+}else if(val == 4){
+	$('.bj').attr('src','__INDEX__/img/cxzt/ts.jpg');//奥铃TS
+	$('.threesixty-wrapper').hide();
+	$('.introduce').hide();
+	$('.q360').hide();
+	$('.banner>h2').hide();
+	$('.banner>span').hide();
+	$('.ul1').css('display','flex');
+	$('.ul1').siblings().not('h1').hide();
+	$('.car_right').attr('src','__INDEX__/img/cxzt/alsunyun.png');
+	var arr = [
+		'__INDEX__/img/cxzt/suyun1-1.jpg',
+		'__INDEX__/img/cxzt/suyun2-2.jpg',
+		'__INDEX__/img/cxzt/suyun3-3.jpg',
+		'__INDEX__/img/cxzt/suyun4-4.jpg',
+		'__INDEX__/img/cxzt/suyun5-5.jpg',
+		'__INDEX__/img/cxzt/suyun6-6.jpg',
+		'__INDEX__/img/cxzt/suyun7-7.jpg',
+	]
+	$('.picture1-1 p').each(function(index,i){
+		$(this).css('background-image','url('+arr[index]+')');
+	})
+	var arr1 = [
+		'__INDEX__/img/cxzt/suyun1.jpg',
+		'__INDEX__/img/cxzt/suyun2.jpg',
+		'__INDEX__/img/cxzt/suyun3.jpg',
+		'__INDEX__/img/cxzt/suyun4.jpg',
+		'__INDEX__/img/cxzt/suyun5.jpg',
+		'__INDEX__/img/cxzt/suyun6.jpg',
+		'__INDEX__/img/cxzt/suyun7.jpg',
+	]
+	$('.picture2-2 p').each(function(index,i){
+		$(this).css('background-image','url('+arr1[index]+')');
+	})
+}else if(val == 7){
+	$('.bj').attr('src','__INDEX__/img/cxzt/xinjieyun.jpg');//奥铃新捷运
+	$('.threesixty-wrapper').hide();
+	$('.introduce').hide();
+	$('.q360').hide();
+	$('.banner>h2').hide();
+	$('.banner>span').hide();
+	$('.ul2').css('display','flex');
+	$('.ul2').siblings().not('h1').hide();
+	$('.car_right').attr('src','__INDEX__/img/cxzt/aljieyun.png');
+	var arr = [
+		'__INDEX__/img/cxzt/jieyun1-1.jpg',
+		'__INDEX__/img/cxzt/jieyun2-2.jpg',
+		'__INDEX__/img/cxzt/jieyun3-3.jpg',
+		'__INDEX__/img/cxzt/jieyun4-4.jpg',
+		'__INDEX__/img/cxzt/jieyun5-5.jpg',
+		'__INDEX__/img/cxzt/jieyun6-6.jpg',
+		'__INDEX__/img/cxzt/jieyun7-7.jpg',
+	]
+	$('.picture1-1 p').each(function(index,i){
+		$(this).css('background-image','url('+arr[index]+')');
+	})
+	var arr1 = [
+		'__INDEX__/img/cxzt/jieyun1s.jpg',
+		'__INDEX__/img/cxzt/jieyun2s.jpg',
+		'__INDEX__/img/cxzt/jieyun3s.jpg',
+		'__INDEX__/img/cxzt/jieyun4s.jpg',
+		'__INDEX__/img/cxzt/jieyun5s.jpg',
+		'__INDEX__/img/cxzt/jieyun6s.jpg',
+		'__INDEX__/img/cxzt/jieyun7s.jpg',
+	]
+	$('.picture2-2 p').each(function(index,i){
+		$(this).css('background-image','url('+arr1[index]+')');
+	})
+}
+function look(a){
+	$('.imgLook').empty();
+	$('.imgLook').show();
+	$copy = $(a).clone();
+	$copy.addClass('looks');
+	$('.imgLook').append($copy);
+}
+$('.imgLook').click(function(){
+	$(this).hide();
+})
+
+function dian(num){
+	if(num == 1){
+		$('.dian1').addClass('color1');
+		$('.dian2').removeClass('color1');
+		$('.picture1-1').show();
+		$('.picture2-2').hide();
+	}else{
+		$('.dian1').removeClass('color1');
+		$('.dian2').addClass('color1');
+		$('.picture2-2').show();
+		$('.picture1-1').hide();
+	}
+}
+
+$('.option div').each(function(){
+	$(this).click(function(){
+		$(this).find('.divs').css('background-image','url(__INDEX__/img/cxzt/select.png)');
+		$(this).siblings().find('.divs').css('background-image','url()');
+	})
+})
+
+var heig = $('body').height();
+var bi = 1600/heig;
+var bis = bi.toFixed(2);
+function gun(){
+	$('html,body').animate({scrollTop:heig*bis},'10');
+}
+$(document).ready(function(){
+var province,city,jxs;		
+var str = '__INDEX__/image1/';
+	// $("#myCar").vc0dEye({
+	// 	imagePath:str,
+	// 	totalImages:32,
+	// 	imageExtension:"png"
+	// });	
+
+function initThreesixty(type) {
+	var $threeSixty = $('#threesixty');
+	$threeSixty.find("ol").empty();
+	var colors = ['White', 'Black', 'Blue', 'Red', 'Grey', 'Silver'];
+	var hasColor = colors.indexOf(type.trim());
+	var color = hasColor > -1 ? type : 'White';
+	$threeSixty.ThreeSixty({
+		totalFrames: 32,
+		endFrame: 32,
+		currentFrame: 1,
+		imgList: '.threesixty_images',
+		progress: '.spinner',
+		imagePath: str,
+		filePrefix: '0-',
+		ext: '.png',
+		zeroPadding: true, // 1.jpg = > 01.jpg
+		zeroBased: true, // 从0开始
+		height: 700,
+		width: 1280,
+		navigation: false,
+		responsive: true
+	});
+}
+initThreesixty('White');
+
+layui.use('form', function(){
+  var form = layui.form;
+  	
+   //各种基于事件的操作，下面会有进一步介绍
+	form.on('select(getCity)', function(data){
+		province = $(this).text();
+	  	$.ajax({
+	        type: 'POST',
+	        dataType:'json',
+	        url : '{:url('Testdrive/getCity')}',
+	        data: {
+	            province:data.value,
+	        },
+	        success: function(data){
+	            var quname_html = "<option value='0'>请选择城市</option>";
+	            for(var i = 0; i < data.length; i++){
+	                quname_html += "<option value='"+ data[i].id+"'>"+ data[i].name +"</option>";
+	            }
+	            $("#city").html(quname_html);
+	            form.render();
+	        }
+	    });
+	});  
+
+
+	form.on('select(getJxs)', function(data){
+		city = $(this).text();
+	  	$.ajax({
+	        type: 'POST',
+	        dataType:'json',
+	        url : '{:url('Testdrive/getjxs')}',
+	        data: {
+	            city:data.value,
+	        },
+	        success: function(data){
+	            var quname_html = "<option value='0'>请选择经销商</option>";
+	            for(var i = 0; i < data.length; i++){
+	                quname_html += "<option value='"+ data[i].id+"'>"+ data[i].name +"</option>";
+	            }
+	            $("#jxs").html(quname_html);
+	            form.render();
+	        }
+	    });
+	});  
+
+	form.on('select(jxs)', function(data){
+		jxs = $(this).text();
+
+	});  
+	//自定义验证规则  
+  form.verify({  
+	    province: function(value){
+            if(value==0){
+                return '请选择省份';
+            }
+        },city: function(value){
+            if(value==0){
+                return '请选择城市';
+            }
+        },jxs: function(value){
+            if(value==0){
+                return '请选择经销商';
+            }
+        },phone: [/^1[3|4|5|7|8]\d{9}$/, '手机必须11位，只能是数字！']  
+  });  
+
+
+
+	//监听提交    在线购车
+	form.on('submit(tj)', function(data){
+	 	$.ajax({
+	        type: 'POST',
+	        dataType:'json',
+	        url : '{:url('Testdrive/tj')}',
+	        data: {
+	            cx:data.field.cx,
+	            province:province,
+	            city:city,
+	            jxs:jxs,
+	            name:data.field.name,
+	            sex:data.field.sex,
+	            phone:data.field.phone,
+	            time:data.field.time
+	        },
+	        success: function(data){
+	        	if(data==1){
+	       			layer.msg('请等待客服人员与您联系', {icon: 6,time:2000,end:function () {
+                            	location.reload()
+                            }
+	       			});
+	       		}
+	        }
+	    });
+	});
+
+
+		//监听提交    预约试驾
+	form.on('submit(tjs)', function(data){
+	 	$.ajax({
+	        type: 'POST',
+	        dataType:'json',
+	        url : '{:url('Testdrive/tj')}',
+	        data: {
+	            cx:'',
+	            province:'',
+	            city:'',
+	            jxs:'',
+	            name:data.field.name,
+	            sex:'',
+	            phone:data.field.phone,
+	            time:''
+	        },
+	        success: function(data){
+	        	if(data==1){
+	       			layer.msg('请等待客服人员与您联系', {icon: 6,time:2000,end:function () {
+                            	location.reload()
+                            }
+	       			});
+	       		}
+	        }
+	    });
+	});
+
+});
+
+
+
+
+
+});
+var trues = true;
+$('.buy_car').click(function(){
+	if(trues){
+		$('.buy_car img').attr('src','__INDEX__/img/cxzt/buy_car.png');
+		trues = false;
+		$('.drive1').show();
+		$('.drive2').hide();
+	}else{
+		$('.buy_car img').attr('src','__INDEX__/img/cxzt/car_buy.png');
+		trues = true;
+		$('.drive1').hide();
+		$('.drive2').show();
+	}
+})
+
+//配置表  按钮
+$('.change_left ul').each(function(index,i){
+	if(!$(this).is(":hidden")){
+		$(this).find('li').click(function(){
+			$(this).children().css('color','#0061B1');
+			$(this).siblings().children().css('color','#424242');
+			$(this).parent().show();
+			$(this).parent().siblings().not('h1').hide();
+		})
+	}
+})
+
+//关闭按钮
+$('.img_one').click(function(){
+	$('.containers').hide();
+	$('.img_two').attr('src','');
+})
+
+//更改配置图片
+function config_Img(src){
+	$('.img_two').attr('src','__INDEX__/img/cxzt/'+ src);
+	$('.containers').show();
+}
+</script>
+</body>
+</html>

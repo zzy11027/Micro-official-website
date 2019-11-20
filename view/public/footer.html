@@ -1,0 +1,142 @@
+<!-- 右侧悬浮导航 -->
+<ul id="rightNav">
+<!-- 	<a href="">
+		<li>
+			<img src="__INDEX__/img/nav/1.png" alt="">
+			<div class="child"></div>
+		</li>
+	</a> -->
+	<a href="{:url('Testdrive/index')}?id=1">
+		<li>
+			<img src="__INDEX__/img/nav/2.png" alt="">
+			<div class="child"></div>
+		</li>
+	</a>
+	<a href="{:url('Testdrive/index')}?id=2">
+		<li>
+			<img src="__INDEX__/img/nav/3.png" alt="">
+			<div class="child"></div>
+		</li>
+	</a>
+	<a href="http://aoling.douyar.cc/index/news/index.html?id=6">
+		<li>
+			<img src="__INDEX__/img/nav/4.png" alt="">
+			<div class="child"></div>
+		</li>
+	</a>
+	<a href="{:url('Product/shopping')}">
+		<li>
+			<img src="__INDEX__/img/nav/jxs.png" alt="">
+			<div class="child"></div>
+		</li>
+	</a>
+<!-- 	<a href="">
+		<li>
+			<img src="__INDEX__/img/nav/kefu.png" alt="">
+			<div class="child"></div>
+		</li>
+	</a> -->
+</ul>
+<!--脚部  -->
+<footer>
+	<div class="foot">
+	<!-- 11111111111111111 -->
+		<ul class="column_1">
+			<a href="{:url('about/contact')}"><li>联系我们</li></a>
+			<a href=""><li>招贤纳士</li></a>
+			<a href="{:url('product/shopping')}"><li class="jxss">经销商查询</li></a>
+			<a href="/index/product/shopping.html"><li class="jxss">服务站查询</li></a>
+		</ul>
+	<!-- 22222222222222222222 -->
+		<div class="ol_search  layui-form">
+			<div class="sle1 flex" style="margin-top: 44%;">
+				<span>奥铃汽车官网搜索</span>
+				<input type="text" class="layui-input" placeholder=""><a class="icon iconfonts">&#xe651;</a>
+			</div>
+<!-- 			<div class="sle2s flex">
+				<span>福田汽车旗下产品品牌</span>
+				<select name="" id=""  lay-filter="tiao">
+					<option value="0">请选择</option>
+					<option value="1"><a href="http://www.foton.com.cn/" target="_blank" class="linkBtn">福田汽车官方网站</a></option>
+					<option value="2"><a href="http://www.aumantruck.com/" target="_blank" class="linkBtn">欧曼官方网站</a></option>
+					<option value="3"><a href="http://auv.foton.com.cn/" target="_blank" class="linkBtn">欧辉客车官方网站</a></option>
+					<option value="4"><a href="http://aumark.foton.com.cn/" target="_blank" class="linkBtn">欧马可官方网站</a></option>
+					<option value="5"><a href="http://van.foton.com.cn" target="_blank" class="linkBtn">商务汽车官方网站</a></option>
+					<option value="6"><a href="http://fpv.foton.com.cn/" target="_blank" class="linkBtn">伽途/祥菱官方网站</a></option>
+					<option value="7"><a href="http://tunland.foton.com.cn/" target="_blank" class="linkBtn">福田拓陆者官网</a></option>
+					<option value="8"><a href="http://forland.foton.com.cn/" target="_blank" class="linkBtn">时代汽车官方网站</a></option>
+					<option value="9"><a href="http://rowor.foton.com.cn" target="_blank" class="linkBtn">瑞沃品牌官方网站</a></option>
+					<option value="10"><a href="http://www.fotonloxa.com/" target="_blank" class="linkBtn">雷萨重机官方网站</a></option>
+					<option value="11"><a href="http://www.bfcec.com.cn/" target="_blank" class="linkBtn">福田康明斯官方网站</a></option>
+					<option value="12"><a href="http://pbms.foton.com.cn" target="_blank" class="linkBtn">供应商门户网站</a></option>
+				</select>
+			</div> -->
+		</div>
+	<!-- 3333333333333333333333 -->
+		<div class="hours">
+			<div class="hours1"></div>
+			<ul class="hours2">
+				<li><a   target="_Blank" href="https://weibo.com/fotonollin?is_hot=1"><img src="__INDEX__/img/index/wb.png" alt=""></a></li>
+<!-- 				<li><a   target="_Blank" href=""><img src="__INDEX__/img/index/kj.png" alt=""></a></li>
+				<li><a   target="_Blank" href=""><img src="__INDEX__/img/index/qq.png" alt=""></a></li> -->
+			</ul>
+		</div>
+
+	<!-- 44444444444444444444444444 -->
+		<div class="ewm">
+			<p>关注我们</p>
+			<img src="__INDEX__/img/index/wxs.jpg" alt="" class="wxs">
+			<img src="__INDEX__/img/index/wbs.png" alt="" class="wbs">
+			<span>官方微信</span>
+			<span>官方微博</span>
+		</div>
+	</div>
+
+	<div class="Explain">© 北京福田汽车股份有限公司版权所有     京CP备  2004550  京公网安备   11041000095号     地址：北京市昌平区沙河站沙阳路   24小时监督热线：010-80722999 <!-- <img src="__INDEX__/img/index/cnzz.png" alt="" style="display: inline-block;"> --></div>
+</footer>
+<a href="#" class="s5" id="goToTop" style="display: block;">返 回<br>顶 部</a>
+<script>
+$('#rightNav li').each(function(i,index){
+	$(this).hover(function(){
+		$(this).find('.child').stop().animate({'left':'-129%','opacity':'1'},500);
+	},function(){
+		$(this).find('.child').stop().animate({'left':'15%','opacity':'0'},500);
+	})
+})
+     layui.use('form', function () {
+         var form = layui.form;
+
+         //各种基于事件的操作，下面会有进一步介绍
+         form.on('select(tiao)', function (data) {
+             console.log(data)
+             if (data.value == 0) {
+                 window.location.href = "http://www.foton.com.cn/";
+             }else if(data.value == 1){
+                window.location.href = "http://www.aumantruck.com/";
+             }else if(data.value == 2){
+                window.location.href = "http://auv.foton.com.cn/";
+             }else if(data.value == 3){
+                window.location.href = "http://aumark.foton.com.cn/";
+             }else if(data.value == 4){
+                window.location.href = "http://van.foton.com.cn";
+             }else if(data.value == 5){
+                window.location.href = "http://fpv.foton.com.cn/";
+             }else if(data.value == 6){
+                window.location.href = "http://tunland.foton.com.cn/";
+             }else if(data.value == 7){
+                window.location.href = "http://forland.foton.com.cn/";
+             }else if(data.value == 8){
+                window.location.href = "http://rowor.foton.com.cn";
+             }else if(data.value == 9){
+                window.location.href = "http://www.fotonloxa.com/";
+             }else if(data.value == 10){
+                window.location.href = "http://www.bfcec.com.cn/";
+             }else if(data.value == 11){
+                window.location.href = "http://pbms.foton.com.cn";
+             }else if(data.value == 12){
+                window.location.href = "http://www.foton.com.cn/";
+             }
+         });
+
+     });
+</script>

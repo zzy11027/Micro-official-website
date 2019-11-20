@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   {include file="mobile/public/resource" /}    
+    <link rel="stylesheet" href="__INDEX__/mobile/css/denglu.css">
+    <script src="//captcha.luosimao.com/static/js/api.js"></script>
+<script src="__INDEX__/js/register_messages.js"></script>
+</head>
+
+<body>
+        {include file="mobile/public/header" /} 
+    <div class="psw">
+
+        <p>账号：<input type="text" class="inp1" placeholder="请输入账号" name="mobile"></p>
+
+
+        <p>密码：<input type="password" placeholder="请输入密码" name="password"></p>
+
+
+        <input type="hidden" name="lms" value="{$lms}">
+       <!--  <div style="padding-left: 2.4rem;display: flex;">
+            <span style="line-height: 46px; color: #116eb4" >验证码：</span>
+            <div class="l-captcha" id="yzm" data-site-key="c35f80e3aeb63b54fdac9db0fd6a3f2b" data-callback="getResponse" data-width="100%" data-hieght="50%"  ></div>
+        </div> -->
+        <div style="height: 1rem; margin-top: 1rem;">
+            <span id="m_p3" style="width: 0.7813rem;height: 0.7813rem;">
+                <label><input name="rember" type="checkbox" value="1"  id="rember" ></label>  记住登录状态</span>
+            <span id="m_p4">
+                <a href="{:url('login/passreset')}">忘记密码</a>？ 
+                <a href="{:url('login/reg')}">注册</a>
+            </sapn>
+         </div>
+            <p class="p2" style="display: block; padding-top: 0.8125rem;">
+                <a> <button class="btn1" onclick="tj()">登录 ＞</button></a>
+            </p>
+
+    </div>
+    {include file="mobile/public/footer" /} 
+
+
+    <script>
+        function tj() {
+            console.log(resps);
+        var phone = $("input[name='mobile']").val();
+		var password = $("input[name='password']").val();
+		var rember = $('input[name="rember"]:checked').val(); 
+        var lms = $("input[name='lms']").val();
+		if(rember!=1){
+			rember=2;
+		}
+		if (phone == '') {
+	        alert('请输入账号');
+	        return false;
+	    }else if(password==''){
+	        alert('请输入密码');
+	        return false;
+	    }else if (!(/^[1][3,4,5,7,8][0-9]{9}$/.test(phone))) {
+            alert("请输入正确的账号");
+            return false;
+	    }
+
+     //    else if(resps == undefined || resps == ''){
+	    // 	alert('请进行验证');
+	    // 	return false;
+	    // }
+
+	    $.ajax({
+            url: '/index/login/index',
+            data: {
+                phone:phone,
+                password:password,
+                rember:rember,
+                //yzm:resps,
+                lms:lms
+            },
+            async:false,
+            type: 'post',
+            dataType: 'json',
+            success: function callback_ver(result) {
+                if(result==1){
+                	alert('用户名密码为空');
+                	return false;
+                }else if(result==2){
+                	alert('随机码验证错误');
+                	return false;
+                }else if(result==3){
+                	alert('手机号不存在');
+                	return false;
+                }else if(result==4){
+                	alert('密码错误');
+                	return false;
+                }else if(result==5){
+                	alert('登录成功'); //跳转
+                	window.location.href = 'http://aoling.douyar.cc';
+                	return false;
+                }else if(result==6){
+                    alert('登录成功'); //跳转
+                    window.location.href = 'http://aoling.douyar.cc/index/hd1/lm_xs1.html';
+                    return false;
+                }else if(result==7){
+                    alert('登录成功'); //跳转
+                    window.location.href = 'http://aoling.douyar.cc/index/hd1/cc.html';
+                    return false;
+                }
+            }
+        });
+
+    }
+    
+    var resps;
+        function getResponse(resp){
+            resps = resp;
+            console.log(resps);
+        }
+    </script>
+</body>
+
+</html>

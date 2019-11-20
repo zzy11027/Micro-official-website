@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>奥铃2019线上勒芒赛</title>
+	<link rel="stylesheet" href="__INDEX__/hd1/2019/lm/css/licheng.css">
+	<link rel="stylesheet" href="__INDEX__/hd1/2019/lm/css/swiper.min.css">
+	<script src='__INDEX__/hd1/2019/lm/js/jquery.min.js'></script>
+	<script src='__INDEX__/hd1/2019/lm/js/swiper.min.js'></script>
+	<script>
+		var _hmt = _hmt || [];
+		(function() {
+			var hm = document.createElement("script");
+			hm.src = "https://hm.baidu.com/hm.js?4b35b9696537f6518e4cdcdeeee51ff6";
+			var s = document.getElementsByTagName("script")[0]; 
+			s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+</head>
+
+<body>
+	<div class="warp">
+		<div class="banner">
+			<img src="__INDEX__/hd1/2019/lm/img/banner.jpg" alt="">
+		</div>
+		<div class="content">
+			<div class="kongjian">
+				<div class="imgs img">
+					<a href="{:url('hd1/lm_xs')}"><img class="tu1 " src="__INDEX__/hd1/2019/lm/img/kj/saishizhongxin1.png" alt=""></a>
+					<img class="tu2 " src="__INDEX__/hd1/2019/lm/img/kj/chengjibang2.png" alt="">
+					<a href="{:url('hd1/lm_xs1')}"><img class="tu3 " src="__INDEX__/hd1/2019/lm/img/kj/gerenzhongxin1.png" alt=""></a>
+					<!-- <a href="{:url('hd1/index')}"><img class="tu4 " src="__INDEX__/hd1/2019/lm/img/kj/aolinglemangsai1.png" alt=""></a> -->
+				</div>
+				<div class="zhandian">
+					<div class="imgs">
+						<img class="w100" src="__INDEX__/hd1/2019/lm/img/grzxbmcs/zhandian.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+<!-- 里程榜！！！！！！！！！！！！！！！！！！里程榜！！！！！！！！！！！！！！！！！！里程榜！！！！！！！！！！！！！！！！！！ -->
+		<div class="licheng" id="licheng" style="display:none">
+			<div class="content">
+				<div class="jingsai">
+					<div class="daohang">
+						<img class="lichengbang" src="__INDEX__/hd1/2019/lm/img/daohang/lichengyuanze.png" alt="">
+						<img class="youhangbang" src="__INDEX__/hd1/2019/lm/img/daohang/youhao.png" alt="">
+						<img class="renqibang" src="__INDEX__/hd1/2019/lm/img/daohang/renqi.png" alt="">
+						<img class="yinglibang" src="__INDEX__/hd1/2019/lm/img/daohang/yingli.png" alt="" onclick="alert('敬请期待！');return false;">
+						
+					</div>
+					<a href="{:url('hd1/lm_xs1')}"><img src="__INDEX__/hd1/2019/lm/img/baomingcansai.png" class="baomingcansai" alt=""></a>
+
+					<div class="pk">
+						<div class="top">
+							<span>京A·xx21</span>
+							<span>
+								<img class="w100" src="__INDEX__/hd1/2019/lm/img/remenpkjingsai.png" alt="">
+							</span>
+							<span>京A·xx43</span>
+						</div>
+						<div class="center">
+							<span>
+								<img class="w100" src="__INDEX__/hd1/2019/lm/img/tuceng7.png" alt="">
+							</span>
+							<div class="shengfu">
+								<p>
+									<span>113KM <img src="__INDEX__/hd1/2019/lm/img/shengli.png" alt=""></span>
+									<span>2019年7月24号</span>
+									<span><img src="__INDEX__/hd1/2019/lm/img/shibai.png" alt="">110KM</span>
+							 	</p>
+							</div>
+							<span>
+								<img class="w100" src="__INDEX__/hd1/2019/lm/img/tuceng7.png" alt="">
+							</span>
+						</div>
+						<div class="bottom">
+							<div class="toupiao">
+								<p>当前累计行程：22993KM</p>
+								<span>
+									<img class="w100" src="http://aoling.douyar.cc/public/static/index/hd1/2019/lm/img/moren.png" alt="" onclick="tou(this,1)">
+								</span>
+							</div>
+							<div>
+								<span>
+									<img class="w100" src="__INDEX__/hd1/2019/lm/img/vslicheng.png" alt="">
+								</span>
+							</div>
+							<div class="toupiao">
+								<p>当前累计行程：22993KM</p>
+								<span>
+									<img class="w100" src="http://aoling.douyar.cc/public/static/index/hd1/2019/lm/img/moren.png" alt="" onclick="tou(this,2)">
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="top10">
+						<span>
+							<img class="w100" src="__INDEX__/hd1/2019/lm/img/topbiaoqian/saijilichengTOP10.png" alt="">
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="paimingbiaodan">
+				<img src="__INDEX__/hd1/2019/lm/img/paimingbiaodan.jpg" alt="">
+			</div>
+			<div class="content">
+				<div class="dianzan">
+			
+				<!-- foreach  foreach foreach  foreach foreach  foreach foreach  foreach foreach  foreach-->
+			
+				
+					{volist name="sql1" id="vo" key="k" }
+					<p class="yellow">
+						<span class="Champion">{$k}</span>
+						<span class="span1">{$vo.cp}</span>
+						<span class="span2">{$vo.mileage}</span>
+						<img src="__INDEX__/hd1/2019/lm/img/shouweixuanze.png" class="tu2"  onclick="dian(this)" alt="">
+					</p>
+					{/volist}
+				<!-- foreach  foreach foreach  foreach foreach  foreach foreach  foreach foreach  foreach-->
+
+				</div>
+
+				<!-- PK判断!!!!!!!!!!!!!!!!!!!! PK判断!!!!!!!!!!!!!!!!!!!! PK判断!!!!!!!!!!!!!!!!!!!! PK判断!!!!!!!!!!!!!!!!!!!! PK判断!!!!!!!!!!!!!!!!!!!! PK判断!!!!!!!!!!!!!!!!!!!! PK判断!!!!!!!!!!!!!!!!!!!! PK判断!!!!!!!!!!!!!!!!!!!! -->
+				<div class="jingsai">
+<!-- 					<div class="pk">
+						<div class="top">
+							<span>京A·xx22</span>
+							<span class="w50">
+								<img class="w100" src="__INDEX__/hd1/2019/lm/img/wodepk.png" alt="">
+							</span>
+							<span>京A·xx33</span>
+						</div>
+						<div class="center">
+							<span>
+								<img class="w100" src="__INDEX__/hd1/2019/lm/img/tuceng7.png" alt="">
+							</span>
+							<div class="shengfu">
+								<p>
+									<span>113KM <img src="__INDEX__/hd1/2019/lm/img/shengli.png" alt=""></span>
+									<span>2019年7月24号</span>
+									<span><img src="__INDEX__/hd1/2019/lm/img/shibai.png" alt="">110KM</span>
+								</p>
+							</div>
+							<span>
+								<img class="w100" src="__INDEX__/hd1/2019/lm/img/tuceng7.png" alt="">
+							</span>
+						</div>
+						<div class="bottom">
+							<div class="toupiao">
+								<p>当前累计行程：21993KM</p>
+								<span>
+									<img class="w100" src="http://aoling.douyar.cc/public/static/index/hd1/2019/lm/img/moren.png" alt="" onclick="tou(this)">
+								</span>
+							</div>
+							<div>
+								<span>
+									<img class="w100" src="__INDEX__/hd1/2019/lm/img/vslicheng.png" alt="">
+								</span>
+							</div>
+							<div class="toupiao">
+								<p>当前累计行程：21293KM</p>
+								<span>
+									<img class="w100" src="http://aoling.douyar.cc/public/static/index/hd1/2019/lm/img/moren.png" alt="" onclick="tou(this)">
+								</span>
+							</div>
+						</div>
+					</div> -->
+				</div>
+				<!-- PK判断!!!!!!!!!!!!!!!!!!!! PK判断!!!!!!!!!!!!!!!!!!!! PK判断!!!!!!!!!!!!!!!!!!!! PK判断!!!!!!!!!!!!!!!!!!!! PK判断!!!!!!!!!!!!!!!!!!!! PK判断!!!!!!!!!!!!!!!!!!!! PK判断!!!!!!!!!!!!!!!!!!!! PK判断!!!!!!!!!!!!!!!!!!!! -->
+			</div>
+		</div>
+
+
+
+
+<!-- 人气榜！！！！！！！！！！！！！！！！！！人气榜！！！！！！！！！！！！！！！！！！人气榜！！！！！！！！！！！！！！！！！！ -->
+		<div class="renqi" id="renqi" style="display:none">
+			<div class="content">
+				<div class="jingsai">
+					<div class="daohang">
+						<img class="lichengbang" src="__INDEX__/hd1/2019/lm/img/daohang/licheng.png" alt="">
+						<img class="youhangbang" src="__INDEX__/hd1/2019/lm/img/daohang/youhao.png" alt="">
+						<img class="renqibang" src="__INDEX__/hd1/2019/lm/img/daohang/renqixunze.png" alt="">
+						<img class="yinglibang" src="__INDEX__/hd1/2019/lm/img/daohang/yingli.png" alt="">
+						<a href="{:url('hd1/lm_xs1')}"><img src="__INDEX__/hd1/2019/lm/img/baomingcansai.png" class="baomingcansai" alt=""></a>
+						
+					</div>
+					<div class="pk">
+						<div class="top">
+							<span>京A·xx32</span>
+							<span class="">
+								<img class="w100" src="__INDEX__/hd1/2019/lm/img/remenpkjingsai.png" alt="">
+							</span>
+							<span>京A·xx76</span>
+						</div>
+						<div class="center">
+							<span>
+								<img class="w100" src="__INDEX__/hd1/2019/lm/img/tuceng7.png" alt="">
+							</span>
+							<div class="shengfu">
+								<p>
+									<span>113 <img src="__INDEX__/hd1/2019/lm/img/shengli.png" alt=""></span>
+									<span>2019年7月24号</span>
+									<span><img src="__INDEX__/hd1/2019/lm/img/shibai.png" alt="">110</span>
+								</p>
+							</div>
+							<span>
+								<img class="w100" src="__INDEX__/hd1/2019/lm/img/tuceng7.png" alt="">
+							</span>
+						</div>
+						<div class="bottom">
+							<div class="toupiao">
+								<p>当前累计点赞人数：<span class="zan1">247</span>人</p>
+								<span>
+									<img class="w100" src="http://aoling.douyar.cc/public/static/index/hd1/2019/lm/img/moren.png" alt="" onclick="tou(this,1)">
+								</span>
+							</div>
+							<div>
+								<span>
+									<img class="w100" src="__INDEX__/hd1/2019/lm/img/vslicheng.png" alt="">
+								</span>
+							</div>
+							<div class="toupiao">
+								<p>当前累计点赞人数：<span class="zan2">124</span>人</p>
+								<span>
+									<img class="w100" src="http://aoling.douyar.cc/public/static/index/hd1/2019/lm/img/moren.png" alt="" onclick="tou(this,2)">
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="top10">
+						<img src="__INDEX__/hd1/2019/lm/img/topbiaoqian/saijirenqiTOP10.png" alt="">
+					</div>
+				</div>
+			</div>
+			<div class="paimingbiaodan">
+				<img src="__INDEX__/hd1/2019/lm/img/paimingbiaodan.jpg" alt="">
+			</div>
+			<div class="content">
+				<div class="dianzan">
+				<!-- foreach  foreach foreach  foreach foreach  foreach foreach  foreach foreach  foreach-->
+
+					{volist name="sql1" id="vo" key="k" }
+				
+					
+					<p class="yellow">
+						<span class="Champion">{$k}</span>
+						<span class="span1">{$vo.cp}</span>
+						<span class="span2">{$vo.workTimeInSeconds}</span>
+						<img src="__INDEX__/hd1/2019/lm/img/shouweixuanze.png" class="tu2"  onclick="dian(this)" alt="">
+					</p>
+					{/volist}
+				<!-- foreach  foreach foreach  foreach foreach  foreach foreach  foreach foreach  foreach-->
+				</div>
+				<div class="jingsai">
+
+					<!-- PK判断!!!!!!!!!!!!!!!!!!!! PK判断!!!!!!!!!!!!!!!!!!!! PK判断!!!!!!!!!!!!!!!!!!!! PK判断!!!!!!!!!!!!!!!!!!!! PK判断!!!!!!!!!!!!!!!!!!!! PK判断!!!!!!!!!!!!!!!!!!!! PK判断!!!!!!!!!!!!!!!!!!!! PK判断!!!!!!!!!!!!!!!!!!!! -->
+<!-- 					<div class="pk">
+						<div class="top">
+							<span>京A·xx11</span>
+							<span class="w50">
+								<img class="w100" src="__INDEX__/hd1/2019/lm/img/wodepk.png" alt="">
+							</span>
+							<span>京A·xx22</span>
+						</div>
+						<div class="center">
+							<span>
+								<img class="w100" src="__INDEX__/hd1/2019/lm/img/tuceng7.png" alt="">
+							</span>
+							<div class="shengfu">
+								<p>
+									<span>113 <img src="__INDEX__/hd1/2019/lm/img/shengli.png" alt=""></span>
+									<span>2019年7月24号</span>
+									<span><img src="__INDEX__/hd1/2019/lm/img/shibai.png" alt="">110</span>
+								</p>
+							</div>
+							<span>
+								<img class="w100" src="__INDEX__/hd1/2019/lm/img/tuceng7.png" alt="">
+							</span>
+						</div>
+						<div class="bottom">
+							<div class="toupiao">
+								<p>当前累计行程：22993</p>
+								<span>
+									<img class="w100" src="http://aoling.douyar.cc/public/static/index/hd1/2019/lm/img/moren.png" alt="" onclick="tou(this)">
+								</span>
+							</div>
+							<div>
+								<span>
+									<img class="w100" src="__INDEX__/hd1/2019/lm/img/vslicheng.png" alt="">
+								</span>
+							</div>
+							<div class="toupiao">
+								<p>当前累计行程：22993</p>
+								<span>
+									<img class="w100" src="http://aoling.douyar.cc/public/static/index/hd1/2019/lm/img/moren.png" alt="" onclick="tou(this)">
+								</span>
+							</div>
+						</div>
+					</div> -->
+
+					<!-- PK判断!!!!!!!!!!!!!!!!!!!! PK判断!!!!!!!!!!!!!!!!!!!! PK判断!!!!!!!!!!!!!!!!!!!! PK判断!!!!!!!!!!!!!!!!!!!! PK判断!!!!!!!!!!!!!!!!!!!! PK判断!!!!!!!!!!!!!!!!!!!! PK判断!!!!!!!!!!!!!!!!!!!! PK判断!!!!!!!!!!!!!!!!!!!! -->
+				</div>
+			</div>
+		</div>
+
+
+
+<!-- 盈利榜！！！！！！！！！！！！！！！！！！盈利榜！！！！！！！！！！！！！！！！！！盈利榜！！！！！！！！！！！！！！！！！！ -->
+		<div class="yingli" id="yingli" style="display:none">
+			<div class="content">
+				<div class="jingsai">
+					<div class="daohang">
+						<img class="lichengbang" src="__INDEX__/hd1/2019/lm/img/daohang/licheng.png" alt="">
+						<img class="youhangbang" src="__INDEX__/hd1/2019/lm/img/daohang/youhao.png" alt="">
+						<img class="renqibang" src="__INDEX__/hd1/2019/lm/img/daohang/renqi.png" alt="">
+						<img class="yinglibang" src="__INDEX__/hd1/2019/lm/img/daohang/yinglixuanze.png" alt="">
+						<a href="{:url('hd1/lm_xs1')}"><img src="__INDEX__/hd1/2019/lm/img/baomingcansai.png" class="baomingcansai" alt=""></a>
+						
+					</div>
+					<div class="top10">
+						<img src="__INDEX__/hd1/2019/lm/img/topbiaoqian/saijiyingliTOP10.png" alt="">
+					</div>
+				</div>
+			</div>
+			<div class="paimingbiaodan">
+				<img src="__INDEX__/hd1/2019/lm/img/paimingbiaodan.jpg" alt="">
+			</div>
+			<div class="content">
+				<div class="dianzan">
+					<p>
+						<span class="Champion"></span>
+						<span class="span1">京A·xx32</span>
+						<span class="span2">1523Km/h</span>
+						<img src="__INDEX__/hd1/2019/lm/img/shouweixuanze.png" class="tu2"  onclick="dian(this)" alt="">
+					</p>
+				</div>
+			</div>
+		</div>
+
+
+
+
+<!-- 油耗榜！！！！！！！！！！！！！！！！！！油耗榜！！！！！！！！！！！！！！！！！！油耗榜！！！！！！！！！！！！！！！！！！ -->
+		<div class="youhao" id="youhao">
+			<div class="content">
+
+				<div class="jingsai">
+					<div class="daohang">
+						<img class="lichengbang" src="__INDEX__/hd1/2019/lm/img/daohang/licheng.png" alt="">
+						<img class="youhangbang" src="__INDEX__/hd1/2019/lm/img/daohang/youhaoxuanze.png" alt="">
+						<img class="renqibang" src="__INDEX__/hd1/2019/lm/img/daohang/renqi.png" alt="">
+						<img class="yinglibang" src="__INDEX__/hd1/2019/lm/img/daohang/yingli.png" alt="">
+						<a href="{:url('hd1/lm_xs1')}"><img src="__INDEX__/hd1/2019/lm/img/baomingcansai.png" class="baomingcansai" alt=""></a>
+						
+					</div>
+					<div class="pk">
+						<div class="top">
+							<span>京A·xx12</span>
+							<span>
+								<img class="w100" src="__INDEX__/hd1/2019/lm/img/remenpkjingsai.png" alt="">
+							</span>
+							<span>京A·xx32</span>
+						</div>
+						<div class="center">
+							<span>
+								<img class="w100" src="__INDEX__/hd1/2019/lm/img/tuceng7.png" alt="">
+							</span>
+							<div class="shengfu">
+								<p>
+									<span>113L <img src="__INDEX__/hd1/2019/lm/img/shengli.png" alt=""></span>
+									<span>2019年7月24号</span>
+									<span><img src="__INDEX__/hd1/2019/lm/img/shibai.png" alt="">110L</span>
+								</p>
+							</div>
+							<span>
+								<img class="w100" src="__INDEX__/hd1/2019/lm/img/tuceng7.png" alt="">
+							</span>
+						</div>
+						<div class="bottom">
+							<div class="toupiao">
+								<p>当前累计耗油量：217L</p>
+								<span>
+									<img class="w100" src="http://aoling.douyar.cc/public/static/index/hd1/2019/lm/img/moren.png" alt="" onclick="tou(this,1)">
+								</span>
+							</div>
+							<div>
+								<span>
+									<img class="w100" src="__INDEX__/hd1/2019/lm/img/vslicheng.png" alt="">
+								</span>
+							</div>
+							<div class="toupiao">
+								<p>当前累计耗油量：224L</p>
+								<span>
+									<img class="w100" src="http://aoling.douyar.cc/public/static/index/hd1/2019/lm/img/moren.png" alt="" onclick="tou(this,2)">
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="top10">
+						<img src="__INDEX__/hd1/2019/lm/img/topbiaoqian/saijiyouhaoTOP10.png" alt="">
+					</div>
+					
+				</div>
+			</div>
+			<div id="2T">
+				<div class="paimingbiaodan">
+					<img src="__INDEX__/hd1/2019/lm/img/paimingbiaodan.jpg" alt="">
+				</div>
+				<div class="content">
+					<div class="dianzan">
+					<!-- foreach  foreach foreach  foreach foreach  foreach foreach  foreach foreach  foreach-->
+						{volist name="sql2" id="vo" key="k" }
+						<p class="yellow">
+							<span class="Champion">{$k}</span>
+							<span class="span1">{$vo.cp}</span>
+							<span class="span2">{$vo.perFuelConsumption}</span>
+							<img src="__INDEX__/hd1/2019/lm/img/shouweixuanze.png" class="tu2"  onclick="dian(this)" alt="">
+						</p>
+						{/volist}
+					<!-- foreach  foreach foreach  foreach foreach  foreach foreach  foreach foreach  foreach-->
+					</div>
+					<div class="jingsai">
+						<!-- PK判断!!!!!!!!!!!!!!!!!!!! PK判断!!!!!!!!!!!!!!!!!!!! PK判断!!!!!!!!!!!!!!!!!!!! PK判断!!!!!!!!!!!!!!!!!!!! PK判断!!!!!!!!!!!!!!!!!!!! PK判断!!!!!!!!!!!!!!!!!!!! PK判断!!!!!!!!!!!!!!!!!!!! PK判断!!!!!!!!!!!!!!!!!!!! -->
+						<!-- <div class="pk">
+							<div class="top">
+								<span>京A·xx7t</span>
+								<span>
+									<img class="w100" src="__INDEX__/hd1/2019/lm/img/wodepk.png" alt="">
+								</span>
+								<span>京A·xx5t</span>
+							</div>
+							<div class="center">
+								<span>
+									<img class="w100" src="__INDEX__/hd1/2019/lm/img/tuceng7.png" alt="">
+								</span>
+								<div class="shengfu">
+									<p>
+										<span>113L <img src="__INDEX__/hd1/2019/lm/img/shengli.png" alt=""></span>
+										<span>2019年7月24号</span>
+										<span><img src="__INDEX__/hd1/2019/lm/img/shibai.png" alt="">110L</span>
+									</p>
+								</div>
+								<span>
+									<img class="w100" src="__INDEX__/hd1/2019/lm/img/tuceng7.png" alt="">
+								</span>
+							</div>
+							<div class="bottom">
+								<div class="toupiao">
+									<p>当前累计行程：22993L</p>
+									<span>
+										<img class="w100" src="http://aoling.douyar.cc/public/static/index/hd1/2019/lm/img/moren.png" alt="" onclick="tou(this)">
+									</span>
+								</div>
+								<div>
+									<span>
+										<img class="w100" src="__INDEX__/hd1/2019/lm/img/vslicheng.png" alt="">
+									</span>
+								</div>
+								<div class="toupiao">
+									<p>当前累计行程：22993L</p>
+									<span>
+										<img class="w100" src="http://aoling.douyar.cc/public/static/index/hd1/2019/lm/img/moren.png" alt="" onclick="tou(this)">
+									</span>
+								</div>
+							</div>
+						</div> -->
+						<!-- PK判断!!!!!!!!!!!!!!!!!!!! PK判断!!!!!!!!!!!!!!!!!!!! PK判断!!!!!!!!!!!!!!!!!!!! PK判断!!!!!!!!!!!!!!!!!!!! PK判断!!!!!!!!!!!!!!!!!!!! PK判断!!!!!!!!!!!!!!!!!!!! PK判断!!!!!!!!!!!!!!!!!!!! PK判断!!!!!!!!!!!!!!!!!!!! -->
+					</div>
+	
+				</div>
+			</div>
+	</div>
+	<div class="content">
+		<div class="chexingtuijian">
+			<div>
+				<span class="w50">
+					<img class="w100" src="__INDEX__/hd1/2019/lm/img/chexingtuijian.png" alt="">
+				</span>
+			</div>
+			<div class="swiper-container swiper-container1 ">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide che ">
+						<div>
+							<img src="/public/static/index/mobile/hd1/2019/lm/img/t2.png" alt="" class="w100" style="width: 291px;height: 164px;">
+							<a href="http://aoling.douyar.cc/index/testdrive/index.html?id=1"><span>预约试驾</span></a>
+						</div>
+						<div>
+							<img class="w100" style="width: 291px;height: 164px;" src="/public/static/index/mobile/hd1/2019/lm/img/t3.png" alt="">
+							<a href="http://aoling.douyar.cc/index/testdrive/index.html?id=1"><span>预约试驾</span></a>
+						</div>
+						<div>
+							<img class="w100" style="width: 291px;height: 164px;" src="/public/static/index/mobile/hd1/2019/lm/img/t1t1.png" alt="">
+							<a href="http://aoling.douyar.cc/index/testdrive/index.html?id=1"><span>预约试驾</span></a>
+						</div>
+					</div>
+					<div class="swiper-slide che">
+						<div>
+							<img src="/public/static/index/mobile/hd1/2019/lm/img/t2.png" alt="" class="w100" style="width: 291px;height: 164px;">
+							<a href="http://aoling.douyar.cc/index/testdrive/index.html?id=1"><span>预约试驾</span></a>
+						</div>
+						<div>
+							<img class="w100" style="width: 291px;height: 164px;" src="/public/static/index/mobile/hd1/2019/lm/img/t3.png" alt="">
+							<a href="http://aoling.douyar.cc/index/testdrive/index.html?id=1"><span>预约试驾</span></a>
+						</div>
+						<div>
+							<img class="w100" style="width: 291px;height: 164px;" src="/public/static/index/mobile/hd1/2019/lm/img/t1t1.png" alt="">
+							<a href="http://aoling.douyar.cc/index/testdrive/index.html?id=1"><span>预约试驾</span></a>
+						</div>
+					</div>
+					<div class="swiper-slide che">
+						<div>
+							<img src="/public/static/index/mobile/hd1/2019/lm/img/t2.png" alt="" class="w100" style="width: 291px;height: 164px;">
+							<a href="http://aoling.douyar.cc/index/testdrive/index.html?id=1"><span>预约试驾</span></a>
+						</div>
+						<div>
+							<img class="w100" style="width: 291px;height: 164px;" src="/public/static/index/mobile/hd1/2019/lm/img/t3.png" alt="">
+							<a href="http://aoling.douyar.cc/index/testdrive/index.html?id=1"><span>预约试驾</span></a>
+						</div>
+						<div>
+							<img class="w100" style="width: 291px;height: 164px;" src="/public/static/index/mobile/hd1/2019/lm/img/t1t1.png" alt="">
+							<a href="http://aoling.douyar.cc/index/testdrive/index.html?id=1"><span>预约试驾</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<a href="http://aoling.douyar.cc/index/news/index.html?id=5" class="xingshuo" style="display: block;">
+			<div>
+				<span class="w50">
+					<img class="w100" src="__INDEX__/hd1/2019/lm/img/aolingxingshuo.png" alt="">
+				</span>
+			</div>
+			<div class="dl">
+				<div class="top1">
+					<div>
+						<dl>
+							<dt class="w50"><img class="w100" src="__INDEX__/mobile/hd1/2019/lm/imgs/33s.jpg" alt=""></dt>
+							<dd>
+								爆款蓝牌奥铃速运，轻拉快跑城配明星
+							</dd>
+						</dl>
+						<span>2019/7/20</span>
+					</div>
+					<div>
+						<dl>
+							<dt class="w50"><img class="w100" src="__INDEX__/mobile/hd1/2019/lm/imgs/44s.jpg" alt=""></dt>
+							<dd>
+								城配企业的“福音”，爆款蓝牌福田奥铃速运再下一城
+							</dd>
+						</dl>
+						<span>2019/7/21</span>
+					</div>
+				</div>
+				<div class="top1">
+					<div>
+						<dl>
+							<dt class="w50"><img class="w100" src="__INDEX__/mobile/hd1/2019/lm/imgs/55s.jpg" alt=""></dt>
+							<dd>
+								专为城配而生，镜头下的福田奥铃速运
+							</dd>
+						</dl>
+						<span>2019/7/22</span>
+					</div>
+					<div>
+						<dl>
+							<dt class="w50"><img class="w100" src="__INDEX__/mobile/hd1/2019/lm/imgs/66s.jpg" alt=""></dt>
+							<dd>
+								“蓝牌无忧 轻拉快跑”奥铃速运引领高效城配风向标
+							</dd>
+						</dl>
+						<span>2019/7/23</span>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+	<script>
+		var mySwiper = new Swiper('.swiper-container1', {
+			autoplay: true, //可选选项，自动滑动
+			pagination: {
+				el: '.swiper-pagination',
+			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			}
+		})
+		var mySwiper3 = new Swiper('.swiper-container3', {
+			effect: 'coverflow',
+			observer: true,
+			observeParents: true,
+			slidesPerView: 1,
+			centeredSlides: true,
+			coverflowEffect: {
+				rotate: 100,
+				stretch: 0,
+				depth: 0,
+				modifier: 2,
+				slideShadows: true
+			},
+		})
+
+		$(".lichengbang").click(function () {
+			$('#licheng').show();
+			$('#renqi').hide();
+			$('#yingli').hide();
+			$('#youhao').hide();
+		});
+		$(".renqibang").click(function () {
+			$('#renqi').show();
+			$('#licheng').hide();
+			$('#yingli').hide();
+			$('#youhao').hide();
+		});
+		$(".yinglibang").click(function () {
+			// $('#yingli').show();
+			// $('#renqi').hide();
+			// $('#licheng').hide();
+			// $('#youhao').hide();
+			alert('敬请期待！');
+			return;
+		});
+		$(".youhangbang").click(function () {
+			$('#youhao').show();
+			$('#renqi').hide();
+			$('#yingli').hide();
+			$('#licheng').hide();
+			console.log('1')
+		});
+		
+		$(".2T").click(function () {
+			$('#2T').show();
+			$('#3T').hide();
+			$('#4T').hide();
+			$('#5T').hide();
+			$('#6T').hide();
+		});
+		$(".3T").click(function () {
+			$('#3T').show();
+			$('#2T').hide();
+			$('#4T').hide();
+			$('#5T').hide();
+			$('#6T').hide();
+		});
+		$(".4T").click(function () {
+			$('#4T').show();
+			$('#3T').hide();
+			$('#2T').hide();
+			$('#5T').hide();
+			$('#6T').hide();
+		});
+		$(".5T").click(function () {
+			$('#5T').show();
+			$('#3T').hide();
+			$('#4T').hide();
+			$('#2T').hide();
+			$('#6T').hide();
+		});
+		$(".6T").click(function () {
+			$('#6T').show();
+			$('#3T').hide();
+			$('#4T').hide();
+			$('#5T').hide();
+			$('#2T').hide();
+		});
+
+	</script>
+	    <script>
+    	function dian(thiss){
+    		$(thiss).attr('src','http://aoling.douyar.cc/public/static/index/mobile/hd1/2019/lm/imgs/dians.png')
+    	}
+    	var a = true;
+    	var b = true;
+		var zan1s  =  $('.zan1').text();
+		var zan2s  =  $('.zan2').text();
+    	function tou(thiss,num){
+            var par = $(thiss).parents('.toupiao').siblings('.toupiao').find('img');
+    		$(thiss).attr('src','http://aoling.douyar.cc/public/static/index/hd1/2019/lm/img/touTAying.png');
+    		$(par).attr('src','http://aoling.douyar.cc/public/static/index/hd1/2019/lm/img/moren.png');
+    		if(num == 1){
+    			var zan1  =  $('.zan1').text();
+    		}
+    		if(num == 2){
+    			var zan2  =  $('.zan2').text();
+    		}
+    		if(num == 1){
+    			console.log(zan1);
+    			$('.zan1').text(++zan1);
+    			$('.zan2').text(zan2s);
+    			b=true;
+    			if(a == true){
+    				$(thiss).attr('src','http://aoling.douyar.cc/public/static/index/hd1/2019/lm/img/touTAying.png');
+    				a=false;
+    			}else{
+    				$('.zan1').text(zan1s);
+    				$(thiss).attr('src','http://aoling.douyar.cc/public/static/index/hd1/2019/lm/img/moren.png');
+    				a=true;
+    			}
+    		}else if(num == 2){
+    			$('.zan2').text(++zan2);
+    			$('.zan1').text(zan1s);
+    			console.log('第二个');a=true;
+    			if(b == true){
+    				$(thiss).attr('src','http://aoling.douyar.cc/public/static/index/hd1/2019/lm/img/touTAying.png');
+    				b=false;
+    			}else{
+    				$('.zan2').text(zan2s);
+    				$(thiss).attr('src','http://aoling.douyar.cc/public/static/index/hd1/2019/lm/img/moren.png');
+    				b=true;
+    			}
+    		}
+    	}
+    </script>
+</body>
+
+</html>

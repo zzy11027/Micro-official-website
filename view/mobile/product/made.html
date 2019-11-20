@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {include file="mobile/public/resource" /}
+    <link rel="stylesheet" href="__INDEX__/mobile/css/chexx.css">
+    <link rel="stylesheet" href="__INDEX__/mobile/css/threesixty.css">
+    <script type="text/javascript" src="__INDEX__/mobile/js/jquery.threesixty.js"></script>
+	<script type="text/javascript" src="__INDEX__/mobile/js/var.js"></script>
+    <script type="text/javascript" src="__INDEX__/mobile/js/LayerFunction.js"></script>
+
+    <style>
+        ::-webkit-scrollbar {
+            display: none
+        }
+    </style>
+</head>
+<body>
+<input type="hidden" name="login_type" id="login_type" value="{$login_type}">
+{include file="mobile/public/header" /}
+<!-- 最大盒子 -->
+<div class="warp">
+	<!-- 价格区间 -->
+	<div class="layui-inline qj">
+		<label class="layui-form-label">价格区间</label>
+		<div class="layui-input-inline" style="width: 100px;">
+			<input type="text" disabled="disabled" name="price_min" placeholder="￥" autocomplete="off" class="layui-input minMoney" style="    border: none!important;background: none!important;">
+		</div>
+		<div class="layui-form-mid">-</div>
+		<div class="layui-input-inline" style="width: 100px;">
+			<input type="text" disabled="disabled" name="price_max" placeholder="￥" autocomplete="off" class="layui-input maxMoney" style="    background: none!important;border: none!important;">
+		</div>
+	</div>
+
+	<!-- 一级    载重 -->
+    <div class="box one0 one1">
+	    <!-- 360度车展 -->
+	    <div class="threesixty-wrapper car360" >
+	        <div class="threesixty" id="threesixty" data-item='page0-1-btn8' data-action='click-theme'
+	            style="height:100% !important;">
+	            <ol class="threesixty_images" style="height: 100%">
+	            </ol>
+	            <div class="spinner" style="margin-top: 0px!important;">
+	                <span>0%</span>
+	            </div>
+	        </div>
+	    </div>
+    </div>
+
+	<!-- 货箱类型 -->
+    <div class="box one2" style="display: none;">
+        <div class="swiper-container  time0 layui-form">
+            <div class="swiper-wrapper swiper-wrapper2">
+                <div class="box_img swiper-slide swiper-slide2">
+                    <div class="logo1" style="height:20.875rem;">
+                        <img id="tu" src="http://aoling.douyar.cc/public/static/index/dz1/pb.jpg" alt="" class="logo_img">
+                        <div class="inp ininp0"></div>
+                        <!-- <img id="tu2" src="__INDEX__/mobile/img/zsdz/biaoti_s.png" alt="" class="biaoti_img"> -->
+                    </div>
+                </div>
+                <div class="box_img swiper-slide swiper-slide2">
+                    <div class="logo1" style="height:20.875rem;">
+                        <img id="tu" src="http://aoling.douyar.cc/public/static/index/dz1/cs.jpg" alt="" class="logo_img">
+                        <div class="inp ininp0"></div>
+                        <!-- <img id="tu2" src="__INDEX__/mobile/img/zsdz/biaoti_s.png" alt="" class="biaoti_img"> -->
+                    </div>
+                </div>
+                <div class="box_img swiper-slide swiper-slide2">
+                    <div class="logo1" style="height:20.875rem;">
+                        <img id="tu" src="http://aoling.douyar.cc/public/static/index/dz1/xs.jpg" alt="" class="logo_img">
+                        <div class="inp ininp0"></div>
+                        <!-- <img id="tu2" src="__INDEX__/mobile/img/zsdz/biaoti_s.png" alt="" class="biaoti_img"> -->
+                    </div>
+                </div>
+            </div>
+            <p class="swiper-button-prev swiper-button-black lefts" > </p>
+            <p class="swiper-button-next swiper-button-black rights" > </p>
+        </div>
+	</div>
+
+
+
+	<!-- 发动机品牌 -->
+    <div class="box one3" style="display: none;">
+        <div class="swiper-container  time1 layui-form">
+            <div class="swiper-wrapper swiper-wrapper2">
+                <div class="box_img swiper-slide swiper-slide2">
+                    <div class="logo1" style="height:20.875rem;">
+                        <img id="tu" src="" alt="" class="logo_img">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <p class="swiper-button-prev swiper-button-black lefts"> </p>
+            <p class="swiper-button-next swiper-button-black rights"> </p>
+        </div>
+	</div>
+
+
+	<!-- 后桥速比 -->
+    <div class="box one4" style="display: none;">
+        <div class="swiper-container  time2 layui-form">
+            <div class="swiper-wrapper swiper-wrapper2">
+                <div class="box_img swiper-slide swiper-slide2">
+                    <!-- <div class="logo1" style="height:20.875rem;">
+                        <img id="tu" src="" alt="" class="logo_img">
+                        <span></span>
+                    </div> -->
+                    <img src="__INDEX__/dz1/cs.jpg" alt="">
+                    <div class="inp2 hqsb0 hovers"></div>
+                </div>
+            </div>
+            <p class="swiper-button-prev swiper-button-black lefts"> </p>
+            <p class="swiper-button-next swiper-button-black rights"> </p>
+        </div>
+	</div>
+
+	<!-- 轮胎规格 -->
+    <div class="box one5" style="display: none;">
+        <div class="swiper-container  time3 layui-form">
+            <div class="swiper-wrapper swiper-wrapper2">
+                <div class="box_img swiper-slide swiper-slide2">
+                   <!--  <div class="logo1" style="height:20.875rem;">
+                        <img id="tu" src="" alt="" class="logo_img">
+                        <span></span>
+                    </div> -->
+                    <img src="__INDEX__/dz1/lt.jpg" alt="">
+                    <div class="inp2 lt0 hovers"></div>
+                </div>
+            </div>
+            <p class="swiper-button-prev swiper-button-black lefts"> </p>
+            <p class="swiper-button-next swiper-button-black rights"> </p>
+        </div>
+	</div>
+	
+	<!-- 配置 -->
+	<div class="box layui-form one6" style="display:none;    ">
+	    <img src="__INDEX__/mobile/img/zsdz/biaoti.png" alt="" style="margin: 0 auto;display: block; width: 9rem;">
+	    <!-- 基本配置 -->
+	    <!-- <ul class="zuoce" style="display:flex;justify-content: space-between;flex-wrap: wrap;height: 6rem;padding: 0 1rem;margin-top: 3rem;">
+        </ul> -->
+        <div class="zuoce">
+
+        </div>
+	    <div class="box_btn">
+	        <button class="fh"><a style="color:#fff"> 重选</a></button>
+	        <button class="fh1"><a style="color:#fff"> 返回</a></button>
+	    </div>
+	</div>
+	<!-- 留资    表单提交 -->
+    <div class="liuzi one7 layui-form" style="display:none;">
+        <div class="public public1">
+            <span>所在城市:</span>
+            <select name="province" id="province" lay-filter="getCity" lay-verify="province">
+                <option value="0">请选择省份</option>
+                {foreach name="province" item="vc" }
+                <option value="{$vc['id']}">{$vc['name']}</option>
+                {/foreach}
+            </select>
+            <select value="city" name="city" id="city" lay-filter="getJxs" lay-verify="city">
+                <option value="0">请选择城市</option>
+            </select>
+        </div>
+        <!-- 所在城市 -->
+        <div class="public public2">
+            <span>经销商名称:</span>
+            <select name="jxs" id="jxs" lay-verify="jxs" lay-filter="jxs">
+                <option value="0">请选择经销商</option>
+            </select>
+        </div>
+        <!-- 个人信息  111111111111111-->
+        <div class="public public3">
+            <span>姓名:</span>
+            <input type="text" name="name" class="layui-input" required lay-verify="required">
+        </div>
+        <!-- 个人信息  222222222222222-->
+        <div class="public public4">
+            <span>联系方式:</span>
+            <input type="text" name="phone" class="layui-input" lay-verify="phone">
+        </div>
+        <button class="layui-btn" lay-submit lay-filter="tj" style="display:block;margin:0 auto;    margin-top: 1rem;">立即提交</button>
+    </div>
+</div>
+
+
+
+<!-- 导航栏 -->
+<div class="loan1">
+    <div class="swiper-container  time4 layui-form" >
+        <div class="swiper-wrapper swiper-wrapper2">
+            <div class="box_img swiper-slide swiper-slide2s" id="loan1">
+             	<li class="yes0 selected">载重</li>
+                <li class="yes0 ">颜色</li>
+                <li class="yes0 ">货箱类型</li>
+            </div>
+            <div class="box_img swiper-slide swiper-slide2s" id="loan1">
+                <li class="yes0 ">发动机品牌</li>
+                <li class="yes0 ">后桥速比</li>
+                <li class="yes0 ">轮胎规格</li>
+            </div>
+            <div class="box_img swiper-slide swiper-slide2s" id="loan1">
+                <li style="width: 100%;text-align: center;" class="yes0 yixuan">已选配置</li>
+            </div>
+        </div>
+        <p class="swiper-button-prev swiper-button-black zuo" style="top:74% !important;height: 22px !important;"> </p>
+        <p class="swiper-button-next swiper-button-black you"  style="top:74% !important;height: 22px !important;"> </p>
+    </div>
+</div>
+
+<!-- 导航下面对应的型号     -->
+<div class="show ">
+    <div class="con1">
+        <!-- 载重      -->
+        <div id="hezi3" style="height: auto;" class="">
+            <ul style="display: flex" id="discharge" class="tit">
+                
+            </ul>
+        </div>
+        <!-- 颜色      -->
+        <div id="hezi0" style="height: auto; display:none">
+            <img src="__INDEX__/mobile/img/zsdz/bcy.png" alt="">
+            <img src="__INDEX__/mobile/img/zsdz/omh.png" alt="">
+            <img src="__INDEX__/mobile/img/zsdz/khl.png" alt="">
+            <img src="__INDEX__/mobile/img/zsdz/zlb.png" alt="">
+        </div>
+    </div>
+</div>
+<p id="p1"> <img src="__INDEX__/mobile/img/zsdz/ljgc.png" alt=""></p>
+{include file="mobile/public/footer" /}
+
+<script type="text/javascript" src="__INDEX__/mobile/js/common.js"></script>
+<script type="text/javascript" src="__INDEX__/mobile/js/threeFunction.js"></script>
+<script type="text/javascript" src="__INDEX__/mobile/js/dom.js"></script>
+<script type="text/javascript" src="__INDEX__/mobile/js/swiper.js"></script>
+<script>
+    var form;
+window.onload = function (){
+    ajaxs(0);
+}
+// 重选  显示隐藏
+$('.fh1').click(function () {
+	$('.one6').hide();
+	$('.one5').show();
+});
+$('.fh').click(function () {
+    $('.zuoce input').each(function(i,index){
+		index.checked = false;
+	})
+	$('.zuoce').empty();
+	$('.one6').hide();
+	$('.one5').show();
+	form.render('checkbox');
+});
+
+// 立即购车
+$('#p1').click(function () {
+	var login_type = $('#login_type').val();
+	// if(login_type==1){
+	// 	layer.msg('请登录', {icon: 6,time: 2000});
+	// 	location.href = 'http://aoling.douyar.cc/index/login/index.html';
+	// 	return false;
+	// }
+    console.log(lengthArr)
+    if(lengthArr[0] == 1){
+		var configArr = concatAll().method1();//获取所有的用户选中的数组     并且去重updefined
+		// var configName = ['载重','颜色','货箱类型','发动机品牌','后桥速比','轮胎规格'];
+		console.log(configArr);
+		$('.zuoce').empty();
+		for(var indexs = 0; indexs < configArr.length; indexs++){
+			var config = $('<ul><li>'+configName[indexs]+'</li><li>'+configArr[indexs]+'</li></ul>');
+			$('.zuoce').append(config);
+			form.render();
+		}
+		$('.pei1 p').text(idArr[0]);
+		$('.bj').attr('src','__INDEX__/img/dz/bj1.jpg');
+        $('.liuzi').show();
+		$('.one6').hide();
+		$('.configs').siblings().not('.bj').hide();
+	}else{
+		alert('请选择详细配置！');
+	}
+});
+
+function ajaxs(i,type,typeIndex){
+	console.log(i,type,typeIndex);
+	var json = {};
+	if(i == 0){
+		json = {
+			'zz':1,
+			'hxcc':hxccArr.method1(),
+			'fdjxh':fdjxhArr.method1(),
+			'hqsb':hqsbArr.method1(),
+			'lt':ltArr.method1(),
+		}
+	}else if(i == 3){
+		json = {
+			'zz':zzArr.method1(),
+			'hxcc':hxccArr.method1(),
+			'dlpp':1,
+			'hqsb':hqsbArr.method1(),
+			'lt':ltArr.method1(),
+		}
+	}else if(i == 4){
+		json = {
+			'zz':zzArr.method1(),
+			'hxcc':hxccArr.method1(),
+			'fdjxh':fdjxhArr.method1(),
+			'hqsb':1,
+			'lt':ltArr.method1(),
+		}
+	}else if(i == 5){
+		json = {
+			'zz':zzArr.method1(),
+			'hxcc':hxccArr.method1(),
+			'fdjxh':fdjxhArr.method1(),
+			'hqsb':hqsbArr.method1(),
+			'lt':1,
+		}
+	}
+	
+	$.ajax({
+	    type: 'POST',
+	    dataType:'json',
+	    traditional: true,//这里设置为true
+	    // url : '/index/Product/ajaxMade',
+	    url : '{:url('Product/ajaxMade')}',
+	    data: json,
+	    success: function(data){
+	    		//每次请求数据   先清空上次的价格
+	    		minmaxMoney = [];
+	    		lengthArr = [];
+	    		lengthArr.push(data.length);
+	    		if(data.length == 1){
+		    		idArr = [];
+		    		idArr.push(data[0].id);
+		    		zdj = data[0].zdj;
+	    		}
+	    		$('#discharge').empty();
+	    		$('.time1 .swiper-wrapper').empty();
+	    		$('#Cab').empty();
+	    		$('#carwidth').empty();
+	    		$('#Wheelbase').empty();
+	    		$('.time2 .swiper-wrapper2').empty();
+	    		$('.time3 .swiper-wrapper2').empty();
+	    		var li3 = $('<div class="swiper-slide swiper-slide2"><img src="__INDEX__/dz1/'+data[0].hqsbimg+'"><span>后桥速比</span><div class="inp2 '+'inpss0'+'"></div></div>');//循环后桥速比
+	    		$('.time2 .swiper-wrapper').append(li3);
+
+	    		var li4 = $('<div class="swiper-slide swiper-slide2"><img src="__INDEX__/dz1/'+data[0].ltimg+'"><span>轮胎</span><div class="inp3 '+'inpsss0'+'"></div></div>');//循环轮胎
+	    		$('.time3 .swiper-wrapper').append(li4);
+		    	for(var ins = 0;ins < data.length; ins++){
+					//将每组里面的zdj     存入minmaxMoney数组中以便后续求最大最小值
+					minmaxMoney.push(parseInt(data[ins].jg));
+					minmaxMoneys();
+					console.log(minmaxMoney);
+		    		var li1 = $('<li class="no">'+data[ins].zz+'</li>');//循环载重
+		    		$('#discharge').append(li1);
+		    		var li2 = $('<div class="swiper-slide swiper-slide2"><img src="__INDEX__/dz1/'+data[ins].dlppimg+'"><span>'+data[ins].dlpp+'</span><div class="inp '+'inps'+ins+'"></div></div>');//循环发动机
+		    		$('.time1 .swiper-wrapper').append(li2);
+
+
+
+
+
+                    //后桥选项  循环
+                    var li7 = $('<input type="radio"  lay-filter="brand1" name="brand" value="'+data[ins].hqsb+'" title="'+data[ins].hqsb+'">');
+                    $('.inp2').append(li7);
+                    form.render();
+
+
+                    //循环轮胎  选项
+                    var li8 = $('<input type="radio"  lay-filter="brand2" name="brand" value="'+data[ins].lt+'" title="'+data[ins].lt+'">');
+                    $('.inp3').append(li8);
+                    form.render();
+		    	}			    		
+	    }
+	});
+}
+
+
+$('.zuo').click(function(){
+    mySwiper4s.slidePrev();
+})
+$('.you').click(function(){
+    mySwiper4s.slideNext();
+})
+$('.yixuan').click(function(){
+    if(lengthArr[0] != 1){
+        alert('请选择详细配置！');
+        return false;
+    }
+})
+$('.lefts').click(function(){
+    mySwiper1s.slidePrev();
+})
+$('.rights').click(function(){
+    mySwiper1s.slideNext();
+})
+$('.lefts').click(function(){
+    mySwiper1.slidePrev();
+})
+$('.rights').click(function(){
+    mySwiper1.slideNext();
+})
+$('.lefts').click(function(){
+    mySwiper2.slidePrev();
+})
+$('.rights').click(function(){
+    mySwiper2.slideNext();
+})
+$('.lefts').click(function(){
+    mySwiper3s.slidePrev();
+})
+$('.rights').click(function(){
+    mySwiper3s.slideNext();
+})
+    </script>
+</body>
+
+</html>

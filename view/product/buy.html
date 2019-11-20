@@ -1,0 +1,99 @@
+<!-- 奥铃官网       首页开始 -->
+<!doctype html>
+<html lang="en">
+<head>
+	 {include file="public/resource" /}
+	<link rel="stylesheet" href="__INDEX__/css/yysj.css">
+</head>
+<body>
+<!-- header -->
+ {include file="public/header" /}
+
+<!-- 内容区 -->
+<div id="container">
+	<!-- banner -->
+	<div class="swiper-container swiper-container1" style="">
+	    <div class="swiper-wrapper swiper-wrapper1">
+	        <div class="swiper-slide swiper-slide1"><a href=""><img src="__INDEX__/img/index/banner.jpg" alt="" class="scale-big"></a></div>
+	    </div>
+	</div>
+
+	<img src="__INDEX__/img/yysj/2.png" alt="" class="yysj">
+
+	<div class="drive layui-form">
+		<div class="driveS">
+			<p>购车信息</p>
+			<span>*为必填项。您的信息我们将会完全保密，请放心填写</span>
+			<!-- 选择车系 -->
+			<div class="public public0">
+				<span>*请选择车系:</span>
+				<select name="" id="">
+					<option value="0">0</option>
+					<option value="1">1</option>
+				</select>
+			</div>
+			<!-- 所在城市 -->
+			<div class="public public1">
+				<span>*所在城市:</span>
+				<select name="" id="">
+					<option value="0">0</option>
+					<option value="1">1</option>
+				</select>
+				<select name="" id="">
+					<option value="0">0</option>
+					<option value="1">1</option>
+				</select>
+			</div>
+			<!-- 所在城市 -->
+			<div class="public public2">
+				<span>经销商名称:</span>
+				<select name="" id="">
+					<option value="0">0</option>
+					<option value="1">1</option>
+				</select>
+			</div>
+			<!-- 个人信息  111111111111111-->
+			<div class="public public3">
+				<span>*姓名:</span>
+				<input type="text" class="layui-input">
+			      <input type="radio" name="sex" value="0" title="先生">
+			      <input type="radio" name="sex" value="1" title="女士" checked>
+			</div>
+			<!-- 个人信息  222222222222222-->
+			<div class="public public4">
+				<span>联系方式:</span>
+				<input type="text"  class="layui-input">
+			</div>
+			<!-- 描述需求 -->
+			<div class="public public6">
+				<span>*计划购车时间:</span>
+				<input type="radio" name="sex" value="1" title="一周后" checked>
+				<input type="radio" name="sex" value="1" title="半月后" checked>
+				<input type="radio" name="sex" value="1" title="一月后" checked>
+			</div>
+
+			<div class="public public7">
+				<span>*计划购车时间:</span>
+				<input type="radio" name="sex" value="1" title="三个月后" checked>
+				<input type="radio" name="sex" value="1" title="半年后" checked>
+				<input type="radio" name="sex" value="1" title="一年后" checked>
+			</div>
+			<button class="layui-btn" lay-submit lay-filter="*">立即提交</button>
+		</div>
+	</div>
+{include file="public/footer" /}
+<!-- footer -->
+<script src="__INDEX__/js/index.js"></script>
+<script>
+$(document).ready(function(){
+	
+
+layui.use('form', function(){
+  var form = layui.form;
+  
+  //各种基于事件的操作，下面会有进一步介绍
+});
+});
+</script>
+</body>
+</html>

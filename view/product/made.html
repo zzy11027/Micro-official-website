@@ -1,0 +1,416 @@
+<!-- 奥铃官网       首页开始 -->
+<!doctype html>
+<html lang="en">
+<head>
+	 {include file="public/resource" /}
+	<link rel="stylesheet" href="__INDEX__/css/dz.css">
+	<link rel="stylesheet" href="__INDEX__/css/iconfont.css">
+	<link rel="stylesheet" href="__INDEX__/css/threesixty.css">
+	<script type="text/javascript" src="__INDEX__/js/var.js"></script>
+</head>
+<body>
+<!-- 顶部导航 -->
+ {include file="public/header" /}
+<input type="hidden" name="login_type" id="login_type" value="{$login_type}">
+<!-- 内容区 -->
+<div id="container">
+	<!-- 价格区间 -->
+	<div class="layui-inline qj">
+		<label class="layui-form-label">价格区间</label>
+		<div class="layui-input-inline" style="width: 100px;">
+			<input type="text" disabled="disabled" name="price_min" placeholder="￥" autocomplete="off" class="layui-input minMoney">
+		</div>
+		<div class="layui-form-mid">-</div>
+		<div class="layui-input-inline" style="width: 100px;">
+			<input type="text" disabled="disabled" name="price_max" placeholder="￥" autocomplete="off" class="layui-input maxMoney">
+		</div>
+	</div>
+
+    <div class="buylist" onclick="ddyl()" style="display: none;">
+		<img src="__INDEX__/img/dz/buylist.png" alt="">
+    </div>
+
+
+	<!-- banner -->
+	<div class="banner">
+
+		<img src="__INDEX__/img/dz/banner.jpg" alt="" class="bj">
+
+		<!-- 360车 -->
+		<div class="threesixty-wrapper">
+			<div class="threesixty" id="threesixty" data-item='page0-1-btn8' data-action='click-theme'>
+				<ol class="threesixty_images" style="height: 100%">
+				</ol>
+				<div class="spinner">
+					<span>0%</span>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- 一级   载重 -->
+		<div id="car" class="basics0 one0">
+			<ul id="chexi" class="chexi">
+			</ul>
+		</div>
+
+
+		<!-- 二级   颜色 -->
+		<div id="basics" class="basics one1">
+			<!-- 选择颜色 -->
+			<ul id="color" class="basics0">
+				<li>
+					<img src="__INDEX__/img/dz/bai.png" alt="">
+				</li>
+				<li>
+					<img src="__INDEX__/img/dz/yin.png" alt="">
+				</li>
+				<li>
+					<img src="__INDEX__/img/dz/hong.png" alt="">
+				</li>
+				<li>
+					<img src="__INDEX__/img/dz/lan.png" alt="">
+				</li>
+			</ul>
+		</div>
+
+
+		<!-- 三级   货箱类型 -->
+		<div id="carbody" class="carbody one2">
+			<div class="power0 layui-form">
+				<div class="swiper-container  time0" style="">
+				    <div class="swiper-wrapper swiper-wrapper2">
+				        <div class="swiper-slide swiper-slide2">
+				        	<img src="__INDEX__/dz1/pb.jpg" alt="">
+				        	<div class="inp ininp0"></div>
+				        </div>
+				        <div class="swiper-slide swiper-slide2">
+				        	<img src="__INDEX__/dz1/cs.jpg" alt="">
+				        	<div class="inp ininp0"></div>
+				        </div>
+				        <div class="swiper-slide swiper-slide2">
+				        	<img src="__INDEX__/dz1/xs.jpg" alt="">
+				        	<div class="inp ininp0"></div>
+				        </div>
+				    </div>
+				</div>
+			    <div class="swiper-button-prev swiper-button-black" style="left: 100px!important;"></div>
+			    <div class="swiper-button-next swiper-button-black" style="right: 100px!important;"></div>
+			</div>
+		</div>
+
+
+		<!-- 四级    发动机品牌 -->
+		<div id="power" class="power one3" >
+			<div class="power1 layui-form">
+				<div class="swiper-container  time1" style="">
+				    <div class="swiper-wrapper swiper-wrapper2">
+				        <div class="swiper-slide swiper-slide2">
+				        </div>
+				    </div>
+				</div>
+			    <div class="swiper-button-prev swiper-button-black" style="left: 100px!important;"></div>
+			    <div class="swiper-button-next swiper-button-black" style="right: 100px!important;"></div>
+			</div>
+		</div>
+
+
+		<!-- 五级    后桥速比 -->
+		<div id="config" class="config one4">
+			<div class="power2 layui-form">
+				<div class="swiper-container  time2" style="">
+				    <div class="swiper-wrapper swiper-wrapper2">
+				        <div class="swiper-slide swiper-slide2">
+				        	<img src="__INDEX__/dz1/cs.jpg" alt="">
+				        	<div class="inp2 hqsb0 hovers"></div>
+				        </div>
+				    </div>
+				</div>
+			    <div class="swiper-button-prev swiper-button-black" style="left: 100px!important;"></div>
+			    <div class="swiper-button-next swiper-button-black" style="right: 100px!important;"></div>
+			</div>
+		</div>
+
+
+		<!-- 六级    轮胎规格 -->
+		<div id="config" class="config one5">
+			<div class="power3 layui-form">
+				<div class="swiper-container  time3" style="">
+				    <div class="swiper-wrapper swiper-wrapper2">
+				        <div class="swiper-slide swiper-slide2">
+				        	<img src="__INDEX__/dz1/lt.jpg" alt="">
+				        	<div class="inp2 lt0 hovers"></div>
+				        </div>
+				    </div>
+				</div>
+			    <div class="swiper-button-prev swiper-button-black" style="left: 100px!important;"></div>
+			    <div class="swiper-button-next swiper-button-black" style="right: 100px!important;"></div>
+			</div>
+		</div>
+
+		<!--立即购买 -->
+		<div id="config" class="config configs" style="display: none;">
+			<div class="fons">
+				<p>基本配置</p>
+				<p>可选配置</p>
+			</div>
+			<div class="pei">
+				<div class="pei1  layui-form">
+					<div class="zuoce">
+<!-- 						<ul class="zuo2">
+							<li>载重</li>
+							<li>颜色</li>
+							<li>货箱类型</li>
+							<li>发动机品牌</li>
+							<li>后桥速比</li>
+							<li>轮胎规格</li>
+						</ul>
+						<div class="zuo1"></div>
+					</div>
+					<p></p> -->
+					</div>
+				</div>
+				<div class="xian"></div>
+				<div class="pei2  layui-form">
+					<!-- 订车    留资 -->
+					<div class="liuzi  layui-form">
+						<div class="public public1">
+							<span>*所在城市:</span>
+							<select name="province" id="province" lay-filter="getCity" lay-verify="province">
+								<option value="0">请选择省份</option>
+								{foreach name="province" item="vc" }
+								<option value="{$vc['id']}">{$vc['name']}</option>
+								{/foreach}
+							</select>
+							<select value="city" name="city" id="city" lay-filter="getJxs" lay-verify="city">
+								<option value="0">请选择城市</option>
+							</select>
+						</div>
+						<!-- 所在城市 -->
+						<div class="public public2">
+							<span>经销商名称:</span>
+							<select name="jxs" id="jxs" lay-verify="jxs" lay-filter="jxs">
+								<option value="0">请选择经销商</option>
+							</select>
+						</div>
+						<!-- 个人信息  111111111111111-->
+						<div class="public public3">
+							<span>*姓名:</span>
+							<input type="text" name="name" class="layui-input" required lay-verify="required" >
+						</div>
+						<!-- 个人信息  222222222222222-->
+						<div class="public public4">
+							<span>联系方式:</span>
+							<input type="text" name="phone" class="layui-input" lay-verify="phone">
+						</div>
+						<button class="layui-btn" lay-submit lay-filter="tj" style="display:block;margin:0 auto;">立即提交</button>
+					</div>
+				</div>
+			</div>
+			<div class="but">
+				<!-- <div><img class="confirm" src="__INDEX__/img/dz/confirm.png" alt="" onclick="test()"></div> -->
+				<div><img class="again" src="__INDEX__/img/dz/again.png" alt="" onclick="again()"></div>
+			</div>
+		</div>
+
+		<!-- 之前的立即购买    ......... -->
+		<div id="buy" class="buy one6">
+			<div class="buts">
+				<div><img class="confirm" src="__INDEX__/img/dz/return.png" alt="" onclick="returns()"></div>
+				<div><img class="again" src="__INDEX__/img/dz/buy.png" alt="" onclick="buy()"></div>
+			</div>
+		</div>
+	</div>
+</div>	
+	<!-- 导航 -->
+	<div id="nav">
+		<ul class="ul1">
+			<li class="cxin">
+				<span class="icon iconfont">&#xe636;</span>
+				<span>载重</span>
+			</li>
+			<li>
+				<span class="icon iconfont1">&#xe666;</span>
+				<span>颜色</span>
+			</li>
+			<li>
+				<span class="icon iconfont">&#xe60f;</span>
+				<span>货箱类型</span>
+			</li>
+			<li class="dongli">
+				<span class="icon iconfont">&#xe62e;</span>
+				<span>发动机品牌</span>
+			</li>
+			<li class="peizhi">
+				<span class="icon iconfont">&#xe693;</span>
+				<span>后桥速比</span>
+			</li>
+			<li class="peizhi1">
+				<span class="icon iconfont">&#xe635;</span>
+				<span>轮胎规格</span>
+			</li>
+		</ul>
+		<div onclick="buy()">
+			<img src="__INDEX__/img/dz/ljgc.png" alt="">
+		</div>
+	</div>	
+</div>
+<!--脚部  -->
+{include file="public/footer" /}
+
+<!-- footer -->
+<script src="__INDEX__/js/index.js"></script>
+<script type="text/javascript" src="__INDEX__/js/jquery.threesixty.js"></script>
+<script type="text/javascript" src="__INDEX__/js/common.js"></script>
+<script type="text/javascript" src="__INDEX__/js/threeFunction.js"></script>
+<script type="text/javascript" src="__INDEX__/js/LayerFunction.js"></script>
+<script type="text/javascript" src="__INDEX__/js/dom.js"></script>
+<script type="text/javascript" src="__INDEX__/js/swiper.js"></script>
+<script>
+//清空
+function again(){
+	$('.youce input').each(function(i,index){
+		index.checked = false;
+	})
+	form.render('checkbox');	
+	$('.zuoce').empty();	
+	$('.configs').hide();
+	$('.one4').show();
+}
+//订单预览
+function ddyl(){
+	$('#buy').show();
+	$('#buy').siblings().not('.bj').hide();
+	$('.bj').attr('src','__INDEX__/img/dz/bj1.jpg');
+	console.log(colorArr,arr1,arr2,arr3,arr4,arr5,radio0,radio1,radio2,radio3)
+}
+
+//返回
+function returns(){
+	$('#buy').hide();
+	$('#computer').show();
+	$('.bj').attr('src','__INDEX__/img/dz/bj1.jpg');
+}
+
+
+//立即购车
+function buy(){
+	var login_type = $('#login_type').val();
+	if(login_type==1){
+		layer.msg('请登录', {icon: 6,time: 2000});
+		location.href = 'http://aoling.douyar.cc/index/login/index.html';
+		return false;
+	}
+	if(lengthArr[0] == 1){
+		var configArr = concatAll().method1();//获取所有的用户选中的数组     并且去重updefined
+		// var configName = ['载重','颜色','货箱类型','发动机品牌','后桥速比','轮胎规格'];
+		console.log(configArr);
+		$('.zuoce').empty();
+		for(var indexs = 0; indexs < configArr.length; indexs++){
+			var config = $('<ul><li>'+configName[indexs]+'</li><li>'+configArr[indexs]+'</li></ul>');
+			$('.zuoce').append(config);
+			form.render();
+		}
+		$('.pei1 p').text(idArr[0]);
+		$('.bj').attr('src','__INDEX__/img/dz/bj1.jpg');
+		$('.configs').show();
+		$('.configs').siblings().not('.bj').hide();
+	}else{
+		alert('请选择详细配置！');
+	}		
+
+}
+
+function ajaxs(i,type,typeIndex){
+	console.log(i,type,typeIndex);
+	var json = {};
+	if(i == 0){
+		json = {
+			'zz':1,
+			'hxcc':hxccArr.method1(),
+			'fdjxh':fdjxhArr.method1(),
+			'hqsb':hqsbArr.method1(),
+			'lt':ltArr.method1(),
+		}
+	}else if(i == 3){
+		json = {
+			'zz':zzArr.method1(),
+			'hxcc':hxccArr.method1(),
+			'dlpp':1,
+			'hqsb':hqsbArr.method1(),
+			'lt':ltArr.method1(),
+		}
+	}else if(i == 4){
+		json = {
+			'zz':zzArr.method1(),
+			'hxcc':hxccArr.method1(),
+			'fdjxh':fdjxhArr.method1(),
+			'hqsb':1,
+			'lt':ltArr.method1(),
+		}
+	}else if(i == 5){
+		json = {
+			'zz':zzArr.method1(),
+			'hxcc':hxccArr.method1(),
+			'fdjxh':fdjxhArr.method1(),
+			'hqsb':hqsbArr.method1(),
+			'lt':1,
+		}
+	}
+	
+	$.ajax({
+	    type: 'POST',
+	    dataType:'json',
+	    traditional: true,//这里设置为true
+	    // url : '/index/Product/ajaxMade',
+	    url : '{:url('Product/ajaxMade')}',
+	    data: json,
+	    success: function(data){
+	    		//每次请求数据   先清空上次的价格
+	    		minmaxMoney = [];
+	    		lengthArr = [];
+	    		lengthArr.push(data.length);
+	    		if(data.length == 1){
+		    		idArr = [];
+		    		idArr.push(data[0].tj);//之前是最后id    现在改为最后推荐产品
+		    		zdj = data[0].zdj;
+	    		}
+	    		$('#chexi').empty();
+	    		$('.time1 .swiper-wrapper').empty();
+	    		$('#Cab').empty();
+	    		$('#carwidth').empty();
+	    		$('#Wheelbase').empty();
+	    		$('.time2 .swiper-wrapper2').empty();
+	    		$('.time3 .swiper-wrapper2').empty();
+	    		var li3 = $('<div class="swiper-slide swiper-slide2"><img src="__INDEX__/dz1/'+data[0].hqsbimg+'"><span>后桥速比</span><div class="inp2 '+' hqsb0'+' hovers'+'"></div></div>');//循环后桥速比
+	    		$('.time2 .swiper-wrapper').append(li3);
+
+	    		var li4 = $('<div class="swiper-slide swiper-slide2"><img src="__INDEX__/dz1/'+data[0].ltimg+'"><span>轮胎</span><div class="inp3'+' hovers'+' lt0'+'"></div></div>');//循环轮胎
+	    		$('.time3 .swiper-wrapper').append(li4);
+		    	for(var ins = 0;ins < data.length; ins++){
+					//将每组里面的zdj     存入minmaxMoney数组中以便后续求最大最小值
+					minmaxMoney.push(parseInt(data[ins].jg));
+					minmaxMoneys();
+					console.log(minmaxMoney);
+		    		var li1 = $('<li class="no">'+data[ins].zz+'</li>');//循环载重
+		    		$('#chexi').append(li1);
+		    		var li2 = $('<div class="swiper-slide swiper-slide2"><img src="__INDEX__/dz1/'+data[ins].dlppimg+'"><span>'+data[ins].dlpp+'</span><div class="inp '+'inps'+ins+'"></div></div>');//循环发动机
+		    		$('.time1 .swiper-wrapper').append(li2);
+
+		    		//后桥选项  循环
+		    		var li7 = $('<input type="radio"  lay-filter="brand1" name="brand" value="'+data[ins].hqsb+'" title="'+data[ins].hqsb+'">');
+		    		$('.hqsb0').append(li7);
+		    		form.render();
+
+
+		    		//循环轮胎  选项
+		    		var li8 = $('<input type="radio"  lay-filter="brand2" name="brand" value="'+data[ins].lt+'" title="'+data[ins].lt+'">');
+		    		$('.lt0').append(li8);
+		    		form.render();
+		    	}			    		
+	    }
+	});
+}
+</script>
+</body>
+</html>

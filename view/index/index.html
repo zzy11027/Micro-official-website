@@ -1,0 +1,184 @@
+<!-- 奥铃官网       首页开始 -->
+<!doctype html>
+<html lang="en">
+<head>
+ {include file="public/resource" /}	
+<link rel="stylesheet" href="__INDEX__/css/index.css">
+<link rel="stylesheet" href="__INDEX__/css/threesixty.css">
+<!-- <script type="text/javascript" src="__INDEX__/js/0deye.min.js"></script> -->
+</head>
+<body  onselectstart="return false">
+ {include file="public/header" /}
+
+<!-- 内容区 -->
+<div id="container" style="background-color:#fff !important;">
+<!-- banner -->
+<div class="swiper-container swiper-container1" >
+    <div class="swiper-wrapper swiper-wrapper1">
+		{volist name="banner" id="vo"}
+        <div class="swiper-slide swiper-slide1" id="t">
+        	<a target="_Blank" href="{$vo['src']}"><img src="{$vo['pc_img']}" alt="" class="scale-big"></a>
+        </div>
+		{/volist}
+    </div>
+    <div class="swiper-pagination"></div>
+</div>
+
+
+
+<!-- 360   车型展示 -->
+	<img src="__INDEX__/img/index/360.png" alt=""  class="carshow">
+<!-- 车型切换 -->
+	<div class="swiper-container swiper-container2" style="">
+	    <div class="swiper-wrapper swiper-wrapper2">
+			{volist name="cx" id="vo"}
+	        <div class="swiper-slide swiper-slide2">
+	        	<span>{$vo['name']}</span>
+	        	<img src="{$vo['img']}" alt="" >
+	        </div>
+	        {/volist}
+	    </div>
+	    <!-- <div class="swiper-pagination"></div> -->
+        <div class="swiper-button-prev swiper-button-black"></div>
+        <div class="swiper-button-next swiper-button-black"></div>
+	</div>
+
+
+
+<!-- 360  度    -->
+	<div class="" style="position: relative;">
+		<img src="__INDEX__/img/index/selected.png" alt="" style="width: 10%;" class="selecteds">
+		<img src="__INDEX__/img/index/360du.png" alt=""  class="threedu">
+		<img src="__INDEX__/img/index/quan.png" alt=""  class="quan">
+		<div class="threesixty-wrapper">
+			<div class="threesixty" id="threesixty" data-item='page0-1-btn8' data-action='click-theme'>
+				<!-- put your preloader here -->
+				<ol class="threesixty_images" style="height: 100%">
+				</ol>
+				<div class="spinner">
+					<span>0%</span>
+				</div>
+				<!-- end preloader -->
+			</div>
+		</div>
+		<img src="__INDEX__/img/index/dzbj.jpg" alt="" style="width: 100%;">
+		<a href="http://aoling.douyar.cc/index/product/made.html"><img src="__INDEX__/img/index/kaishi.png" alt=""  class="kaishi"></a>
+	</div>
+
+
+
+<!-- 中间   3   广告  -->
+	<div class="poster">
+		<div class="poster-son">
+			<a href="{:url('product/shopping')}"><img src="__INDEX__/img/index/jxs.jpg" alt="">
+			<div class="more1 more"></div></a>
+		</div>
+		<div class="poster-son">
+			<a href="{:url('testdrive/index')}?id=1"><img src="__INDEX__/img/index/sj.jpg" alt="">
+			<div class="more2 more"></div></a>
+		</div>
+		<div class="poster-son">
+			<a href="{:url('testdrive/index')}?id=2"><img src="__INDEX__/img/index/yd.jpg" alt="">
+			<div class="more3 more"></div></a>
+		</div>
+	</div>
+
+
+
+<!-- 优惠信息 -->
+	<img src="__INDEX__/img/index/Discount.png" alt="" class="Discount">
+	<div class="car_discount">
+
+		
+		<div class="car_discount_second">
+			{volist name="yhxx" id="vo"}
+			<div style="background-image: url('{$vo['img']}');">
+				<a href="{:url('News/show')}?id={$vo['id']}" class="looks">查看详情</a>
+				<!-- <img src="./img/index/yh2.jpg" alt=""> -->
+			</div>
+			{/volist}
+		</div>
+
+	</div>
+
+
+
+<!-- 奥铃资讯 -->
+	<img src="__INDEX__/img/index/zx.png" alt=""  class="information">
+
+	<div class="ol_information">
+		{volist name="alzx" id="vo"}
+		<div class="information_son" style="background-image: url('{$vo['img']}');">
+			<div class="information_son_container">
+				<div class="line"></div>
+				<a href="{:url('News/show')}?id={$vo.id}" class="font">
+					<p style="text-overflow: ellipsis;white-space: nowrap;overflow:hidden;font-size: 20px;font-weight: bold;">{$vo['title']}</p>
+					<p style="opacity: 0;">....................................................</p>
+					<p style="text-overflow: ellipsis;white-space: nowrap;overflow:hidden;">{$vo['description']}</p>
+				</a>
+			</div>
+		</div>
+		{/volist}
+	</div>
+</div>
+
+ {include file="public/footer" /}
+<script src="__INDEX__/js/index.js"></script>
+<script type="text/javascript" src="__INDEX__/js/jquery.threesixty.js"></script>
+<script>
+$(function(){
+	var str = '__INDEX__/image1/';
+	// $("#myCar").vc0dEye({
+	// 	imagePath:str,
+	// 	totalImages:32,
+	// 	imageExtension:"png"
+	// });	
+	function initThreesixty(type) {
+		console.log(str);
+		var $threeSixty = $('#threesixty');
+		$threeSixty.find("ol").empty();
+		var colors = ['White', 'Black', 'Blue', 'Red', 'Grey', 'Silver'];
+		var hasColor = colors.indexOf(type.trim());
+		var color = hasColor > -1 ? type : 'White';
+		$threeSixty.ThreeSixty({
+			totalFrames: 32,
+			endFrame: 32,
+			currentFrame: 1,
+			imgList: '.threesixty_images',
+			progress: '.spinner',
+			imagePath: str,
+			filePrefix: '0-',
+			ext: '.png',
+			zeroPadding: true, // 1.jpg = > 01.jpg
+			zeroBased: true, // 从0开始
+			height: 700,
+			width: 1280,
+			navigation: false,
+			responsive: true
+		});
+	}
+	initThreesixty('White');
+
+	//点击操控    第三组
+	$('.swiper-slide2').each(function(i,index){
+		$(this).click(function(){
+			//这个判断以后有图了  要去掉    暂时只有一个所以判断
+			if(i == 0){
+				var src = $($(this).children()[1]).attr('src');
+				$('<img src="__INDEX__/img/index/selected.png" alt=""  class="selected">').appendTo($(this));
+				$(this).siblings().find('.selected').remove();
+				$('.selecteds').remove();
+				// $($($('.swiper-slide3')[i]).children()[0]).attr('src',src);
+				// mySwiper3.slideTo(i, 1000, false);
+				if($(this).index() == i){
+					str = '__INDEX__/image'+i+'/';
+				}
+				console.log(str);
+				initThreesixty('White');
+			}
+		})
+	})
+})
+</script>
+</body>
+</html>

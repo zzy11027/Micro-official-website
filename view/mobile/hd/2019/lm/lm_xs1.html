@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>奥铃勒芒赛</title>
+    <link rel="stylesheet" href="__INDEX__/mobile/hd/2019/lm/css/lm_xs1.css">
+    <link rel="stylesheet" href="__INDEX__/mobile/hd/2019/lm/css/set.css">
+    <link rel="stylesheet" href="__INDEX__/mobile/hd/2019/lm/css/swiper.min.css">
+    <script src="__INDEX__/mobile/hd/2019/lm/js/jquery.min.js"></script>
+    <script src="__INDEX__/mobile/hd/2019/lm/js/swiper.min.js"></script>
+    <script src="__INDEX__/mobile/hd/2019/lm/js/register_message.js"></script>
+    <script>
+        var w = 375;
+        var f = 16;
+        var c = document.documentElement.clientWidth;
+        console.log(c);
+        var nf = c * f / w;
+        document.documentElement.style.fontSize = nf + 'px';
+    </script>
+    <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?4b35b9696537f6518e4cdcdeeee51ff6";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</head>
+
+<body>
+    <div class="warp">
+            <div class="tc" style="display:none;">
+                    <div class="z">
+                        <h1 style="font-size:15px; color: #fff;text-align: center;">活动规则</h1>
+                        <p>1、使用福田智科车联网系统的用户通过授权后可直接参与活动，后台每日滚动更新数据，按30天/周期进行评比，每期比赛中，奥铃将根据里程、油耗、人气、盈利四个分类进行排名。月平均里程最高、百公里油耗最低、邀请朋友点赞自己成绩最多的和平均年盈利额最高的前三名将分别获得里程之星、节油之星、人气之星、盈利之星，按冠亚季军分别给予奖励。最高可获得购车现金券2000元；</p>
+                     <p>2、活动期间，每日均会设置幸运之星奖励，参与活动且每日登陆活动页面的客户可点击抽奖，即有机会获取千元购车代金券、666元服务维修保养红包及红包等多重幸运好礼。</p>       
+                    </div>
+                </div>
+        <div class="swiper-container swiper-container1 ">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide banner">
+                    <img src="__INDEX__/mobile/hd/2019/lm/img/banner.jpg" alt="">
+                </div>
+                <!-- <div class="swiper-slide banner">
+                    <img src="__INDEX__/mobile/hd/2019/lm/img/banner.png" alt="">
+                </div>
+                <div class="swiper-slide banner">
+                    <img src="__INDEX__/mobile/hd/2019/lm/img/banner.png" alt="">
+                </div> -->
+            </div>
+            <div class="swiper-pagination"></div>
+            <!--分页器。如果放置在swiper-container外面，需要自定义样式。-->
+        </div>
+
+        <!-- <img src="__INDEX__/mobile/hd/2019/lm/img/sm.png" alt="" class="tu"> -->
+        <img src="__INDEX__/mobile/hd/2019/lm/img/sc.png" alt="" class="tu1">
+
+
+        <!-- 赛事细则 -->
+        <!-- <img src="__INDEX__/mobile/hd/2019/lm/img/sscz.png" alt="" class="tu2" style="display:none;">
+
+
+
+        <div class="sfq" style="display:none;">
+
+        </div> -->
+        <!-- 报名参赛 -->
+        <img src="__INDEX__/mobile/hd/2019/lm/img/bmcs.png" alt="" class="tu2">
+        <div class="sfq1">
+            <input type="text" placeholder="请输入您的姓名" id="in">
+            <input type="text" placeholder="请输入您的电话" id="in1">
+            <!-- <input type="text" placeholder="短信验证码"> -->
+            <input type="text" class="layui-input" onfocus="if(value=='短信验证码') {value=''}" onblur="if (value=='') {value='短信验证码'}" placeholder="短信验证码"  id="in2" lay-verify="yzm" style="width: 60%;" name="yzm">
+            <input type="text" placeholder="请输入您的车架号" id="in3">
+            <!-- <div id="in4">发送验证码</div> -->
+            <input type="text" id="in5" placeholder="请输入您的车牌号">
+            <div  id="in4" onclick="send_capicha_regist()">获取验证码</div>
+            <select name="" id="in6">
+                    <option value="1" class="yq">苏州站</option>
+                    <option value="1"  class="yq">潍坊站</option>
+                    <option value="1" class="yq">天津站</option>
+                    <option value="1"  class="yq">南京站</option>
+                    <option value="1" class="yq">沈阳站</option>
+                    <option value="1" class="yq">武汉站</option>
+                    <option value="1" class="yq">广东站</option>
+            </select>
+            <div class="btn" onclick="tjs()">
+
+            </div>
+            <div class="btn1">
+
+            </div>
+        </div>
+        <img src="__INDEX__/mobile/hd/2019/lm/img/wdcjd.png" alt="" class="tu24" style="display:none;">
+        <img src="__INDEX__/mobile/hd/2019/lm/img/cjd.png" alt="" class="tu10" style="display:none;">
+        <!-- <div class="btn">
+
+        </div>
+        <div class="btn1">
+
+        </div> -->
+
+        <!-- 赛事奖励 -->
+        <img src="__INDEX__/mobile/hd/2019/lm/img/csjl.png" alt="" class="tu3">
+        <img src="__INDEX__/mobile/hd/2019/lm/img/bg.png" alt="" class="tu4">
+        <img src="__INDEX__/mobile/hd/2019/lm/img/cxtj.png" alt="" class="tu5">
+
+
+
+
+
+        <!-- 车型推荐 -->
+        <div class="swp">
+            <div class="swiper-container swiper-container2 ">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide banner1">
+                        <img src="__INDEX__/mobile/hd/2019/lm/img/t1.png" alt="">
+                    <a href="http://aoling.douyar.cc/index/testdrive/index.html?id=1"><div class="yysj"></div></a> 
+                    </div>
+                    <div class="swiper-slide banner1">
+                        <img src="__INDEX__/mobile/hd/2019/lm/img/t2.png" alt="">
+                        <a href="http://aoling.douyar.cc/index/testdrive/index.html?id=1"><div class="yysj"></div></a> 
+                    </div>
+                    <div class="swiper-slide banner1">
+                        <img src="__INDEX__/mobile/hd/2019/lm/img/t3.png" alt="">
+                        <a href="http://aoling.douyar.cc/index/testdrive/index.html?id=1"><div class="yysj"></div></a> 
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <!--分页器。如果放置在swiper-container外面，需要自定义样式。-->
+            </div>
+        </div>
+
+
+
+        <!-- 底部 -->
+        <div class="dibu" id="dh">
+            <img src="__INDEX__/mobile/hd/2019/lm/img/d1.png" alt="" class="tu9" name='d11'>
+            <img src="__INDEX__/mobile/hd/2019/lm/img/d2.png" alt="" class="tu6" name='d22'>
+            <img src="__INDEX__/mobile/hd/2019/lm/img/d33.png" alt="" class="tu7" name='d33'>
+            <img src="__INDEX__/mobile/hd/2019/lm/img/d4.png" alt="" class="tu8" name='d44'>
+        </div>
+        <img src="__INDEX__/mobile/hd/2019/lm/img/fhdb.png" alt="" class="tu23">
+        <img src="__INDEX__/mobile/hd/2019/lm/img/bm.png" alt="" class="tu22">
+    </div>
+
+
+
+
+
+
+    <script>
+
+        //      $("#dh img").click(function () {  
+
+        //         var getOnName = $(this).attr("name");  
+        //         $("#dh img").each(function (i,item) {  
+        //             var getName = $(this).attr("name");  
+        //             // $(this).removeClass("aOn");  
+        //             $(this).find("img").attr("src", "__INDEX__/mobile/hd/2019/lm/img/" + getName + ".png");  
+        //         });  
+        //         // $(this).addClass("aOn");  
+        //         $("#dh img")
+        //         $(this).attr("src", "__INDEX__/mobile/hd/2019/lm/img/" + getOnName  + ".png");  
+        //         $('.nn').find('span').removeClass("aOn") 
+        //  });  
+
+        var yz;
+        function tjs() {
+            var phone = $('#in1').val(); //手机号
+            var yz = $('#in2').val();  //验证
+            var name = $('#in').val(); //名字
+            var che = $('#in3').val(); //车架号
+            var che1 = $('#in5').val(); //车牌号
+            var options=$("#in6 option:selected").text(); //获取选中的项
+            // console.log(options)
+              if (name == '') {
+                alert("请输入您的姓名");
+                return false;
+            }
+            if (phone == '') {
+                alert('请输入您的电话！')
+                return;
+            }
+            var reg = /^0?1[3|4|5|7|8][0-9]\d{8}$/;
+            if (!reg.test(phone)) {
+                alert("请输入正确的手机号");
+                return false;
+            }
+            if (yz == '') {
+                alert("请输入验证码");
+                return false;
+            }
+          
+            if (che == '') {
+                alert("请输入您的车架号");
+                return false;
+            }if (che1 == '') {
+                alert("请输入您的车牌号");
+                return false;
+            }
+            $.ajax({
+                type: "POST",
+                url: "{:url('hd/lz')}",
+                data: {
+                    phone: phone, //手机号
+                    yz: yz, //验证码
+                    name:name,//名字
+                    che:che , //车架号
+                    che1 : che1, //车牌号
+                    options: options //站期
+                },
+                dataType: "json",
+                success: function (data) {
+                   if(data==1){
+                   		alert('请输入姓名');	
+                   		return false;
+                   }
+                   if(data==2){
+                   		alert('请输入电话');	
+                   		return false;
+                   }
+                   if(data==3){
+                   		alert('验证码不正确');	
+                   		return false;
+                   }
+                   if(data==4){
+                   		alert('验证码不正确');	
+                   		return false;
+                   }
+                   if(data==6){
+                   		alert('vin错误');	
+                   		return false;
+                   }
+                   if(data==7){
+                   		alert('vin已存在');	
+                   		return false;
+                   }
+                    if(data==8){
+                   		alert('留资成功');	
+                   		location.reload();
+                   		return false;
+                   }
+                }
+            });
+        }
+
+
+
+
+
+        $('.tu9').click(function () {
+            $('.tu9').attr('src', '__INDEX__/mobile/hd/2019/lm/img/d11.png');
+            window.location.href = '{:url('hd/lm_xs')}'
+        })
+
+
+
+        $('.tu7').click(function () {
+            $('.tu9').attr('src', '__INDEX__/mobile/hd/2019/lm/img/d33.png');
+            window.location.href = '{:url('hd/lm_xs1')}'
+        })
+        $('.tu6').click(function () {
+            $('.tu6').attr('src', '__INDEX__/mobile/hd/2019/lm/img/d22.png');
+            window.location.href = '{:url('hd/lm')}'
+        })
+        $('.tu8').click(function () {
+            $('.tu8').attr('src', '__INDEX__/mobile/hd/2019/lm/img/d44.png');
+            window.location.href = '{:url('hd/index')}'
+        })
+        // $('.btn').click(function () {
+        //     $('.sfq1').hide();
+        //     $('.tu10').show();
+        //     $('.tu24').show();
+        //     $('.tu2').hide();
+        // })
+        $('.tu22').click(function () {
+            $('.tu24').hide();
+            $('.tu2').show();
+            $('.sfq1').show();
+            $('.tu10').hide();
+        })
+        $('.tu23').click(function () {
+            $('html ,body').animate({
+                scrollTop: 0
+            }, 1000);
+            return false;
+        });
+        var mySwiper = new Swiper('.swiper-container1', {
+            autoplay: true, //可选选项，自动滑动
+            pagination: {
+                el: '.swiper-pagination',
+            },
+        })
+        var mySwiper = new Swiper('.swiper-container2', {
+            slidesPerView: 2,
+            // centeredSlides: true,
+            // slidesPerView: 'auto',
+        })
+        $('.btn1').click(function(){
+            $('.tc').show();
+        })
+        $('.tc').click(function(){
+            $('.tc').hide();
+        })
+    </script>
+</body>
+
+</html>

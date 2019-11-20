@@ -1,0 +1,68 @@
+<!-- 奥铃官网       首页开始 -->
+<!doctype html>
+<html lang="en">
+<head>
+	{include file="public/resource" /}	
+	<link rel="stylesheet" href="__INDEX__/css/ppdt.css">
+</head>
+<body>
+	{include file="public/header" /}	
+<!-- header -->
+
+	<!-- banner -->
+	<div class="swiper-container swiper-container1" style="">
+	    <div class="swiper-wrapper swiper-wrapper1">
+	        <div class="swiper-slide swiper-slide1"><a href=""><img src="__INDEX__/img/ppdt/banner.jpg" alt="" class="scale-big"></a></div>
+	    </div>
+	</div>
+
+	<!--  navlist -->
+	<ul class="navlist">
+		{volist name="news_cate" id="vo"}
+		<li><a href="{:url('News/index')}?id={$vo.id}">{$vo['name']}</a></li>
+		{/volist}
+	</ul>
+<div id="container">
+
+
+	<div class="inside">
+		<div class="inside-tit">
+			<h1>{$sql_cate['name']}</h1>
+			<p>{$sql_cate['description']}</p>
+		</div>
+		{volist name="list" id="vo"}
+		<div class="inside-item">
+			<img src="{$vo['img']}" alt="">
+			<div class="item-rig">
+				<h4>{$vo['title']}</h4>
+				<span>时间{$vo['add_date']}</span>
+				<span>{$vo['description']}</span>
+				<a href="{:url('News/show')}?id={$vo['id']}"><button></button></a>
+			</div>
+		</div>
+		{/volist}
+	</div>
+
+	<!-- <div id="test1"></div> -->
+</div>
+ {include file="public/footer" /}	
+<!-- footer -->
+<script>
+$('.navlist>li>a').each(function(i,index){
+	if($(this)[0].href == String(window.location)){
+		console.log($(this).siblings());
+		$(this).addClass('isselecteds').siblings().removeClass('isselected');
+	}
+})
+layui.use('laypage', function(){
+  var laypage = layui.laypage;
+  
+  //执行一个laypage实例
+  laypage.render({
+    elem: 'test1', //注意，这里的 test1 是 ID，不用加 # 号
+    count: 50 //数据总数，从服务端得到
+  });
+});
+</script>
+</body>
+</html>

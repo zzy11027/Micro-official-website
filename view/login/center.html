@@ -1,0 +1,496 @@
+<!-- 奥铃官网       首页开始 -->
+<!doctype html>
+<html lang="en">
+<head>
+	{include file="public/resource" /}	
+	<link rel="stylesheet" href="__INDEX__/css/member.css">
+	<script src="__INDEX__/js/register_messages.js"></script>
+	<script src="//captcha.luosimao.com/static/js/api.js"></script>
+</head>
+<body>
+	 {include file="public/header" /}	
+<!-- header -->
+<div id="container">
+	<!-- banner -->
+	<div class="swiper-container swiper-container1" style="">
+	    <div class="swiper-wrapper swiper-wrapper1">
+	        <div class="swiper-slide swiper-slide1"><a href=""><img src="__INDEX__/img/member/banner.jpg" alt="" class="scale-big"></a></div>
+	    </div>
+	</div>
+
+	<!-- 签到领积分 -->
+	<div class="lings">
+		<div class="ling">
+			<div>
+				<img src="__INDEX__/img/member/qd.png" alt="">
+				<img src="__INDEX__/img/member/qian.png" alt="">
+			</div>
+		</div>
+	</div>
+
+
+	<!-- 个人中心 -->
+	<div class="myself-list">
+		<div class="list-l">
+			<div>个人中心</div>
+			<ul>
+				<li class="selected">个人资料</li>
+				<li>登录密码修改</li>
+				<li>手机号码修改</li>
+				<li>会员积分查询</li>
+				<li>工单线索查询</li>
+				<a target="_Blank" href="http://czyl.foton.com.cn/shareCars/PC/default.jsp?param=7qbl1NabxFcxt7RYtgBHPpBpwn2MzyX6"><li>车主有礼</li></a>
+				<li>积分商城</li>
+			</ul>
+		</div>
+		<!-- 个人资料 -->
+		<div class="list-r list1">
+
+			<!-- 个人资料 -->
+			<div class="list-r-1">
+				<ul class="top">
+					<li>个人资料</li>
+				</ul>
+				<ul class="item item1">
+					<li>会员号:</li>
+					<li>敬请期待</li>
+				</ul>
+				<ul class="item item2">
+					<li>手机号码:</li>
+					<li>100000</li>
+					<li class="xiugai" style="cursor: pointer;">修改</li>
+				</ul>
+				<ul class="item item3">
+					<li>会员等级:</li>
+					<li>敬请期待</li>
+				</ul>
+				<ul class="item item4">
+					<li>会员积分:</li>
+					<li>敬请期待</li>
+				</ul>
+				<ul class="item item5 clearfloat">
+					<li>权益:</li>
+					<div>
+						<table id="customers">
+							<tr>
+								<th>权益项目</th>
+								<th>优惠</th>
+								<th>剩余次数</th>
+								<th>到期时间</th> 
+							</tr>
+							<tr>
+								<td>敬请期待</td>
+								<td>敬请期待</td>
+								<td>敬请期待</td>
+								<td>敬请期待</td>
+							</tr>
+						</table>
+					</div>
+				</ul>
+			</div>
+
+			<!-- 个人信息 -->
+			<div class="layui-form">	
+			<div class="list-r-1 list-r-2s">
+				<ul class="top">
+					<li>个人信息</li>
+				</ul>
+				<div class="yy">
+
+					<div class="sle1 flex00">
+						<span>昵称:</span>
+						<input type="text" class="layui-input" name="nick" placeholder="昵称">
+						<span>个性签名:</span>
+						<input type="text" class="sel-right layui-input" name="autograph" placeholder="个性签名">
+					</div>
+					
+					<div class="sle2 flex00">
+						<span>姓名:</span>
+						<input type="text" class="layui-input"  name="xm" placeholder="姓名">
+						<span>出生日期:</span>
+						<input type="text" class="sel-right layui-input" id="test1"  name="Birth">
+					</div>
+
+					<div class="sle3 flex00">
+						<span>证件类型:</span>
+						<select name="zjtype" id="">
+							<option value="0">请选择</option>
+						</select>
+						<span>证件号码:</span>
+						<input type="text" class="layui-input hm"  name="zjnum" placeholder="证件号码">
+					</div>
+
+					<div class="sle4 flex00">
+						<span>所在省市:</span>
+						<select name="prov" id="">
+							<option value="0">请选择</option>
+						</select>
+						<select name="city" id="">
+							<option value="0">请选择</option>
+						</select>
+						<select name="jxs" id="">
+							<option value="0">请选择</option>
+						</select>
+					</div>
+
+					<div class="sle5 flex00">
+						<span>车辆用途:</span>
+						<select name="caruse" id="">
+							<option value="0">请选择</option>
+						</select>
+						<span>家庭年收入:</span>
+						<select name="income" id="">
+							<option value="0">请选择</option>
+						</select>
+					</div>
+
+					<div class="sle6 flex00">
+						<span>爱好:</span>
+						<input type="text" name="like" class="layui-input" placeholder="爱好">
+					</div>
+				</div>
+			</div>
+
+
+			<!-- 标签信息 -->
+			<div class="list-r-1 list-r-2s">
+				<ul class="top">
+					<li>标签信息</li>
+				</ul>
+				<div class="yy">
+					<div class="sle3 flex00">
+						<span>我是:</span>
+						<select name="biaoqian" id="">
+							<option value="0">请选择</option>
+						</select>
+						<span>特点:</span>
+						<select name="tedian" id="">
+							<option value="0">请选择</option>
+						</select>
+					</div>
+				</div>
+			</div>
+
+			<div class="but">
+				<img src="__INDEX__/img/member/save.png" alt=""  class="save layui-btn" lay-submit lay-filter="tjss" >
+				<a href=""><img src="__INDEX__/img/member/close.png" alt="" class="close"></a>
+			</div>
+		</div>
+		</div>
+
+		<!-- 登录密码修改 -->
+		<div class="list-r list2">
+
+			<!-- 个人资料 -->
+			<div class="list-r-1">
+				<ul class="top">
+					<li>登录密码修改</li>
+				</ul>
+				<div class="yy layui-form">
+
+					<div class="sle1 flex00">
+						<span>旧密码:</span>
+						<input type="text" class="layui-input usedpass" name="usedpass" lay-verify="usedpass" placeholder="旧密码">
+					</div>
+					
+					<div class="sle2 flex00">
+						<span>新密码:</span>
+						<input type="text" class="layui-input newpass" name="newpass" lay-verify="newpass" placeholder="新密码">
+					</div>
+
+					<div class="sle3 flex00">
+						<span>确认密码:</span>
+						<input type="text" class="layui-input conpass" name="conpass" lay-verify="conpass" placeholder="确认密码">
+					</div>
+					<div class="but">
+						<img src="__INDEX__/img/member/save.png" alt=""  class="save layui-btn" lay-submit lay-filter="tj" >
+						<a href=""><img src="__INDEX__/img/member/close.png" alt="" class="close"></a>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+
+		
+		<!-- 手机号码修改 -->
+		<div class="list-r list3">
+
+			<div class="list-r-1">
+				<ul class="top">
+					<li>手机号码修改</li>
+				</ul>
+				<div class="yy layui-form">
+
+					<div class="sle1 flex00">
+						<span>新手机号:</span>
+						<input type="text" class="layui-input phone"  name="phone" lay-verify="phone" placeholder="新手机号">
+					</div>
+					
+					<div class="sle2 flex00">
+						<span>随机码:</span>
+						<div class="l-captcha" data-site-key="c35f80e3aeb63b54fdac9db0fd6a3f2b"  data-callback="getResponse" data-width="100%"></div>
+					</div>
+
+					<div class="sle2 flex00">
+						<span>验证码:</span>
+						<input type="text" class="layui-input"  onfocus="if(value=='请输入验证码') {value=''}" onblur="if (value=='') {value='请输入验证码'}" placeholder="验证码"  lay-verify="yzm" style="width: 82%;" name="yzm">
+						<div id="getYzm"  onclick="send_capicha_regist3()">获取验证码</div>
+					</div>
+
+					<div class="but">
+						<img src="__INDEX__/img/member/save.png" alt="" class="save layui-btn" lay-submit lay-filter="tjs" >
+						<a href=""><img src="__INDEX__/img/member/close.png" alt="" class="close"></a>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+
+
+
+
+
+		<!-- 会员积分查询 -->
+		<div class="list-r list4">
+
+			<div class="list-r-1">
+				<ul class="top">
+					<li>会员积分查询</li>
+				</ul>
+				<ul class="item item1">
+					<li>会员等级:</li>
+					<li>敬请期待</li>
+				</ul>
+				<ul class="item item4">
+					<li>会员积分:</li>
+					<li>敬请期待</li>
+				</ul>
+				<ul class="item item5 clearfloat">
+					<li>近三个月的积分记录:</li>
+					<div>
+						<table id="customers">
+							<tr>
+								<th>Company</th>
+								<th>Contact</th>
+								<th>Contact</th>
+								<th>Contact</th> 
+							</tr>
+							<tr>
+								<td>敬请期待</td>
+								<td>敬请期待</td>
+								<td>敬请期待</td>
+								<td>敬请期待</td>
+							</tr>
+						</table>
+					</div>
+				</ul>
+			</div>
+
+			<div class="but">
+				<img src="__INDEX__/img/member/save.png" alt=""  class="save layui-btn" lay-submit lay-filter="" >
+				<a href=""><img src="__INDEX__/img/member/close.png" alt="" class="close"></a>
+			</div>
+		</div>
+
+
+		<!-- 工单线索查询 -->
+		<div class="list-r list5">
+
+			<div class="list-r-1">
+				<ul class="top">
+					<li>工单线索查询</li>
+				</ul>
+				<ul class="item item5 clearfloat">
+					<div>
+						<table id="customers">
+							<tr>
+								<th>序号</th>
+								<th>类型</th>
+								<th>提交时间</th>
+								<th>状态</th> 
+								<th>操作</th> 
+							</tr>
+							<tr>
+								<td>敬请期待</td>
+								<td>敬请期待</td>
+								<td>敬请期待</td>
+								<td>敬请期待</td>
+								<td>敬请期待</td>
+							</tr>
+						</table>
+					</div>
+				</ul>
+			</div>
+
+			<div class="but">
+				<img src="__INDEX__/img/member/save.png" alt="" class="save">
+				<a href=""><img src="__INDEX__/img/member/close.png" alt="" class="close"></a>
+			</div>
+		</div>
+	</div>
+
+</div>
+		
+ {include file="public/footer" /}	
+<!-- footer -->
+<script>
+var resps;
+function getResponse(resp){
+	console.log(resp);
+	console.log(resps);
+      // resp 即验证成功后获取的值
+     resps = resp;
+}
+layui.use('form', function(){
+  var form = layui.form;
+  
+	//各种基于事件的操作，下面会有进一步介绍
+	//
+	//
+	//登录密码修改 ................START
+	//
+  	form.on('submit(tj)', function(data){
+		console.log(data);
+	 	$.ajax({
+	        type: 'POST',
+	        dataType:'json',
+	        url : '',
+	        data: {
+	        	usedpass:data.field.usedpass,//旧密码
+	        	newpass:data.field.newpass,//新密码
+	        	conpass:data.field.conpass//确认密码
+	        },
+	        success: function(data){
+	        	if(data==1){
+	       			layer.msg('修改成功', {icon: 6,time:2000,end:function () {
+                            	window.location.href=''; //要跳转到登录页面
+                            }
+	       			});
+	       		}
+	        }
+	    });
+	});
+
+
+	//手机号修改
+	//
+  	form.on('submit(tjs)', function(data){
+		console.log(data);
+	 	$.ajax({
+	        type: 'POST',
+	        dataType:'json',
+	        url : '',
+	        data: {
+	        	phone:data.field.phone,//手机号
+	        	yzm:data.field.yzm//验证码
+	        },
+	        success: function(data){
+	        	if(data==1){
+	       			layer.msg('修改成功', {icon: 6,time:2000,end:function () {
+                            	window.location.href=''; //要跳转到登录页面
+                            }
+	       			});
+	       		}
+	        }
+	    });
+	});
+
+	//个人资料   修改   
+	//
+  	form.on('submit(tjss)', function(data){
+		console.log(data);
+	 	$.ajax({
+	        type: 'POST',
+	        dataType:'json',
+	        url : '',
+	        data: {
+	        	phone:data.field.nick,//昵称
+	        	yzm:data.field.autograph,//个性签名
+	        	yzm:data.field.xm,//姓名
+	        	yzm:data.field.Birth,//出生日期
+	        	yzm:data.field.zjtype,//证件类型
+	        	yzm:data.field.zjnum,//证件号码
+	        	yzm:data.field.prov,//省份
+	        	yzm:data.field.city,//城市
+	        	yzm:data.field.jxs,//经销商
+	        	yzm:data.field.caruse,//车辆用途
+	        	yzm:data.field.income,//家庭收入
+	        	yzm:data.field.like,//爱好
+	        	yzm:data.field.biaoqian,//标签
+	        	yzm:data.field.tedian,//特点
+	        },
+	        success: function(data){
+	        	if(data==1){
+	       			layer.msg('修改成功', {icon: 6,time:2000,end:function () {
+                            	window.location.href=''; //要跳转到登录页面
+                            }
+	       			});
+	       		}
+	        }
+	    });
+	});
+	 form.verify({  
+		usedpass: function(value){
+        	passwords = value;
+            if(value==''){
+                return '请输入旧密码';
+            }
+        },newpass: function(value){
+            if(value==''){
+                return '请输入新密码';
+            }
+        },conpass: function(value){
+            if(value==''){
+                return '请确认密码';
+            }else if(value != passwords){
+            	return '两次密码不一致'
+            }
+        },phone: function(value){
+            if(value==''){
+                return '请输入手机号';
+            }
+        },yzm: function(value){
+            if(value==''){
+                return '请输入验证码';
+            }
+        },phone: [/^1[3|4|5|7|8]\d{9}$/, '手机必须11位，只能是数字！']  
+  });
+});
+layui.use('laydate', function(){
+  var laydate = layui.laydate;
+  
+  //执行一个laydate实例
+  laydate.render({
+    elem: '#test1' //指定元素
+  });
+});
+
+
+$('.list-l ul li').each(function(index,i){
+	$(this).click(function(){
+		if(index == 3 || index == 4 || index == 6){
+			alert('敬请期待！');
+			return false;
+		}
+		var indexs = $(this).index();
+		if(index == indexs){
+			console.log(indexs);
+			$(this).addClass('selected');
+			$(this).siblings().removeClass('selected');
+			$('.myself-list>.list'+(indexs+1)).show();
+			$('.myself-list>.list'+(indexs+1)).siblings().not('.list-l').hide();			
+		}
+
+	})
+})
+
+$('.xiugai').click(function(){
+	$('.list3').show();
+	$('.list3').siblings().not('.list-l').hide();
+})
+
+</script>
+</body>
+</html>

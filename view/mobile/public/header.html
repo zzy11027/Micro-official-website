@@ -1,0 +1,262 @@
+<!-- 顶部导航 -->
+	<div id="header">
+		<a href="/"><img src="__INDEX__/mobile/img/index/logo.png" alt="" class="logo"></a>
+		<div id="main">
+			<img src="__INDEX__/mobile/img/index/main1.png" alt="" class="main1">
+			<img src="__INDEX__/mobile/img/index/main2.png" alt="" class="main2 toggle" id="sidenav-toggle">
+		</div>
+	</div>
+
+
+    <!-- 遮罩 -->
+    <div class="sidenav-overlays"></div>
+
+    <!-- 车型展示 -->
+    <div id="carShow">
+        <div id="cxshow">
+            <span>车型展示</span>
+            <img src="__INDEX__/mobile/img/index/7.png" alt="">
+        </div>
+        <ul id="cts" class="cts">
+        	{volist name="product_cate" id="vo"}
+            <li>
+                <a href="{:url('Product/show')}?id={$vo.id}">
+                    <span>{$vo['name']}</span>
+                    <img src="{$vo['img']}" alt="">
+                </a>
+            </li>
+        	{/volist}
+        </ul>
+    </div>
+
+
+
+	<nav class="sidenav" data-sidenav data-sidenav-toggle="#sidenav-toggle">
+		<ul class="sidenav-menu">
+			<!--产品导购  -->
+			<li>
+				<a href="javascript:;" data-sidenav-dropdown-toggle class="active">
+					<div class="navleft">
+						<span class="sidenav-link-icon">
+							<img src="__INDEX__/mobile/img/index/1.png" alt="">
+						</span>
+						<span class="sidenav-link-title">产品导购</span>
+					</div>
+					<div class="navright">
+						<span class="sidenav-dropdown-icon show" data-sidenav-dropdown-icon>
+							<img src="__INDEX__/mobile/img/index/6.png" alt="" class="drop">
+						</span>
+					</div>
+				</a>
+			</li>
+			<!--无忧服务  -->
+			<li>
+				<a href="javascript:;" data-sidenav-dropdown-toggle class="active">
+					<div class="navleft">
+						<span class="sidenav-link-icon">
+							<img src="__INDEX__/mobile/img/index/2.png" alt="">
+						</span>
+						<span class="sidenav-link-title">无忧服务</span>
+					</div>
+					<div class="navright">
+						<span class="sidenav-dropdown-icon show" data-sidenav-dropdown-icon>
+							<img src="__INDEX__/mobile/img/index/6.png" alt="" class="drop">
+						</span>
+					</div>
+				</a>
+			</li>
+			<!--活动专区  -->
+			<li>
+				<a href="javascript:;" data-sidenav-dropdown-toggle class="active">
+					<div class="navleft">
+						<span class="sidenav-link-icon">
+							<img src="__INDEX__/mobile/img/index/2.png" alt="">
+						</span>
+						<span class="sidenav-link-title">活动专区</span>
+					</div>
+					<div class="navright">
+						<span class="sidenav-dropdown-icon show" data-sidenav-dropdown-icon>
+							<img src="__INDEX__/mobile/img/index/6.png" alt="" class="drop">
+						</span>
+					</div>
+				</a>
+			</li>
+			<!--品牌动态  -->
+			<li>
+				<a href="javascript:;" data-sidenav-dropdown-toggle class="active">
+					<div class="navleft">
+						<span class="sidenav-link-icon">
+							<img src="__INDEX__/mobile/img/index/4.png" alt="">
+						</span>
+						<span class="sidenav-link-title">品牌动态</span>
+					</div>
+					<div class="navright">
+						<span class="sidenav-dropdown-icon show" data-sidenav-dropdown-icon>
+							<img src="__INDEX__/mobile/img/index/6.png" alt="" class="drop">
+						</span>
+					</div>
+				</a>
+			</li>
+			<!--关于我们  -->
+			<li>
+				<a href="javascript:;" data-sidenav-dropdown-toggle class="active">
+					<div class="navleft">
+						<span class="sidenav-link-icon">
+							<img src="__INDEX__/mobile/img/index/5.png" alt="">
+						</span>
+						<span class="sidenav-link-title">关于我们</span>
+					</div>
+					<div class="navright">
+						<span class="sidenav-dropdown-icon show" data-sidenav-dropdown-icon>
+							<img src="__INDEX__/mobile/img/index/6.png" alt="" class="drop">
+						</span>
+					</div>
+				</a>
+			</li>
+<!-- 			<li>
+				<a href="javascript:;" data-sidenav-dropdown-toggle class="active">
+					<div class="navleft">
+						<span class="sidenav-link-icon">
+							<img src="__INDEX__/mobile/img/index/8.png" alt="">
+						</span>
+						<span class="sidenav-link-title">会员中心</span>
+					</div>
+					<div class="navright">
+						<span class="sidenav-dropdown-icon show" data-sidenav-dropdown-icon>
+							<img src="__INDEX__/mobile/img/index/6.png" alt="" class="drop">
+						</span>
+					</div>
+				</a>
+			</li> -->
+			{if $type_login==2}
+			<li>
+				<!-- <a href="javascript:;" data-sidenav-dropdown-toggle class="active">
+					<div class="navleft">
+						<span class="sidenav-link-icon">
+							<img src="__INDEX__/mobile/img/index/8.png" alt="">
+						</span>
+						<span class="sidenav-link-title">退出登录</span>
+					</div>
+					<div class="navright">
+						<span class="sidenav-dropdown-icon show" data-sidenav-dropdown-icon>
+							<img src="__INDEX__/mobile/img/index/6.png" alt="" class="drop">
+						</span>
+					</div>
+				</a> -->
+						<!-- <a id="Unchecked"  onclick="logotu();" data-href="1">退出登录</a>	 -->
+			</li>
+			{/if}
+		</ul>
+		<div class="twoNav">
+			<ul id="nav1s" class="navs0">
+				<li>
+					<a href="{:url('Product/shopping')}"><span>导购说明>>></span></a>
+					<img src="__INDEX__/mobile/img/index/7.png" alt="">
+				</li>
+				<li>
+					<a href="{:url('product/made')}"><span>专属定制>>></span></a>
+					<img src="__INDEX__/mobile/img/index/7.png" alt="">
+				</li>
+				<li>
+					<a href="http://aoling.douyar.cc/index/product/shopping.html#jxs"><span>经销商查询>>></span></a>
+					<img src="__INDEX__/mobile/img/index/7.png" alt="">
+				</li>
+				<li>
+					<a onclick="alert('敬请期待');return false;" href=""><span>金融服务>>></span></a>
+					<img src="__INDEX__/mobile/img/index/7.png" alt="">
+				</li>
+				<li>
+					<a  onclick="alert('敬请期待')"><span>购车计算器>>></span></a>
+					<img src="__INDEX__/mobile/img/index/7.png" alt="">
+				</li>
+			</ul>
+			<ul id="nav1s" class="navs1">
+				<li>
+					<a href="http://aoling.douyar.cc/index/service/maintain.html#bbb" onclick="tiao()"><span>预约维保>>></span></a>
+					<img src="__INDEX__/mobile/img/index/7.png" alt="">
+				</li>
+				<li>
+					<a href="{:url('service/maintain')}#aaa" onclick="tiao()"><span>服务站查询>>></span></a>
+					<img src="__INDEX__/mobile/img/index/7.png" alt="">
+				</li>
+				<li>
+					<a href="https://www.365autogo.com/"><span>配件商城>>></span></a>
+					<img src="__INDEX__/mobile/img/index/7.png" alt="">
+				</li>
+			</ul>
+			<ul id="nav1s" class="navs2">
+				<li>
+					<a href="http://aoling.douyar.cc/index/hd1/lm.html"><span>奥铃勒芒赛>>></span></a>
+					<img src="__INDEX__/mobile/img/index/7.png" alt="">
+				</li>
+				<li>
+					<a href="http://al.douyar.cc/ol/ol_spirit.php"><span>奥铃精神>>></span></a>
+					<img src="__INDEX__/mobile/img/index/7.png" alt="">
+				</li>
+				<li>
+					<a href="http://czyl.foton.com.cn/shareCars/againBuyCar.html"><span>车主有礼>>></span></a>
+					<img src="__INDEX__/mobile/img/index/7.png" alt="">
+				</li>
+<!-- 				<li>
+					<a href="http://ollin.foton.com.cn/ollin/static/html/mHtml/BqCJfMkKHJnKKL5Td3W6od.html"><span>科技奥铃服务号>>></span></a>
+					<img src="__INDEX__/mobile/img/index/7.png" alt="">
+				</li> -->
+				<li>
+					<a href="{:url('news/index')}?id=6"><span>更多优惠活动>>></span></a>
+					<img src="__INDEX__/mobile/img/index/7.png" alt="">
+				</li>
+			</ul>
+			<ul id="nav1s" class="navs3">
+				{volist name="news_cate" id="vo"}
+				<li>
+					<a href="{:url('News/index')}?id={$vo.id}"><span>{$vo['name']}>>></span></a>
+					<img src="__INDEX__/mobile/img/index/7.png" alt="">
+				</li>
+				{/volist}
+			</ul>
+			<ul id="nav1s" class="navs4">
+				<li>
+					<a href="{:url('About/albrand')}"><span>奥铃品牌>>></span></a>
+					<img src="__INDEX__/mobile/img/index/7.png" alt="">
+				</li>
+				<li>
+					<a href="{:url('About/contact')}"><span>联系我们>>></span></a>
+					<img src="__INDEX__/mobile/img/index/7.png" alt="">
+				</li>
+
+			</ul>
+			<ul id="nav1s" class="navs5">
+				<li>
+					<a href="{:url('Login/index')}"><span>会员中心>>></span></a>
+					<img src="__INDEX__/mobile/img/index/7.png" alt="">
+				</li>
+
+
+			</ul>
+		</div>
+	</nav>
+	<script>
+		function logotu(){
+		$.ajax({
+			type: 'POST',
+			dataType: 'json',
+			url: '{:url('Common/login_out')}',
+			success: function (data) {
+				alert('退出成功');
+				location.reload();
+				return false;
+			}
+		});
+}
+	
+
+	function tiao(){
+		if(window.location.href == 'http://aoling.douyar.cc/index/service/maintain.html#aaa' || window.location.href == 'http://aoling.douyar.cc/index/service/maintain.html#bbb'){
+			location.reload();
+		}
+	}
+
+	function su(){
+		alert("敬请期待");
+	}
+	</script>

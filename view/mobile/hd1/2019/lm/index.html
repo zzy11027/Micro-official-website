@@ -1,0 +1,1339 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <title>福田奥铃&福康杯 2019线上勒芒赛</title>
+    <link rel="stylesheet" href="__INDEX__/mobile/hd1/2019/lm/css/set.css">
+    <link rel="stylesheet" href="__INDEX__/mobile/hd1/2019/lm/css/px2rem.css">
+    <link rel="stylesheet" href="__INDEX__/mobile/hd1/2019/lm/css/swiper.min.css">
+    <script src="__INDEX__/mobile/hd1/2019/lm/js/ejs.min.js"></script>
+    <script src="__INDEX__/mobile/hd1/2019/lm/js/jquery.min.js"></script>
+    <script src="__INDEX__/mobile/hd1/2019/lm/js/swiper.min.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <script>
+        wx.config({
+            debug: false, // 开启调试模式调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印�?
+            appId: 'wx8c5b80ddabf32666', // 必填，公众号的唯一标识
+            timestamp: '{$arr.timestamp}', // 必填，生成签名的时间
+            nonceStr: '{$arr.noncestr}', // 必填，生成签名的随机
+            signature: '{$arr.sha1}',// 必填，签名，见附
+            jsApiList: [
+                "onMenuShareTimeline",
+                "onMenuShareAppMessage"
+            ] // 必填，需要使用的JS接口列表，所有JS接口列表见附
+        });
+        wx.ready(function () {
+            wx.onMenuShareAppMessage({
+                title: '奥铃勒芒赛', // 分享标题
+                desc: '福田奥铃&福康杯 2019线上勒芒赛”高效物流，赢在TCO', // 分享描述
+                link: 'http://aoling.douyar.cc/index/hd1/lm_xs.html', // 分享链接
+                imgUrl: 'http://aoling.douyar.cc/public/fx/cc.jpg', // 分享图标
+                type: '', // 分享类型,music、video或link，不填默认为link
+                dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+                success: function () {
+
+                },
+                cancel: function () {
+                    //alert("取消成功");
+                    // 用户取消分享后执行的回调函数
+                }
+
+            });
+            wx.onMenuShareTimeline({
+                title: '奥铃勒芒赛', // 分享标题
+                link: 'http://aoling.douyar.cc/index/hd1/lm_xs.html', // 分享链接
+                imgUrl: 'http://aoling.douyar.cc/public/fx/cc.jpg', // 分享图标
+                success: function () {
+
+                },
+                cancel: function () {
+                  //  alert("取消成功");
+                    // 用户取消分享后执行的回调函数
+                }
+            });
+        })
+    </script>
+   
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?4b35b9696537f6518e4cdcdeeee51ff6";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <script>
+        var w = 375;
+        var f = 16;
+        var c = document.documentElement.clientWidth;
+        console.log(c);
+        var nf = c * f / w;
+        document.documentElement.style.fontSize = nf + 'px';
+    </script>
+    <style>
+        .swiper-container .swiper-slide:not(.swiper-slide-active) {
+            transform: scale(0.8);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- banner -->
+    <div class="swiper-container swiper-container1">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="__INDEX__/mobile/hd1/2019/lm/img/bannersss.jpg" alt="">
+                <!-- <img src="__INDEX__/mobile/hd1/2019/lm/imgs/banner.jpg" alt=""> -->
+            </div>
+        </div>
+    </div>
+    <!-- 赛程 -->
+    <div class="saicheng">
+
+    </div>
+    <!--START      container -->
+    <div id="container">
+
+        <div class="back1">
+        <!-- 导航 -->
+        <div class="nav">
+            <div class="navson1" onclick="pk1(items1)"></div>
+            <div class="navson2" onclick="pk1(items2)"></div>
+            <div class="navson4" onclick="pk1(items4)"></div>
+            <div class="navson3" onclick="pk1(items3)"></div>
+        </div>
+
+        <!--pk pk pk pk 第一个父元素     pk -->
+        <div class="parent1">
+            <!--START    11111111      pk             START -->
+            <div id="hot1" class="hot1">
+                <!-- 热门     pk       竞赛 -->
+                <div class="hot"></div>
+                <!-- 报名 -->
+                <a href="{:url('hd1/lm_xs1')}">
+                    <div class="baoming"></div>
+                </a>
+                <!-- 汽车 -->
+                <div class="car">
+                    <div class="car1">
+                        <span>京A.XX23</span>
+                    </div>
+                    <div class="vs1"></div>
+                    <div class="car2">
+                        <span>京A.XX21</span>
+                    </div>
+                </div>
+                <!-- 当前行驶里程 -->
+                <div class="xingshi">
+                    <p>当前行驶里程：1312KM</p>
+                    <p>当前行驶里程：1300KM</p>
+                </div>
+                <!-- 投票 -->
+                <div class="tou">
+                    <div class="tou1" onclick="tou(this,1)"></div>
+                    <div class="tou2" onclick="tou(this,2)"></div>
+                </div>
+                <!-- 列表       -->
+                <script charset="UTF-8" type="text/template" id="menuTemplate">
+                    <div class="listsHot"></div>
+                        <% items.forEach(function(item){%>
+                        <ul class="bang">
+                            <li>
+                                <span><%=item.mileage1 %></span><span><%=item.achievement1 %></span>
+                            </li>
+                            <li>
+                                <span><%=item.time %></span>
+                            </li>
+                            <li>
+                                <span><%=item.achievement2 %></span><span><%=item.mileage2 %></span>
+                            </li>
+                        </ul>
+                        <% }) %>
+                </script>
+
+
+
+                <!-- 循环   热门pk  循环   热门pk   循环   热门pk     循环   热门pk      循环   热门pk -->
+                <div class="lists lists1 listsOut">
+                        <ul class="bang">
+                            <li>
+                                <span>1512KM</span>
+                                <span>胜利</span>
+                            </li>
+                            <li>
+                                <span>2019年7月24号</span>
+                            </li>
+                            <li>
+                                <span>1482KM</span>
+                                <span>失败</span>
+                            </li>
+                        </ul>
+                </div>
+            </div>
+            <!--END      111111      pk    1111111        END -->
+
+            <!--START    222222      pk    2222222         START -->
+            <div id="hot1" class="hot2" style="display: none;">
+                <!-- 热门     pk       竞赛 -->
+                <div class="hot"></div>
+                <!-- 报名 -->
+                <a href="{:url('hd1/lm_xs1')}">
+                    <div class="baoming"></div>
+                </a>
+                <!-- 汽车 -->
+                <div class="car">
+                    <div class="car1">
+                        <span>京A.XX56</span>
+                    </div>
+                    <div class="vs2"></div>
+                    <div class="car2">
+                        <span>京A.XX47</span>
+                    </div>
+                </div>
+                <!-- 当前行驶里程 -->
+                <div class="xingshi">
+                    <p>当前行驶里程：1201KM</p>
+                    <p>当前行驶里程：1131KM</p>
+                </div>
+                <!-- 投票 -->
+                <div class="tou">
+                    <div class="tou1" onclick="tou(this,1)"></div>
+                    <div class="tou2" onclick="tou(this,2)"></div>
+                </div>
+
+
+
+                <!-- 循环   热门pk  循环   热门pk   循环   热门pk     循环   热门pk      循环   热门pk -->
+                <div class="lists lists2 listsOut">
+                    <ul class="bang">
+                        <li>
+                            <span>120L</span><span>胜利</span>
+                        </li>
+                        <li>
+                            <span>2019年7月24号</span>
+                        </li>
+                        <li>
+                            <span>138L</span><span>失败</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--END      3333333      pk    3333333        END -->
+
+
+            <!--START    333333333      pk    333333333         START -->
+            <div id="hot1" class="hot3" style="display: none;">
+                <!-- 热门     pk       竞赛 -->
+                <div class="hot"></div>
+                <!-- 报名 -->
+                <a href="{:url('hd1/lm_xs1')}">
+                    <div class="baoming"></div>
+                </a>
+                <!-- 汽车 -->
+                <div class="car">
+                    <div class="car1">
+                        <span>京A.XX54</span>
+                    </div>
+                    <div class="vs3"></div>
+                    <div class="car2">
+                        <span>京A.XX79</span>
+                    </div>
+                </div>
+                <!-- 当前行驶里程 -->
+                <div class="xingshi">
+                    <p>当前出勤率：<span class="">80小时</span></p>
+                    <p>当前出勤率：<span class="">70小时</span></p>
+                </div>
+                <!-- 投票 -->
+                <div class="tou">
+                    <div class="tou1" onclick="tou(this,1)"></div>
+                    <div class="tou2" onclick="tou(this,2)"></div>
+                </div>
+
+
+
+
+                <!-- 循环   热门pk  循环   热门pk   循环   热门pk     循环   热门pk      循环   热门pk -->
+                <div class="lists lists3 listsOut">
+                    <ul class="bang">
+                        <li>
+                            <span>出勤率80%</span><span>胜利</span>
+                        </li>
+                        <li>
+                            <span>2019年7月24号</span>
+                        </li>
+                        <li>
+                            <span>出勤率50%</span><span>失败</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--END      333333333      pk    333333333        END -->
+
+
+            <!--START    444444444444      pk    444444444444         START -->
+            <div id="hot1" class="hot4" style="display: none;">
+                <!-- 热门     pk       竞赛 -->
+                <div class="hot"></div>
+                <!-- 报名 -->
+                <a href="{:url('hd1/lm_xs1')}">
+                    <div class="baoming"></div>
+                </a>
+                <!-- 汽车 -->
+                <div class="car">
+                    <div class="car1">
+                        <span>京A.XX54</span>
+                    </div>
+                    <div class="vs3"></div>
+                    <div class="car2">
+                        <span>京A.XX79</span>
+                    </div>
+                </div>
+                <!-- 当前行驶里程 -->
+                <div class="xingshi">
+                    <p>当前点赞人数：<span class="zan1">324</span>人</p>
+                    <p>当前点赞人数：<span class="zan2">248</span>人</p>
+                </div>
+                <!-- 投票 -->
+                <div class="tou">
+                    <div class="tou1" onclick="tou(this,1)"></div>
+                    <div class="tou2" onclick="tou(this,2)"></div>
+                </div>
+
+
+
+
+                <!-- 循环   热门pk  循环   热门pk   循环   热门pk     循环   热门pk      循环   热门pk -->
+                <div class="lists lists3 listsOut">
+                    <ul class="bang">
+                        <li>
+                            <span>324人点赞</span><span>胜利</span>
+                        </li>
+                        <li>
+                            <span>2019年7月24号</span>
+                        </li>
+                        <li>
+                            <span>248人点赞</span><span>失败</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--END      444444444444      pk    444444444444        END -->
+        </div>
+        </div>
+
+        <!--榜单 榜单 榜单 榜单 第二个父元素     榜单 -->
+        <div class="parent2">
+            <!--START            里程榜单             START -->
+            <div class="list list1">
+                <!-- 赛季里程榜单 -->
+                <div class="saiji1"></div>
+                <!-- 我的成绩单 -->
+                <a href="http://aoling.douyar.cc/index/hd1/lm_xs1.html" class="mylist"></a>
+                <!-- 榜单    导航 -->
+                <div class="navlist1"></div>
+                <div class="chaochu" style="height: 24rem;overflow: hidden;">
+                    <!-- 里程排行榜            此处循环     ul    -->
+                    {volist name="sql1" id="vo" key="k" }
+                    <ul class="bang1">
+                        <li class="capss">
+                            {$k}
+                        </li>
+                        <li style="width: 3.65625rem;margin-left:2.1875rem;">
+                            {$vo.cp|mb_substr=0,3,'utf-8'}***
+                        </li>
+                        <li style="width: 4.6875rem;margin-left:1.51875rem;">
+                            {$vo.cx}
+                        </li>
+                        <li style="width:2.90625rem;text-align: center;margin-left: 0.5rem;">
+                            {$vo.mileage}
+                        </li>
+                        <li style="margin-left:2.1875rem;">
+                            <img src="__INDEX__/mobile/hd1/2019/lm/imgs/dian.png" alt="" class="dianss" onclick="dian(this,'no1',{$vo.id})">
+                        </li>
+                    </ul>
+                    {/volist}
+                </div>
+                <!--  点击查看更多    -->
+                <!-- <div class="more"></div> -->
+            </div>
+            <!--END            里程榜单             END -->
+
+
+
+            <!--START            油耗榜单             START -->
+            <div class="list list2" style="display: none;">
+                <!-- 赛季里程榜单 -->
+                <div class="saiji2"></div>
+                <!-- 我的成绩单 -->
+                <a href="http://aoling.douyar.cc/index/hd1/lm_xs1.html" class="mylist"></a>
+                <!-- 榜单    导航 -->
+                <div class="navlist2"></div>
+                <!-- 里程排行榜            此处循环     ul    -->
+                <div class="chaochu" style="height: 24rem;overflow: auto;">
+                {volist name="sql2" id="vo" key="k" }
+                    <ul class="bang1">
+                        <li class="capss">
+                            {$k}
+                        </li>
+                        <li style="width: 3.65625rem;margin-left:2.1875rem;">
+                            {$vo.cp|mb_substr=0,3,'utf-8'}***
+                        </li>
+                        <li style="width: 4.6875rem;margin-left: 1.51875rem;">
+                            {$vo.cx}
+                        </li>
+                        <li style="width:2.90625rem;text-align: center;margin-left: 0.5rem;">
+                            {$vo.perFuelConsumption}
+                        </li>
+                        <li style="margin-left:2.1875rem;">
+                            <img src="__INDEX__/mobile/hd1/2019/lm/imgs/dian.png" alt="" class="dianss" onclick="dian(this,'no2',{$vo.id})">
+                        </li>
+                    </ul>
+                {/volist}
+                </div>
+                <!--  点击查看更多    -->
+                <!-- <div class="more"></div> -->
+            </div>
+            <!--END            油耗榜单             END -->
+
+
+            <!--START            人气榜单             START -->
+            <div class="list list4" style="display: none;">
+                <!-- 赛季里程榜单 -->
+                <div class="saiji3"></div>
+                <!-- 我的成绩单 -->
+                <a href="http://aoling.douyar.cc/index/hd1/lm_xs1.html" class="mylist"></a>
+                <!-- 榜单    导航 -->
+                <div class="navlist4"></div>
+                <!-- 里程排行榜            此处循环     ul    -->
+                <div class="chaochu" style="height: 24rem;overflow: auto;">
+                <input type="hidden" id="openid" value="{$openid}">
+                {volist name="sql3" id="vo" key="k" }
+                    <ul class="bang1">
+                        <li class="capss">
+                            {$k}
+                        </li>
+                        <li style="width: 3.65625rem;margin-left:2.1875rem;">
+                             {$vo.cp|mb_substr=0,3,'utf-8'}***
+                        </li>
+                        <li style="width: 4.6875rem;margin-left: 1.51875rem;">
+                            {$vo.cx}
+                        </li>
+                        <li style="width:2.90625rem;text-align: center;margin-left: 0.5rem;">
+                            {$vo.dz}
+                        </li>
+                        <li style="margin-left:2.1875rem;">
+                            <img src="__INDEX__/mobile/hd1/2019/lm/imgs/dian.png" alt="" class="dianss" onclick="dian(this,'yes',{$vo.id})">
+                        </li>
+                    </ul>
+                {/volist}
+                </div>
+                <!--  点击查看更多    -->
+                <!-- <div class="more"></div> -->
+            </div>
+            <!--END            人气榜单             END -->
+
+
+
+            <!--START            盈利榜单             START -->
+            <div class="list list3" style="display: none;">
+                <!-- 赛季里程榜单 -->
+                <div class="saiji4"></div>
+                <!-- 我的成绩单 -->
+                <a href="http://aoling.douyar.cc/index/hd1/lm_xs1.html" class="mylist"></a>
+                <!-- 榜单    导航 -->
+                <div class="navlist3"></div>
+                <!-- 里程排行榜            此处循环     ul    -->
+                <div class="chaochu" style="height: 24rem;overflow: auto;">
+                {volist name="sql4" id="vo" key="k" }
+                    <ul class="bang1">
+                        <li class="capss">
+                            {$k}
+                        </li>
+                        <li style="width: 3.65625rem;margin-left:2.1875rem;">
+                             {$vo.cp|mb_substr=0,3,'utf-8'}***
+                        </li>
+                        <li style="width: 4.6875rem;margin-left: 1.51875rem;">
+                            {$vo.cx}
+                        </li>
+                        <li style="width:2.90625rem;text-align: center;margin-left: 0.5rem;">
+                            {$vo.runTimeInSeconds}
+                        </li>
+                        <li style="margin-left:2.1875rem;">
+                            <img src="__INDEX__/mobile/hd1/2019/lm/imgs/dian.png" alt="" class="dianss" onclick="dian(this,'no3',{$vo.id})">
+                        </li>
+                    </ul>
+                {/volist}
+                </div>
+                <!--  点击查看更多    -->
+                <!-- <div class="more"></div> -->
+            </div>
+            <!--END            盈利榜单             END -->
+        </div>
+
+        <!--pk pk pk pk 第三个父元素     pk -->
+        <div class="parent3">
+
+            <!--START     1111111111       我的pk             START -->
+            {if condition="$pk1 neq ''"}
+            <div id="mypk" class="mypk1" style="">
+                <div class="pk"></div>
+
+                <div id="hot1">
+                    <div class="car">
+                        <div class="car1">
+                            <span>{$pk1['my_cp']|mb_substr=0,3,'utf-8'}***</span>
+                        </div>
+                        <div class="vs1"></div>
+                        <div class="car2">
+                            <span>{$pk1['t_cp']|mb_substr=0,3,'utf-8'}***</span>
+                        </div>
+                    </div>
+                    <div class="lists">
+                        <ul class="bang">
+                            <li>
+                                <span>{$pk1['my_cs']}KM</span><span>{$pk1['my_jg']}</span>
+                            </li>
+                            <li>
+                                <span>{$pk1['add_date']}</span>
+                            </li>
+                            <li>
+                                <span>{$pk1['t_cs']}KM</span><span>{$pk1['t_jg']}</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            {/if}
+            <!--END     111111111       我的pk             END -->
+
+
+            <!--START     22222222       我的pk             START -->
+             {if condition="$pk2 neq ''"}
+            <div id="mypk" class="mypk2" style="display: none;">
+                <div class="pk"></div>
+
+                <div id="hot1">
+                    <div class="car">
+                        <div class="car1">
+                            <span>{$pk2['my_cp']|mb_substr=0,3,'utf-8'}***</span>
+                        </div>
+                        <div class="vs2"></div>
+                        <div class="car2">
+                            <span>{$pk2['t_cp']|mb_substr=0,3,'utf-8'}***</span>
+                        </div>
+                    </div>
+                    <div class="lists">
+                        <ul class="bang">
+                            <li>
+                                <span>{$pk2['my_cs']}KM</span><span>{$pk2['my_jg']}</span>
+                            </li>
+                            <li>
+                                 <span>{$pk2['add_date']}</span>
+                            </li>
+                            <li>
+                                 <span>{$pk2['t_cs']}KM</span><span>{$pk2['t_jg']}</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+             {/if}
+            <!--END     22222222       我的pk             END -->
+
+
+            <!--START     33333333333       我的pk             START -->
+             {if condition="$pk3 neq '' "}
+            <div id="mypk" class="mypk3" style="display: none;">
+                <div class="pk"></div>
+
+                <div id="hot1">
+                    <div class="car">
+                        <div class="car1">
+                             <span>{$pk3['my_cp']|mb_substr=0,3,'utf-8'}***</span>
+                        </div>
+                        <div class="vs3"></div>
+                        <div class="car2">
+                            <span>{$pk3['t_cp']|mb_substr=0,3,'utf-8'}***</span>
+                        </div>
+                    </div>
+                    <div class="lists">
+                        <ul class="bang">
+                             <li>
+                                <span>{$pk3['my_cs']}KM</span><span>{$pk3['my_jg']}</span>
+                            </li>
+                            <li>
+                                 <span>{$pk3['add_date']}</span>
+                            </li>
+                            <li>
+                                 <span>{$pk3['t_cs']}KM</span><span>{$pk3['t_jg']}</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+             {/if}
+            <!--END     33333333333       我的pk             END -->
+        </div>
+
+        <!--START            车型推荐             START -->
+        <div class="back4">
+            <div class="tuijian"></div>
+            <div class="swiper-container swiper-container2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="__INDEX__/mobile/hd1/2019/lm/img/t2.png" alt="" style="">
+                        <a href="http://aoling.douyar.cc/index/testdrive/index.html?id=1"></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="__INDEX__/mobile/hd1/2019/lm/img/t3.png" alt="" style="">
+                        <a href="http://aoling.douyar.cc/index/testdrive/index.html?id=1"></a>
+                    </div>
+<!--                     <div class="swiper-slide">
+                        <img src="__INDEX__/mobile/hd1/2019/lm/img/t1t1.png" alt="" style="">
+                        <a href="http://aoling.douyar.cc/index/testdrive/index.html?id=1"></a>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+
+        <!--END            车型推荐             END -->
+
+
+        <!--START            奥铃星说             START -->
+        <div class="back5">
+            <div class="olsaid"></div>
+            <div class="said">
+                <!-- 此处循环ul    此处循环ul    此处循环ul    此处循环ul-->
+                <ul>
+                    <a href="http://aoling.douyar.cc/index/news/show.html?id=54">
+                        <img src="__INDEX__/mobile/hd1/2019/lm/imgs/33s.jpg" alt="" style="width:100%; height: 100%;">
+                    </a>
+                    <a href="http://aoling.douyar.cc/index/news/show.html?id=54">
+                        <p>行业首发活鲜水产运输解决方案，奥铃活鲜水产行业王者之战沧州上演</p>
+                        <span>2019/8/22</span>
+                    </a>
+                </ul>
+                <ul>
+                    <a href="http://aoling.douyar.cc/index/news/index.html?id=5">
+                        <img src="__INDEX__/mobile/hd1/2019/lm/imgs/33s.jpg" alt="" style="width:100%; height: 100%;">
+                    </a>
+                    <a href="http://aoling.douyar.cc/index/news/index.html?id=5">
+                        <p>爆款蓝牌奥铃速运，轻拉快跑城配明星</p>
+                        <span>2019/7/21</span>
+                    </a>
+                </ul>
+                <ul>
+                    <a href="http://aoling.douyar.cc/index/news/index.html?id=5">
+                        <img src="__INDEX__/mobile/hd1/2019/lm/imgs/44s.jpg" alt="" style="width:100%; height: 100%;">
+                    </a>
+                    <a href="http://aoling.douyar.cc/index/news/index.html?id=5">
+                        <p>城配企业的“福音”，爆款蓝牌福田奥铃速运再下一城</p>
+                        <span>2019/7/22 </span>
+                    </a>
+                </ul>
+                <ul>
+                    <a href="http://aoling.douyar.cc/index/news/index.html?id=5">
+                        <img src="__INDEX__/mobile/hd1/2019/lm/imgs/55s.jpg" alt="" style="width:100%; height: 100%;">
+                    </a>
+                    <a href="http://aoling.douyar.cc/index/news/index.html?id=5">
+                        <p>专为城配而生，镜头下的福田奥铃速运</p>
+                        <span>2019/7/23</span>
+                    </a>
+                </ul>
+                <ul>
+                    <a href="http://aoling.douyar.cc/index/news/index.html?id=5">
+                        <img src="__INDEX__/mobile/hd1/2019/lm/imgs/66s.jpg" alt="" style="width:100%; height: 100%;">
+                    </a>
+                    <a href="http://aoling.douyar.cc/index/news/index.html?id=5">
+                        <p>“蓝牌无忧 轻拉快跑”奥铃速运引领高效城配风向标</p>
+                        <span>2019/7/24</span>
+                    </a>
+                </ul>
+            </div>
+        </div>
+        <div style="width: 100%;height: 1.6rem;"></div>
+
+        <!--END            奥铃星说             END -->
+    </div>
+    <div class="dibu">
+        <a href="{:url('hd1/lm_xs')}"> <img src="__INDEX__/mobile/hd1/2019/lm/img/d1.png" alt="" class="tu9"></a>
+        <a href="{:url('hd1/cc')}" > <img src="__INDEX__/mobile/hd1/2019/lm/img/d22.png" alt="" class="tu6"></a>
+        <a href="{:url('hd1/lm_xs1')}"> <img src="__INDEX__/mobile/hd1/2019/lm/img/d3.png" alt="" class="tu7"></a>
+    </div>
+
+
+
+
+    <script src="__INDEX__/mobile/hd1/2019/lm/js/dom.js"></script>
+    <script>
+    function pk1(items){
+        var str=$("#menuTemplate").html();
+        var result=ejs.render(str, {items: items});
+        $(".listsOut").html(result);        
+    }
+    //里程：
+    var items1=[
+        {"mileage1":"1324KM","achievement1":"失败","time":"2019年8月1号","achievement2":"1438KM","mileage2":"胜利"},
+        {"mileage1":"1462KM","achievement1":"胜利","time":"2019年8月2号","achievement2":"1255KM","mileage2":"失败"},
+        {"mileage1":"1544KM","achievement1":"胜利","time":"2019年8月3号","achievement2":"1002KM","mileage2":"失败"},
+        {"mileage1":"1332KM","achievement1":"失败","time":"2019年8月4号","achievement2":"1554KM","mileage2":"胜利"},
+        {"mileage1":"1120KM","achievement1":"失败","time":"2019年8月5号","achievement2":"1541KM","mileage2":"胜利"},
+        {"mileage1":"1255KM","achievement1":"胜利","time":"2019年8月6号","achievement2":"1095KM","mileage2":"失败"},
+        {"mileage1":"1304KM","achievement1":"失败","time":"2019年8月7号","achievement2":"1402KM","mileage2":"胜利"},
+        {"mileage1":"1198KM","achievement1":"失败","time":"2019年8月8号","achievement2":"1386KM","mileage2":"胜利"},
+        {"mileage1":"1336KM","achievement1":"胜利","time":"2019年8月9号","achievement2":"1289KM","mileage2":"失败"},
+        {"mileage1":"1150KM","achievement1":"失败","time":"2019年8月10号","achievement2":"1425KM","mileage2":"胜利"},
+        {"mileage1":"1425KM","achievement1":"失败","time":"2019年8月11号","achievement2":"1522KM","mileage2":"胜利"},
+        {"mileage1":"1056KM","achievement1":"失败","time":"2019年8月12号","achievement2":"1440KM","mileage2":"胜利"},
+        {"mileage1":"1213KM","achievement1":"胜利","time":"2019年8月13号","achievement2":"1015KM","mileage2":"失败"},
+        {"mileage1":"1356KM","achievement1":"失败","time":"2019年8月14号","achievement2":"1540KM","mileage2":"胜利"},
+        {"mileage1":"1003KM","achievement1":"失败","time":"2019年8月15号","achievement2":"1521KM","mileage2":"胜利"},
+        {"mileage1":"1402KM","achievement1":"失败","time":"2019年8月16号","achievement2":"1552KM","mileage2":"胜利"},
+        {"mileage1":"1005KM","achievement1":"失败","time":"2019年8月17号","achievement2":"1065KM","mileage2":"胜利"},
+        {"mileage1":"1512KM","achievement1":"胜利","time":"2019年8月18号","achievement2":"1278KM","mileage2":"失败"},
+        {"mileage1":"1432KM","achievement1":"胜利","time":"2019年8月19号","achievement2":"1115KM","mileage2":"失败"},
+        {"mileage1":"1553KM","achievement1":"胜利","time":"2019年8月20号","achievement2":"1452KM","mileage2":"失败"},
+        {"mileage1":"1202KM","achievement1":"失败","time":"2019年8月21号","achievement2":"1345KM","mileage2":"胜利"},
+        {"mileage1":"1023KM","achievement1":"失败","time":"2019年8月22号","achievement2":"1543KM","mileage2":"胜利"},
+        {"mileage1":"1235KM","achievement1":"胜利","time":"2019年8月23号","achievement2":"1022KM","mileage2":"失败"},
+        {"mileage1":"1349KM","achievement1":"失败","time":"2019年8月24号","achievement2":"1408KM","mileage2":"胜利"},
+        {"mileage1":"1057KM","achievement1":"失败","time":"2019年8月25号","achievement2":"1285KM","mileage2":"胜利"},
+        {"mileage1":"1206KM","achievement1":"失败","time":"2019年8月26号","achievement2":"1452KM","mileage2":"胜利"},
+        {"mileage1":"1542KM","achievement1":"胜利","time":"2019年8月27号","achievement2":"1252KM","mileage2":"失败"},
+        {"mileage1":"1215KM","achievement1":"失败","time":"2019年8月28号","achievement2":"1345KM","mileage2":"胜利"},
+        {"mileage1":"1447KM","achievement1":"胜利","time":"2019年8月29号","achievement2":"1025KM","mileage2":"失败"},
+        {"mileage1":"1047KM","achievement1":"失败","time":"2019年8月30号","achievement2":"1156KM","mileage2":"胜利"},
+        {"mileage1":"1486KM","achievement1":"胜利","time":"2019年8月31号","achievement2":"1245KM","mileage2":"失败"},
+        {"mileage1":"1148KM","achievement1":"失败","time":"2019年9月1号","achievement2":"1384KM","mileage2":"胜利"},
+        {"mileage1":"1356KM","achievement1":"失败","time":"2019年9月2号","achievement2":"1485KM","mileage2":"胜利"},
+        {"mileage1":"1054KM","achievement1":"失败","time":"2019年9月3号","achievement2":"1358KM","mileage2":"胜利"},
+        {"mileage1":"1485KM","achievement1":"失败","time":"2019年9月4号","achievement2":"1543KM","mileage2":"胜利"},
+        {"mileage1":"1246KM","achievement1":"胜利","time":"2019年9月5号","achievement2":"1153KM","mileage2":"失败"},
+        {"mileage1":"1524KM","achievement1":"胜利","time":"2019年9月6号","achievement2":"1348KM","mileage2":"失败"},
+        {"mileage1":"1365KM","achievement1":"胜利","time":"2019年9月7号","achievement2":"1248KM","mileage2":"失败"},
+        {"mileage1":"1354KM","achievement1":"失败","time":"2019年9月8号","achievement2":"1485KM","mileage2":"胜利"},
+        {"mileage1":"1058KM","achievement1":"失败","time":"2019年9月9号","achievement2":"1344KM","mileage2":"胜利"},
+        {"mileage1":"1336KM","achievement1":"胜利","time":"2019年9月10号","achievement2":"1289KM","mileage2":"失败"},
+        {"mileage1":"1432KM","achievement1":"胜利","time":"2019年9月11号","achievement2":"1115KM","mileage2":"失败"},
+        {"mileage1":"1235KM","achievement1":"胜利","time":"2019年9月12号","achievement2":"1022KM","mileage2":"失败"},
+        {"mileage1":"1349KM","achievement1":"失败","time":"2019年9月13号","achievement2":"1408KM","mileage2":"胜利"},
+        {"mileage1":"1057KM","achievement1":"失败","time":"2019年9月14号","achievement2":"1285KM","mileage2":"胜利"},
+        {"mileage1":"1206KM","achievement1":"失败","time":"2019年9月15号","achievement2":"1452KM","mileage2":"胜利"},
+        {"mileage1":"1542KM","achievement1":"胜利","time":"2019年9月16号","achievement2":"1252KM","mileage2":"失败"},
+        {"mileage1":"1553KM","achievement1":"胜利","time":"2019年9月17号","achievement2":"1452KM","mileage2":"失败"},
+        {"mileage1":"1056KM","achievement1":"失败","time":"2019年9月18号","achievement2":"1440KM","mileage2":"胜利"},
+        {"mileage1":"1213KM","achievement1":"胜利","time":"2019年9月19号","achievement2":"1015KM","mileage2":"失败"},
+        {"mileage1":"1356KM","achievement1":"失败","time":"2019年9月20号","achievement2":"1540KM","mileage2":"胜利"},
+        {"mileage1":"1003KM","achievement1":"失败","time":"2019年9月21号","achievement2":"1521KM","mileage2":"胜利"},
+        {"mileage1":"1402KM","achievement1":"失败","time":"2019年9月22号","achievement2":"1552KM","mileage2":"胜利"},
+        {"mileage1":"1150KM","achievement1":"失败","time":"2019年9月23号","achievement2":"1425KM","mileage2":"胜利"},
+        {"mileage1":"1425KM","achievement1":"失败","time":"2019年9月24号","achievement2":"1522KM","mileage2":"胜利"},
+        {"mileage1":"1056KM","achievement1":"失败","time":"2019年9月25号","achievement2":"1440KM","mileage2":"胜利"},
+        {"mileage1":"1402KM","achievement1":"失败","time":"2019年9月26号","achievement2":"1552KM","mileage2":"胜利"},
+        {"mileage1":"1577KM","achievement1":"胜利","time":"2019年9月27号","achievement2":"1612KM","mileage2":"失败"},
+        {"mileage1":"1507KM","achievement1":"胜利","time":"2019年9月28号","achievement2":"1541KM","mileage2":"失败"},
+        {"mileage1":"1447KM","achievement1":"胜利","time":"2019年9月29号","achievement2":"1025KM","mileage2":"失败"},
+        {"mileage1":"1047KM","achievement1":"失败","time":"2019年9月30号","achievement2":"1156KM","mileage2":"胜利"},
+        {"mileage1":"1148KM","achievement1":"失败","time":"2019年10月1号","achievement2":"1384KM","mileage2":"胜利"},
+        {"mileage1":"1356KM","achievement1":"失败","time":"2019年10月2号","achievement2":"1485KM","mileage2":"胜利"},
+        {"mileage1":"1054KM","achievement1":"失败","time":"2019年10月3号","achievement2":"1358KM","mileage2":"胜利"},
+        {"mileage1":"1485KM","achievement1":"失败","time":"2019年10月4号","achievement2":"1543KM","mileage2":"胜利"},
+        {"mileage1":"1246KM","achievement1":"胜利","time":"2019年10月5号","achievement2":"1153KM","mileage2":"失败"},
+        {"mileage1":"1524KM","achievement1":"胜利","time":"2019年10月6号","achievement2":"1348KM","mileage2":"失败"},
+        {"mileage1":"1365KM","achievement1":"胜利","time":"2019年10月7号","achievement2":"1247KM","mileage2":"失败"},
+        {"mileage1":"1365KM","achievement1":"胜利","time":"2019年10月8号","achievement2":"1245KM","mileage2":"失败"},
+        {"mileage1":"1365KM","achievement1":"胜利","time":"2019年10月9号","achievement2":"1243KM","mileage2":"失败"},
+        {"mileage1":"1365KM","achievement1":"胜利","time":"2019年10月10号","achievement2":"1240KM","mileage2":"失败"},
+        {"mileage1":"1365KM","achievement1":"胜利","time":"2019年10月11号","achievement2":"1238KM","mileage2":"失败"},
+        {"mileage1":"1365KM","achievement1":"胜利","time":"2019年10月12号","achievement2":"1240KM","mileage2":"失败"},
+        {"mileage1":"1365KM","achievement1":"胜利","time":"2019年10月13号","achievement2":"1238KM","mileage2":"失败"},
+        {"mileage1":"1365KM","achievement1":"胜利","time":"2019年10月14号","achievement2":"1234KM","mileage2":"失败"},
+        {"mileage1":"1365KM","achievement1":"胜利","time":"2019年10月15号","achievement2":"1241KM","mileage2":"失败"},
+        {"mileage1":"1365KM","achievement1":"胜利","time":"2019年10月16号","achievement2":"1241KM","mileage2":"失败"},
+        {"mileage1":"1365KM","achievement1":"胜利","time":"2019年10月17号","achievement2":"1240KM","mileage2":"失败"},
+        {"mileage1":"1165KM","achievement1":"胜利","time":"2019年10月18号","achievement2":"1110KM","mileage2":"失败"},
+        {"mileage1":"1465KM","achievement1":"胜利","time":"2019年10月19号","achievement2":"1248KM","mileage2":"失败"},
+        {"mileage1":"1422KM","achievement1":"胜利","time":"2019年10月20号","achievement2":"1248KM","mileage2":"失败"},
+        {"mileage1":"1462KM","achievement1":"胜利","time":"2019年10月21号","achievement2":"1248KM","mileage2":"失败"},
+        {"mileage1":"1475KM","achievement1":"胜利","time":"2019年10月22号","achievement2":"1248KM","mileage2":"失败"},
+        {"mileage1":"1466KM","achievement1":"胜利","time":"2019年10月23号","achievement2":"1248KM","mileage2":"失败"},
+        {"mileage1":"1401KM","achievement1":"胜利","time":"2019年10月24号","achievement2":"1248KM","mileage2":"失败"},
+        {"mileage1":"1388KM","achievement1":"胜利","time":"2019年10月25号","achievement2":"1248KM","mileage2":"失败"},
+        {"mileage1":"1372KM","achievement1":"胜利","time":"2019年10月26号","achievement2":"1248KM","mileage2":"失败"},
+        {"mileage1":"1377KM","achievement1":"胜利","time":"2019年10月27号","achievement2":"1248KM","mileage2":"失败"},
+        {"mileage1":"1379KM","achievement1":"胜利","time":"2019年10月28号","achievement2":"1248KM","mileage2":"失败"},
+        {"mileage1":"1362KM","achievement1":"胜利","time":"2019年10月29号","achievement2":"1248KM","mileage2":"失败"},
+        {"mileage1":"1360KM","achievement1":"胜利","time":"2019年10月30号","achievement2":"1248KM","mileage2":"失败"},
+        {"mileage1":"1361KM","achievement1":"胜利","time":"2019年10月31号","achievement2":"1248KM","mileage2":"失败"},
+        {"mileage1":"1375KM","achievement1":"胜利","time":"2019年11月1号","achievement2":"1248KM","mileage2":"失败"},
+        {"mileage1":"1373KM","achievement1":"胜利","time":"2019年11月2号","achievement2":"1248KM","mileage2":"失败"},
+        {"mileage1":"1365KM","achievement1":"胜利","time":"2019年11月3号","achievement2":"1248KM","mileage2":"失败"},
+        {"mileage1":"1363KM","achievement1":"胜利","time":"2019年11月4号","achievement2":"1248KM","mileage2":"失败"},
+        {"mileage1":"1367KM","achievement1":"胜利","time":"2019年11月5号","achievement2":"1248KM","mileage2":"失败"},
+        {"mileage1":"1368KM","achievement1":"胜利","time":"2019年11月6号","achievement2":"1248KM","mileage2":"失败"},
+        {"mileage1":"1362KM","achievement1":"胜利","time":"2019年11月7号","achievement2":"1248KM","mileage2":"失败"},
+        {"mileage1":"1360KM","achievement1":"胜利","time":"2019年11月8号","achievement2":"1248KM","mileage2":"失败"},
+        {"mileage1":"1364KM","achievement1":"胜利","time":"2019年11月9号","achievement2":"1248KM","mileage2":"失败"},
+        {"mileage1":"1362KM","achievement1":"胜利","time":"2019年11月10号","achievement2":"1248KM","mileage2":"失败"},
+        {"mileage1":"1388KM","achievement1":"胜利","time":"2019年11月11号","achievement2":"1222KM","mileage2":"失败"},
+        {"mileage1":"1312KM","achievement1":"胜利","time":"2019年11月12号","achievement2":"1266KM","mileage2":"失败"},
+        {"mileage1":"1332KM","achievement1":"胜利","time":"2019年11月13号","achievement2":"1298KM","mileage2":"失败"},
+        {"mileage1":"1354KM","achievement1":"胜利","time":"2019年11月14号","achievement2":"1275KM","mileage2":"失败"},
+        {"mileage1":"1366KM","achievement1":"胜利","time":"2019年11月15号","achievement2":"1244KM","mileage2":"失败"},
+        {"mileage1":"1377KM","achievement1":"胜利","time":"2019年11月16号","achievement2":"1251KM","mileage2":"失败"},
+        {"mileage1":"1343KM","achievement1":"胜利","time":"2019年11月17号","achievement2":"1255KM","mileage2":"失败"},
+        {"mileage1":"1365KM","achievement1":"胜利","time":"2019年11月18号","achievement2":"1287KM","mileage2":"失败"},
+        {"mileage1":"1312KM","achievement1":"胜利","time":"2019年11月19号","achievement2":"1263KM","mileage2":"失败"},
+    ];
+    //油耗：
+    var items2=[
+        {"mileage1":"12L","achievement1":"平局","time":"2019年8月1号","achievement2":"12L","mileage2":"平局"},
+        {"mileage1":"13L","achievement1":"失败","time":"2019年8月2号","achievement2":"11L","mileage2":"胜利"},
+        {"mileage1":"13L","achievement1":"失败","time":"2019年8月3号","achievement2":"11L","mileage2":"胜利"},
+        {"mileage1":"12L","achievement1":"胜利","time":"2019年8月4号","achievement2":"14L","mileage2":"失败"},
+        {"mileage1":"10L","achievement1":"胜利","time":"2019年8月5号","achievement2":"14L","mileage2":"失败"},
+        {"mileage1":"11L","achievement1":"胜利","time":"2019年8月6号","achievement2":"12L","mileage2":"失败"},
+        {"mileage1":"12L","achievement1":"平局","time":"2019年8月7号","achievement2":"12L","mileage2":"平局"},
+        {"mileage1":"13L","achievement1":"失败","time":"2019年8月8号","achievement2":"11L","mileage2":"胜利"},
+        {"mileage1":"13L","achievement1":"失败","time":"2019年8月9号","achievement2":"11L","mileage2":"胜利"},
+        {"mileage1":"12L","achievement1":"胜利","time":"2019年8月10号","achievement2":"15L","mileage2":"失败"},
+        {"mileage1":"10L","achievement1":"胜利","time":"2019年8月11号","achievement2":"14L","mileage2":"失败"},
+        {"mileage1":"11L","achievement1":"平局","time":"2019年8月12号","achievement2":"11L","mileage2":"平局"},
+        {"mileage1":"12L","achievement1":"平局","time":"2019年8月13号","achievement2":"12L","mileage2":"平局"},
+        {"mileage1":"13L","achievement1":"失败","time":"2019年8月14号","achievement2":"10L","mileage2":"胜利"},
+        {"mileage1":"13L","achievement1":"失败","time":"2019年8月15号","achievement2":"11L","mileage2":"胜利"},
+        {"mileage1":"12L","achievement1":"平局","time":"2019年8月16号","achievement2":"12L","mileage2":"平局"},
+        {"mileage1":"13L","achievement1":"失败","time":"2019年8月17号","achievement2":"11L","mileage2":"胜利"},
+        {"mileage1":"13L","achievement1":"失败","time":"2019年8月18号","achievement2":"10L","mileage2":"胜利"},
+        {"mileage1":"11L","achievement1":"失败","time":"2019年8月19号","achievement2":"10L","mileage2":"胜利"},
+        {"mileage1":"12L","achievement1":"平局","time":"2019年8月20号","achievement2":"12L","mileage2":"平局"},
+        {"mileage1":"11L","achievement1":"胜利","time":"2019年8月21号","achievement2":"12L","mileage2":"失败"},
+        {"mileage1":"13L","achievement1":"失败","time":"2019年8月22号","achievement2":"11L","mileage2":"胜利"},
+        {"mileage1":"12L","achievement1":"胜利","time":"2019年8月23号","achievement2":"14L","mileage2":"失败"},
+        {"mileage1":"14L","achievement1":"胜利","time":"2019年8月24号","achievement2":"15L","mileage2":"失败"},
+        {"mileage1":"14L","achievement1":"失败","time":"2019年8月25号","achievement2":"10L","mileage2":"胜利"},
+        {"mileage1":"12L","achievement1":"失败","time":"2019年8月26号","achievement2":"11L","mileage2":"胜利"},
+        {"mileage1":"10L","achievement1":"胜利","time":"2019年8月27号","achievement2":"11L","mileage2":"失败"},
+        {"mileage1":"11L","achievement1":"平局","time":"2019年8月28号","achievement2":"11L","mileage2":"平局"},
+        {"mileage1":"13L","achievement1":"失败","time":"2019年8月29号","achievement2":"12L","mileage2":"胜利"},
+        {"mileage1":"12L","achievement1":"胜利","time":"2019年8月30号","achievement2":"14L","mileage2":"失败"},
+        {"mileage1":"10L","achievement1":"胜利","time":"2019年8月31号","achievement2":"12L","mileage2":"失败"},
+        {"mileage1":"13L","achievement1":"失败","time":"2019年9月1号","achievement2":"10L","mileage2":"胜利"},
+        {"mileage1":"11L","achievement1":"平局","time":"2019年9月2号","achievement2":"11L","mileage2":"平局"},
+        {"mileage1":"12L","achievement1":"胜利","time":"2019年9月3号","achievement2":"14L","mileage2":"失败"},
+        {"mileage1":"10L","achievement1":"胜利","time":"2019年9月4号","achievement2":"11L","mileage2":"失败"},
+        {"mileage1":"12L","achievement1":"失败","time":"2019年9月5号","achievement2":"10L","mileage2":"胜利"},
+        {"mileage1":"11L","achievement1":"失败","time":"2019年9月6号","achievement2":"10L","mileage2":"胜利"},
+        {"mileage1":"13L","achievement1":"胜利","time":"2019年9月7号","achievement2":"14L","mileage2":"失败"},
+        {"mileage1":"10L","achievement1":"平局","time":"2019年9月8号","achievement2":"10L","mileage2":"平局"},
+        {"mileage1":"12L","achievement1":"失败","time":"2019年9月9号","achievement2":"11L","mileage2":"胜利"},
+        {"mileage1":"13L","achievement1":"失败","time":"2019年9月10号","achievement2":"11L","mileage2":"胜利"},
+        {"mileage1":"14L","achievement1":"失败","time":"2019年9月11号","achievement2":"10L","mileage2":"胜利"},
+        {"mileage1":"14L","achievement1":"胜利","time":"2019年9月12号","achievement2":"15L","mileage2":"失败"},
+        {"mileage1":"14L","achievement1":"失败","time":"2019年9月13号","achievement2":"10L","mileage2":"胜利"},
+        {"mileage1":"12L","achievement1":"失败","time":"2019年9月14号","achievement2":"11L","mileage2":"胜利"},
+        {"mileage1":"10L","achievement1":"胜利","time":"2019年9月15号","achievement2":"11L","mileage2":"失败"},
+        {"mileage1":"10L","achievement1":"胜利","time":"2019年9月16号","achievement2":"14L","mileage2":"失败"},
+        {"mileage1":"11L","achievement1":"失败","time":"2019年9月17号","achievement2":"10L","mileage2":"胜利"},
+        {"mileage1":"12L","achievement1":"平局","time":"2019年9月18号","achievement2":"12L","mileage2":"平局"},
+        {"mileage1":"11L","achievement1":"胜利","time":"2019年9月19号","achievement2":"12L","mileage2":"失败"},
+        {"mileage1":"13L","achievement1":"失败","time":"2019年9月20号","achievement2":"11L","mileage2":"胜利"},
+        {"mileage1":"12L","achievement1":"胜利","time":"2019年9月21号","achievement2":"14L","mileage2":"失败"},
+        {"mileage1":"14L","achievement1":"胜利","time":"2019年9月22号","achievement2":"15L","mileage2":"失败"},
+        {"mileage1":"12L","achievement1":"胜利","time":"2019年9月23号","achievement2":"15L","mileage2":"失败"},
+        {"mileage1":"10L","achievement1":"胜利","time":"2019年9月24号","achievement2":"14L","mileage2":"失败"},
+        {"mileage1":"12L","achievement1":"平局","time":"2019年9月25号","achievement2":"12L","mileage2":"平局"},
+        {"mileage1":"13L","achievement1":"失败","time":"2019年9月26号","achievement2":"10L","mileage2":"胜利"},
+        {"mileage1":"12L","achievement1":"失败","time":"2019年9月27号","achievement2":"10L","mileage2":"胜利"},
+        {"mileage1":"10L","achievement1":"胜利","time":"2019年9月28号","achievement2":"11L","mileage2":"失败"},
+        {"mileage1":"13L","achievement1":"失败","time":"2019年9月29号","achievement2":"12L","mileage2":"胜利"},
+        {"mileage1":"12L","achievement1":"胜利","time":"2019年9月30号","achievement2":"14L","mileage2":"失败"},
+        {"mileage1":"13L","achievement1":"失败","time":"2019年10月1号","achievement2":"10L","mileage2":"胜利"},
+        {"mileage1":"11L","achievement1":"平局","time":"2019年10月2号","achievement2":"11L","mileage2":"平局"},
+        {"mileage1":"12L","achievement1":"胜利","time":"2019年10月3号","achievement2":"14L","mileage2":"失败"},
+        {"mileage1":"10L","achievement1":"胜利","time":"2019年10月4号","achievement2":"11L","mileage2":"失败"},
+        {"mileage1":"12L","achievement1":"失败","time":"2019年10月5号","achievement2":"10L","mileage2":"胜利"},
+        {"mileage1":"11L","achievement1":"失败","time":"2019年10月6号","achievement2":"10L","mileage2":"胜利"},
+        {"mileage1":"13L","achievement1":"胜利","time":"2019年10月7号","achievement2":"14L","mileage2":"失败"},
+        {"mileage1":"13L","achievement1":"胜利","time":"2019年10月8号","achievement2":"14L","mileage2":"失败"},
+        {"mileage1":"13L","achievement1":"胜利","time":"2019年10月9号","achievement2":"15L","mileage2":"失败"},
+        {"mileage1":"13L","achievement1":"胜利","time":"2019年10月10号","achievement2":"15L","mileage2":"失败"},
+        {"mileage1":"13L","achievement1":"胜利","time":"2019年10月11号","achievement2":"14L","mileage2":"失败"},
+        {"mileage1":"13L","achievement1":"胜利","time":"2019年10月12号","achievement2":"15L","mileage2":"失败"},
+        {"mileage1":"13L","achievement1":"胜利","time":"2019年10月13号","achievement2":"15L","mileage2":"失败"},
+        {"mileage1":"13L","achievement1":"胜利","time":"2019年10月14号","achievement2":"15L","mileage2":"失败"},
+        {"mileage1":"13L","achievement1":"胜利","time":"2019年10月15号","achievement2":"14L","mileage2":"失败"},
+        {"mileage1":"13L","achievement1":"胜利","time":"2019年10月16号","achievement2":"14L","mileage2":"失败"},
+        {"mileage1":"13L","achievement1":"胜利","time":"2019年10月17号","achievement2":"14L","mileage2":"失败"},
+        {"mileage1":"13L","achievement1":"胜利","time":"2019年10月18号","achievement2":"15L","mileage2":"失败"},
+        {"mileage1":"13L","achievement1":"胜利","time":"2019年10月19号","achievement2":"15L","mileage2":"失败"},
+        {"mileage1":"13L","achievement1":"胜利","time":"2019年10月20号","achievement2":"15L","mileage2":"失败"},
+        {"mileage1":"12L","achievement1":"胜利","time":"2019年10月21号","achievement2":"13L","mileage2":"失败"},
+        {"mileage1":"11L","achievement1":"胜利","time":"2019年10月22号","achievement2":"15L","mileage2":"失败"},
+        {"mileage1":"10L","achievement1":"胜利","time":"2019年10月23号","achievement2":"15L","mileage2":"失败"},
+        {"mileage1":"12L","achievement1":"胜利","time":"2019年10月24号","achievement2":"15L","mileage2":"失败"},
+        {"mileage1":"13L","achievement1":"胜利","time":"2019年10月25号","achievement2":"15L","mileage2":"失败"},
+        {"mileage1":"14L","achievement1":"胜利","time":"2019年10月26号","achievement2":"15L","mileage2":"失败"},
+        {"mileage1":"15L","achievement1":"胜利","time":"2019年10月27号","achievement2":"15L","mileage2":"失败"},
+        {"mileage1":"14L","achievement1":"胜利","time":"2019年10月28号","achievement2":"15L","mileage2":"失败"},
+        {"mileage1":"13L","achievement1":"胜利","time":"2019年10月29号","achievement2":"15L","mileage2":"失败"},
+        {"mileage1":"12L","achievement1":"胜利","time":"2019年10月30号","achievement2":"15L","mileage2":"失败"},
+        {"mileage1":"13L","achievement1":"胜利","time":"2019年10月31号","achievement2":"15L","mileage2":"失败"},
+        {"mileage1":"13L","achievement1":"胜利","time":"2019年11月1号","achievement2":"15L","mileage2":"失败"},
+        {"mileage1":"13L","achievement1":"胜利","time":"2019年11月2号","achievement2":"15L","mileage2":"失败"},
+        {"mileage1":"17L","achievement1":"胜利","time":"2019年11月3号","achievement2":"15L","mileage2":"失败"},
+        {"mileage1":"15L","achievement1":"胜利","time":"2019年11月4号","achievement2":"15L","mileage2":"失败"},
+        {"mileage1":"14L","achievement1":"胜利","time":"2019年11月5号","achievement2":"15L","mileage2":"失败"},
+        {"mileage1":"17L","achievement1":"胜利","time":"2019年11月6号","achievement2":"15L","mileage2":"失败"},
+        {"mileage1":"13L","achievement1":"胜利","time":"2019年11月7号","achievement2":"15L","mileage2":"失败"},
+        {"mileage1":"15L","achievement1":"胜利","time":"2019年11月8号","achievement2":"15L","mileage2":"失败"},
+        {"mileage1":"15L","achievement1":"胜利","time":"2019年11月9号","achievement2":"15L","mileage2":"失败"},
+        {"mileage1":"13L","achievement1":"胜利","time":"2019年11月10号","achievement2":"15L","mileage2":"失败"},
+        {"mileage1":"12L","achievement1":"胜利","time":"2019年11月11号","achievement2":"14L","mileage2":"失败"},
+        {"mileage1":"12L","achievement1":"胜利","time":"2019年11月12号","achievement2":"15L","mileage2":"失败"},
+        {"mileage1":"11L","achievement1":"胜利","time":"2019年11月13号","achievement2":"14L","mileage2":"失败"},
+        {"mileage1":"14L","achievement1":"胜利","time":"2019年11月14号","achievement2":"15L","mileage2":"失败"},
+        {"mileage1":"12L","achievement1":"胜利","time":"2019年11月15号","achievement2":"16L","mileage2":"失败"},
+        {"mileage1":"13L","achievement1":"胜利","time":"2019年11月16号","achievement2":"14L","mileage2":"失败"},
+        {"mileage1":"14L","achievement1":"胜利","time":"2019年11月17号","achievement2":"13L","mileage2":"失败"},
+        {"mileage1":"12L","achievement1":"胜利","time":"2019年11月18号","achievement2":"15L","mileage2":"失败"},
+        {"mileage1":"13L","achievement1":"胜利","time":"2019年11月19号","achievement2":"15L","mileage2":"失败"},
+    ];
+    //点赞：
+    var items3=[
+        {"mileage1":"212人点赞","achievement1":"失败","time":"2019年8月1号","achievement2":"365人点赞","mileage2":"胜利"},
+        {"mileage1":"411人点赞","achievement1":"胜利","time":"2019年8月2号","achievement2":"375人点赞","mileage2":"失败"},
+        {"mileage1":"312人点赞","achievement1":"失败","time":"2019年8月3号","achievement2":"524人点赞","mileage2":"胜利"},
+        {"mileage1":"511人点赞","achievement1":"失败","time":"2019年8月4号","achievement2":"662人点赞","mileage2":"胜利"},
+        {"mileage1":"340人点赞","achievement1":"失败","time":"2019年8月5号","achievement2":"648人点赞","mileage2":"胜利"},
+        {"mileage1":"225人点赞","achievement1":"失败","time":"2019年8月6号","achievement2":"464人点赞","mileage2":"胜利"},
+        {"mileage1":"534人点赞","achievement1":"胜利","time":"2019年8月7号","achievement2":"243人点赞","mileage2":"失败"},
+        {"mileage1":"454人点赞","achievement1":"失败","time":"2019年8月8号","achievement2":"840人点赞","mileage2":"胜利"},
+        {"mileage1":"322人点赞","achievement1":"失败","time":"2019年8月9号","achievement2":"454人点赞","mileage2":"胜利"},
+        {"mileage1":"221人点赞","achievement1":"胜利","time":"2019年8月10号","achievement2":"213人点赞","mileage2":"失败"},
+        {"mileage1":"874人点赞","achievement1":"胜利","time":"2019年8月11号","achievement2":"584人点赞","mileage2":"失败"},
+        {"mileage1":"554人点赞","achievement1":"胜利","time":"2019年8月12号","achievement2":"534人点赞","mileage2":"失败"},
+        {"mileage1":"867人点赞","achievement1":"胜利","time":"2019年8月13号","achievement2":"721人点赞","mileage2":"失败"},
+        {"mileage1":"752人点赞","achievement1":"胜利","time":"2019年8月14号","achievement2":"534人点赞","mileage2":"失败"},
+        {"mileage1":"875人点赞","achievement1":"胜利","time":"2019年8月15号","achievement2":"453人点赞","mileage2":"失败"},
+        {"mileage1":"837人点赞","achievement1":"胜利","time":"2019年8月16号","achievement2":"537人点赞","mileage2":"失败"},
+        {"mileage1":"545人点赞","achievement1":"胜利","time":"2019年8月17号","achievement2":"473人点赞","mileage2":"失败"},
+        {"mileage1":"396人点赞","achievement1":"失败","time":"2019年8月18号","achievement2":"556人点赞","mileage2":"胜利"},
+        {"mileage1":"345人点赞","achievement1":"失败","time":"2019年8月19号","achievement2":"456人点赞","mileage2":"胜利"},
+        {"mileage1":"554人点赞","achievement1":"失败","time":"2019年8月20号","achievement2":"646人点赞","mileage2":"胜利"},
+        {"mileage1":"456人点赞","achievement1":"失败","time":"2019年8月21号","achievement2":"886人点赞","mileage2":"胜利"},
+        {"mileage1":"546人点赞","achievement1":"失败","time":"2019年8月22号","achievement2":"464人点赞","mileage2":"胜利"},
+        {"mileage1":"425人点赞","achievement1":"失败","time":"2019年8月23号","achievement2":"648人点赞","mileage2":"胜利"},
+        {"mileage1":"878人点赞","achievement1":"胜利","time":"2019年8月24号","achievement2":"864人点赞","mileage2":"失败"},
+        {"mileage1":"954人点赞","achievement1":"胜利","time":"2019年8月25号","achievement2":"486人点赞","mileage2":"失败"},
+        {"mileage1":"656人点赞","achievement1":"失败","time":"2019年8月26号","achievement2":"898人点赞","mileage2":"胜利"},
+        {"mileage1":"354人点赞","achievement1":"失败","time":"2019年8月27号","achievement2":"539人点赞","mileage2":"胜利"},
+        {"mileage1":"742人点赞","achievement1":"失败","time":"2019年8月28号","achievement2":"853人点赞","mileage2":"胜利"},
+        {"mileage1":"647人点赞","achievement1":"胜利","time":"2019年8月29号","achievement2":"583人点赞","mileage2":"失败"},
+        {"mileage1":"452人点赞","achievement1":"失败","time":"2019年8月30号","achievement2":"751人点赞","mileage2":"胜利"},
+        {"mileage1":"634人点赞","achievement1":"胜利","time":"2019年8月31号","achievement2":"461人点赞","mileage2":"失败"},
+        {"mileage1":"385人点赞","achievement1":"失败","time":"2019年9月1号","achievement2":"486人点赞","mileage2":"胜利"},
+        {"mileage1":"485人点赞","achievement1":"失败","time":"2019年9月2号","achievement2":"672人点赞","mileage2":"胜利"},
+        {"mileage1":"648人点赞","achievement1":"胜利","time":"2019年9月3号","achievement2":"482人点赞","mileage2":"失败"},
+        {"mileage1":"361人点赞","achievement1":"失败","time":"2019年9月4号","achievement2":"492人点赞","mileage2":"胜利"},
+        {"mileage1":"428人点赞","achievement1":"失败","time":"2019年9月5号","achievement2":"596人点赞","mileage2":"胜利"},
+        {"mileage1":"624人点赞","achievement1":"胜利","time":"2019年9月6号","achievement2":"526人点赞","mileage2":"失败"},
+        {"mileage1":"545人点赞","achievement1":"失败","time":"2019年9月7号","achievement2":"648人点赞","mileage2":"胜利"},
+        {"mileage1":"342人点赞","achievement1":"失败","time":"2019年9月8号","achievement2":"395人点赞","mileage2":"胜利"},
+        {"mileage1":"542人点赞","achievement1":"胜利","time":"2019年9月9号","achievement2":"472人点赞","mileage2":"失败"},
+        {"mileage1":"396人点赞","achievement1":"失败","time":"2019年9月10号","achievement2":"556人点赞","mileage2":"胜利"},
+        {"mileage1":"647人点赞","achievement1":"胜利","time":"2019年9月11号","achievement2":"583人点赞","mileage2":"失败"},
+        {"mileage1":"396人点赞","achievement1":"失败","time":"2019年9月12号","achievement2":"556人点赞","mileage2":"胜利"},
+        {"mileage1":"345人点赞","achievement1":"失败","time":"2019年9月13号","achievement2":"456人点赞","mileage2":"胜利"},
+        {"mileage1":"554人点赞","achievement1":"失败","time":"2019年9月14号","achievement2":"646人点赞","mileage2":"胜利"},
+        {"mileage1":"456人点赞","achievement1":"失败","time":"2019年9月15号","achievement2":"886人点赞","mileage2":"胜利"},
+        {"mileage1":"742人点赞","achievement1":"失败","time":"2019年9月16号","achievement2":"853人点赞","mileage2":"胜利"},
+        {"mileage1":"875人点赞","achievement1":"胜利","time":"2019年9月17号","achievement2":"453人点赞","mileage2":"失败"},
+        {"mileage1":"425人点赞","achievement1":"失败","time":"2019年9月18号","achievement2":"648人点赞","mileage2":"胜利"},
+        {"mileage1":"878人点赞","achievement1":"胜利","time":"2019年9月19号","achievement2":"864人点赞","mileage2":"失败"},
+        {"mileage1":"954人点赞","achievement1":"胜利","time":"2019年9月20号","achievement2":"486人点赞","mileage2":"失败"},
+        {"mileage1":"656人点赞","achievement1":"失败","time":"2019年9月21号","achievement2":"898人点赞","mileage2":"胜利"},
+        {"mileage1":"354人点赞","achievement1":"失败","time":"2019年9月22号","achievement2":"539人点赞","mileage2":"胜利"},
+        {"mileage1":"221人点赞","achievement1":"胜利","time":"2019年9月23号","achievement2":"213人点赞","mileage2":"失败"},
+        {"mileage1":"874人点赞","achievement1":"胜利","time":"2019年9月24号","achievement2":"584人点赞","mileage2":"失败"},
+        {"mileage1":"752人点赞","achievement1":"胜利","time":"2019年9月25号","achievement2":"534人点赞","mileage2":"失败"},
+        {"mileage1":"396人点赞","achievement1":"失败","time":"2019年9月26号","achievement2":"556人点赞","mileage2":"胜利"},
+        {"mileage1":"411人点赞","achievement1":"胜利","time":"2019年9月27号","achievement2":"621人点赞","mileage2":"胜利"},
+        {"mileage1":"387人点赞","achievement1":"失败","time":"2019年9月28号","achievement2":"401人点赞","mileage2":"胜利"},
+        {"mileage1":"647人点赞","achievement1":"胜利","time":"2019年9月29号","achievement2":"583人点赞","mileage2":"失败"},
+        {"mileage1":"452人点赞","achievement1":"失败","time":"2019年9月30号","achievement2":"751人点赞","mileage2":"胜利"},
+        {"mileage1":"385人点赞","achievement1":"失败","time":"2019年10月1号","achievement2":"486人点赞","mileage2":"胜利"},
+        {"mileage1":"485人点赞","achievement1":"失败","time":"2019年10月2号","achievement2":"672人点赞","mileage2":"胜利"},
+        {"mileage1":"648人点赞","achievement1":"胜利","time":"2019年10月3号","achievement2":"482人点赞","mileage2":"失败"},
+        {"mileage1":"361人点赞","achievement1":"失败","time":"2019年10月4号","achievement2":"492人点赞","mileage2":"胜利"},
+        {"mileage1":"428人点赞","achievement1":"失败","time":"2019年10月5号","achievement2":"596人点赞","mileage2":"胜利"},
+        {"mileage1":"624人点赞","achievement1":"胜利","time":"2019年10月6号","achievement2":"526人点赞","mileage2":"失败"},
+        {"mileage1":"545人点赞","achievement1":"失败","time":"2019年10月7号","achievement2":"648人点赞","mileage2":"胜利"},
+        {"mileage1":"545人点赞","achievement1":"胜利","time":"2019年10月8号","achievement2":"648人点赞","mileage2":"失败"},
+        {"mileage1":"542人点赞","achievement1":"胜利","time":"2019年10月9号","achievement2":"647人点赞","mileage2":"失败"},
+        {"mileage1":"551人点赞","achievement1":"胜利","time":"2019年10月10号","achievement2":"646人点赞","mileage2":"失败"},
+        {"mileage1":"551人点赞","achievement1":"胜利","time":"2019年10月11号","achievement2":"645人点赞","mileage2":"失败"},
+        {"mileage1":"552人点赞","achievement1":"胜利","time":"2019年10月12号","achievement2":"644人点赞","mileage2":"失败"},
+        {"mileage1":"553人点赞","achievement1":"胜利","time":"2019年10月13号","achievement2":"643人点赞","mileage2":"失败"},
+        {"mileage1":"554人点赞","achievement1":"胜利","time":"2019年10月14号","achievement2":"642人点赞","mileage2":"失败"},
+        {"mileage1":"552人点赞","achievement1":"胜利","time":"2019年10月15号","achievement2":"641人点赞","mileage2":"失败"},
+        {"mileage1":"554人点赞","achievement1":"胜利","time":"2019年10月16号","achievement2":"644人点赞","mileage2":"失败"},
+        {"mileage1":"553人点赞","achievement1":"胜利","time":"2019年10月17号","achievement2":"645人点赞","mileage2":"失败"},
+        {"mileage1":"552人点赞","achievement1":"胜利","time":"2019年10月18号","achievement2":"643人点赞","mileage2":"失败"},
+        {"mileage1":"552人点赞","achievement1":"胜利","time":"2019年10月19号","achievement2":"642人点赞","mileage2":"失败"},
+        {"mileage1":"554人点赞","achievement1":"胜利","time":"2019年10月20号","achievement2":"641人点赞","mileage2":"失败"},
+        {"mileage1":"542人点赞","achievement1":"胜利","time":"2019年10月21号","achievement2":"647人点赞","mileage2":"失败"},
+        {"mileage1":"553人点赞","achievement1":"胜利","time":"2019年10月22号","achievement2":"646人点赞","mileage2":"失败"},
+        {"mileage1":"555人点赞","achievement1":"胜利","time":"2019年10月23号","achievement2":"644人点赞","mileage2":"失败"},
+        {"mileage1":"553人点赞","achievement1":"胜利","time":"2019年10月24号","achievement2":"643人点赞","mileage2":"失败"},
+        {"mileage1":"552人点赞","achievement1":"胜利","time":"2019年10月25号","achievement2":"642人点赞","mileage2":"失败"},
+        {"mileage1":"556人点赞","achievement1":"胜利","time":"2019年10月26号","achievement2":"645人点赞","mileage2":"失败"},
+        {"mileage1":"557人点赞","achievement1":"胜利","time":"2019年10月27号","achievement2":"643人点赞","mileage2":"失败"},
+        {"mileage1":"558人点赞","achievement1":"胜利","time":"2019年10月28号","achievement2":"642人点赞","mileage2":"失败"},
+        {"mileage1":"554人点赞","achievement1":"胜利","time":"2019年10月29号","achievement2":"648人点赞","mileage2":"失败"},
+        {"mileage1":"553人点赞","achievement1":"胜利","time":"2019年10月30号","achievement2":"648人点赞","mileage2":"失败"},
+        {"mileage1":"552人点赞","achievement1":"胜利","time":"2019年10月31号","achievement2":"648人点赞","mileage2":"失败"},
+        {"mileage1":"556人点赞","achievement1":"胜利","time":"2019年11月1号","achievement2":"641人点赞","mileage2":"失败"},
+        {"mileage1":"553人点赞","achievement1":"胜利","time":"2019年11月2号","achievement2":"643人点赞","mileage2":"失败"},
+        {"mileage1":"556人点赞","achievement1":"胜利","time":"2019年11月3号","achievement2":"646人点赞","mileage2":"失败"},
+        {"mileage1":"554人点赞","achievement1":"胜利","time":"2019年11月4号","achievement2":"643人点赞","mileage2":"失败"},
+        {"mileage1":"557人点赞","achievement1":"胜利","time":"2019年11月5号","achievement2":"645人点赞","mileage2":"失败"},
+        {"mileage1":"558人点赞","achievement1":"胜利","time":"2019年11月6号","achievement2":"648人点赞","mileage2":"失败"},
+        {"mileage1":"556人点赞","achievement1":"胜利","time":"2019年11月7号","achievement2":"643人点赞","mileage2":"失败"},
+        {"mileage1":"555人点赞","achievement1":"胜利","time":"2019年11月8号","achievement2":"648人点赞","mileage2":"失败"},
+        {"mileage1":"554人点赞","achievement1":"胜利","time":"2019年11月9号","achievement2":"641人点赞","mileage2":"失败"},
+        {"mileage1":"750人点赞","achievement1":"胜利","time":"2019年11月10号","achievement2":"640人点赞","mileage2":"失败"},
+        {"mileage1":"847人点赞","achievement1":"胜利","time":"2019年11月11号","achievement2":"640人点赞","mileage2":"失败"},
+        {"mileage1":"655人点赞","achievement1":"胜利","time":"2019年11月12号","achievement2":"640人点赞","mileage2":"失败"},
+        {"mileage1":"877人点赞","achievement1":"胜利","time":"2019年11月13号","achievement2":"640人点赞","mileage2":"失败"},
+        {"mileage1":"744人点赞","achievement1":"胜利","time":"2019年11月14号","achievement2":"640人点赞","mileage2":"失败"},
+        {"mileage1":"854人点赞","achievement1":"胜利","time":"2019年11月15号","achievement2":"640人点赞","mileage2":"失败"},
+        {"mileage1":"901人点赞","achievement1":"胜利","time":"2019年11月16号","achievement2":"640人点赞","mileage2":"失败"},
+        {"mileage1":"784人点赞","achievement1":"胜利","time":"2019年11月17号","achievement2":"640人点赞","mileage2":"失败"},
+        {"mileage1":"882人点赞","achievement1":"胜利","time":"2019年11月18号","achievement2":"640人点赞","mileage2":"失败"},
+        {"mileage1":"741人点赞","achievement1":"胜利","time":"2019年11月19号","achievement2":"640人点赞","mileage2":"失败"},
+    ];
+    //出勤：
+    var items4=[
+        {"mileage1":"12h","achievement1":"胜利","time":"2019年8月1号","achievement2":"10h","mileage2":"失败"},
+        {"mileage1":"14h","achievement1":"胜利","time":"2019年8月2号","achievement2":"11h","mileage2":"失败"},
+        {"mileage1":"10h","achievement1":"失败","time":"2019年8月3号","achievement2":"13h","mileage2":"胜利"},
+        {"mileage1":"14h","achievement1":"胜利","time":"2019年8月4号","achievement2":"12h","mileage2":"失败"},
+        {"mileage1":"12h","achievement1":"胜利","time":"2019年8月5号","achievement2":"11h","mileage2":"失败"},
+        {"mileage1":"14h","achievement1":"胜利","time":"2019年8月6号","achievement2":"13h","mileage2":"失败"},
+        {"mileage1":"12h","achievement1":"失败","time":"2019年8月7号","achievement2":"14h","mileage2":"胜利"},
+        {"mileage1":"11h","achievement1":"失败","time":"2019年8月8号","achievement2":"13h","mileage2":"胜利"},
+        {"mileage1":"14h","achievement1":"胜利","time":"2019年8月9号","achievement2":"12h","mileage2":"失败"},
+        {"mileage1":"14h","achievement1":"失败","time":"2019年8月10号","achievement2":"13h","mileage2":"胜利"},
+        {"mileage1":"11h","achievement1":"胜利","time":"2019年8月11号","achievement2":"10h","mileage2":"失败"},
+        {"mileage1":"14h","achievement1":"胜利","time":"2019年8月12号","achievement2":"12h","mileage2":"失败"},
+        {"mileage1":"13h","achievement1":"失败","time":"2019年8月13号","achievement2":"14h","mileage2":"胜利"},
+        {"mileage1":"13h","achievement1":"失败","time":"2019年8月14号","achievement2":"14h","mileage2":"胜利"},
+        {"mileage1":"10h","achievement1":"失败","time":"2019年8月15号","achievement2":"12h","mileage2":"胜利"},
+        {"mileage1":"14h","achievement1":"胜利","time":"2019年8月16号","achievement2":"12h","mileage2":"失败"},
+        {"mileage1":"14h","achievement1":"胜利","time":"2019年8月17号","achievement2":"10h","mileage2":"失败"},
+        {"mileage1":"13h","achievement1":"胜利","time":"2019年8月18号","achievement2":"11h","mileage2":"失败"},
+        {"mileage1":"15h","achievement1":"胜利","time":"2019年8月19号","achievement2":"12h","mileage2":"失败"},
+        {"mileage1":"11h","achievement1":"失败","time":"2019年8月20号","achievement2":"14h","mileage2":"胜利"},
+        {"mileage1":"14h","achievement1":"胜利","time":"2019年8月21号","achievement2":"11h","mileage2":"失败"},
+        {"mileage1":"14h","achievement1":"平局","time":"2019年8月22号","achievement2":"14h","mileage2":"平局"},
+        {"mileage1":"13h","achievement1":"胜利","time":"2019年8月23号","achievement2":"14h","mileage2":"失败"},
+        {"mileage1":"12h","achievement1":"平局","time":"2019年8月24号","achievement2":"12h","mileage2":"平局"},
+        {"mileage1":"10h","achievement1":"失败","time":"2019年8月25号","achievement2":"13h","mileage2":"胜利"},
+        {"mileage1":"14h","achievement1":"胜利","time":"2019年8月26号","achievement2":"10h","mileage2":"失败"},
+        {"mileage1":"12h","achievement1":"平局","time":"2019年8月27号","achievement2":"12h","mileage2":"平局"},
+        {"mileage1":"10h","achievement1":"失败","time":"2019年8月28号","achievement2":"11h","mileage2":"胜利"},
+        {"mileage1":"13h","achievement1":"失败","time":"2019年8月29号","achievement2":"14h","mileage2":"胜利"},
+        {"mileage1":"10h","achievement1":"失败","time":"2019年8月30号","achievement2":"11h","mileage2":"胜利"},
+        {"mileage1":"12h","achievement1":"失败","time":"2019年8月31号","achievement2":"14h","mileage2":"胜利"},
+        {"mileage1":"13h","achievement1":"平局","time":"2019年9月1号","achievement2":"13h","mileage2":"平局"},
+        {"mileage1":"12h","achievement1":"胜利","time":"2019年9月2号","achievement2":"10h","mileage2":"失败"},
+        {"mileage1":"11h","achievement1":"失败","time":"2019年9月3号","achievement2":"14h","mileage2":"胜利"},
+        {"mileage1":"13h","achievement1":"失败","time":"2019年9月4号","achievement2":"14h","mileage2":"胜利"},
+        {"mileage1":"10h","achievement1":"失败","time":"2019年9月5号","achievement2":"11h","mileage2":"胜利"},
+        {"mileage1":"11h","achievement1":"失败","time":"2019年9月6号","achievement2":"12h","mileage2":"胜利"},
+        {"mileage1":"12h","achievement1":"失败","time":"2019年9月7号","achievement2":"13h","mileage2":"胜利"},
+        {"mileage1":"10h","achievement1":"失败","time":"2019年9月8号","achievement2":"11h","mileage2":"胜利"},
+        {"mileage1":"11h","achievement1":"平局","time":"2019年9月9号","achievement2":"11h","mileage2":"平局"},
+        {"mileage1":"14h","achievement1":"胜利","time":"2019年9月10号","achievement2":"11h","mileage2":"失败"},
+        {"mileage1":"13h","achievement1":"失败","time":"2019年9月11号","achievement2":"14h","mileage2":"胜利"},
+        {"mileage1":"14h","achievement1":"胜利","time":"2019年9月12号","achievement2":"10h","mileage2":"失败"},
+        {"mileage1":"13h","achievement1":"胜利","time":"2019年9月13号","achievement2":"11h","mileage2":"失败"},
+        {"mileage1":"15h","achievement1":"胜利","time":"2019年9月14号","achievement2":"12h","mileage2":"失败"},
+        {"mileage1":"11h","achievement1":"失败","time":"2019年9月15号","achievement2":"14h","mileage2":"胜利"},
+        {"mileage1":"13h","achievement1":"失败","time":"2019年9月16号","achievement2":"14h","mileage2":"胜利"},
+        {"mileage1":"12h","achievement1":"平局","time":"2019年9月17号","achievement2":"12h","mileage2":"平局"},
+        {"mileage1":"13h","achievement1":"胜利","time":"2019年9月18号","achievement2":"14h","mileage2":"失败"},
+        {"mileage1":"12h","achievement1":"平局","time":"2019年9月19号","achievement2":"12h","mileage2":"平局"},
+        {"mileage1":"10h","achievement1":"失败","time":"2019年9月20号","achievement2":"13h","mileage2":"胜利"},
+        {"mileage1":"14h","achievement1":"胜利","time":"2019年9月21号","achievement2":"10h","mileage2":"失败"},
+        {"mileage1":"12h","achievement1":"平局","time":"2019年9月22号","achievement2":"12h","mileage2":"平局"},
+        {"mileage1":"14h","achievement1":"失败","time":"2019年9月23号","achievement2":"13h","mileage2":"胜利"},
+        {"mileage1":"11h","achievement1":"胜利","time":"2019年9月24号","achievement2":"10h","mileage2":"失败"},
+        {"mileage1":"13h","achievement1":"失败","time":"2019年9月25号","achievement2":"14h","mileage2":"胜利"},
+        {"mileage1":"14h","achievement1":"胜利","time":"2019年9月26号","achievement2":"12h","mileage2":"失败"},
+        {"mileage1":"11h","achievement1":"失败","time":"2019年9月27号","achievement2":"10h","mileage2":"胜利"},
+        {"mileage1":"14h","achievement1":"胜利","time":"2019年9月28号","achievement2":"12h","mileage2":"失败"},
+        {"mileage1":"13h","achievement1":"失败","time":"2019年9月29号","achievement2":"14h","mileage2":"胜利"},
+        {"mileage1":"10h","achievement1":"失败","time":"2019年9月30号","achievement2":"11h","mileage2":"胜利"},
+        {"mileage1":"13h","achievement1":"平局","time":"2019年10月1号","achievement2":"13h","mileage2":"平局"},
+        {"mileage1":"12h","achievement1":"胜利","time":"2019年10月2号","achievement2":"10h","mileage2":"失败"},
+        {"mileage1":"11h","achievement1":"失败","time":"2019年10月3号","achievement2":"14h","mileage2":"胜利"},
+        {"mileage1":"13h","achievement1":"失败","time":"2019年10月4号","achievement2":"14h","mileage2":"胜利"},
+        {"mileage1":"10h","achievement1":"失败","time":"2019年10月5号","achievement2":"11h","mileage2":"胜利"},
+        {"mileage1":"11h","achievement1":"失败","time":"2019年10月6号","achievement2":"12h","mileage2":"胜利"},
+        {"mileage1":"12h","achievement1":"失败","time":"2019年10月7号","achievement2":"13h","mileage2":"胜利"},
+        {"mileage1":"12h","achievement1":"胜利","time":"2019年10月8号","achievement2":"13h","mileage2":"失败"},
+        {"mileage1":"11h","achievement1":"胜利","time":"2019年10月9号","achievement2":"13h","mileage2":"失败"},
+        {"mileage1":"10h","achievement1":"胜利","time":"2019年10月10号","achievement2":"13h","mileage2":"失败"},
+        {"mileage1":"12h","achievement1":"胜利","time":"2019年10月11号","achievement2":"13h","mileage2":"失败"},
+        {"mileage1":"12h","achievement1":"胜利","time":"2019年10月12号","achievement2":"13h","mileage2":"失败"},
+        {"mileage1":"11h","achievement1":"胜利","time":"2019年10月13号","achievement2":"13h","mileage2":"失败"},
+        {"mileage1":"10h","achievement1":"胜利","time":"2019年10月14号","achievement2":"13h","mileage2":"失败"},
+        {"mileage1":"13h","achievement1":"胜利","time":"2019年10月15号","achievement2":"13h","mileage2":"失败"},
+        {"mileage1":"12h","achievement1":"胜利","time":"2019年10月16号","achievement2":"13h","mileage2":"失败"},
+        {"mileage1":"12h","achievement1":"胜利","time":"2019年10月17号","achievement2":"13h","mileage2":"失败"},
+        {"mileage1":"12h","achievement1":"胜利","time":"2019年10月18号","achievement2":"13h","mileage2":"失败"},
+        {"mileage1":"12h","achievement1":"胜利","time":"2019年10月19号","achievement2":"13h","mileage2":"失败"},
+        {"mileage1":"12h","achievement1":"胜利","time":"2019年10月20号","achievement2":"13h","mileage2":"失败"},
+        {"mileage1":"12h","achievement1":"胜利","time":"2019年10月21号","achievement2":"13h","mileage2":"失败"},
+        {"mileage1":"12h","achievement1":"胜利","time":"2019年10月22号","achievement2":"13h","mileage2":"失败"},
+        {"mileage1":"12h","achievement1":"胜利","time":"2019年10月23号","achievement2":"13h","mileage2":"失败"},
+        {"mileage1":"12h","achievement1":"胜利","time":"2019年10月24号","achievement2":"13h","mileage2":"失败"},
+        {"mileage1":"12h","achievement1":"胜利","time":"2019年10月25号","achievement2":"13h","mileage2":"失败"},
+        {"mileage1":"12h","achievement1":"胜利","time":"2019年10月26号","achievement2":"13h","mileage2":"失败"},
+        {"mileage1":"12h","achievement1":"胜利","time":"2019年10月27号","achievement2":"13h","mileage2":"失败"},
+        {"mileage1":"12h","achievement1":"胜利","time":"2019年10月28号","achievement2":"13h","mileage2":"失败"},
+        {"mileage1":"12h","achievement1":"胜利","time":"2019年10月29号","achievement2":"13h","mileage2":"失败"},
+        {"mileage1":"12h","achievement1":"胜利","time":"2019年10月30号","achievement2":"13h","mileage2":"失败"},
+        {"mileage1":"12h","achievement1":"胜利","time":"2019年10月31号","achievement2":"13h","mileage2":"失败"},
+        {"mileage1":"12h","achievement1":"胜利","time":"2019年11月1号","achievement2":"13h","mileage2":"失败"},
+        {"mileage1":"12h","achievement1":"胜利","time":"2019年11月2号","achievement2":"13h","mileage2":"失败"},
+        {"mileage1":"12h","achievement1":"胜利","time":"2019年11月3号","achievement2":"12h","mileage2":"失败"},
+        {"mileage1":"12h","achievement1":"胜利","time":"2019年11月4号","achievement2":"13h","mileage2":"失败"},
+        {"mileage1":"12h","achievement1":"胜利","time":"2019年11月5号","achievement2":"14h","mileage2":"失败"},
+        {"mileage1":"12h","achievement1":"胜利","time":"2019年11月6号","achievement2":"15h","mileage2":"失败"},
+        {"mileage1":"12h","achievement1":"胜利","time":"2019年11月7号","achievement2":"11h","mileage2":"失败"},
+        {"mileage1":"12h","achievement1":"胜利","time":"2019年11月8号","achievement2":"13h","mileage2":"失败"},
+        {"mileage1":"12h","achievement1":"胜利","time":"2019年11月9号","achievement2":"13h","mileage2":"失败"},
+        {"mileage1":"13h","achievement1":"胜利","time":"2019年11月10号","achievement2":"12h","mileage2":"失败"},
+        {"mileage1":"13h","achievement1":"胜利","time":"2019年11月11号","achievement2":"12h","mileage2":"失败"},
+        {"mileage1":"14h","achievement1":"胜利","time":"2019年11月12号","achievement2":"12h","mileage2":"失败"},
+        {"mileage1":"12h","achievement1":"胜利","time":"2019年11月13号","achievement2":"12h","mileage2":"失败"},
+        {"mileage1":"13h","achievement1":"胜利","time":"2019年11月14号","achievement2":"12h","mileage2":"失败"},
+        {"mileage1":"13h","achievement1":"胜利","time":"2019年11月15号","achievement2":"12h","mileage2":"失败"},
+        {"mileage1":"14h","achievement1":"胜利","time":"2019年11月16号","achievement2":"12h","mileage2":"失败"},
+        {"mileage1":"15h","achievement1":"胜利","time":"2019年11月17号","achievement2":"12h","mileage2":"失败"},
+        {"mileage1":"13h","achievement1":"胜利","time":"2019年11月18号","achievement2":"12h","mileage2":"失败"},
+        {"mileage1":"12h","achievement1":"胜利","time":"2019年11月19号","achievement2":"12h","mileage2":"失败"},
+    ];
+    window.onload = function(){
+        pk1(items1);
+    }
+
+    
+    var $oldDom;// 记录原dom
+    var newNum = 0;
+    var maths;//记录原dom文本
+    // 逻辑开始
+	function dian(thiss,yes,infoid){
+        var openid = $("#openid").val();
+  
+        $.ajax({
+            type: "POST",
+            url: "{:url('hd1/dz')}",
+            data: {
+                id:infoid,
+                openid:openid,
+                yes:yes
+            },
+            dataType: "json",
+            success: function (data) {
+                if(data==1){
+                    alert('请登录');
+                    window.location.href='http://aoling.douyar.cc/index/login/index.html?login=2';
+                }
+
+                if(data==2){
+                    alert('已经点过赞了');
+                }else if(data == 4){
+                    alert('您已PK！');
+                }else{
+                    $(thiss).attr('src','http://aoling.douyar.cc/public/static/index/mobile/hd1/2019/lm/imgs/dians.png');
+                    $(thiss).parents('ul').siblings().find('img').attr('src','http://aoling.douyar.cc/public/static/index/mobile/hd1/2019/lm/imgs/dian.png');
+                    if(yes == 'yes'){
+                        newNum++;
+                        if(newNum == 1){
+                            $oldDom = $(thiss);//第一次点击记录原dom
+                            maths = $(thiss).parent().siblings().eq(3).text();//记录原dom里面的文本，以便于还原
+                            var math = parseInt($(thiss).parent().siblings().eq(3).text());
+                            math++;
+                            $(thiss).parent().siblings().eq(3).text(math);
+                        }
+                        if(newNum == 2){
+                            if($(thiss)[0] == $oldDom[0]){
+                                newNum = 1;
+                                console.log('点击相同按钮没操作！');
+                                $oldDom = $(thiss);//更新dom
+                                maths = $(thiss).parent().siblings().eq(3).text() - 1;//更新文本，以便于还原
+                            }else{
+                                newNum = 1;
+                                console.log('没有点击相同按钮没操作！');
+                                $oldDom.parent().siblings().eq(3).text(maths);//还原
+                                var math = parseInt($(thiss).parent().siblings().eq(3).text());
+                                math++;
+                                $(thiss).parent().siblings().eq(3).text(math);
+                                $oldDom = $(thiss);//更新dom
+                                maths = $(thiss).parent().siblings().eq(3).text() - 1;//更新文本，以便于还原
+                            }
+                        }            
+                    }else if(yes == 'no1'){
+                        console.log(data);
+                        var hot1 = $('<div id="hot1">\
+                            <div class="car">\
+                                <div class="car1">\
+                                    <span>'+data.my_cp+'</span>\
+                                </div>\
+                                <div class="vs1"></div>\
+                                <div class="car2">\
+                                    <span>'+data.t_cp+'</span>\
+                                </div>\
+                            </div>\
+                            <div class="lists">\
+                                <ul class="bang">\
+                                    <li>\
+                                        <span>'+data.my_cs+'</span><span>'+data.my_jg+'</span>\
+                                    </li>\
+                                    <li>\
+                                        <span>'+data.add_date+'</span>\
+                                    </li>\
+                                    <li>\
+                                        <span>'+data.t_cs+'</span><span>'+data.t_jg+'</span>\
+                                    </li>\
+                                </ul>\
+                            </div>\
+                        </div>')
+                        $('#mypk').find('#hot1').remove();
+                        $(hot1).appendTo($('#mypk'));
+                        $('.parent3').show();
+                        $('.mypk1').show();
+                        $('.mypk1').siblings().hide();
+                    }else if(yes == 'no2'){
+                        console.log(data);
+                        var hot1 = $('<div id="hot1">\
+                            <div class="car">\
+                                <div class="car1">\
+                                    <span>'+data.my_cp+'</span>\
+                                </div>\
+                                <div class="vs1"></div>\
+                                <div class="car2">\
+                                    <span>'+data.t_cp+'</span>\
+                                </div>\
+                            </div>\
+                            <div class="lists">\
+                                <ul class="bang">\
+                                    <li>\
+                                        <span>'+data.my_cs+'</span><span>'+data.my_jg+'</span>\
+                                    </li>\
+                                    <li>\
+                                        <span>'+data.add_date+'</span>\
+                                    </li>\
+                                    <li>\
+                                        <span>'+data.t_cs+'</span><span>'+data.t_jg+'</span>\
+                                    </li>\
+                                </ul>\
+                            </div>\
+                        </div>')
+                        $('#mypk').find('#hot1').remove();
+                        $(hot1).appendTo($('#mypk'));
+                        $('.parent3').show();
+                        $('.mypk2').show();
+                        $('.mypk2').siblings().hide();
+                    }else if(yes == 'no3'){
+                        console.log(data);
+                        var hot1 = $('<div id="hot1">\
+                            <div class="car">\
+                                <div class="car1">\
+                                    <span>'+data.my_cp+'</span>\
+                                </div>\
+                                <div class="vs1"></div>\
+                                <div class="car2">\
+                                    <span>'+data.t_cp+'</span>\
+                                </div>\
+                            </div>\
+                            <div class="lists">\
+                                <ul class="bang">\
+                                    <li>\
+                                        <span>'+data.my_cs+'</span><span>'+data.my_jg+'</span>\
+                                    </li>\
+                                    <li>\
+                                        <span>'+data.add_date+'</span>\
+                                    </li>\
+                                    <li>\
+                                        <span>'+data.t_cs+'</span><span>'+data.t_jg+'</span>\
+                                    </li>\
+                                </ul>\
+                            </div>\
+                        </div>')
+                        $('#mypk').find('#hot1').remove();
+                        $(hot1).appendTo($('#mypk'));
+                        $('.parent3').show();
+                        $('.mypk3').show();
+                        $('.mypk3').siblings().hide();
+                    }                     
+                }
+            }
+        });
+    }
+    var a = true;
+    var b = true;
+    var zan1s  =  $('.zan1').text();
+    var zan2s  =  $('.zan2').text();
+    function tou(thiss,num){
+        var par = $(thiss).siblings();
+        $(thiss).css('background-image',"url('http://aoling.douyar.cc/public/static/index/hd1/2019/lm/img/touTAying.png')");
+        $(par).css('background-image',"url('http://aoling.douyar.cc/public/static/index/hd1/2019/lm/img/moren.png')");
+        if(num == 1){
+            var zan1  =  $('.zan1').text();
+        }
+        if(num == 2){
+            var zan2  =  $('.zan2').text();
+        }
+        if(num == 1){
+            console.log(zan1);
+            $('.zan1').text(++zan1);
+            $('.zan2').text(zan2s);
+            b=true;
+            if(a == true){
+                $(thiss).css('background-image',"url('http://aoling.douyar.cc/public/static/index/hd1/2019/lm/img/touTAying.png')");
+                a=false;
+            }else{
+                $('.zan1').text(zan1s);
+                $(thiss).css('background-image',"url('http://aoling.douyar.cc/public/static/index/hd1/2019/lm/img/moren.png')");
+                a=true;
+            }
+        }else if(num == 2){
+            $('.zan2').text(++zan2);
+            console.log(zan2);
+            console.log(zan1s);
+            $('.zan1').text(zan1s);
+            console.log('第二个');a=true;
+            if(b == true){
+                $(thiss).css('background-image',"url('http://aoling.douyar.cc/public/static/index/hd1/2019/lm/img/touTAying.png')");
+                b=false;
+            }else{
+                $('.zan2').text(zan2s);
+                $(thiss).css('background-image',"url('http://aoling.douyar.cc/public/static/index/hd1/2019/lm/img/moren.png')");
+                b=true;
+            }
+        }
+    }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {include file="mobile/public/resource" /}
+    <link rel="stylesheet" href="__INDEX__/mobile/css/chexx.css">
+    <link rel="stylesheet" href="__INDEX__/mobile/css/threesixty.css">
+    <script type="text/javascript" src="__INDEX__/mobile/js/jquery.threesixty.js"></script>
+    <style>
+        ::-webkit-scrollbar {
+            display: none
+        }
+    </style>
+</head>
+<body>
+    {include file="mobile/public/header" /}
+    <!-- 最大盒子 （360车展    动力品牌    变速箱   后桥速比  流资） -->
+   
+    <div class="warp">
+            <div class="layui-inline qj">
+                    <label class="layui-form-label">价格区间</label>
+                    <div class="layui-input-inline" style="width: 100px;">
+                      <input type="text" disabled="disabled" name="price_min" placeholder="￥" autocomplete="off" class="layui-input minMoney">
+                    </div>
+                    <div class="layui-form-mid">-</div>
+                    <div class="layui-input-inline" style="width: 100px;">
+                      <input type="text" disabled="disabled" name="price_max" placeholder="￥" autocomplete="off" class="layui-input maxMoney">
+                    </div>
+                  </div>
+        <div class="box con">
+            <!-- <h1 style="text-align: center;line-height: 2.375rem; font-size: 0.9063rem;">官方指导价 <span
+                    style="color:#5f5f5f; ">￥90,999 -123,999</span></h1> -->
+            <!-- 360度车展 -->
+            <div class="threesixty-wrapper car360" >
+                <div class="threesixty" id="threesixty" data-item='page0-1-btn8' data-action='click-theme'
+                    style="height:100% !important;">
+                    <ol class="threesixty_images" style="height: 100%">
+                    </ol>
+                    <div class="spinner" style="margin-top: 0px!important;">
+                        <span>0%</span>
+                    </div>
+                    <div id="myCar" style="display:none;">1111</div>
+                    <div id="myCar" style="display:none;">2222</div>
+                </div>
+            </div>
+
+            <!-- 金钱总额 -->
+            <!-- <p class="Price"><span>价格总价：</span><span>￥ 111111111</span><span>-</span><span>￥ 2222222222</span></p> -->
+
+            <!-- 动力品牌 -->
+            <div class="swiper-container  time1 layui-form" style="display: none;">
+                <div class="swiper-wrapper swiper-wrapper2">
+                    <div class="box_img swiper-slide swiper-slide2">
+                        <div class="logo1" style="height:20.875rem;">
+                            <img id="tu" src="__INDEX__/mobile/img/zsdz/back_img.png" alt="" class="logo_img">
+                            <img id="tu2" src="__INDEX__/mobile/img/zsdz/biaoti_s.png" alt="" class="biaoti_img">
+                            <ul>
+                                <li><input type="radio" name="sex">4A2-88C50</li>
+                                <li><input type="radio" name="sex">4A2-88C50</li>
+                            </ul>
+                            <ul>
+                                <li><input type="radio" name="see">4A2-88C50</li>
+                                <li><input type="radio" name="see">4A2-88C50</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <p class="swiper-button-prev swiper-button-black"> </p>
+                <p class="swiper-button-next swiper-button-black"> </p>
+            </div>
+            <!-- 变速箱 -->
+            <div class="swiper-container  time2 layui-form" style="display: none;">
+                <div class="swiper-wrapper swiper-wrapper2">
+                    <div class="box_img swiper-slide swiper-slide2">
+                        <div class="logo1" style="height:20.875rem">
+                            <img id="tu" src="__INDEX__/mobile/img/zsdz/back_img.png" alt="" class="logo_img">
+                            <img id="tu2" src="__INDEX__/mobile/img/zsdz/biaoti_s.png" alt="" class="biaoti_img">
+                            <ul>
+                                <li><input type="radio" name="sex">4A2-88C50</li>
+                                <li><input type="radio" name="sex">4A2-88C50</li>
+                            </ul>
+                            <ul>
+                                <li><input type="radio" name="see">4A2-88C50</li>
+                                <li><input type="radio" name="see">4A2-88C50</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="box_img swiper-slide swiper-slide2">
+                        <div class="logo1" style="height:20.875rem">
+                            
+                            <ul>
+                                <li><input type="radio" name="sex">4A2-88C50</li>
+                                <li><input type="radio" name="sex">4A2-88C50</li>
+                            </ul>
+                            <ul>
+                                <li><input type="radio" name="see">4A2-88C50</li>
+                                <li><input type="radio" name="see">4A2-88C50</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="box_img swiper-slide swiper-slide2">
+                        <div class="logo1" style="height:20.875rem;">
+                            
+                            <ul>
+                                <li><input type="radio" name="sex">4A2-88C50</li>
+                                <li><input type="radio" name="sex">4A2-88C50</li>
+                            </ul>
+                            <ul>
+                                <li><input type="radio" name="see">4A2-88C50</li>
+                                <li><input type="radio" name="see">4A2-88C50</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+                <p class="swiper-button-prev swiper-button-black"> </p>
+                <p class="swiper-button-next swiper-button-black"> </p>
+            </div>
+
+            <!-- 后桥速比 -->
+            <div class="swiper-container  time3 layui-form" style="display: none;">
+                <div class="swiper-wrapper swiper-wrapper2">
+                    <div class="box_img swiper-slide swiper-slide2">
+                        <div class="logo1" style="height:20.875rem;">
+                            <img id="tu" src="__INDEX__/mobile/img/zsdz/back_img.png" alt="" class="logo_img">
+                            <img id="tu2" src="__INDEX__/mobile/img/zsdz/biaoti_s.png" alt="" class="biaoti_img">
+                            <ul>
+                                <li><input type="radio" name="sex">4A2-88C50</li>
+                                <li><input type="radio" name="sex">4A2-88C50</li>
+                            </ul>
+                            <ul>
+                                <li><input type="radio" name="see">4A2-88C50</li>
+                                <li><input type="radio" name="see">4A2-88C50</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="box_img swiper-slide swiper-slide2">
+                        <div class="logo1" style="height:20.875rem;">
+                            
+                            <ul>
+                                <li><input type="radio" name="sex">4A2-88C50</li>
+                                <li><input type="radio" name="sex">4A2-88C50</li>
+                            </ul>
+                            <ul>
+                                <li><input type="radio" name="see">4A2-88C50</li>
+                                <li><input type="radio" name="see">4A2-88C50</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="box_img swiper-slide swiper-slide2">
+                        <div class="logo1" style="height:20.875rem;">
+                            
+                            <ul>
+                                <li><input type="radio" name="sex">4A2-88C50</li>
+                                <li><input type="radio" name="sex">4A2-88C50</li>
+                            </ul>
+                            <ul>
+                                <li><input type="radio" name="see">4A2-88C50</li>
+                                <li><input type="radio" name="see">4A2-88C50</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <p class="swiper-button-prev swiper-button-black"> </p>
+                <p class="swiper-button-next swiper-button-black"> </p>
+            </div>
+            <!-- 流资 -->
+            <div class="liuzi  layui-form" style="display:none;">
+                <div class="public public1">
+                    <span>所在城市:</span>
+                    <select name="province" id="province" lay-filter="getCity" lay-verify="province">
+                        <option value="0">请选择省份</option>
+                        {foreach name="province" item="vc" }
+                        <option value="{$vc['id']}">{$vc['name']}</option>
+                        {/foreach}
+                    </select>
+                    <select value="city" name="city" id="city" lay-filter="getJxs" lay-verify="city">
+                        <option value="0">请选择城市</option>
+                    </select>
+                </div>
+                <!-- 所在城市 -->
+                <div class="public public2">
+                    <span>经销商名称:</span>
+                    <select name="jxs" id="jxs" lay-verify="jxs" lay-filter="jxs">
+                        <option value="0">请选择经销商</option>
+                    </select>
+                </div>
+                <!-- 个人信息  111111111111111-->
+                <div class="public public3">
+                    <span>姓名:</span>
+                    <input type="text" name="name" class="layui-input" required lay-verify="required">
+                </div>
+                <!-- 个人信息  222222222222222-->
+                <div class="public public4">
+                    <span>联系方式:</span>
+                    <input type="text" name="phone" class="layui-input" lay-verify="phone">
+                </div>
+                <button class="layui-btn" lay-submit lay-filter="tj" style="display:block;margin:0 auto;    margin-top: 1rem;">立即提交</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="loan1">
+        <!-- 选项卡  nav 导航-->
+        <!-- <div class="nav" style="width:100%;">
+
+            <ul id="loan1" class="swiper-slide swiper-slide2 tit1" style="">
+                <li class="yes0 selected">车系</li>
+                <li class="yes0 ">颜色</li>
+                <li class="yes0 ">排放标定</li>
+                <li class="yes0 ">制动</li>
+                <li class="yes0 ">驾驶室</li>
+                <li class="yes0 ">车身宽度</li>
+                <li class="yes0 ">轴距</li>
+                <li class="btn2 ">动力品牌</li>
+                <li class="btn3 ">变速箱</li>
+                <li class="btn4 ">后桥速比</li>
+                <li class="btn1">配置</li>
+            </ul>
+
+        </div> -->
+        <div class="swiper-container  time4 layui-form" >
+                <div class="swiper-wrapper swiper-wrapper2">
+                    <div class="box_img swiper-slide swiper-slide2" id="loan1">
+                         <li class="yes0 selected">车系</li>
+                            <li class="yes0 ">颜色</li>
+                            <li class="yes0 ">排放标定</li>
+                        
+
+                    </div>
+                    <div class="box_img swiper-slide swiper-slide2" id="loan1">
+                        
+                            <li class="yes0 ">制动</li>
+                            <li class="yes0 ">驾驶室</li>
+                            <li class="yes0 ">车身宽度</li>
+                           
+
+                    </div>
+                    <div class="box_img swiper-slide swiper-slide2"id='loan1'>
+                    
+                            <li class="yes0 ">轴距</li>
+                            <li class="btn2 ">动力品牌</li>
+                            <li class="btn3 ">变速箱</li>
+                          
+
+                    </div>
+                    <div class="box_img swiper-slide swiper-slide2" id="loan1">
+                            
+                            <li class="btn4 ">后桥速比</li>
+                            <li class="btn1">配置</li>
+                            <li class="yes0 "></li>
+                        
+                        </div>
+                </div>
+                <p class="swiper-button-prev swiper-button-black" style="top:74% !important;height: 22px !important;"> </p>
+                <p class="swiper-button-next swiper-button-black"  style="top:74% !important;height: 22px !important;"> </p>
+            </div>
+
+    </div>
+
+    <!-- 导航下面对应的型号     -->
+    <div class="show ">
+        <div class="con1">
+
+            <!-- 车系 -->
+            <div id="hezi3" style="height: auto;" class="">
+                <ul style="display: flex" id="discharge" class="tit">
+                    <li class="no">奥铃CTS</li>
+                </ul>
+            </div>
+
+
+            <!-- 颜色 -->
+            <div id="hezi0" style="height: auto; display:none">
+                <img src="__INDEX__/mobile/img/zsdz/zlb.png" alt="">
+                <img src="__INDEX__/mobile/img/zsdz/bcy.png" alt="">
+                <img src="__INDEX__/mobile/img/zsdz/omh.png" alt="">
+                <img src="__INDEX__/mobile/img/zsdz/khl.png" alt="">
+            </div>
+
+            <!-- 排放标定 -->
+            <div id="hezi1" style="display:none;height: auto" class="con_1">
+                <ul id="discharge" class="basics1 bd">
+                </ul>
+
+            </div>
+
+            <!-- 制动 -->
+            <div id="hezi2" style="display:none;height: auto">
+                <ul id="discharge" class="basics1 zd">
+                </ul>
+            </div>
+
+
+            <!-- 驾驶室 -->
+            <div id="hezi4" style="display:none;height: auto">
+                <ul id="discharge" class="basics1 jss">
+                </ul>
+            </div>
+
+            <!-- 车身宽度 -->
+            <div id="hezi5" style="display:none;height: auto" class="ss">
+                <ul id="discharge" class="basics1 carwidth">
+                </ul>
+
+            </div>
+
+            <!-- 轴距 -->
+            <div id="hezi6" style="display:none;height: auto">
+                <ul id="discharge" class="basics1 Wheelbase">
+                </ul>
+            </div>
+            <div id="hezi6" style="display:none;height: auto">
+                <ul id="discharge" class="basics1 Wheelbase">
+                </ul>
+            </div>
+            <div id="hezi6" style="display:none;height: auto">
+                <ul id="discharge" class="basics1 Wheelbase">
+                </ul>
+            </div>
+            <div id="hezi6" style="display:none;height: auto">
+                <ul id="discharge" class="basics1 Wheelbase">
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 配置 -->
+    <div class="box1 layui-form" style="display:none;    ">
+        <img src="__INDEX__/mobile/img/zsdz/biaoti.png" alt="">
+
+        <!-- 基本配置 -->
+        <ul class="zuoce" style="display:flex;justify-content: space-between;flex-wrap: wrap;height: 6rem;padding: 0 1rem;">
+
+        </ul>
+
+    <!-- 可选配置 -->
+        <img src="__INDEX__/mobile/img/zsdz/biaoti_t.png" alt="">
+
+        <ul class="youce" style="display:flex;justify-content: space-between;flex-wrap: wrap;height: 13rem;padding: 0 1rem;">
+
+        </ul>
+        <div class="box_btn">
+            <button class="fh"><a style="color:#fff"> 重选</a></button>
+            <button class="fh1"><a style="color:#fff"> 返回</a></button>
+        </div>
+    </div>
+
+    <p id="p1"> <img src="__INDEX__/mobile/img/zsdz/ljgc.png" alt=""></p>
+
+
+    {include file="mobile/public/footer" /}
+    <script>
+var ppArr = [];//所选品牌
+var colorArr = [];//颜色
+var bdArr = [];//排放标定    
+var zdArr = [];//制动
+var csArr = [];//车身
+var kdArr = [];//宽度
+var zjArr = [];//轴距
+var dlxhArr = [];//动力品牌
+var bsxArr = [];//变速箱
+var hqsbArr = [];//后桥速比
+var lengthArr = [];//返回值长度判断
+var idArr = [];//最后一条数据id
+var money;//总钱数
+var zdj = 0;//总单价
+var minmaxMoney = [];//最大最小价格
+var province, city, jxs;//省市经销商
+var str = '__INDEX__/mobile/image0/';
+var radio0;
+var radio1;
+var radio2;
+var radio3 = [];
+initThreesixty('White');
+// 动力品牌 swiper
+var mySwiper1 = new Swiper('.time1', {
+    observer: true,
+    observeParents: true,
+    observeSlideChildren: true,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+})
+var mySwiper1 = new Swiper('.time2', {
+    observer: true,
+    observeParents: true,
+    observeSlideChildren: true,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+})
+var mySwiper1 = new Swiper('.time3', {
+    observer: true,
+    observeParents: true,
+    observeSlideChildren: true,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+})
+var mySwiper1 = new Swiper('.time4', {
+    observer: true,
+    observeParents: true,
+    observeSlideChildren: true,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+})
+// layui   单选
+layui.use('form', function () {
+    form = layui.form;
+    form.on('checkbox(config)', function(data){
+        console.log(data.elem); //得到checkbox原始DOM对象
+        console.log(data.elem.checked); //是否被选中，true或者false
+        console.log(data.value); //复选框value值，也可以通过data.elem.value得到
+        console.log(data.othis); //得到美化后的DOM对象
+        // radio3 = data.value;
+        // console.log(radio3);
+    });
+
+    //选择 动力品牌
+    form.on('radio(brand0)', function(data){
+        console.log(data.elem); //得到checkbox原始DOM对象
+        console.log(data.elem.checked); //是否被选中，true或者false
+        console.log(data.value); //复选框value值，也可以通过data.elem.value得到
+        console.log(data.othis); //得到美化后的DOM对象
+        radio0 = data.value;
+        dlxhArr = [];
+        dlxhArr.push(radio0);
+        console.log(dlxhArr);
+    });
+
+    form.on('radio(brand1)', function(data){
+        console.log(data.elem); //得到checkbox原始DOM对象
+        console.log(data.elem.checked); //是否被选中，true或者false
+        console.log(data.value); //复选框value值，也可以通过data.elem.value得到
+        console.log(data.othis); //得到美化后的DOM对象
+        radio1 = data.value;
+        bsxArr = [];
+        bsxArr.push(radio1);
+        console.log(bsxArr);
+    });
+
+    form.on('radio(brand2)', function(data){
+        console.log(data.elem); //得到checkbox原始DOM对象
+        console.log(data.elem.checked); //是否被选中，true或者false
+        console.log(data.value); //复选框value值，也可以通过data.elem.value得到
+        console.log(data.othis); //得到美化后的DOM对象
+        radio2 = data.value;
+        hqsbArr = [];
+        hqsbArr.push(radio2);
+        console.log(hqsbArr);
+    });
+    //各种基于事件的操作，下面会有进一步介绍
+    form.on('select(getCity)', function (data) {
+        province = $(this).text();
+        $.ajax({
+            type: 'POST',
+            dataType: 'json',
+            url: '{:url('Testdrive/getCity')}',
+            data: {
+                province: data.value,
+            },
+            success: function (data) {
+                var quname_html = "<option value='0'>请选择城市</option>";
+                for (var i = 0; i < data.length; i++) {
+                    quname_html += "<option value='" + data[i].id + "'>" +
+                        data[i].name + "</option>";
+                }
+                $("#city").html(quname_html);
+                form.render();
+            }
+        });
+    });
+
+    form.on('select(getJxs)', function (data) {
+        city = $(this).text();
+        $.ajax({
+            type: 'POST',
+            dataType: 'json',
+            url: '{:url('Testdrive/getjxs')}',
+            data: {
+                city: data.value,
+            },
+            success: function (data) {
+                var quname_html = "<option value='0'>请选择经销商</option>";
+                for (var i = 0; i < data.length; i++) {
+                    quname_html += "<option value='" + data[i].id + "'>" +
+                        data[i].name + "</option>";
+                }
+                $("#jxs").html(quname_html);
+                form.render();
+            }
+        });
+    });
+
+    form.on('select(jxs)', function (data) {
+        jxs = $(this).text();
+
+    });
+    //自定义验证规则  
+    form.verify({
+        province: function (value) {
+            if (value == 0) {
+                return '请选择省份';
+            }
+        },
+        city: function (value) {
+            if (value == 0) {
+                return '请选择城市';
+            }
+        },
+        jxs: function (value) {
+            if (value == 0) {
+                return '请选择经销商';
+            }
+        },
+        required: function(value){
+            console.log(value);
+            if(value == ''){
+                return '请输入您的姓名';
+            }
+        },
+        phone: [/^1[3|4|5|7|8]\d{9}$/, '手机必须11位，只能是数字！']
+    });
+
+
+
+    //监听提交
+    form.on('submit(tj)', function (data) {
+        $.ajax({
+            type: 'POST',
+            dataType: 'json',
+            traditional: true,//这里设置为true
+            url: '{:url('Testdrive/tj')}',
+            data: {
+                province: province,
+                city: city,
+                jxs: jxs,
+                name: data.field.name,
+                phone: data.field.phone,
+                cx:ppArr.method1(),
+                sex:'',
+                time:'',
+                content:concatAll('isEnd')
+            },
+            success: function (data) {
+                if (data == 1) {
+                    layer.msg('请等待客服人员与您联系', {
+                        icon: 6,
+                        time: 2000,
+                        end: function () {
+                            location.reload();
+                        }
+                    });
+                }
+            }
+        });
+    });
+});
+
+layui.use('form', function () {
+    var form = layui.form;
+    //监听提交
+    form.on('submit(formDemo)', function (data) {
+        layer.msg(JSON.stringify(data.field));
+        return false;
+    });
+});
+// 重选  显示隐藏
+$('.fh1').click(function () {
+    $('.box1').hide();
+    $('.warp').show();
+    $(".show").show();
+});
+$('.fh').click(function () {
+    $('.youce input').each(function(i,index){
+		index.checked = false;
+	})
+	form.render('checkbox');
+});
+
+
+// 立即购车
+$('#p1').click(function () {
+    if(lengthArr[0] == 1){
+        $('.liuzi').show();
+        $('.liuzi').siblings().hide();
+        $('.qj').hide();
+        $('.box1 ').hide();
+        $(".warp").show();
+        $(".show").show();
+        radio3 = [];
+        $("input:checkbox[name='config']:checked").each(function(i){
+            radio3[i] = $(this).val();
+        });
+        $('#loan1>li').each(function(i,index){
+            $(this).removeClass('selected');
+        })
+        console.log(radio3);
+    }else{
+        alert('请选择详细配置！');
+    }
+});
+
+// 导航  li   下面对应的   显示隐藏   导航下标  为7 8 9 10   的显示隐藏   
+$('#loan1>li').each(function (i, index) {
+    console.log(i)
+    $(this).click(function(){
+        if(ppArr.length == 0 ){
+            alert('请选择车系！');
+            return false;
+        }else{
+            $(this).addClass('selected');
+            $(this).siblings().removeClass('selected');
+            if (i == 7) {
+                $(".time1").show();
+                $(".time1").siblings().hide();
+                $('.con1').hide();
+                ajaxs(i);
+                $('.qj').show();
+            } 
+            else if (i == 8) {
+                $(".time2").show();
+                $(".time2").siblings().hide();
+                $('.con1').hide();
+                ajaxs(i);
+                $('.qj').show();
+            } 
+            else if (i == 9) {
+                $(".time3").show();
+                $(".time3").siblings().hide();
+                $('.con1').hide();
+                ajaxs(i);
+                $('.qj').show();
+            } 
+            else if (i == 10) {
+                $(".box1").show();
+                $(".warp").hide();
+                $(".show").hide();
+                $('.qj').hide();
+                if(lengthArr[0] == 1){
+                    $.ajax({
+                        type: 'POST',
+                        dataType:'json',
+                        url : '{:url('Product/ajaxMadeId')}',
+                        data: {id:idArr[0]},
+                        success: function(data){
+                            console.log(data);
+                            $('.youce').empty();
+                            for(var suoyins = 0; suoyins < data.kxx.length; suoyins++){
+                                var configs = $('<input type="checkbox" lay-skin="primary"  lay-filter="config"  name="config" value="'+data.kxx[suoyins]+'" title="'+data.kxx[suoyins]+'">');
+                                $('.youce').append(configs);
+                                form.render();
+                            }
+                        }
+                    });
+                }
+                var configArr = concatAll().method1();//获取所有的用户选中的数组     并且去重updefined
+                console.log(configArr);
+                $('.zuoce').empty();
+                for(var indexs = 0; indexs < configArr.length; indexs++){
+                    var config = $('<input checked="checked" type="checkbox" lay-skin="primary"  lay-filter="configs" disabled="disabled" name="configs" value="0" title="'+configArr[indexs]+'">');
+                    $('.zuoce').append(config);
+                    form.render();
+                }
+            }
+            else{
+                $(".car360").show();
+                $(".car360").siblings().hide();
+                $('.con1>div').eq(i).show();
+                $('.con1>div').eq(i).siblings().hide();
+                $('.con1').show();
+                $('.qj').show();
+                ajaxs(i);
+            }
+        }
+    })
+})
+
+// 车系  选择  车型
+$('.tit li').click(function () {
+    $(this).addClass('yes');
+    $(this).removeClass('no');
+    $(this).siblings().addClass('no');
+    $(this).siblings().removeClass('yes');
+    var i = $(this).index(); //下标第一种写法
+    str = '__INDEX__/mobile/image'+i+'/';
+    initThreesixty('White');
+    $('.car360').show();
+    $('.car360').siblings().hide();
+    var text = $(this).text();
+    ppArr = [];
+    ppArr.push(text);
+    console.log(ppArr);
+});
+//选择颜色
+$('#hezi0>img').each(function(i,index){
+    $(this).click(function(){
+        if(i == 0){
+            var str = '朱鹭白';
+            $(this).addClass('hover');
+            $(this).siblings().removeClass('hover');
+        }else if(i == 1){
+            var str = '奔驰银';
+            $(this).addClass('hover');
+            $(this).siblings().removeClass('hover');
+        }else if(i == 2){
+            var str = '欧曼红';
+            $(this).addClass('hover');
+            $(this).siblings().removeClass('hover');
+        }else if(i == 3){
+            var str = '科幻蓝';
+            $(this).addClass('hover');
+            $(this).siblings().removeClass('hover');
+        }
+        colorArr = [];
+        colorArr.push(str);
+        console.log(colorArr);
+    })
+})
+//选择排放标定
+$(document).on('click','.bd li',function(){
+    $(this).addClass('yes');
+    $(this).removeClass('no');
+    $(this).siblings().addClass('no');
+    $(this).siblings().removeClass('yes');
+    var text = $(this).text();
+    bdArr = [];
+    bdArr.push(text);
+    console.log(bdArr);
+})
+//选择制动braking
+$(document).on('click','.zd li',function(){
+    $(this).addClass('yes');
+    $(this).removeClass('no');
+    $(this).siblings().addClass('no');
+    $(this).siblings().removeClass('yes');
+    var text = $(this).text();
+    zdArr = [];
+    zdArr.push(text);
+    console.log(zdArr);
+})
+//选择驾驶室
+$(document).on('click','.jss li',function(){
+    $(this).addClass('yes');
+    $(this).removeClass('no');
+    $(this).siblings().addClass('no');
+    $(this).siblings().removeClass('yes');
+    var text = $(this).text();
+    csArr = [];
+    csArr.push(text);
+    console.log(csArr);
+})
+//选择车身宽度
+$(document).on('click','.carwidth li',function(){
+    $(this).addClass('yes');
+    $(this).removeClass('no');
+    $(this).siblings().addClass('no');
+    $(this).siblings().removeClass('yes');
+    var text = $(this).text();
+    kdArr = [];
+    kdArr.push(text);
+    console.log(kdArr);
+})
+//选择轴距
+$(document).on('click','.Wheelbase li',function(){
+    $(this).addClass('yes');
+    $(this).removeClass('no');
+    $(this).siblings().addClass('no');
+    $(this).siblings().removeClass('yes');
+    var text = $(this).text();
+    zjArr = [];
+    zjArr.push(text);
+    console.log(zjArr);
+})
+//动力品牌     
+$(document).on('click','.time1 .swiper-slide2 img',function(){
+    var json = {
+        'pp':ppArr[0],
+        'dlpp':$('.time1 .swiper-slide2').find('span').text(),
+        'dlxh':1,
+        'cs':csArr.method1(),
+        'kd':kdArr.method1(),
+        'zj':zjArr.method1(),
+        'bd':bdArr.method1(),
+        'zd':zdArr.method1(),
+    }
+    $.ajax({
+        type: 'POST',
+        dataType:'json',
+        traditional: true,//这里设置为true
+        url : '{:url('Product/ajaxMade')}',
+        data: json,
+        success: function(data){
+                console.log(data);
+                lengthArr = [];
+                lengthArr.push(data.length);
+                if(data.length == 1){
+                    idArr = [];
+                    idArr.push(data[0].id);
+                    zdj = data[0].zdj;
+                }
+                $('.inp').empty();
+                for(var ins = 0;ins < data.length; ins++){
+                    var li7 = $('<input type="radio"  lay-filter="brand0" name="brand" value="'+data[ins].dlxh+'" title="'+data[ins].dlxh+'">');
+                    $('.inps' + ins).append(li7);
+                    form.render();
+                }                       
+        }
+    });
+    $(this).parent().addClass('hover');
+    $(this).parent().siblings().removeClass('hover');
+    $(this).parent().find('.inp').addClass('hovers');
+    $(this).parent().siblings().find('.inp').removeClass('hovers');
+})
+//变速箱     
+$(document).on('click','.time2 .swiper-slide2 img',function(){
+    var json = {
+        'pp':ppArr[0],
+        'bsx':1,
+        'cs':csArr.method1(),
+        'kd':kdArr.method1(),
+        'zj':zjArr.method1(),
+        'bd':bdArr.method1(),
+        'zd':zdArr.method1(),
+        'dlxh':dlxhArr.method1(),
+    }
+    $.ajax({
+        type: 'POST',
+        dataType:'json',
+        traditional: true,//这里设置为true
+        url : '{:url('Product/ajaxMade')}',
+        data: json,
+        success: function(data){
+                console.log(data);
+                lengthArr = [];
+                lengthArr.push(data.length);
+                if(data.length == 1){
+                    idArr = [];
+                    idArr.push(data[0].id);
+                    zdj = data[0].zdj;
+                }
+                $('.inp2').empty();
+                for(var ins = 0;ins < data.length; ins++){
+                    var li7 = $('<input type="radio"  lay-filter="brand1" name="brand" value="'+data[ins].bsxxh+'" title="'+data[ins].bsxxh+'">');
+                    $('.inpss' + ins).append(li7);
+                    form.render();
+                }                      
+        }
+    });
+    $(this).parent().addClass('hover');
+    $(this).parent().siblings().removeClass('hover');
+    $(this).parent().find('.inp2').addClass('hovers');
+    $(this).parent().siblings().find('.inp2').removeClass('hovers');
+})
+//后桥速比
+$(document).on('click','.time3 .swiper-slide2 img',function(){
+    var json = {
+        'pp':ppArr[0],
+        'hqsu':1,
+        'cs':csArr.method1(),
+        'kd':kdArr.method1(),
+        'zj':zjArr.method1(),
+        'bd':bdArr.method1(),
+        'zd':zdArr.method1(),
+        'dlxh':dlxhArr.method1(),
+        'bsxxh':bsxArr.method1(),
+    }
+    $.ajax({
+        type: 'POST',
+        dataType:'json',
+        traditional: true,//这里设置为true
+        url : '{:url('Product/ajaxMade')}',
+        data: json,
+        success: function(data){
+                lengthArr = [];
+                lengthArr.push(data.length);
+                if(data.length == 1){
+                    idArr = [];
+                    idArr.push(data[0].id);
+                    zdj = data[0].zdj;
+                }
+                $('.inp3').empty();
+                for(var ins = 0;ins < data.length; ins++){
+                    var li7 = $('<input type="radio"  lay-filter="brand2" name="brand" value="'+data[ins].hqsb+'" title="'+data[ins].hqsb+'">');
+                    $('.inpsss' + ins).append(li7);
+                    form.render();
+                }                       
+        }
+    });
+    $(this).parent().addClass('hover');
+    $(this).parent().siblings().removeClass('hover');
+    $(this).parent().find('.inp3').addClass('hovers');
+    $(this).parent().siblings().find('.inp3').removeClass('hovers');
+})
+
+// 360车
+function initThreesixty(type) {
+    var $threeSixty = $('#threesixty');
+    $threeSixty.find("ol").empty();
+    var colors = ['White', 'Black', 'Blue', 'Red', 'Grey', 'Silver'];
+    var hasColor = colors.indexOf(type.trim());
+    var color = hasColor > -1 ? type : 'White';
+    $threeSixty.ThreeSixty({
+        totalFrames: 32,
+        endFrame: 32,
+        currentFrame: 1,
+        imgList: '.threesixty_images',
+        progress: '.spinner',
+        imagePath: str,
+        filePrefix: '0-',
+        ext: '.png',
+        zeroPadding: true, // 1.jpg = > 01.jpg
+        zeroBased: true, // 从0开始
+        height: 700,
+        width: 1280,
+        navigation: false,
+        responsive: true
+    });
+}
+function concatAll(isEnd){
+    if(isEnd == 'isEnd'){
+        var shuzu = [];
+        if(!colorArr[0]){
+            colorArr[0] = "";
+        }else if(!bdArr[0]){
+            bdArr[0] = "";
+        }else if(!zdArr[0]){
+            zdArr[0] = "";
+        }else if(!csArr[0]){
+            csArr[0] = "";
+        }else if(!kdArr[0]){
+            kdArr[0] = "";
+        }else if(!zjArr[0]){
+            zjArr[0] = "";
+        }else if(!dlxhArr[0]){
+            dlxhArr[0] = "";
+        }else if(!bsxArr[0]){
+            bsxArr[0] = "";
+        }else if(!hqsbArr[0]){
+            hqsbArr[0] = "";
+        }
+        shuzu = "color:" + colorArr[0]+",bd:"+bdArr[0]+",zd:"+zdArr[0]+",cs:"+csArr[0]+",kd:"+kdArr[0]+",zj:"+zjArr[0]+",dlxh:"+dlxhArr[0]+",bsxxh:"+bsxArr[0]+",hqsb:"+hqsbArr[0];
+        console.log(shuzu);
+        return shuzu;
+    }else{
+        var shuzu = [];
+        shuzu = [ppArr[0],colorArr[0],bdArr[0],zdArr[0],csArr[0],kdArr[0],zjArr[0],dlxhArr[0],bsxArr[0],hqsbArr[0]];
+        return shuzu;       
+    }
+}
+Array.prototype.method1=function(){
+    var arr = [];
+    for(var i=0;i<this.length;i++){
+        if(arr.indexOf(this[i]) == -1){
+           arr.push(this[i]);
+        }
+    var indexs = arr.indexOf(undefined);
+    if (indexs > -1) {
+        arr.splice(indexs,1);
+    }
+    }
+    return arr;
+}
+function minmaxMoneys(){
+    if(minmaxMoney.length == 0){
+        $('.minMoney').val('0');
+        $('.maxMoney').val(minmaxMoney[0]);
+    }else{
+        var minN = eval("Math.min(" + minmaxMoney.toString() + ")");
+        var maxN = eval("Math.max(" + minmaxMoney.toString() + ")");
+        $('.minMoney').val(minN);
+        $('.maxMoney').val(maxN);       
+    }
+}
+function ajaxs(i){
+    console.log(i);
+    var json = {};
+    if(i == 2){
+        json = {
+            'pp':ppArr[0],
+            'bd':1,
+            'cs':csArr.method1(),
+            'kd':kdArr.method1(),
+            'zj':zjArr.method1(),
+            'zd':zdArr.method1(),
+            'dlxh':dlxhArr.method1(),
+            'bsxxh':bsxArr.method1(),
+        }
+    }else if(i == 3){
+        json = {
+            'pp':ppArr[0],
+            'bd':bdArr.method1(),
+            'zd':1,
+            'cs':csArr.method1(),
+            'kd':kdArr.method1(),
+            'zj':zjArr.method1(),
+            'dlxh':dlxhArr.method1(),
+            'bsxxh':bsxArr.method1(),
+        }
+        console.log('yes',json);
+    }else if(i == 4){
+        json = {
+            'pp':ppArr[0],
+            'bd':bdArr.method1(),
+            'cs':1,
+            'kd':kdArr.method1(),
+            'zj':zjArr.method1(),
+            'zd':zdArr.method1(),
+            'dlxh':dlxhArr.method1(),
+            'bsxxh':bsxArr.method1(),
+        }
+    }else if(i == 5){
+        json = {
+            'pp':ppArr[0],
+            'bd':bdArr.method1(),
+            'cs':csArr.method1(),
+            'kd':1,
+            'zj':zjArr.method1(),
+            'zd':zdArr.method1(),
+            'dlxh':dlxhArr.method1(),
+            'bsxxh':bsxArr.method1(),
+        }
+    }else if(i == 6){
+        json = {
+            'pp':ppArr[0],
+            'bd':bdArr.method1(),
+            'cs':csArr.method1(),
+            'kd':kdArr.method1(),
+            'zj':1,
+            'zd':zdArr.method1(),
+            'dlxh':dlxhArr.method1(),
+            'bsxxh':bsxArr.method1(),
+        }
+    }else if(i == 7){
+            json = {
+            'pp':ppArr[0],
+            'dlpp':1,
+            'cs':csArr.method1(),
+            'kd':kdArr.method1(),
+            'zj':zjArr.method1(),
+            'bd':bdArr.method1(),
+            'zd':zdArr.method1(),
+            'dlxh':dlxhArr.method1(),
+            'bsxxh':bsxArr.method1(),
+        }
+    }else if(i == 8){
+        json = {
+            'pp':ppArr[0],
+            'bsx':1,
+            'cs':csArr.method1(),
+            'kd':kdArr.method1(),
+            'zj':zjArr.method1(),
+            'bd':bdArr.method1(),
+            'zd':zdArr.method1(),
+            'dlxh':dlxhArr.method1(),
+            'bsxxh':bsxArr.method1(),
+        }
+    }else if(i == 9){
+        json = {
+            'pp':ppArr[0],
+            'hqsb':1,
+            'cs':csArr.method1(),
+            'kd':kdArr.method1(),
+            'zj':zjArr.method1(),
+            'bd':bdArr.method1(),
+            'zd':zdArr.method1(),
+            'dlxh':dlxhArr.method1(),
+            'bsxxh':bsxArr.method1(),
+        }
+    }
+    $.ajax({
+        type: 'POST',
+        dataType:'json',
+        traditional: true,//这里设置为true
+        // url : '/index/Product/ajaxMade',
+        url : '{:url('Product/ajaxMade')}',
+        data: json,
+        success: function(data){
+                //每次请求数据   先清空上次的价格
+                minmaxMoney = [];
+                lengthArr = [];
+                lengthArr.push(data.length);
+                if(data.length == 1){
+                    idArr = [];
+                    idArr.push(data[0].id);
+                    zdj = data[0].zdj;
+                }
+                $('.bd').empty();
+                $('.zd').empty();
+                $('.jss').empty();
+                $('.carwidth').empty();
+                $('.Wheelbase').empty();
+                $('.time1 .swiper-wrapper2').empty();
+                $('.time2 .swiper-wrapper2').empty();
+                $('.time3 .swiper-wrapper2').empty();
+                console.log(data);
+                for(var ins = 0;ins < data.length; ins++){
+                    //将每组里面的zdj     存入minmaxMoney数组中以便后续求最大最小值
+                    minmaxMoney.push(parseInt(data[ins].zdj));
+                    minmaxMoneys();
+                    console.log(minmaxMoney);
+                    var li1 = $('<li class="no">'+data[ins].bd+'</li>');
+                    $('.bd').append(li1);
+                    var li2 = $('<li class="no">'+data[ins].zd+'</li>');
+                    $('.zd').append(li2);
+                    var li3 = $('<li class="no">'+data[ins].cs+'</li>');
+                    $('.jss').append(li3);
+                    var li4 = $('<li class="no">'+data[ins].kd+'</li>');
+                    $('.carwidth').append(li4);
+                    var li5 = $('<li class="no">'+data[ins].zj+'</li>');
+                    $('.Wheelbase').append(li5);
+                    var li6 = $('<div class="box_img swiper-slide swiper-slide2"><div class="logo1" style="height:20.875rem;"><img id="tu" src="__INDEX__/dz/'+data[ins].cc+'.jpg"><span>'+data[ins].dlpp+'</span><div class="inp '+'inps'+ins+'"></div></div></div>')
+                    $('.time1 .swiper-wrapper2').append(li6);
+                    var li7 = $('<div class="box_img swiper-slide swiper-slide2"><div class="logo1" style="height:20.875rem;"><img id="tu" src="__INDEX__/dz/'+data[ins].cc+'.jpg"><span>'+data[ins].bsx+'</span><div class="inp2 '+'inpss'+ins+'"></div></div></div>');
+                    $('.time2 .swiper-wrapper2').append(li7);
+                    var li8 = $('<div class="box_img swiper-slide swiper-slide2"><div class="logo1" style="height:20.875rem;"><img id="tu" src="__INDEX__/dz/'+data[ins].cc+'.jpg"><span>'+data[ins].hqsb+'</span><div class="inp3 '+'inpsss'+ins+'"></div></div></div>')
+                    $('.time3 .swiper-wrapper2').append(li8);
+                }                       
+        }
+    });
+}
+    </script>
+</body>
+
+</html>

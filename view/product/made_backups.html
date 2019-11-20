@@ -1,0 +1,1757 @@
+<!-- 奥铃官网       首页开始 -->
+<!doctype html>
+<html lang="en">
+<head>
+	 {include file="public/resource" /}
+	<link rel="stylesheet" href="__INDEX__/css/dz.css">
+	<link rel="stylesheet" href="__INDEX__/css/iconfont.css">
+<link rel="stylesheet" href="__INDEX__/css/threesixty.css">
+	<!-- <script type="text/javascript" src="__INDEX__/js/0deye.min.js"></script> -->
+</head>
+<body>
+<!-- 顶部导航 -->
+ {include file="public/header" /}
+<input type="hidden" name="login_type" id="login_type" value="{$login_type}">
+<!-- 内容区 -->
+<div id="container">
+	<!-- 价格区间 -->
+    <div class="layui-inline qj">
+      <label class="layui-form-label">价格区间</label>
+      <div class="layui-input-inline" style="width: 100px;">
+        <input type="text" disabled="disabled" name="price_min" placeholder="￥" autocomplete="off" class="layui-input minMoney">
+      </div>
+      <div class="layui-form-mid">-</div>
+      <div class="layui-input-inline" style="width: 100px;">
+        <input type="text" disabled="disabled" name="price_max" placeholder="￥" autocomplete="off" class="layui-input maxMoney">
+      </div>
+    </div>
+    <div class="buylist" onclick="ddyl()" style="display: none;">
+		<img src="__INDEX__/img/dz/buylist.png" alt="">
+    </div>
+	<!-- banner -->
+	<div class="banner">
+		<img src="__INDEX__/img/dz/banner.jpg" alt="" class="bj">
+		<!-- 360车 -->
+		<div class="threesixty-wrapper" >
+			<div class="threesixty" id="threesixty" data-item='page0-1-btn8' data-action='click-theme'>
+				<ol class="threesixty_images" style="height: 100%">
+				</ol>
+				<div class="spinner">
+					<span>0%</span>
+				</div>
+			</div>
+		</div>
+		<!-- 一级   车系 -->
+		<div id="car" class="basics0 one0">
+			<!-- 车系 -->
+			<ul id="chexi" class="chexi">
+			{volist name="sql" id="vo"}					
+				<li class="no">{$vo['pp']}</li>
+	<!-- 			<li class="no">奥铃TS</li>
+				<li class="no">奥铃新捷运</li> -->
+			{/volist}
+			</ul>
+		</div>
+		<!-- 二级   基础 -->
+		<div id="basics" class="basics one1">
+			<ul id="cheshen" class="cheshen">
+				<li  class="no">颜色</li>
+				<li  class="no">排放标定</li>
+				<li  class="no">制动</li>
+			</ul>
+			<!-- 选择颜色 -->
+			<ul id="color" class="basics0">
+				<li>
+					<img src="__INDEX__/img/dz/bai.png" alt="">
+				</li>
+				<li>
+					<img src="__INDEX__/img/dz/yin.png" alt="">
+				</li>
+				<li>
+					<img src="__INDEX__/img/dz/hong.png" alt="">
+				</li>
+				<li>
+					<img src="__INDEX__/img/dz/lan.png" alt="">
+				</li>
+			</ul>
+			<!-- 排放标定 -->
+			<ul id="discharge" class="basics1">
+<!-- 				<li class="no">国V</li>
+				<li class="no">京V</li>
+				<li class="no">新京V</li> -->
+			</ul>
+			<!-- 制动 -->
+			<ul id="braking" class="basics2">
+<!-- 				<li class="no">液刹</li>
+				<li class="no">断气刹</li>
+				<li class="no">气刹</li> -->
+			</ul>
+		</div>
+		<!-- 三级   车身 -->
+		<div id="carbody" class="carbody one2">
+			<!-- 基础 -->
+			<ul id="jichu" class="jichu">					
+				<li class="no">驾驶室</li>
+				<li class="no">车身宽度</li>
+				<li class="no">轴距</li>
+			</ul>
+			<!-- 驾驶室 -->
+			<ul id="Cab" class="carbody0">
+			</ul>
+			<!-- 车身宽度 -->
+			<ul id="carwidth" class="carbody1">
+			</ul>
+			<!-- 轴距 -->
+			<ul id="Wheelbase" class="carbody2">
+			</ul>
+		</div>
+		<!-- 四级    动力 -->
+		<div id="power" class="power one3" >
+			<!-- 动力品牌 -->
+			<ul id="brand" class="brand">
+				<li class="no">动力品牌</li>
+				<li class="no">变速箱</li>
+				<li class="no">后桥速比</li>
+			</ul>
+			<!-- 动力品牌 -->
+			<div class="power0 layui-form">
+				<div class="swiper-container  time1" style="">
+				    <div class="swiper-wrapper swiper-wrapper2">
+				        <div class="swiper-slide swiper-slide2">
+				        </div>
+				    </div>
+				</div>
+			    <div class="swiper-button-prev swiper-button-black" style="left: 100px!important;"></div>
+			    <div class="swiper-button-next swiper-button-black" style="right: 100px!important;"></div>
+			</div>
+			<!-- 变速箱 -->
+			<div class="power1 layui-form" style="display: none;">
+				<div class="swiper-container time2" style="">
+				    <div class="swiper-wrapper swiper-wrapper2">
+				        <div class="swiper-slide swiper-slide2">
+				        </div>
+				    </div>
+				</div>
+			    <div class="swiper-button-prev swiper-button-black" style="left: 100px!important;"></div>
+			    <div class="swiper-button-next swiper-button-black" style="right: 100px!important;"></div>
+			</div>
+			<!-- 后桥速比 -->
+			<div class="power2 layui-form" style="display: none;">
+				<div class="swiper-container time3" style="">
+				    <div class="swiper-wrapper swiper-wrapper2">
+				        <div class="swiper-slide swiper-slide2">
+				        </div>
+				    </div>
+				</div>
+			    <div class="swiper-button-prev swiper-button-black" style="left: 100px!important;"></div>
+			    <div class="swiper-button-next swiper-button-black" style="right: 100px!important;"></div>
+			</div>
+		</div>
+		<!-- 五级    配置 -->
+		<div id="config" class="config one4">
+			<div class="fons">
+				<p>基本配置</p>
+				<p>可选配置</p>
+			</div>
+			<div class="pei">
+				<div class="pei1  layui-form">
+					<div class="zuoce">
+					</div>
+				</div>
+				<div class="xian"></div>
+				<div class="pei2  layui-form">
+					<div class="youce">
+					</div>
+				</div>
+			</div>
+			<div class="but">
+				<!-- <div><img class="confirm" src="__INDEX__/img/dz/confirm.png" alt="" onclick="test()"></div> -->
+				<div><img class="again" src="__INDEX__/img/dz/again.png" alt="" onclick="again()"></div>
+			</div>
+		</div>
+		<!-- 六级    金融计算器 -->
+		<div id="computer" class="computer one5">
+			<ul id="loan" class="loan">
+				<li class="no">贷款</li>
+				<li class="no">全款</li>
+			</ul>
+			<div class="fons">
+				<p>选择填写</p>
+				<p>计算结果</p>
+			</div>
+			<div class="computer1">
+				<div class="pei1  layui-form">
+					<div class="sle1 flexx">
+						<span>车系:</span>
+						<input type="text" class="layui-input chexing" placeholder="奥铃CTS" disabled="disabled">
+					</div>
+					<div class="sle1 flexx">
+						<span>车型:</span>
+						<input type="text" class="layui-input chexi" placeholder="奥铃CTS" disabled="disabled">
+					</div>
+					<div class="sle1 flexx">
+						<span>总额:</span>
+						<input type="text" class="layui-input allMoney" placeholder="" disabled="disabled">
+					</div>
+					<div class="sle1 flexx">
+						<span>方案:</span>
+						<select name="" id="">
+							<option value="0">请选择</option>
+						</select>
+					</div>
+					<div class="sle1 flexx">
+						<span>还款方式:</span>
+						<input type="radio" name="main" value="0" title="等额本息">
+					</div>
+					<div class="sle1 flexx">
+						<span>意向首付:</span>
+						<div id="slideTest1"  class="demo-slider" style="width: 65%;display: inline-block;"></div>
+					</div>
+					<div class="sle1 flexx">
+						<span>还款利率:</span>
+					</div>
+					<div class="sle1 flexx">
+						<span>还款期限:</span>
+					</div>
+					</div>
+				<div class="xian"></div>
+				<div class="pei2  layui-form">
+					<div class="sle1 flexx">
+						<span>首付金额:</span>
+						<!-- <input type="text" class="layui-input" placeholder="昵称"> -->
+					</div>
+					<div class="sle1 flexx">
+						<span>贷款金额:</span>
+						<!-- <input type="text" class="layui-input" placeholder="昵称"> -->
+					</div>
+					<div class="sle1 flexx">
+						<span>还款次数:</span>
+						<!-- <input type="text" class="layui-input" placeholder="昵称"> -->
+					</div>
+					<div class="sle1 flexx">
+						<span>每次还款:</span>
+						<!-- <input type="text" class="layui-input" placeholder="昵称"> -->
+					</div>
+					<div class="sle1 flexx">
+						<span>利息总和:</span>
+						<!-- <input type="text" class="layui-input" placeholder="昵称"> -->
+					</div>
+					<div class="sle1 flexx">
+						<span>还款金额:</span>
+						<!-- <input type="text" class="layui-input" placeholder="昵称"> -->
+					</div>
+					<div class="sle1 flexx">
+						<span>购车总额:</span>
+						<input type="text" class="layui-input carMoney" placeholder="" disabled="disabled">
+					</div>
+					<div class="ddyl"><img src="__INDEX__/img/dz/ddyl.png" alt="" onclick="ddyl()"></div>
+				</div>
+			</div>
+		</div>
+		<!-- 订车    留资 -->
+		<div class="liuzi  layui-form">
+			<div class="public public1">
+				<span>*所在城市:</span>
+				<select name="province" id="province" lay-filter="getCity" lay-verify="province">
+					<option value="0">请选择省份</option>
+					{foreach name="province" item="vc" }
+					<option value="{$vc['id']}">{$vc['name']}</option>
+					{/foreach}
+				</select>
+				<select value="city" name="city" id="city" lay-filter="getJxs" lay-verify="city">
+					<option value="0">请选择城市</option>
+				</select>
+			</div>
+			<!-- 所在城市 -->
+			<div class="public public2">
+				<span>经销商名称:</span>
+				<select name="jxs" id="jxs" lay-verify="jxs" lay-filter="jxs">
+					<option value="0">请选择经销商</option>
+				</select>
+			</div>
+			<!-- 个人信息  111111111111111-->
+			<div class="public public3">
+				<span>*姓名:</span>
+				<input type="text" name="name" class="layui-input" required lay-verify="required" >
+			</div>
+			<!-- 个人信息  222222222222222-->
+			<div class="public public4">
+				<span>联系方式:</span>
+				<input type="text" name="phone" class="layui-input" lay-verify="phone">
+			</div>
+			<button class="layui-btn" lay-submit lay-filter="tj" style="display:block;margin:0 auto;">立即提交</button>
+		</div>
+		<!-- 立即购买    ......... -->
+		<div id="buy" class="buy one6">
+			<div class="buy1">
+				<div class="sle1 flexs">
+					<span>车系:</span>
+					<div class="cx1"></div>
+					<span>品牌:</span>
+					<div class="pinpai"></div>
+					<!-- <input type="text" class="layui-input" placeholder="昵称"> -->
+				</div>
+				<div class="sle1 flexs">
+					<span>车型:</span>
+					<div class="cx2"></div>
+					<span>发动机:</span>
+					<div class="fdj"></div>
+					<!-- <input type="text" class="layui-input" placeholder="昵称"> -->
+				</div>
+
+				<div class="sle1 flexs">
+					<span>颜色:</span>
+					<div class="yanse"></div>
+					<!-- <input type="text" class="layui-input" placeholder="昵称"> -->
+				</div>
+
+				<div class="sle1 flexs" style="justify-content: center;width: 23%;padding-left: 52%;">
+					<span style="font-size: 14px;">共计:</span>
+					<div style="font-size: 24px;color: #0066b3;" class="gongji"></div>
+				</div>
+			</div>
+			<div class="buts">
+				<div><img class="confirm" src="__INDEX__/img/dz/return.png" alt="" onclick="returns()"></div>
+				<div><img class="again" src="__INDEX__/img/dz/buy.png" alt="" onclick="buy()"></div>
+			</div>
+		</div>
+	</div>
+	<div id="nav">
+		<ul class="ul1">
+			<li class="cxin">
+				<span class="icon iconfont">&#xe638;</span>
+				<span>车系</span>
+			</li>
+			<li>
+				<span class="icon iconfont">&#xe670;</span>
+				<span>基础</span>
+			</li>
+			<li>
+				<span class="icon iconfont">&#xe65b;</span>
+				<span>车身</span>
+			</li>
+			<li class="dongli">
+				<span class="icon iconfont">&#xe603;</span>
+				<span>动力</span>
+			</li>
+			<li class="peizhi">
+				<span class="icon iconfont">&#xe667;</span>
+				<span>配置</span>
+			</li>
+			<li class="jisuanqi" style="display: none;">
+				<span class="icon iconfont">&#xe644;</span>
+				<span>金融计算器</span>
+			</li>
+		</ul>
+		<div onclick="buy()">
+			<img src="__INDEX__/img/dz/ljgc.png" alt="">
+		</div>
+	</div>
+
+</div>		
+</div>
+<!--脚部  -->
+{include file="public/footer" /}
+
+<!-- footer -->
+<script src="__INDEX__/js/index.js"></script>
+<script type="text/javascript" src="__INDEX__/js/jquery.threesixty.js"></script>
+<script>
+var str = '__INDEX__/image1/';
+var ppArr = [];//所选品牌
+var colorArr = [];//颜色
+var bdArr = [];//排放标定    
+var zdArr = [];//制动
+var csArr = [];//车身
+var kdArr = [];//宽度
+var zjArr = [];//轴距
+var dlxhArr = [];//动力品牌
+var bsxArr = [];//变速箱
+var hqsbArr = [];//后桥速比
+var lengthArr = [];//返回值长度判断
+var idArr = [];//最后一条数据id
+var money;//总钱数
+var zdj = 0;//总单价
+var minmaxMoney = [];//最大最小价格
+var province, city, jxs;//省市经销商
+
+
+var radio0;
+var radio1;
+var radio2;
+var radio3;
+function initThreesixty(type) {
+	var $threeSixty = $('#threesixty');
+	$threeSixty.find("ol").empty();
+	var colors = ['White', 'Black', 'Blue', 'Red', 'Grey', 'Silver'];
+	var hasColor = colors.indexOf(type.trim());
+	var color = hasColor > -1 ? type : 'White';
+	$threeSixty.ThreeSixty({
+		totalFrames: 32,
+		endFrame: 32,
+		currentFrame: 1,
+		imgList: '.threesixty_images',
+		progress: '.spinner',
+		imagePath: str,
+		filePrefix: '0-',
+		ext: '.png',
+		zeroPadding: true, // 1.jpg = > 01.jpg
+		zeroBased: true, // 从0开始
+		height: 700,
+		width: 1280,
+		navigation: false,
+		responsive: true
+	});
+}
+initThreesixty('White');
+
+layui.use('form', function(){
+	form = layui.form;
+	form.on('checkbox(config)', function(data){
+		console.log(data.elem); //得到checkbox原始DOM对象
+		console.log(data.elem.checked); //是否被选中，true或者false
+		console.log(data.value); //复选框value值，也可以通过data.elem.value得到
+		console.log(data.othis); //得到美化后的DOM对象
+		radio3 = data.value;
+		console.log(radio3);
+	});
+
+	//选择 动力品牌
+	form.on('radio(brand0)', function(data){
+		console.log(data.elem); //得到checkbox原始DOM对象
+		console.log(data.elem.checked); //是否被选中，true或者false
+		console.log(data.value); //复选框value值，也可以通过data.elem.value得到
+		console.log(data.othis); //得到美化后的DOM对象
+		radio0 = data.value;
+		dlxhArr = [];
+		dlxhArr.push(radio0);
+		console.log(dlxhArr);
+	});
+
+	form.on('radio(brand1)', function(data){
+		console.log(data.elem); //得到checkbox原始DOM对象
+		console.log(data.elem.checked); //是否被选中，true或者false
+		console.log(data.value); //复选框value值，也可以通过data.elem.value得到
+		console.log(data.othis); //得到美化后的DOM对象
+		radio1 = data.value;
+		bsxArr = [];
+		bsxArr.push(radio1);
+		console.log(bsxArr);
+	});
+
+	form.on('radio(brand2)', function(data){
+		console.log(data.elem); //得到checkbox原始DOM对象
+		console.log(data.elem.checked); //是否被选中，true或者false
+		console.log(data.value); //复选框value值，也可以通过data.elem.value得到
+		console.log(data.othis); //得到美化后的DOM对象
+		radio2 = data.value;
+		hqsbArr = [];
+		hqsbArr.push(radio2);
+		console.log(hqsbArr);
+	});
+
+
+	//各种基于事件的操作，下面会有进一步介绍
+	form.on('select(getCity)', function (data) {
+		province = $(this).text();
+		$.ajax({
+			type: 'POST',
+			dataType: 'json',
+			url: '{:url('Testdrive/getCity')}',
+			data: {
+				province: data.value,
+			},
+			success: function (data) {
+				var quname_html = "<option value='0'>请选择城市</option>";
+				for (var i = 0; i < data.length; i++) {
+					quname_html += "<option value='" + data[i].id + "'>" +
+						data[i].name + "</option>";
+				}
+				$("#city").html(quname_html);
+				form.render();
+			}
+		});
+	});
+
+
+	form.on('select(getJxs)', function (data) {
+		city = $(this).text();
+		$.ajax({
+			type: 'POST',
+			dataType: 'json',
+			url: '{:url('Testdrive/getjxs')}',
+			data: {
+				city: data.value,
+			},
+			success: function (data) {
+				var quname_html = "<option value='0'>请选择经销商</option>";
+				for (var i = 0; i < data.length; i++) {
+					quname_html += "<option value='" + data[i].id + "'>" +
+						data[i].name + "</option>";
+				}
+				$("#jxs").html(quname_html);
+				form.render();
+			}
+		});
+	});
+
+	form.on('select(jxs)', function (data) {
+		jxs = $(this).text();
+
+	});
+	//自定义验证规则  
+	form.verify({
+		province: function (value) {
+			if (value == 0) {
+				return '请选择省份';
+			}
+		},
+		city: function (value) {
+			if (value == 0) {
+				return '请选择城市';
+			}
+		},
+		jxs: function (value) {
+			if (value == 0) {
+				return '请选择经销商';
+			}
+		},
+		required: function(value){
+			console.log(value);
+			if(value == ''){
+				return '请输入您的姓名';
+			}
+		},
+		phone: [/^1[3|4|5|7|8]\d{9}$/, '手机必须11位，只能是数字！']
+	});
+
+
+
+	//监听提交
+	form.on('submit(tj)', function (data) {
+		$.ajax({
+			type: 'POST',
+			dataType: 'json',
+			traditional: true,//这里设置为true
+			url: '{:url('Testdrive/tj')}',
+			data: {
+				type:1,
+				province: province,
+				city: city,
+				jxs: jxs,
+				name: data.field.name,
+				phone: data.field.phone,
+				cx:ppArr.method1(),
+				sex:'',
+				time:'',
+				content:concatAll('isEnd')
+			},
+			success: function (data) {
+				if (data == 1) {
+					layer.msg('请等待客服人员与您联系', {
+						icon: 6,
+						time: 2000,
+						end: function () {
+							location.reload();
+						}
+					});
+				}
+			}
+		});
+	});
+
+	window.test = function(){
+	 	var arr = new Array();
+		money = 0;
+		$("input:checkbox[name='config']:checked").each(function(i){
+			arr[i] = $(this).val();
+		});
+		arr.forEach((i,index) =>{
+			// console.log(i,index);
+			if(arr[index] == '有导流罩'){
+				console.log('有导流罩');
+				money += 600;
+			}else if(arr[index] == '导流罩'){
+				console.log('导流罩');
+				money += 600;
+			}else if(arr[index] == '手动空调'){
+				console.log('手动空调');
+				money += 2000;
+			}else if(arr[index] == '电动空调'){
+				console.log('电动空调');
+				money += 2300;
+			}else if(arr[index] == '多媒体'){
+				console.log('多媒体');
+				money += 2600;
+			}else if(arr[index] == '中控锁/电动门窗'){
+				console.log('中控锁');
+				money += 900;
+			}else if(arr[index] == '有内胎子午胎 7.50R16NT/电动门窗'){
+				console.log('有内胎子午胎 7.50R16NT/电动门窗');
+				money += 1000;
+			}else if(arr[index] == '8.25R16轮胎'){
+				console.log('8.25R16轮胎');
+				money += 1800;
+			}else if(arr[index] == '9.00R20轮胎'){
+				console.log('9.00R20轮胎');
+				money += 2500;
+			}else if(arr[index] == '前盘后鼓 基本速比'){
+				console.log('前盘后鼓 基本速比');
+				money += 600;
+			}else if(arr[index] == '前后鼓式 大速比（自调臂4.33）'){
+				console.log('前后鼓式 大速比（自调臂4.33）');
+				money += 600;
+			}else if(arr[index] == '前盘后鼓 小速比（自调臂）'){
+				console.log('前盘后鼓 小速比（自调臂）');
+				money += 600;
+			}else if(arr[index] == '前后鼓式 大速比（自调臂）'){
+				console.log('前后鼓式 大速比（自调臂）');
+				money += 600;
+			}else if(arr[index] == '前盘后鼓 大速比（自调臂）'){
+				console.log('前盘后鼓 大速比（自调臂）');
+				money += 600;
+			}else if(arr[index] == '前盘后鼓 基本速比（自调臂)'){
+				console.log('前盘后鼓 基本速比（自调臂)');
+				money += 600;
+			}else if(arr[index] == '前盘后鼓'){
+				console.log('前盘后鼓');
+				money += 600;
+			}else if(arr[index] == 'MP5+GPS+多功能方向盘'){
+				console.log('MP5+GPS+多功能方向盘');
+				money += 2000;
+			}else if(arr[index] == '倒车雷达+巡航'){
+				console.log('倒车雷达+巡航');
+				money += 450;
+			}else if(arr[index] == '倒车雷达'){
+				console.log('倒车雷达');
+				money += 450;
+			}else if(arr[index] == '电动后视镜+电加热后视镜'){
+				console.log('电动后视镜+电加热后视镜');
+				money += 400;
+			}else if(arr[index] == '电加热后视镜'){
+				console.log('电加热后视镜');
+				money += 400;
+			}else if(arr[index] == '前+后稳定杆'){
+				console.log('前+后稳定杆');
+				money += 1000;
+			}else if(arr[index] == '中控锁+电动车窗+遥控+电加热后视镜+电动后视镜'){
+				console.log('中控锁+电动车窗+遥控+电加热后视镜+电动后视镜');
+				money += 1550;
+			}else if(arr[index] == '车载无线服务控制器（T-BOX）'){
+				console.log('车载无线服务控制器（T-BOX）');
+				money += 500;
+			}else{
+				money += 0;
+			}
+		})
+		if(money == undefined){
+			alert('请确认您的配置选项！');
+		}else{
+			$('#computer').show();
+			$('#computer').siblings().not('.bj').hide();
+			$('.allMoney').val(money + '元');
+			$('.chexing').val(ppArr[0]);
+			$('.chexi').val(ppArr[0]);
+			$('.carMoney').val(parseInt(money) + parseInt(zdj));
+			$('.cx1').text(ppArr[0]);
+			$('.cx2').text(ppArr[0]);
+			$('.pinpai').text(ppArr[0]);
+			$('.fdj').text(dlxhArr[0]);
+			$('.yanse').text(colorArr[0]);
+			$('.gongji').text(money);
+			$('.bj').attr('src','__INDEX__/img/dz/bj1.jpg');
+		}
+		console.log(money);
+    }
+});
+
+
+layui.use('slider', function(){
+	var $ = layui.$
+	,slider = layui.slider;
+	slider.render({
+		elem: '#slideTest1'  //绑定元素
+		,min: 0
+		,max: 0
+		,setTips: function(value){ //自定义提示文本
+			console.log(value)
+			return value + '%';
+		}
+	});
+});
+
+//改变导航颜色
+$('#nav>ul>li').each(function(i,index){
+	$(this).click(function(){
+		$(this).children().css('color','#0066b3');
+		$(this).siblings().children().css('color','#535353');
+		var index = $('#nav>ul>li').index(this);
+		//如果选中的导航索引不是前四个   那么隐藏前四个对应的元素   =======>   360度车展示
+		if(index == 3){
+			if(ppArr.length != 0){
+				$('.banner>.one' + 0).hide();
+				if(index == i){
+					$('.banner>.one' + i).show();
+					$('.banner').children().not('.bj,.one' + i).hide();
+					$('.bj').attr('src','__INDEX__/img/dz/bj1.jpg');				
+				}
+			}else{
+				alert('请选择车系！');
+				$(this).children().css('color','rgb(83, 83, 83)');
+			}
+		}
+		if(index == 1 || index == 2){
+			if(ppArr.length != 0){
+				$('.banner>.one' + 0).show();
+				if(index == i){
+					$('.banner>.one' + i).show();
+					$('.threesixty-wrapper').show();
+					initThreesixty('White');
+					$('.banner').children().not('.threesixty-wrapper,.bj,.one' + i).hide();
+					$('.bj').attr('src','__INDEX__/img/dz/banner.jpg');
+				}
+			}else{
+				alert('请选择车系！');
+				$(this).children().css('color','rgb(83, 83, 83)');
+			}
+		}
+	})
+})
+//点击动力
+$('.dongli').click(function(){
+	var json = {
+		'pp':ppArr[0],
+		'dlpp':1,
+		'cs':csArr.method1(),
+		'kd':kdArr.method1(),
+		'zj':zjArr.method1(),
+		'bd':bdArr.method1(),
+		'zd':zdArr.method1(),
+		'dlxh':dlxhArr.method1(),
+		'bsxxh':bsxArr.method1(),
+	}
+	$.ajax({
+	    type: 'POST',
+	    dataType:'json',
+	    traditional: true,//这里设置为true
+	    url : '{:url('Product/ajaxMade')}',
+	    data: json,
+	    success: function(data){
+	    		//每次请求数据   先清空上次的价格
+	    		minmaxMoney = [];
+	    		console.log(data);
+	    		lengthArr = [];
+	    		lengthArr.push(data.length);
+	    		if(data.length == 1){
+		    		idArr = [];
+		    		idArr.push(data[0].id);
+		    		zdj = data[0].zdj;
+	    		}
+	    		$('#discharge').empty();
+	    		$('#braking').empty();
+	    		$('#Cab').empty();
+	    		$('#carwidth').empty();
+	    		$('#Wheelbase').empty();
+	    		$('.time1 .swiper-wrapper2').empty();
+	    		$('.time2 .swiper-wrapper2').empty();
+	    		$('.time3 .swiper-wrapper2').empty();
+		    	for(var ins = 0;ins < data.length; ins++){
+		    		//将每组里面的zdj     存入minmaxMoney数组中以便后续求最大最小值
+		    		minmaxMoney.push(parseInt(data[ins].zdj));
+		    		minmaxMoneys();
+		    		console.log(minmaxMoney);
+		    		var li1 = $('<li class="no">'+data[ins].bd+'</li>');
+		    		$('#discharge').append(li1);
+		    		var li2 = $('<li class="no">'+data[ins].zd+'</li>');
+		    		$('#braking').append(li2);
+		    		var li3 = $('<li class="no">'+data[ins].cs+'</li>');
+		    		$('#Cab').append(li3);
+		    		var li4 = $('<li class="no">'+data[ins].kd+'</li>');
+		    		$('#carwidth').append(li4);
+		    		var li5 = $('<li class="no">'+data[ins].zj+'</li>');
+		    		$('#Wheelbase').append(li5);
+					var li6 = $('<div class="swiper-slide swiper-slide2"><img src="__INDEX__/dz/'+data[ins].cc+'.jpg"><span>'+data[ins].dlpp+'</span><div class="inp '+'inps'+ins+'"></div></div>')
+		    		$('.time1 .swiper-wrapper2').append(li6);
+		    		var li7 = $('<div class="swiper-slide swiper-slide2"><img src="__INDEX__/dz/'+data[ins].cc+'.jpg"><span>'+data[ins].bsx+'</span><div class="inp2 '+'inpss'+ins+'"></div></div>');
+		    		$('.time2 .swiper-wrapper2').append(li7);
+		    		var li8 = $('<div class="swiper-slide swiper-slide2"><img src="__INDEX__/dz/'+data[ins].cc+'.jpg"><span>'+data[ins].hqsb+'</span><div class="inp3 '+'inpsss'+ins+'"></div></div>')
+		    		$('.time3 .swiper-wrapper2').append(li8);
+		    	}			    		
+	    }
+	});
+})
+
+//二级点击切换车型      车系
+$('#chexi>li').each(function(i,index){
+	$(this).click(function(){
+		if($('#chexi>li').index(this) == i){
+			ppArr = [];
+			ppArr.push($(this).text());//每次只存入一个字段
+			$(this).addClass('yes');
+			$(this).removeClass('no');
+			$(this).siblings().addClass('no');
+			$(this).siblings().removeClass('yes');
+			$('.power' + i).show();
+			$('.power' + i).siblings().not('.brand').hide();
+			str = '__INDEX__/image1'+'/';
+			// str = '__INDEX__/image'+i+'/';
+			initThreesixty('White');
+		}
+	})
+})
+//二级点击切换车型      车身
+$('#jichu>li').each(function(i,index){
+	$(this).click(function(){
+		// $('#carbody').hide();
+		// $('#basics').show();
+		if($('#jichu>li').index(this) == i){
+			ajaxs(i,'cheshen',i);
+			$('#carbody').find('.carbody' + i).css('display','flex');
+			$('#carbody').find('.carbody' + i).siblings().not('.jichu').css('display','none');
+			$(this).addClass('yes');
+			$(this).removeClass('no');
+			$(this).siblings().addClass('no');
+			$(this).siblings().removeClass('yes');
+			// $('.power' + i).show();
+			// $('.power' + i).siblings().not('.brand').hide();
+		}
+	})
+})
+
+
+//二级点击切换车型      基础
+$('#cheshen>li').each(function(i,index){
+	$(this).click(function(){
+		// $('#carbody').hide();
+		// $('#basics').show();
+		if($('#cheshen>li').index(this) == i){
+			ajaxs(i,'jichu',i);
+			$('#basics').find('.basics' + i).css('display','flex');
+			$('#basics').find('.basics' + i).siblings().not('.cheshen').css('display','none');
+			$(this).addClass('yes');
+			$(this).removeClass('no');
+			$(this).siblings().addClass('no');
+			$(this).siblings().removeClass('yes');
+			// $('.power' + i).show();
+			// $('.power' + i).siblings().not('.brand').hide();
+		}
+	})
+})
+
+
+//二级点击切换车型     动力
+$('.brand>li').each(function(i,index){
+	$(this).click(function(){
+		if($('.brand>li').index(this) == i){
+			ajaxs(i,'dongli',i);
+			$(this).addClass('yes');
+			$(this).removeClass('no');
+			$(this).siblings().addClass('no');
+			$(this).siblings().removeClass('yes');
+			$('.power' + i).show();
+			$('.power' + i).siblings().not('.brand').hide();
+		}
+	})
+})
+
+//二级点击切换车型     金融计算器
+$('.loan>li').each(function(i,index){
+	$(this).click(function(){
+		if($('.loan>li').index(this) == i){
+			$(this).addClass('yes');
+			$(this).removeClass('no');
+			$(this).siblings().addClass('no');
+			$(this).siblings().removeClass('yes');
+			$('.power' + i).show();
+			$('.power' + i).siblings().not('.loan').hide();
+		}
+	})
+})
+
+//清空
+function again(){
+	$('.youce input').each(function(i,index){
+		index.checked = false;
+	})
+	form.render('checkbox');		
+}
+
+//订单预览
+function ddyl(){
+	$('#buy').show();
+	$('#buy').siblings().not('.bj').hide();
+	$('.bj').attr('src','__INDEX__/img/dz/bj1.jpg');
+	console.log(colorArr,arr1,arr2,arr3,arr4,arr5,radio0,radio1,radio2,radio3)
+}
+
+//返回
+function returns(){
+	$('#buy').hide();
+	$('#computer').show();
+	$('.bj').attr('src','__INDEX__/img/dz/bj1.jpg');
+}
+
+
+//立即购车
+function buy(){
+	var login_type = $('#login_type').val();
+	if(login_type==1){
+		layer.msg('请登录', {icon: 6,time: 2000});
+		location.href = 'http://aoling.douyar.cc/index/login/index.html';
+		return false;
+	}
+	if(lengthArr[0] == 1){
+		$('.liuzi').show();
+		$('.liuzi').siblings().not('.bj').hide();
+	}else{
+		alert('请选择详细配置！');
+	}		
+
+}
+
+
+//选择颜色
+$('#color>li').each(function(i,index){
+	$(this).click(function(){
+		if(i == 0){
+			var str = '朱鹭白';
+			$(this).find('img').addClass('hover');
+			$(this).siblings().find('img').removeClass('hover');
+		}else if(i == 1){
+			var str = '奔驰银';
+			$(this).find('img').addClass('hover');
+			$(this).siblings().find('img').removeClass('hover');
+		}else if(i == 2){
+			var str = '欧曼红';
+			$(this).find('img').addClass('hover');
+			$(this).siblings().find('img').removeClass('hover');
+		}else if(i == 3){
+			var str = '科幻蓝';
+			$(this).find('img').addClass('hover');
+			$(this).siblings().find('img').removeClass('hover');
+		}
+		colorArr = [];
+		colorArr.push(str);
+		console.log(colorArr);
+	})
+})
+//选择排放标定
+$(document).on('click','#discharge li',function(){
+	$(this).addClass('yes');
+	$(this).removeClass('no');
+	$(this).siblings().addClass('no');
+	$(this).siblings().removeClass('yes');
+	var text = $(this).text();
+	bdArr = [];
+	bdArr.push(text);
+	console.log(bdArr);
+})
+//选择制动braking
+$(document).on('click','#braking li',function(){
+	$(this).addClass('yes');
+	$(this).removeClass('no');
+	$(this).siblings().addClass('no');
+	$(this).siblings().removeClass('yes');
+	var text = $(this).text();
+	zdArr = [];
+	zdArr.push(text);
+	console.log(zdArr);
+})
+//选择驾驶室
+$(document).on('click','#Cab li',function(){
+	$(this).addClass('yes');
+	$(this).removeClass('no');
+	$(this).siblings().addClass('no');
+	$(this).siblings().removeClass('yes');
+	var text = $(this).text();
+	csArr = [];
+	csArr.push(text);
+	console.log(csArr);
+})
+//选择车身宽度
+$(document).on('click','#carwidth li',function(){
+	$(this).addClass('yes');
+	$(this).removeClass('no');
+	$(this).siblings().addClass('no');
+	$(this).siblings().removeClass('yes');
+	var text = $(this).text();
+	kdArr = [];
+	kdArr.push(text);
+	console.log(kdArr);
+})
+//选择轴距
+$(document).on('click','#Wheelbase li',function(){
+	$(this).addClass('yes');
+	$(this).removeClass('no');
+	$(this).siblings().addClass('no');
+	$(this).siblings().removeClass('yes');
+	var text = $(this).text();
+	zjArr = [];
+	zjArr.push(text);
+	console.log(zjArr);
+})
+
+var mySwiper1 = new Swiper ('.time1', {
+	prevButton:'.swiper-button-prev',
+	nextButton:'.swiper-button-next',
+	slidesPerView : 3,
+	freeMode : true,
+	observer:true,
+	observeParents: true
+}) 
+//动力品牌     
+$(document).on('click','.time1 .swiper-slide2 img',function(){
+	var json = {
+		'pp':ppArr[0],
+		'dlpp':$('.time1 .swiper-slide2').find('span').text(),
+		'dlxh':1,
+		'cs':csArr.method1(),
+		'kd':kdArr.method1(),
+		'zj':zjArr.method1(),
+		'bd':bdArr.method1(),
+		'zd':zdArr.method1(),
+	}
+	$.ajax({
+	    type: 'POST',
+	    dataType:'json',
+	    traditional: true,//这里设置为true
+	    url : '{:url('Product/ajaxMade')}',
+	    data: json,
+	    success: function(data){
+	    		console.log(data);
+	    		lengthArr = [];
+	    		lengthArr.push(data.length);
+	    		if(data.length == 1){
+		    		idArr = [];
+		    		idArr.push(data[0].id);
+		    		zdj = data[0].zdj;
+	    		}
+	    		$('.inp').empty();
+		    	for(var ins = 0;ins < data.length; ins++){
+		    		var li7 = $('<input type="radio"  lay-filter="brand0" name="brand" value="'+data[ins].dlxh+'" title="'+data[ins].dlxh+'">');
+		    		$('.inps' + ins).append(li7);
+		    		form.render();
+		    	}			    		
+	    }
+	});
+	$(this).parent().addClass('hover');
+	$(this).parent().siblings().removeClass('hover');
+	$(this).parent().find('.inp').addClass('hovers');
+	$(this).parent().siblings().find('.inp').removeClass('hovers');
+})
+//变速箱
+$(document).on('click','.time2 .swiper-slide2 img',function(){
+	var json = {
+		'pp':ppArr[0],
+		'bsx':1,
+		'cs':csArr.method1(),
+		'kd':kdArr.method1(),
+		'zj':zjArr.method1(),
+		'bd':bdArr.method1(),
+		'zd':zdArr.method1(),
+		'dlxh':dlxhArr.method1(),
+	}
+	$.ajax({
+	    type: 'POST',
+	    dataType:'json',
+	    traditional: true,//这里设置为true
+	    url : '{:url('Product/ajaxMade')}',
+	    data: json,
+	    success: function(data){
+	    		lengthArr = [];
+	    		lengthArr.push(data.length);
+	    		if(data.length == 1){
+		    		idArr = [];
+		    		idArr.push(data[0].id);
+		    		zdj = data[0].zdj;
+	    		}
+	    		$('.inp2').empty();
+		    	for(var ins = 0;ins < data.length; ins++){
+		    		var li7 = $('<input type="radio"  lay-filter="brand1" name="brand" value="'+data[ins].bsxxh+'" title="'+data[ins].bsxxh+'">');
+		    		$('.inpss' + ins).append(li7);
+		    		form.render();
+		    	}			    		
+	    }
+	});
+	$(this).parent().addClass('hover');
+	$(this).parent().siblings().removeClass('hover');
+	$(this).parent().find('.inp2').addClass('hovers');
+	$(this).parent().siblings().find('.inp2').removeClass('hovers');
+})
+//后桥速比
+$(document).on('click','.time3 .swiper-slide2 img',function(){
+	var json = {
+		'pp':ppArr[0],
+		'hqsu':1,
+		'cs':csArr.method1(),
+		'kd':kdArr.method1(),
+		'zj':zjArr.method1(),
+		'bd':bdArr.method1(),
+		'zd':zdArr.method1(),
+		'dlxh':dlxhArr.method1(),
+		'bsxxh':bsxArr.method1(),
+	}
+	$.ajax({
+	    type: 'POST',
+	    dataType:'json',
+	    traditional: true,//这里设置为true
+	    url : '{:url('Product/ajaxMade')}',
+	    data: json,
+	    success: function(data){
+	    		lengthArr = [];
+	    		lengthArr.push(data.length);
+	    		if(data.length == 1){
+		    		idArr = [];
+		    		idArr.push(data[0].id);
+		    		zdj = data[0].zdj;
+	    		}
+	    		$('.inp3').empty();
+		    	for(var ins = 0;ins < data.length; ins++){
+		    		var li7 = $('<input type="radio"  lay-filter="brand2" name="brand" value="'+data[ins].hqsb+'" title="'+data[ins].hqsb+'">');
+		    		$('.inpsss' + ins).append(li7);
+		    		form.render();
+		    	}			    		
+	    }
+	});
+	$(this).parent().addClass('hover');
+	$(this).parent().siblings().removeClass('hover');
+	$(this).parent().find('.inp3').addClass('hovers');
+	$(this).parent().siblings().find('.inp3').removeClass('hovers');
+})
+//判断配置能不能点击     已经做更改
+$('.peizhi').click(function(){
+	if(lengthArr[0] == 1){
+		$.ajax({
+		    type: 'POST',
+		    dataType:'json',
+		    url : '{:url('Product/ajaxMadeId')}',
+		    data: {id:idArr[0]},
+		    success: function(data){
+		    	console.log(data);
+		    	$('.youce').empty();
+		    	for(var suoyins = 0; suoyins < data.kxx.length; suoyins++){
+		    		var configs = $('<input type="checkbox" lay-skin="primary"  lay-filter="config"  name="config" value="'+data.kxx[suoyins]+'" title="'+data.kxx[suoyins]+'">');
+		    		$('.youce').append(configs);
+		    		form.render();
+		    	}
+		    }
+		});
+	}
+	$('#config').show();
+	$('#config').siblings().not('.bj').hide();
+	$('.bj').attr('src','__INDEX__/img/dz/bj1.jpg');
+	var configArr = concatAll().method1();//获取所有的用户选中的数组     并且去重updefined
+	console.log(configArr);
+	$('.zuoce').empty();
+	for(var indexs = 0; indexs < configArr.length; indexs++){
+		var config = $('<input checked="checked" type="checkbox" lay-skin="primary"  lay-filter="config" disabled="disabled" name="config" value="0" title="'+configArr[indexs]+'">');
+		$('.zuoce').append(config);
+		form.render();
+	}
+	console.log(form);
+	// else{
+	// 	alert('请选择详细配置！');
+	// 	$(this).children().css('color','rgb(83, 83, 83)');
+	// }
+})
+//判断配置能不能点击
+$('.jisuanqi').click(function(){
+	if(money == undefined){
+		alert('请确认您的配置选项！');
+	}else{
+		$('#computer').show();
+		$('#computer').siblings().not('.bj').hide();
+		$('.allMoney').val(money + '元');
+		$('.chexing').val(ppArr[0]);
+		$('.chexi').val(ppArr[0]);
+		$('.carMoney').val(parseInt(money) + parseInt(zdj));
+		$('.cx1').text(ppArr[0]);
+		$('.cx2').text(ppArr[0]);
+		$('.pinpai').text(ppArr[0]);
+		$('.fdj').text(dlxhArr[0]);
+		$('.yanse').text(colorArr[0]);
+		$('.gongji').text(money);
+		$('.bj').attr('src','__INDEX__/img/dz/bj1.jpg');
+	}
+})
+//车系点击
+$('.cxin').click(function(){
+	$('#car').show();
+	$('#car').siblings().not('.bj').hide();
+	$('.bj').attr('src','__INDEX__/img/dz/banner.jpg');
+	$('.threesixty-wrapper').show();
+	initThreesixty('White');
+})
+var mySwiper2 = new Swiper ('.time2', {
+	prevButton:'.swiper-button-prev',
+	nextButton:'.swiper-button-next',
+	slidesPerView : 3,
+	freeMode : true,
+	observer:true,
+	observeParents: true
+}) 
+
+var mySwiper3s = new Swiper ('.time3', {
+	prevButton:'.swiper-button-prev',
+	nextButton:'.swiper-button-next',
+	slidesPerView : 3,
+	freeMode : true,
+	observer:true,
+	observeParents: true
+}) 
+
+function concatAll(isEnd){
+	if(isEnd == 'isEnd'){
+		var shuzu = [];
+		if(!colorArr[0]){
+			colorArr[0] = "";
+		}else if(!bdArr[0]){
+			bdArr[0] = "";
+		}else if(!zdArr[0]){
+			zdArr[0] = "";
+		}else if(!csArr[0]){
+			csArr[0] = "";
+		}else if(!kdArr[0]){
+			kdArr[0] = "";
+		}else if(!zjArr[0]){
+			zjArr[0] = "";
+		}else if(!dlxhArr[0]){
+			dlxhArr[0] = "";
+		}else if(!bsxArr[0]){
+			bsxArr[0] = "";
+		}else if(!hqsbArr[0]){
+			hqsbArr[0] = "";
+		}
+		shuzu = "color:" + colorArr[0]+",bd:"+bdArr[0]+",zd:"+zdArr[0]+",cs:"+csArr[0]+",kd:"+kdArr[0]+",zj:"+zjArr[0]+",dlxh:"+dlxhArr[0]+",bsxxh:"+bsxArr[0]+",hqsb:"+hqsbArr[0];
+		console.log(shuzu);
+		return shuzu;
+	}else{
+		var shuzu = [];
+		shuzu = [ppArr[0],colorArr[0],bdArr[0],zdArr[0],csArr[0],kdArr[0],zjArr[0],dlxhArr[0],bsxArr[0],hqsbArr[0]];
+		return shuzu;		
+	}
+}
+Array.prototype.method1=function(){
+    var arr = [];
+    for(var i=0;i<this.length;i++){
+        if(arr.indexOf(this[i]) == -1){
+           arr.push(this[i]);
+        }
+    var indexs = arr.indexOf(undefined);
+    if (indexs > -1) {
+	    arr.splice(indexs,1);
+	}
+    }
+    return arr;
+}
+function minmaxMoneys(){
+	if(minmaxMoney.length == 0){
+		$('.minMoney').val('0');
+		$('.maxMoney').val(minmaxMoney[0]);
+	}else{
+		var minN = eval("Math.min(" + minmaxMoney.toString() + ")");
+		var maxN = eval("Math.max(" + minmaxMoney.toString() + ")");
+		$('.minMoney').val(minN);
+		$('.maxMoney').val(maxN);		
+	}
+}
+function ajaxs(i,type,typeIndex){
+	console.log(i,type,typeIndex);
+	var json = {};
+	if(type == 'jichu'){
+		console.log(i,type,typeIndex);
+		if(typeIndex == 1){
+			if(i == 0){
+				json = {
+					'pp':ppArr[0],
+					'bd':1,
+					'cs':csArr.method1(),
+					'kd':kdArr.method1(),
+					'zj':zjArr.method1(),
+					// 'bd':bdArr.method1(),
+					'zd':zdArr.method1(),
+					'dlxh':dlxhArr.method1(),
+					'bsxxh':bsxArr.method1(),
+				}
+			}else if(i == 1){
+				json = {
+					'pp':ppArr[0],
+					'bd':1,
+					'cs':csArr.method1(),
+					'kd':kdArr.method1(),
+					'zj':zjArr.method1(),
+					// 'bd':bdArr.method1(),
+					'zd':zdArr.method1(),
+					'dlxh':dlxhArr.method1(),
+					'bsxxh':bsxArr.method1(),
+				}
+				console.log('yes',json);
+			}else if(i == 2){
+				json = {
+					'pp':ppArr[0],
+					'bd':1,
+					'cs':csArr.method1(),
+					'kd':kdArr.method1(),
+					'zj':zjArr.method1(),
+					// 'bd':bdArr.method1(),
+					'zd':zdArr.method1(),
+					'dlxh':dlxhArr.method1(),
+					'bsxxh':bsxArr.method1(),
+				}
+			}
+		}else if(typeIndex == 2){
+			if(i == 0){
+				json = {
+					'pp':ppArr[0],
+					'zd':1,
+					'cs':csArr.method1(),
+					'kd':kdArr.method1(),
+					'zj':zjArr.method1(),
+					'bd':bdArr.method1(),
+					// 'zd':zdArr.method1(),
+					'dlxh':dlxhArr.method1(),
+					'bsxxh':bsxArr.method1(),
+				}
+			}if(i == 1){
+				json = {
+					'pp':ppArr[0],
+					'zd':1,
+					'cs':csArr.method1(),
+					'kd':kdArr.method1(),
+					'zj':zjArr.method1(),
+					'bd':bdArr.method1(),
+					// 'zd':zdArr.method1(),
+					'dlxh':dlxhArr.method1(),
+					'bsxxh':bsxArr.method1(),
+				}
+			}else if(i == 2){
+				json = {
+					'pp':ppArr[0],
+					'zd':1,
+					'cs':csArr.method1(),
+					'kd':kdArr.method1(),
+					'zj':zjArr.method1(),
+					'bd':bdArr.method1(),
+					// 'zd':zdArr.method1(),
+					'dlxh':dlxhArr.method1(),
+					'bsxxh':bsxArr.method1(),
+				}
+			}
+		}
+	}else if(type == 'cheshen'){
+		console.log(i,type,typeIndex);
+		if(typeIndex == 0){
+			console.log(csArr.method1().length)
+			if(i == 0){
+				//如果用户没有选择  cs   那么默认是1
+				// if(csArr.method1().length == 0){
+					json = {
+						'pp':ppArr[0],
+						'cs':1,
+						'kd':kdArr.method1(),
+						'zj':zjArr.method1(),
+						'bd':bdArr.method1(),
+						'zd':zdArr.method1(),
+						'dlxh':dlxhArr.method1(),
+						'bsxxh':bsxArr.method1(),
+					}
+				// }
+				// else{
+				// 	json = {
+				// 		'pp':ppArr[0],
+				// 		'cs':csArr.method1(),
+				// 		'kd':kdArr.method1(),
+				// 		'zj':zjArr.method1(),
+				// 		'bd':bdArr.method1(),
+				// 		'zd':zdArr.method1(),
+				// 		'dlxh':dlxhArr.method1(),
+				// 		'bsxxh':bsxArr.method1(),
+				// 	}
+				// }
+
+			}else if(i == 1){
+				//如果用户没有选择  kd   那么默认是1
+				// if(kdArr.method1().length == 0){
+					json = {
+						'pp':ppArr[0],
+						'cs':csArr.method1(),
+						'kd':1,
+						'zj':zjArr.method1(),
+						'bd':bdArr.method1(),
+						'zd':zdArr.method1(),
+						'dlxh':dlxhArr.method1(),
+						'bsxxh':bsxArr.method1(),
+					}
+				// }
+				// else{
+				// 	json = {
+				// 		'pp':ppArr[0],
+				// 		'cs':csArr.method1(),
+				// 		'kd':kdArr.method1(),
+				// 		'zj':zjArr.method1(),
+				// 		'bd':bdArr.method1(),
+				// 		'zd':zdArr.method1(),
+				// 		'dlxh':dlxhArr.method1(),
+				// 		'bsxxh':bsxArr.method1(),
+				// 	}
+				// }
+			}else if(i == 2){
+				//如果用户没有选择  zj   那么默认是1
+				// if(zjArr.method1().length == 0){
+					json = {
+						'pp':ppArr[0],
+						'cs':csArr.method1(),
+						'kd':kdArr.method1(),
+						'zj':1,
+						'bd':bdArr.method1(),
+						'zd':zdArr.method1(),
+						'dlxh':dlxhArr.method1(),
+						'bsxxh':bsxArr.method1(),
+					}
+				// }
+				// else{
+				// 	json = {
+				// 		'pp':ppArr[0],
+				// 		'cs':csArr.method1(),
+				// 		'kd':kdArr.method1(),
+				// 		'zj':zjArr.method1(),
+				// 		'bd':bdArr.method1(),
+				// 		'zd':zdArr.method1(),
+				// 		'dlxh':dlxhArr.method1(),
+				// 		'bsxxh':bsxArr.method1(),
+				// 	}
+				// }
+			}
+		}else if(typeIndex == 1){
+			if(i == 0){
+				//如果用户没有选择  cs   那么默认是1
+				// if(csArr.method1().length == 0){
+					json = {
+						'pp':ppArr[0],
+						'cs':1,
+						'kd':kdArr.method1(),
+						'zj':zjArr.method1(),
+						'bd':bdArr.method1(),
+						'zd':zdArr.method1(),
+						'dlxh':dlxhArr.method1(),
+						'bsxxh':bsxArr.method1(),
+					}
+				// }
+				// else{
+				// 	json = {
+				// 		'pp':ppArr[0],
+				// 		'cs':csArr.method1(),
+				// 		'kd':kdArr.method1(),
+				// 		'zj':zjArr.method1(),
+				// 		'bd':bdArr.method1(),
+				// 		'zd':zdArr.method1(),
+				// 		'dlxh':dlxhArr.method1(),
+				// 		'bsxxh':bsxArr.method1(),
+				// 	}
+				// }
+			}else if(i == 1){
+				//如果用户没有选择  kd   那么默认是1
+				// if(kdArr.method1().length == 0){
+					json = {
+						'pp':ppArr[0],
+						'cs':csArr.method1(),
+						'kd':1,
+						'zj':zjArr.method1(),
+						'bd':bdArr.method1(),
+						'zd':zdArr.method1(),
+						'dlxh':dlxhArr.method1(),
+						'bsxxh':bsxArr.method1(),
+					}
+				// }
+				// else{
+				// 	json = {
+				// 		'pp':ppArr[0],
+				// 		'cs':csArr.method1(),
+				// 		'kd':kdArr.method1(),
+				// 		'zj':zjArr.method1(),
+				// 		'bd':bdArr.method1(),
+				// 		'zd':zdArr.method1(),
+				// 		'dlxh':dlxhArr.method1(),
+				// 		'bsxxh':bsxArr.method1(),
+				// 	}
+				// }
+			}else if(i == 2){
+				//如果用户没有选择  zj   那么默认是1
+				// if(zjArr.method1().length == 0){
+					json = {
+						'pp':ppArr[0],
+						'cs':csArr.method1(),
+						'kd':kdArr.method1(),
+						'zj':1,
+						'bd':bdArr.method1(),
+						'zd':zdArr.method1(),
+						'dlxh':dlxhArr.method1(),
+						'bsxxh':bsxArr.method1(),
+					}
+				// }
+				// else{
+				// 	json = {
+				// 		'pp':ppArr[0],
+				// 		'cs':csArr.method1(),
+				// 		'kd':kdArr.method1(),
+				// 		'zj':zjArr.method1(),
+				// 		'bd':bdArr.method1(),
+				// 		'zd':zdArr.method1(),
+				// 		'dlxh':dlxhArr.method1(),
+				// 		'bsxxh':bsxArr.method1(),
+				// 	}
+				// }
+			}
+		}else if(typeIndex == 2){
+			if(i == 0){
+				//如果用户没有选择  cs   那么默认是1
+				// if(csArr.method1().length == 0){
+					json = {
+						'pp':ppArr[0],
+						'cs':1,
+						'kd':kdArr.method1(),
+						'zj':zjArr.method1(),
+						'bd':bdArr.method1(),
+						'zd':zdArr.method1(),
+						'dlxh':dlxhArr.method1(),
+						'bsxxh':bsxArr.method1(),
+					}
+				// }
+				// else{
+				// 	json = {
+				// 		'pp':ppArr[0],
+				// 		'cs':csArr.method1(),
+				// 		'kd':kdArr.method1(),
+				// 		'zj':zjArr.method1(),
+				// 		'bd':bdArr.method1(),
+				// 		'zd':zdArr.method1(),
+				// 		'dlxh':dlxhArr.method1(),
+				// 		'bsxxh':bsxArr.method1(),
+				// 	}
+				// }
+			}else if(i == 1){
+				//如果用户没有选择  kd   那么默认是1
+				// if(kdArr.method1().length == 0){
+					json = {
+						'pp':ppArr[0],
+						'cs':csArr.method1(),
+						'kd':1,
+						'zj':zjArr.method1(),
+						'bd':bdArr.method1(),
+						'zd':zdArr.method1(),
+						'dlxh':dlxhArr.method1(),
+						'bsxxh':bsxArr.method1(),
+					}
+				// }
+				// else{
+				// 	json = {
+				// 		'pp':ppArr[0],
+				// 		'cs':csArr.method1(),
+				// 		'kd':kdArr.method1(),
+				// 		'zj':zjArr.method1(),
+				// 		'bd':bdArr.method1(),
+				// 		'zd':zdArr.method1(),
+				// 		'dlxh':dlxhArr.method1(),
+				// 		'bsxxh':bsxArr.method1(),
+				// 	}
+				// }
+			}else if(i == 2){
+				//如果用户没有选择  zj   那么默认是1
+				// if(zjArr.method1().length == 0){
+					json = {
+						'pp':ppArr[0],
+						'cs':csArr.method1(),
+						'kd':kdArr.method1(),
+						'zj':1,
+						'bd':bdArr.method1(),
+						'zd':zdArr.method1(),
+						'dlxh':dlxhArr.method1(),
+						'bsxxh':bsxArr.method1(),
+					}
+				// }
+				// else{
+				// 	json = {
+				// 		'pp':ppArr[0],
+				// 		'cs':csArr.method1(),
+				// 		'kd':kdArr.method1(),
+				// 		'zj':zjArr.method1(),
+				// 		'bd':bdArr.method1(),
+				// 		'zd':zdArr.method1(),
+				// 		'dlxh':dlxhArr.method1(),
+				// 		'bsxxh':bsxArr.method1(),
+				// 	}
+				// }
+			}
+		}
+	}
+	else if(type == 'dongli'){
+		console.log(i,type,typeIndex);
+		if(typeIndex == 0){
+			if(i == 0){
+				var json = {
+					'pp':ppArr[0],
+					'dlpp':1,
+					'cs':csArr.method1(),
+					'kd':kdArr.method1(),
+					'zj':zjArr.method1(),
+					'bd':bdArr.method1(),
+					'zd':zdArr.method1(),
+					'dlxh':dlxhArr.method1(),
+					'bsxxh':bsxArr.method1(),
+				}
+			}else if(i == 1){
+				json = {
+					'pp':ppArr[0],
+					'dlpp':1,
+					'cs':csArr.method1(),
+					'kd':kdArr.method1(),
+					'zj':zjArr.method1(),
+					'bd':bdArr.method1(),
+					'zd':zdArr.method1(),
+					'dlxh':dlxhArr.method1(),
+					'bsxxh':bsxArr.method1(),
+				}
+			}else if(i == 2){
+				json = {
+					'pp':ppArr[0],
+					'dlpp':1,
+					'cs':csArr.method1(),
+					'kd':kdArr.method1(),
+					'zj':zjArr.method1(),
+					'bd':bdArr.method1(),
+					'zd':zdArr.method1(),
+					'dlxh':dlxhArr.method1(),
+					'bsxxh':bsxArr.method1(),
+				}
+			}
+		}else if(typeIndex == 1){
+			if(i == 0){
+				var json = {
+					'pp':ppArr[0],
+					'bsx':1,
+					'cs':csArr.method1(),
+					'kd':kdArr.method1(),
+					'zj':zjArr.method1(),
+					'bd':bdArr.method1(),
+					'zd':zdArr.method1(),
+					'dlxh':dlxhArr.method1(),
+					'bsxxh':bsxArr.method1(),
+				}
+			}else if(i == 1){
+				json = {
+					'pp':ppArr[0],
+					'bsx':1,
+					'cs':csArr.method1(),
+					'kd':kdArr.method1(),
+					'zj':zjArr.method1(),
+					'bd':bdArr.method1(),
+					'zd':zdArr.method1(),
+					'dlxh':dlxhArr.method1(),
+					'bsxxh':bsxArr.method1(),
+				}
+			}else if(i == 2){
+				json = {
+					'pp':ppArr[0],
+					'bsx':1,
+					'cs':csArr.method1(),
+					'kd':kdArr.method1(),
+					'zj':zjArr.method1(),
+					'bd':bdArr.method1(),
+					'zd':zdArr.method1(),
+					'dlxh':dlxhArr.method1(),
+					'bsxxh':bsxArr.method1(),
+				}
+			}
+		}else if(typeIndex == 2){
+			if(i == 0){
+				json = {
+					'pp':ppArr[0],
+					'hqsb':1,
+					'cs':csArr.method1(),
+					'kd':kdArr.method1(),
+					'zj':zjArr.method1(),
+					'bd':bdArr.method1(),
+					'zd':zdArr.method1(),
+					'dlxh':dlxhArr.method1(),
+					'bsxxh':bsxArr.method1(),
+				}
+			}else if(i == 1){
+				json = {
+					'pp':ppArr[0],
+					'hqsb':1,
+					'cs':csArr.method1(),
+					'kd':kdArr.method1(),
+					'zj':zjArr.method1(),
+					'bd':bdArr.method1(),
+					'zd':zdArr.method1(),
+					'dlxh':dlxhArr.method1(),
+					'bsxxh':bsxArr.method1(),
+				}
+			}else if(i == 2){
+				json = {
+					'pp':ppArr[0],
+					'hqsb':1,
+					'cs':csArr.method1(),
+					'kd':kdArr.method1(),
+					'zj':zjArr.method1(),
+					'bd':bdArr.method1(),
+					'zd':zdArr.method1(),
+					'dlxh':dlxhArr.method1(),
+					'bsxxh':bsxArr.method1(),
+				}
+			}
+		}
+	}
+	$.ajax({
+	    type: 'POST',
+	    dataType:'json',
+	    traditional: true,//这里设置为true
+	    // url : '/index/Product/ajaxMade',
+	    url : '{:url('Product/ajaxMade')}',
+	    data: json,
+	    success: function(data){
+	    		//每次请求数据   先清空上次的价格
+	    		minmaxMoney = [];
+	    		lengthArr = [];
+	    		lengthArr.push(data.length);
+	    		if(data.length == 1){
+		    		idArr = [];
+		    		idArr.push(data[0].id);
+		    		zdj = data[0].zdj;
+	    		}
+	    		$('#discharge').empty();
+	    		$('#braking').empty();
+	    		$('#Cab').empty();
+	    		$('#carwidth').empty();
+	    		$('#Wheelbase').empty();
+	    		$('.time1 .swiper-wrapper2').empty();
+	    		$('.time2 .swiper-wrapper2').empty();
+	    		$('.time3 .swiper-wrapper2').empty();
+		    	for(var ins = 0;ins < data.length; ins++){
+					//将每组里面的zdj     存入minmaxMoney数组中以便后续求最大最小值
+					minmaxMoney.push(parseInt(data[ins].zdj));
+					minmaxMoneys();
+					console.log(minmaxMoney);
+		    		var li1 = $('<li class="no">'+data[ins].bd+'</li>');
+		    		$('#discharge').append(li1);
+		    		var li2 = $('<li class="no">'+data[ins].zd+'</li>');
+		    		$('#braking').append(li2);
+		    		var li3 = $('<li class="no">'+data[ins].cs+'</li>');
+		    		$('#Cab').append(li3);
+		    		var li4 = $('<li class="no">'+data[ins].kd+'</li>');
+		    		$('#carwidth').append(li4);
+		    		var li5 = $('<li class="no">'+data[ins].zj+'</li>');
+		    		$('#Wheelbase').append(li5);
+		    		var li6 = $('<div class="swiper-slide swiper-slide2"><img src="__INDEX__/dz/'+data[ins].cc+'.jpg"><span>'+data[ins].dlpp+'</span><div class="inp '+'inps'+ins+'"></div></div>')
+		    		$('.time1 .swiper-wrapper2').append(li6);
+		    		var li7 = $('<div class="swiper-slide swiper-slide2"><img src="__INDEX__/dz/'+data[ins].cc+'.jpg"><span>'+data[ins].bsx+'</span><div class="inp2 '+'inpss'+ins+'"></div></div>');
+		    		$('.time2 .swiper-wrapper2').append(li7);
+		    		var li8 = $('<div class="swiper-slide swiper-slide2"><img src="__INDEX__/dz/'+data[ins].cc+'.jpg"><span>'+data[ins].hqsb+'</span><div class="inp3 '+'inpsss'+ins+'"></div></div>')
+		    		$('.time3 .swiper-wrapper2').append(li8);
+		    	}			    		
+	    }
+	});
+}
+</script>
+</body>
+</html>

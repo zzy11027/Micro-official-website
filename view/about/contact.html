@@ -1,0 +1,92 @@
+<!-- 奥铃官网       首页开始 -->
+<!doctype html>
+<html lang="en">
+<head>
+	 {include file="public/resource" /}	
+	<link rel="stylesheet" href="__INDEX__/css/gywm.css">
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=xGH57RZg1HhFU8hOFGvdB5VOGbp5H1Hp"></script>
+</head>
+<body>
+{include file="public/header" /}	
+<!-- header -->
+<div id="container">
+	<!-- banner -->
+<!-- 	<div class="swiper-container swiper-container1" style="">
+	    <div class="swiper-wrapper swiper-wrapper1">
+	        <div class="swiper-slide swiper-slide1"><a href=""><img src="./img/gywm/banner.jpg" alt="" class="scale-big"></a></div>
+	    </div>
+	</div> -->
+
+	<!-- 联系我们 -->
+	<img src="__INDEX__/img/gywm/lxwm.png" alt="" class="lxwm">
+
+	<div class="hello">
+		<span>客户您好:<br></span>欢迎您访问北汽福田汽车股份有限公司轻型商用车事业本部网站，我事业部网站将为您提供热情、诚挚""的服务。如果您还需要了解我事业部其他相关资讯和产品信息，请直接拨打我们的服务热线与我们联系。
+	</div>
+
+	<div class="phone">
+		<div>
+      		<p>24小时服务热线：4008-199-199 </p>
+      		<p>通讯地址：北京市昌平区沙河镇沙阳路</p>
+		</div>
+		<div>
+      		<p>奥铃品牌官网网址：HTTP://OLLIN.FOTON.COM.CN</p>
+      		<p>网站网址：HTTP://WWW.FOTON.COM.CN</p>
+		</div>
+	</div>
+
+	
+	<!-- 地图 -->
+	<div class="allmap">
+
+	</div>
+	
+
+	<!-- 招贤纳士 -->
+	<img src="__INDEX__/img/gywm/zxns.png" alt="" class="zxns">
+
+
+	<!-- 了解更多 -->
+	<a target="_Blank" href="HTTP://FUTUREFOTON.ZHIYE.COM/HOME"><div class="ljgd">
+		<img src="__INDEX__/img/gywm/ljgd.jpg" alt="">
+		<div>
+			<p>了解更多</p>
+			<p>HTTP://FUTUREFOTON.ZHIYE.COM/HOME</p>
+		</div>
+	</div>
+	</a>
+	<!-- 招商加盟 -->
+	<img src="__INDEX__/img/gywm/zsjm.png" alt="" class="zsjm">
+	<div class="zsjm-con">
+		<div>招商条件</div>
+		<p>拟加盟经销商必须具备较强的运营管理能力，具备 设立和管理好二级网点的能力。</p>
+		<p>拟加盟经销商需要具备商用车销售经验的销售团队，且经轻型商用车事业本部奥铃品牌培训合格。</p>
+		<p>拟加盟经销商必须有较强的经营意愿，认同福田汽 车的文化，且库存、资金、形象等要素均。</p>
+		<p>达到奥铃品牌准入的基本要求</p>
+		<span>招商热线</span>
+		<h3>010-59917468</h3>
+	</div>
+
+	<!-- 合作伙伴 -->
+	<img src="__INDEX__/img/gywm/hzhb.png" alt="" class="hzhb">
+	<img src="__INDEX__/img/gywm/friend.png" alt="" class="friend">
+</div>
+		
+ {include file="public/footer" /}	
+<!-- footer -->
+<script>
+// 百度地图API功能
+var map = new BMap.Map("allmap");    // 创建Map实例
+map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);  // 初始化地图,设置中心点坐标和地图级别
+//添加地图类型控件
+map.addControl(new BMap.MapTypeControl({
+	mapTypes:[
+        BMAP_NORMAL_MAP,
+        BMAP_HYBRID_MAP
+    ]}));	  
+map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
+map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+</script>
+
+</body>
+</html>

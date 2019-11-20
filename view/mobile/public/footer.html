@@ -1,0 +1,101 @@
+ <div class="footer layui-form" style="margin-top:1.5625rem;height:9.75rem;">
+     <div class="center">
+         <ul>
+             <li><a href="{:url('About/contact')}">联系我们</a> &nbsp;&nbsp;&nbsp;|</li>
+             <li><a href="{:url('service/maintain')}">服务站查询</a> &nbsp;&nbsp;|</li>
+             <li><a href="http://aoling.douyar.cc/index/about/contact.html#zxns">招贤纳士</a> &nbsp;&nbsp;&nbsp;|</li>
+             <li><a href="http://aoling.douyar.cc/index/product/shopping.html#jxs">经销商查询</a></li>
+         </ul>
+<!--          <div class="c_i">
+             <p>探索奥铃汽车官网</p>
+             <input type="text" id="suo" placeholde=""><a class="icon-sousuo iconfonts"></a>
+         </div> -->
+         <!-- <p>福田汽车旗下产品品牌</p> -->
+         <!-- <form>
+             <select id="suo1" lay-filter="getCity5" name="sel">
+                 <option value="">福特汽车家族网站</option>
+                 <option value="100">福特汽车官方网站</option>
+                 <option value="99">奥曼官方网站</option>
+                 <option value="98">欧辉客车官方网站</option>
+                 <option value="97">欧马可官方网站 </option>
+                 <option value="96">奥铃官方网站</option>
+                 <option value="95">伽途/祥菱官方网站</option>
+                 <option value="94">时代汽车官方网站</option>
+                 <option value="93">雷萨重机官方网站</option>
+                 <option value="92">福田拓陆者官网</option>
+                 <option value="91">福田康明斯官方网站</option>
+                 <option value="90">福田普罗科环境装备官方网站</option>
+                 <option value="89">供应商门户网站</option>
+                 <option value="88">配件商城</option>
+                 <option value="87">福田全球官网</option>
+             </select>
+         </form> -->
+         <span class="s1">24小时服务热线：</span> <span class="s2">4008-199-199</span>
+         <div style="clear:both"></div>
+
+         <div class="tu1"><span>关于我们：</span>
+             <div class="tu2">
+                 <ul class="hours2">
+                     <li ><a target="_Blank"
+                             href="https://weibo.com/fotonollin?is_hot=1"><img src="__INDEX__/mobile/img/cxzt/vb.png"
+                                 alt=""></a></li>
+                     <li><a target="_Blank" href="https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzA4MDA4NTYwNg==&scene=124#wechat_redirect"><img src="__INDEX__/mobile/img/cxzt/vx.png" alt=""></a></li>
+                     <!-- <li><a target="_Blank" href=""><img src="__INDEX__/mobile/img/cxzt/QQ.png" alt=""></a></li> -->
+                 </ul>
+             </div>
+         </div>
+         <div class="s5" id="goToTop">返 回</br>顶 部</div>
+     </div>
+
+
+ </div>
+ <div style="clear:both "></div>
+
+ <div class="dibu">
+     <p>© 北京福田汽车股份有限公司版权所有 京CP备 2004550 京公网安备 11041000095号 地址：北京市昌平区沙河站沙阳路 24小时监督热线：010-80722999</p>
+
+ </div>
+
+ </div>
+
+
+ <script src="__INDEX__/mobile/js/header.js"></script>
+ <script src="__INDEX__/mobile/js/fhdb.js"></script>
+ <script>
+     layui.use('form', function () {
+         var form = layui.form;
+
+         //各种基于事件的操作，下面会有进一步介绍
+         form.on('select(getCity5)', function (data) {
+             console.log(data)
+             if (data.value == 100) {
+                 window.location.href = "http://www.foton.com.cn/";
+             }else if(data.value == 99){
+                window.location.href = "http://www.aumantruck.com/";
+             }else if(data.value == 98){
+                window.location.href = "http://auv.foton.com.cn/";
+             }else if(data.value == 97){
+                window.location.href = "http://aumark.foton.com.cn/";
+             }else if(data.value == 96){
+                window.location.href = "http://van.foton.com.cn";
+             }else if(data.value == 95){
+                window.location.href = "http://fpv.foton.com.cn/";
+             }else if(data.value == 94){
+                window.location.href = "http://tunland.foton.com.cn/";
+             }else if(data.value == 93){
+                window.location.href = "http://forland.foton.com.cn/";
+             }else if(data.value == 92){
+                window.location.href = "http://rowor.foton.com.cn";
+             }else if(data.value == 91){
+                window.location.href = "http://www.fotonloxa.com/";
+             }else if(data.value == 90){
+                window.location.href = "http://www.bfcec.com.cn/";
+             }else if(data.value == 89){
+                window.location.href = "http://pbms.foton.com.cn";
+             }else if(data.value == 88){
+                window.location.href = "http://www.foton.com.cn/";
+             }
+         });
+
+     });
+ </script>

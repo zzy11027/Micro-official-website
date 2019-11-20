@@ -1,0 +1,198 @@
+<!-- 顶部导航 -->
+<div id="header">
+	<a href="/"><img class="logo" src="__INDEX__/img/index/logo.png" alt="" ></a>
+	<nav>
+		<li>
+			<a class="Unchecked" href="/" data-href="1">首页<img src="__INDEX__/img/index/icon.png" alt=""></a>
+		</li>
+		<li>
+			<a class="Unchecked" data-href="2">车型展示<img src="__INDEX__/img/index/icon.png" alt=""></a>
+			<!-- 二级导航   车型展示-->
+			<div class="Popup_1 Popup">
+				<a href=""><img src="__INDEX__/img/index/cx_show.png" alt="" class="cx_show"></a>
+				<div class="lines"></div>
+				<ul class="showblock">
+					{volist name="product_cate" id="vo"}
+					<li>
+						<span>{$vo['name']}</span>
+						<a href="{:url('Product/show')}?id={$vo.id}"><img src="{$vo['img']}" alt=""></a>
+					</li>
+					{/volist}
+				</ul>
+			</div>
+		</li>
+		<li>
+			<a class="Unchecked" data-href="3">产品导购<img src="__INDEX__/img/index/icon.png" alt=""></a>
+			<!-- 二级导航   产品导购-->
+			<div class="Popup_2 Popup">
+				<a href=""><img src="__INDEX__/img/index/cpdg.png" alt="" class="cx_show"></a>
+				<div class="lines"></div>
+				<ul class="showblock">
+					<li>
+						<a href="{:url('Product/shopping')}"><img src="__INDEX__/img/index/dgsm.jpg" alt="">
+						<p>导购说明>>></p></a>
+					</li>
+					<li>
+						<a href="{:url('Product/made')}"><img src="__INDEX__/img/index/zsdz.jpg" alt="">
+						<p>专属定制>>></p></a>
+					</li>
+					<li>
+						<a href="{:url('Product/shopping')}"><img src="__INDEX__/img/index/jxscx.jpg" alt="">
+						<p>经销商查询>>></p></a>
+					</li>	
+					<li>
+						<a  onclick="alert('敬请期待!');return false;"><img src="__INDEX__/img/index/jrfw.jpg" alt="">
+						<p>金融服务>>></p></a>
+					</li>
+					<li>
+						<a href="http://aoling.douyar.cc/index/product/made.html"><img src="__INDEX__/img/index/gcjsq.jpg" alt="">
+						<p>购车计算器>>></p></a>
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li>
+			<a class="Unchecked" data-href="4">无忧服务<img src="__INDEX__/img/index/icon.png" alt=""></a>
+			<!-- 二级导航   无忧服务-->
+			<div class="Popup_2 Popup">
+				<a href=""><img src="__INDEX__/img/index/wyfw.png" alt="" class="cx_show"></a>
+				<div class="lines"></div>
+				<ul class="showblock">
+					<li>
+						<a href="{:url('Service/maintain')}"><img src="__INDEX__/img/index/dgsm2.jpg" alt="">
+						<p>预约维保>>></p></a>
+					</li>
+					<li>
+						<a href="{:url('Service/maintain')}"><img src="__INDEX__/img/index/fwzcx.jpg" alt="">
+						<p>服务站查询>>></p></a>
+					</li>
+					<li>
+						<a  target="_Blank" href="https://www.365autogo.com/"><img src="__INDEX__/img/index/jxscx1.jpg" alt="">
+						<p>配件商城>>></p></a>
+					</li>	
+				</ul>
+			</div>
+		</li>
+		<li>
+			<a href="http://aoling.douyar.cc/index/news/index.html?id=6" class="Unchecked" data-href="5">活动专区<img src="__INDEX__/img/index/icon.png" alt=""></a>
+			<!-- 二级导航   活动专区-->
+			<div class="Popup_2 Popup">
+				<a href=""><img src="__INDEX__/img/index/hdzq.png" alt="" class="cx_show"></a>
+				<div class="lines"></div>
+				<ul class="showblock">
+					<li>
+						<a target="_Blank" href="http://czyl.foton.com.cn/shareCars/PC/default.jsp?param=7qbl1NabxFcxt7RYtgBHPpBpwn2MzyX6"><img style="height: 65%;" src="__INDEX__/img/index/czyl.jpg" alt="">
+						<p>车主有礼>>></p></a>
+					</li>
+					<li>
+						<a target="_Blank" href="http://mp.weixin.qq.com/s/Oao0hZ_zBquJ6a5-FZwDgw"><img style="height: 65%;" src="http://ollin.foton.com.cn/ollin/resources/attachment/8dt3K5sGku3LnAGpb4Xa5v" alt="">
+						<p>旺年开门红>>></p></a>
+					</li>
+					<li>
+						<a target="_Blank" href="http://ollin.foton.com.cn/ollin/static/html/BqCJfMkKHJnKKL5Td3W6od.html?navNum=5"><img style="height: 65%;" src="http://ollin.foton.com.cn/ollin/resources/attachment/XkuwsdJePPVC6ZR4tFqWkD" alt="">
+						<p>科技奥铃服务号>>></p></a>
+					</li>
+					<li>
+						<a target="_Blank" href="https://mp.weixin.qq.com/s/lkIx27DNumDax-vh-J8fxA"><img style="height: 65%;" src="http://ollin.foton.com.cn/ollin/resources/attachment/C2pf5QV6mD48LwBH87ncvS" alt="">
+						<p>福田22周年庆>>></p></a>
+					</li>
+					<li>
+						<a target="_Blank" href="http://aoling.douyar.cc/index/hd/index.html"><img style="height: 65%;" src="__INDEX__/img/index/lemang.jpg" alt="">
+						<p>奥铃勒芒赛>>></p></a>
+					</li>
+					<!-- <li>
+						<a onclick="alert('敬请期待!');return false;"><img src="__INDEX__/img/index/yjdy.jpg" alt="">
+						<p>有奖调研>>></p></a>
+					</li>
+					<li>
+						<a onclick="alert('敬请期待!');return false;"><img src="__INDEX__/img/index/jxscx2.jpg" alt="">
+						<p>签到领积分>>></p></a>
+					</li>	
+					<li>
+						<a onclick="alert('敬请期待!');return false;"><img src="__INDEX__/img/index/zsdz1.jpg" alt="">
+						<p>福运相伴 感恩有礼>>></p></a>
+					</li> -->
+<!-- 					<li>
+						<a href="http://aoling.douyar.cc/index/news/index.html?id=6"><img src="__INDEX__/img/index/yhhd.jpg" alt="">
+						<p>更多优惠活动>>></p></a>
+					</li> -->	
+				</ul>
+			</div>
+		</li>
+		<li>
+			<a class="Unchecked" data-href="6">品牌动态<img src="__INDEX__/img/index/icon.png" alt=""></a>
+			<!-- 二级导航   品牌动态-->
+			<div class="Popup_2 Popup">
+				<a href=""><img src="__INDEX__/img/index/ppdt.png" alt="" class="cx_show"></a>
+				<div class="lines"></div>
+				<ul class="showblock">
+					{volist name="news_cate" id="vo"}
+					<li>
+						<a href="{:url('News/index')}?id={$vo.id}"><img src="{$vo['img']}" alt="">
+						<p>{$vo['name']}>>></p></a>
+					</li>
+					{/volist}
+				</ul>
+			</div>
+		</li>
+		<li>
+			<a class="Unchecked" data-href="7">关于我们<img src="__INDEX__/img/index/icon.png" alt=""></a>
+			<!-- 二级导航   关于我们-->
+			<div class="Popup_2 Popup">
+				<a href=""><img src="__INDEX__/img/index/gywm.png" alt="" class="cx_show"></a>
+				<div class="lines"></div>
+				<ul class="showblock">
+					<li>
+						<a href="{:url('About/albrand')}"><img src="__INDEX__/img/index/dgsm1.png" alt="">
+						<p>奥铃品牌>>></p></a>
+					</li>
+					<li>
+						<a href="{:url('About/contact')}"><img src="__INDEX__/img/index/lxwm.jpg" alt="">
+						<p>联系我们>>></p></a>
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li>
+			<a class="Unchecked" data-href="8">会员中心<img src="__INDEX__/img/index/icon.png" alt=""></a>
+			<!-- 二级导航   会员中心-->
+			<div class="Popup_2 Popup">
+				<a href=""><img src="__INDEX__/img/index/gywm.png" alt="" class="cx_show"></a>
+				<div class="lines"></div>
+				<ul class="showblock">
+					<li>
+						<a href="{:url('Login/index')}"><img src="__INDEX__/img/index/ip.jpg" alt="">
+						<p>会员中心>>></p></a>
+					</li>
+				</ul>
+			</div>
+		</li>
+	
+<!-- 		{if $type_login==2}
+		<li>
+			<a class="Unchecked"  onclick="logotu();" data-href="1">退出登录<img style="opacity: 0" src="__INDEX__/img/index/icon.png" alt=""></a>
+		</li>
+		{/if}
+ -->
+
+	</nav>
+	<!-- <input type="text" class="inp"> -->
+	<!-- <img src="__INDEX__/img/index/search.png" alt="" class="search"> -->
+</div>
+<!-- 顶部导航结束 -->
+<script>
+
+function logotu(){
+		$.ajax({
+			type: 'POST',
+			dataType: 'json',
+			url: '{:url('Common/login_out')}',
+			success: function (data) {
+				alert('退出成功');
+				location.reload();
+				return false;
+			}
+		});
+}
+
+</script>

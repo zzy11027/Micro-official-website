@@ -1,0 +1,135 @@
+<!-- 奥铃官网       首页开始 -->
+<!doctype html>
+<html lang="en">
+<head>
+{include file="public/resource" /}	
+<link rel="stylesheet" href="__INDEX__/css/cz.css">
+<script src="//captcha.luosimao.com/static/js/api.js"></script>
+<script src="__INDEX__/js/register_messages.js"></script>
+</head>
+<body>
+ {include file="public/header" /}	
+<!-- 内容区 -->
+<div id="container">
+	<!-- banner -->
+	<div class="swiper-container swiper-container1" style="">
+	    <div class="swiper-wrapper swiper-wrapper1">
+	        <div class="swiper-slide swiper-slide1"><a href=""><img src="__INDEX__/img/sign/banner.jpg" alt="" class="scale-big"></a></div>
+	    </div>
+	</div>
+
+	<img src="__INDEX__/img/sign/cz.png" alt="" class="cz">
+
+	<div class="yy layui-form">
+		<p>*为必选项。您的信息我们竟将会完全保密，请您放心填写</p>
+		<div class="sle1 flex0">
+			<span>手机号:</span>
+			<input type="text" class="layui-input phone" placeholder="手机号"  lay-verify="phone" name="phone">
+		</div>
+		
+		<div class="sle2 flex0">
+			<span>随机码:</span>
+			<div class="l-captcha" data-site-key="c35f80e3aeb63b54fdac9db0fd6a3f2b"  data-callback="getResponse" data-width="100%"></div>
+		</div>
+
+		<div class="sle3 flex0">
+			<span>验证码:</span>
+			<input type="text" class="layui-input" onfocus="if(value=='请输入验证码') {value=''}" onblur="if (value=='') {value='请输入验证码'}" placeholder="验证码"  lay-verify="yzm" style="width: 79%;"  name="yzm" >
+			<div id="getYzm"  onclick="send_capicha_passregist()">获取验证码</div>
+		</div>
+
+		<div class="sle4 flex0">
+			<span>新密码:</span>
+			<input type="text" class="layui-input hm" placeholder="新密码" lay-verify="password" name="password">
+		</div>
+
+		<div class="sle6 flex0">
+			<span>确认密码:</span>
+			<input type="text" class="layui-input" placeholder="确认密码" lay-verify="passwords" name="ypassword">
+		</div>
+		<button class="layui-btn" lay-submit lay-filter="tj" style="display: block;margin: 0 auto;margin-top: 40px;">立即提交</button>
+	</div>
+	
+</div>
+
+
+
+
+ {include file="public/footer" /}	
+<!-- <script src="__INDEX__/js/register_message.js"></script> -->
+<!-- <script src="//captcha.luosimao.com/static/js/api.js"></script> -->
+<script>
+layui.use('form', function(){
+  var form = layui.form;
+  
+  //各种基于事件的操作，下面会有进一步介绍
+  //
+  //
+	//自定义验证规则  
+  form.verify({  
+	    phone: function(value){
+            if(value==''){
+                return '请输入手机号';
+            }
+        },yzm: function(value){
+            if(value==''){
+                return '请输入验证码';
+            }
+        },password: function(value){
+            if(value==''){
+                return '请输入密码';
+            }
+        },passwords: function(value){
+            if(value==''){
+                return '请确认密码';
+            }
+        },phone: [/^1[3|4|5|7|8]\d{9}$/, '手机必须11位，只能是数字！']  
+  });
+
+
+	//监听提交
+	form.on('submit(tj)', function(data){
+	if(resps == undefined || resps == ''){alert('请验证随机码');return false;}
+	 	$.ajax({
+	        type: 'POST',
+	        dataType:'json',
+	        url : '{:url('Login/passreset')}',
+	        data: {
+	         	phone:data.field.phone,
+	        	yzm:data.field.yzm,
+	        	password:data.field.password,
+	        	ypassword:data.field.ypassword
+	        },
+	        success: function(data){
+	        	if(data==5){
+	       			layer.msg('修改成功', {icon: 6,time:2000,end:function () {
+                            	location.reload()
+                            }
+	       			});
+	       		}else if(data==4){
+	       			layer.msg('确认密码不正确', {icon: 6,time:2000,});
+	       		}else if(data==3){
+	       			layer.msg('用户密码为空', {icon: 6,time:2000,});
+	       		}else if(data==3){
+	       			layer.msg('验证码过期', {icon: 6,time:2000,});
+	       		}else if(data==2){
+	       			layer.msg('验证码过期', {icon: 6,time:2000,});
+	       		}else if(data==1){
+	       			layer.msg('验证码不正确', {icon: 6,time:2000,});
+	       		}else if(data==6){
+	       			layer.msg('手机号不存在', {icon: 6,time:2000,});
+	       		}
+	        }
+	    });
+	}); 
+});
+var resps;
+function getResponse(resp){
+	console.log(resp);
+	console.log(resps);
+      // resp 即验证成功后获取的值
+     resps = resp;
+}
+</script>
+</body>
+</html>

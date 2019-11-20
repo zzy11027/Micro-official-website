@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>奥铃2019线上勒芒赛</title>
+	<link rel="stylesheet" href="__INDEX__/hd1/2019/lm/css/index.css">
+	<link rel="stylesheet" href="__INDEX__/hd1/2019/lm/css/xianxiabangdan.css">
+	<link rel="stylesheet" href="__INDEX__/hd1/2019/lm/css/xianxiapc.css">
+	<link rel="stylesheet" href="__INDEX__/hd1/2019/lm/css/swiper.min.css">
+	<script src='__INDEX__/hd1/2019/lm/js/swiper.min.js'></script>
+	<script src="__INDEX__/hd1/2019/lm/js/jquery.min.js"></script>
+	<script src="__INDEX__/hd1/2019/lm/js/select.js"></script>
+	<script src="/public/static/index/hd1/2019/lm/js/register_messages.js"></script>
+		<script>
+        wx.config({
+            debug: false, //开启调试模式调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，
+            appId: 'wxa1ef57725e6a43a9', // 必填，公众号的唯一标识
+            timestamp: '{$arr.timestamp}', // 必填，生成签名的时间
+            nonceStr: '{$arr.noncestr}', // 必填，生成签名的随机
+            signature: '{$arr.sha1}',// 必填，签名，见附
+            jsApiList: [
+                "onMenuShareTimeline",
+                "onMenuShareAppMessage"
+            ] // 必填，需要使用的JS接口列表，所有JS接口列表见附
+        });
+     
+	    // var device_type = navigator.userAgent;//获取userAgent信息  
+	    // var md = new MobileDetect(device_type);//初始化mobile-detect  
+	    // var os = md.os();//获取系统  
+	    // if (os == "iOS") {//ios系统的处理  
+	    //     wx.ready(function() {  
+	    //     	document.getElementById('video').play();  
+	   	//  	});  
+	    // }
+        wx.ready(function () {
+            wx.onMenuShareAppMessage({
+                title: '锐珂医疗|微官网', // 分享标题
+                desc: '百年影像 源于锐珂', // 分享描述
+                link: 'http://rk.douyar.cc/rkyl/anli.php', // 分享链接
+                imgUrl: 'http://rk.douyar.cc/yqh/images/fx.jpg', // 分享图标
+                type: '', // 分享类型,music、video或link，不填默认为link
+                dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+                success: function () {
+                   // alert("分享成功");
+                    // 用户确认分享后执行的回调函数
+                },
+                cancel: function () {
+           // alert("取消成功");
+                    // 用户取消分享后执行的回调函数
+                }
+
+            });
+            wx.onMenuShareTimeline({
+                title: '锐珂医疗|微官网', // 分享标题
+                link: 'http://rk.douyar.cc/rkyl/anli.php', // 分享链接
+                imgUrl: 'http://rk.douyar.cc/yqh/images/fx.jpg', // 分享图标
+                success: function () {
+                    //alert("分享成功");
+                    // 用户确认分享后执行的回调函数
+                },
+                cancel: function () {
+                   // alert("取消成功");
+                    // 用户取消分享后执行的回调函数
+                }
+            });
+        })
+    </script>
+	<script>
+		var _hmt = _hmt || [];
+		(function () {
+			var hm = document.createElement("script");
+			hm.src = "https://hm.baidu.com/hm.js?4b35b9696537f6518e4cdcdeeee51ff6";
+			var s = document.getElementsByTagName("script")[0];
+			s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+	<style>
+		a {
+			text-decoration: none;
+
+		}
+	</style>
+</head>
+
+<body>
+
+
+	<div class="motai" style="display:none;">
+
+	</div>
+
+	<div class="xinxi" style="display:none;">
+		<p>
+			<span><input style="color:#fff;" class="name" type="text" placeholder="请输入您的姓名" id="in"></span>
+		</p>
+		<p>
+			<span><input style="color:#fff;" class="phone" type="text" placeholder="请输入您的电话" id="in1"></span>
+		</p>
+		<p class="duan">
+			<span><input type="text" class="layui-input" style="color:#fff; width: 35%;"
+					placeholder="短信验证码" onfocus="if(value=='短信验证码') {value=''}" onblur="if (value=='') {value='短信验证码'}"
+					id="in2" lay-verify="yzm" name="yzm"></span>
+			<!-- <span class="yanzheng"><input style="color:#fff;" type="button" style="color:#fff" ></span> -->
+		</p>
+		<!-- <p>
+			<span><input style="color:#fff;" type="text" placeholder="请输入您的车架号" id="in3"></span>
+		</p>
+		<p>
+			<span><input style="color:#fff;" type="text" placeholder="请输入您的车牌号" id="in5"></span>
+		</p> -->
+		<p>
+        <select name="province"  class="province" onchange="getCitys()" id="in7" style="color: #000;">
+        	<option value="100">请选择省份</option>
+	        <script type="text/javascript"> 
+	            for(var i=0;i<provinceArr.length;i++)    
+	            {
+	                document.write("<option value='"+i+"'>"+provinceArr[i]+"</option>");
+	                
+	            }
+	        </script>
+        </select>
+        <select name="city" id="city" class="city" style="color: #000;">
+			<option value="0">请选择城市</option>
+        </select>
+		</p>
+
+		<a href="#">
+			*报名参赛前请确保您的奥铃爱车已安装并激活了iFoton车联网系统
+		</a>
+		<p class="tijiao">
+			<span>
+				<img class="tijiaoimg w100" src="/public/static/index/hd1/2019/lm/img/grzxbmcs/tijiao.png" alt=""
+					onclick="tjs()">
+			</span>
+			<!-- <span>
+				<img class="w100" src="/public/static/index/hd1/2019/lm/img/grzxbmcs/yuedubisaiguize.png" alt="">
+			</span> -->
+		</p>
+		<div class="fasongyanzhengma " onclick="send_capicha_regist()" id="in6">
+			发送验证码
+		</div>
+	</div>
+
+
+
+
+
+
+	<img src="__INDEX__/mobile/hd1/2019/lm/img/bm.png" alt="" class="tu22">
+	<!-- <img src="__INDEX__/hd1/2019/lm/img/beijing.jpg" alt="" id="xxbj"> -->
+	<div class="warp" id="index">
+		<div class="swiper-container swiper-container1 ">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide banner">
+					<img src="/public/upload/admin/20190530/15592065867911.jpg" alt="">
+				</div>
+				<!-- <div class="swiper-slide banner">
+					<img src="__INDEX__/hd1/2019/lm/img/grzxbmcs/banner.png" alt="">
+				</div>
+				<div class="swiper-slide banner">
+					<img src="__INDEX__/hd1/2019/lm/img/grzxbmcs/banner.png" alt="">
+				</div> -->
+
+			</div>
+			<div class="swiper-button-prev left"></div>
+			<!--左箭头。如果放置在swiper-container外面，需要自定义样式。-->
+			<div class="swiper-button-next right"></div>
+			<!--右箭头。如果放置在swiper-container外面，需要自定义样式。-->
+			<div class="swiper-pagination"></div>
+		</div>
+		<div class="content">
+			<div class="kongjian">
+				<div class="imgs img">
+					<img class="saishizhongxing" src="__INDEX__/hd1/2019/lm/img/saishizhongxinxuanzhong.png" alt="">
+					<img class="saishizhongxingbangdan" src="__INDEX__/hd1/2019/lm/img/fenzhansaiweixuanzhong.png"
+						alt="">
+
+				<a href="http://aoling.douyar.cc/index/hd1/lm_xs.html">	<img src="__INDEX__/hd1/2019/lm/img/xianshanglemangsaiweixuanzhong.png" alt="" id="xs"></a>
+				</div>
+			</div>
+			<div class="red w50">
+				<img class="w100" src="__INDEX__/hd1/2019/lm/img/saishijieshao.png" alt="">
+			</div>
+			<img class="w100" src="__INDEX__/hd1/2019/lm/img/saishijieshaozi.png" alt="" class="mb90">
+			<div class="red w50" >
+				<img class="w100" src="__INDEX__/hd1/2019/lm/img/xinwenzhongxin.png" alt="">
+			</div>
+			<div class="xingshuo">
+				<div class="dl">
+					<!-- <div class="top1">
+						<div>
+							<dl>
+								<dt class="w50" style="width:50%;"><img class="w100"
+										src="__INDEX__/hd1/2019/lm/img/jingcaisaishi tupian.jpg" alt=""></dt>
+								<dd>
+									福田奥铃&福田康明斯杯奥铃勒芒赛今日苏州开赛
+								</dd>
+							</dl>
+							<span>2019/5/27</span>
+						</div>
+						<div>
+							<dl>
+								<dt class="w50" style="width:50%;"><img class="w100"
+										src="__INDEX__/hd1/2019/lm/img/jingcaisaishi tupian.jpg" alt=""></dt>
+								<dd>
+									福田奥铃&福田康明斯杯奥铃勒芒赛今日苏州开赛
+								</dd>
+							</dl>
+							<span>2019/5/27</span>
+						</div>
+					</div> -->
+					<div class="top1">
+						<div>
+							<a href="http://aoling.douyar.cc/index/news/show.html?id=30">
+								<dl>
+									<dt class="w50" style="width:100%;"><img class="w100"
+											src="__INDEX__/hd1/2019/lm/img/C83A2500.jpg" alt=""></dt>
+									<dd>
+										福田奥铃速运创新上市 中国轻卡实况挑战大师赛首战长三角
+									</dd>
+								</dl>
+							</a>
+							<span>2019/5/27</span>
+						</div>
+						<div>
+							<a href="http://aoling.douyar.cc/index/news/show.html?id=29">
+								<dl>
+									<dt class="w50" style="width:100%;"><img class="w100"
+											src="__INDEX__/hd1/2019/lm/img/44s.jpg" alt=""></dt>
+									<dd>
+										细分、细节、细致 这样的福田奥铃速运能否“做你专属”？
+									</dd>
+								</dl>
+							</a>
+							<span>2019/5/27</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="mt150 mb53 red w50">
+				<img class="w100" src="__INDEX__/hd1/2019/lm/img/jingcaisaishi.png" alt="">
+			</div>
+			<div class="swiper-container swiper-container2 ">
+				<div class="swiper-wrapper">
+                <div class="swiper-slide banner1">
+                    <img src="__INDEX__/mobile/hd1/2019/lm/img1/hd1.jpg" alt="" style="width: 100%;">
+                </div>
+                <div class="swiper-slide banner1">
+                    <img src="__INDEX__/mobile/hd1/2019/lm/img1/hd2.jpg" alt="" style="width: 100%;">
+                </div>
+                <div class="swiper-slide banner1">
+                    <img src="__INDEX__/mobile/hd1/2019/lm/img1/hd3.jpg" alt="" style="width: 100%;">
+                </div>
+                <div class="swiper-slide banner1">
+                    <img src="__INDEX__/mobile/hd1/2019/lm/img1/hd4.jpg" alt="" style="width: 100%;">
+                </div>
+                <div class="swiper-slide banner1">
+                    <img src="__INDEX__/mobile/hd1/2019/lm/img1/hd5.jpg" alt="" style="width: 100%;">
+                </div>
+                <div class="swiper-slide banner1">
+                    <img src="__INDEX__/mobile/hd1/2019/lm/img1/hd6.png" alt="" style="width: 100%;">
+                </div>
+
+				</div>
+			</div>
+			<div class="mt50 w50 red">
+				<a href="https://live.photoplus.cn/activity/live/2851712?uniqCode=wMT1rXGROl&accessFrom=qrcode&from=singlemessage">
+					<img class="w100" src="__INDEX__/hd1/2019/lm/img/gengduojingcaidapian.png" alt="">
+				</a>
+			</div>
+			<div class="mt150 w50 red">
+				<img class="w100" src="__INDEX__/hd1/2019/lm/img/saishianpai.png" alt="">
+
+			</div>
+			<div class="map">
+				<img class="w100" src="__INDEX__/hd1/2019/lm/img/ditu.png" alt="">
+			</div>
+			<div class="mt140 mb75 w50 red">
+				<img class="w100" src="__INDEX__/hd1/2019/lm/img/bisaiguize.png" alt="">
+			</div>
+
+		</div>
+		<div class="guize">
+		</div>
+		<div class="content">
+			<div class="mt115 red w50">
+				<img class="w100" src="__INDEX__/hd1/2019/lm/img/jiangxiangshezhi.png" alt="">
+			</div>
+			<div class="mt30">
+				<span style="display:inline-block;width: 49%"><img class="w100"
+						src="__INDEX__/hd1/2019/lm/img/fensaijiangli.png" alt=""></span>
+				<span style="display:inline-block;width: 49%"><img class="w100"
+						src="__INDEX__/hd1/2019/lm/img/zhongjuesaijiangli.png" alt=""></span>
+			</div>
+			<div class="mt185 red w50">
+				<img class="w100" src="__INDEX__/hd1/2019/lm/img/saishiyongche.png" alt="">
+			</div>
+			<div class="swiper-container swiper-container1s ">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide banner">
+						<img  style="width: 73%" src="__INDEX__/hd1/2019/lm/img/saishiyongchetupianweizhi.jpg" alt="">
+					</div>
+					<div class="swiper-slide banner">
+						<img  style="width: 73%" src="__INDEX__/hd1/2019/lm/img/saishiyongchetupianweizhi.jpg" alt="">
+					</div>
+					<div class="swiper-slide banner">
+						<img  style="width: 73%" src="__INDEX__/hd1/2019/lm/img/saishiyongchetupianweizhi.jpg" alt="">
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<!-- <div class="foot mt155">
+			<img src="__INDEX__/hd1/2019/lm/img/dibu.png" alt="">
+		</div> -->
+	</div>
+	<img src="__INDEX__/hd1/2019/lm/img/img-Bd/beijing.png" alt="" style="display:none; width: 100%;" id="fzbj">
+	<div class="warp" id="indexbangdan" style="display:none">
+		<div class="banner">
+				<div class="swiper-container vido swiper-container3s ">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide banner">
+								<video style="width: 100%;"  src="__INDEX__/mobile/hd1/2019/lm/img1/1.mp4" id="video_1" _type="video"
+									webkit-playsinline="true" webkit-playsinline playsinline x5-playsinline x5-video-player-fullscreen="true"  class="video_1" preload="meta" playsinline="true" x5-video-player-type="h5">
+								该浏览器不支持video属性
+								</video>
+							</div>
+							<div class="swiper-slide banner">
+								<video style="width: 100%;"  src="__INDEX__/mobile/hd1/2019/lm/img1/2.mp4" id="video_2" _type="video"
+									webkit-playsinline="true" webkit-playsinline playsinline x5-playsinline x5-video-player-fullscreen="true"  class="video_1" preload="meta" playsinline="true" x5-video-player-type="h5">
+								该浏览器不支持video属性
+								</video>
+							</div>
+							<div class="swiper-slide banner">
+								<video style="width: 100%;"  src="__INDEX__/mobile/hd1/2019/lm/img1/3.mp4" id="video_3" _type="video"
+									webkit-playsinline="true" webkit-playsinline playsinline x5-playsinline x5-video-player-fullscreen="true"  class="video_1" preload="meta" playsinline="true" x5-video-player-type="h5">
+								该浏览器不支持video属性
+								</video>
+							</div>
+						</div>
+						<div class="swiper-pagination"></div>
+						<!--分页器。如果放置在swiper-container外面，需要自定义样式。-->
+					</div>
+		</div>
+
+		<div class="content">
+			<div class="kongjian">
+				<div class="imgs img">
+					<img class="saishizhongxing" src="__INDEX__/hd1/2019/lm/img/saishizhongxinwenxuanzhong.png" alt="">
+					<img class="saishizhongxingbangdan" src="__INDEX__/hd1/2019/lm/img/fenzhansaixuanzhong.png" alt="">
+					<a href="http://aoling.douyar.cc/index/hd1/lm_xs.html"><img src="__INDEX__/hd1/2019/lm/img/xianshanglemangsaiweixuanzhong.png"
+							alt=""></a>
+				</div>
+			</div>
+			<div class="zhandian">
+				<img class="w80" src="__INDEX__/hd1/2019/lm/img/grzxbmcs/zhandian.png" alt="">
+			</div>
+			<div class="w30 fenzhansaiguanjun">
+				<img class="w100" src="__INDEX__/hd1/2019/lm/img/img-Bd/fenzhansaiguanjunbang.png" alt="">
+			</div>
+			<div class="dl1">
+				<div class="left">
+					<dl>
+						<dt class="two">
+							<img class="w100" src="__INDEX__/hd1/2019/lm/img/img-Bd/D08.png" alt="">
+							<img src="__INDEX__/hd1/2019/lm/img/img-Bd/yajun.png" alt="" class="jiangbei">
+						</dt>
+						<dd>
+							<p>姓名：杨士远</p>
+							<p>行业：商场超市</p>
+							<p>单位：静远</p>
+							<p>成绩：<span>01'43"202</span></p>
+							<img class="w50" src="__INDEX__/hd1/2019/lm/img/img-Bd/chengjibaogao.png" alt="">
+						</dd>
+					</dl>
+				</div>
+				<div class="center">
+					<dl>
+						<dt class="one">
+							<img class="w100" src="__INDEX__/hd1/2019/lm/img/img-Bd/A04.png" alt="">
+							<img src="__INDEX__/hd1/2019/lm/img/img-Bd/guanjun.png" alt="" class="jiangbei">
+						</dt>
+						<dd>
+							<p>姓名：李晓东</p>
+							<p>行业：快运</p>
+							<p>单位：东深</p>
+							<p>成绩：<span>01'35"82</span></p>
+							<img class="w50" src="__INDEX__/hd1/2019/lm/img/img-Bd/chengjibaogao.png" alt="">
+						</dd>
+					</dl>
+				</div>
+				<div class="right">
+					<dl>
+						<dt class="two">
+							<img class="w100" src="__INDEX__/hd1/2019/lm/img/img-Bd/b07.png" alt="">
+							<img src="__INDEX__/hd1/2019/lm/img/img-Bd/jijun.png" alt="" class="jiangbei">
+						</dt>
+						<dd>
+							<p>姓名：齐佛晓</p>
+							<p>行业：快运</p>
+							<p>单位：58速运</p>
+							<p>成绩：<span>01'51"59</span></p>
+							<img class="w50" src="__INDEX__/hd1/2019/lm/img/img-Bd/chengjibaogao.png" alt="">
+						</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+		<div class="mt50 paiming">
+			<img src="__INDEX__/hd1/2019/lm/img/img-Bd/paimingbiao.png" alt="">
+		</div>
+		<div class="content">
+			<div class="mt20 bisai mb20 element">
+				<!-- 				<p>
+					<span class="num">4</span>
+					<span class="name">王大锤</span>
+					<span class="hangye">快递快运</span>
+					<span class="gongsi">xxxx物流公司</span>
+					<span class="time">1'23'33</span>
+				</p> -->
+				<p>
+					<span class="num">4</span>
+					<span class="name">窦怀亚</span>
+					<span id="dw"></span>
+					<span id="gs">苏州金明运输有限公司</span>
+					<span style="color:#0DC3FF;">1'55"86</span>
+				</p>
+				<p>
+					<span class="num">5</span>
+					<span class="name">马亮亮</span>
+					<span id="dw"></span>
+					<span id="gs">苏州金明运输有限公司</span>
+					<span style="color:#0DC3FF;">2'00"31</span>
+				</p>
+				<p>
+					<span class="num">6</span>
+					<span class="name">黄新永</span>
+					<span id="dw"></span>
+					<span id="gs">快狗打车</span>
+					<span style="color:#0DC3FF;">2'01"33</span>
+				</p>
+				<p>
+					<span class="num">7</span>
+					<span class="name">袁浩东</span>
+					<span id="dw"></span>
+					<span id="gs">上海万家物流有限公司</span>
+					<span style="color:#0DC3FF;">2'01"40</span>
+				</p>
+				<p>
+					<span class="num">8</span>
+					<span class="name">孙磊</span>
+					<span id="dw"></span>
+					<span id="gs">上海万家物流有限公司</span>
+					<span style="color:#0DC3FF;">2'04"58</span>
+				</p>
+				<p>
+					<span class="num">9</span>
+					<span class="name">郭理</span>
+					<span id="dw"></span>
+					<span id="gs">上海聚邦物流有限公司</span>
+					<span style="color:#0DC3FF;">2'01"70</span>
+				</p>
+				<p>
+					<span class="num">10</span>
+					<span class="name">杜义强</span>
+					<span id="dw"></span>
+					<span id="gs">上海聚邦物流有限公司</span>
+					<span style="color:#0DC3FF;">2'01"84</span>
+				</p>
+				<p>
+					<span class="num">11</span>
+					<span class="name">吴叔权</span>
+					<span id="dw">快递快运</span>
+					<span id="gs">上海聚邦物流有限公司</span>
+					<span style="color:#0DC3FF;">2'02"60</span>
+				</p>
+				<p>
+					<span class="num">12</span>
+					<span class="name">李成真</span>
+					<span id="dw"></span>
+					<span id="gs">苏州大汉货运有限公司</span>
+					<span style="color:#0DC3FF;">2'02"83</span>
+				</p>
+				<p>
+					<span class="num">13</span>
+					<span class="name">曹斌</span>
+					<span id="dw"></span>
+					<span id="gs">苏州大汉货运有限公司</span>
+					<span style="color:#0DC3FF;">2'03"83</span>
+				</p>
+				<p>
+					<span class="num">14</span>
+					<span class="name">顾海联</span>
+					<span id="dw"></span>
+					<span id="gs">苏州市虎丘区安吉搬家服务部</span>
+					<span style="color:#0DC3FF;">2'04"51</span>
+				</p>
+				<p>
+					<span class="num">15</span>
+					<span class="name">蒋正新</span>
+					<span id="dw"></span>
+					<span id="gs">苏州市虎丘区安吉搬家服务部</span>
+					<span style="color:#0DC3FF;">2'04"89</span>
+				</p>
+				<p>
+					<span class="num">16</span>
+					<span class="name">秦永昌</span>
+					<span id="dw"></span>
+					<span id="gs">苏州时达通物流有限公司</span>
+					<span style="color:#0DC3FF;">2'05"33</span>
+				</p>
+				<p>
+					<span class="num">17</span>
+					<span class="name">许建平</span>
+					<span id="dw"></span>
+					<span id="gs">苏州时达通物流有限公司</span>
+					<span style="color:#0DC3FF;">2'05"66</span>
+				</p>
+				<p>
+					<span class="num">18</span>
+					<span class="name">林海峰</span>
+					<span id="dw"></span>
+					<span id="gs">苏州天天供应链管理有限公司</span>
+					<span style="color:#0DC3FF;">2'06"54</span>
+				</p>
+				<p>
+					<span class="num">19</span>
+					<span class="name">周斌</span>
+					<span id="dw"></span>
+					<span id="gs">苏州天天供应链管理有限公司</span>
+					<span style="color:#0DC3FF;">2'06"74</span>
+				</p>
+				<p>
+					<span class="num">20</span>
+					<span class="name">韩伟</span>
+					<span id="dw"></span>
+					<span id="gs">跨越速运</span>
+					<span style="color:#0DC3FF;">2'06"99</span>
+				</p>
+				<p>
+					<span class="num">21</span>
+					<span class="name">李庆贺</span>
+					<span id="dw"></span>
+					<span id="gs">跨越速运</span>
+					<span style="color:#0DC3FF;">2'07"43</span>
+				</p>
+				<p>
+					<span class="num">22</span>
+					<span class="name">吴龙栋</span>
+					<span id="dw">快递快运</span>
+					<span id="gs">苏州玲敬物流有限公司</span>
+					<span style="color:#0DC3FF;">2'08"89</span>
+				</p>
+				<p>
+					<span class="num">23</span>
+					<span class="name">马茂</span>
+					<span id="dw">商超配送</span>
+					<span id="gs">苏州玲敬物流有限公司</span>
+					<span style="color:#0DC3FF;">2'09"32</span>
+				</p>
+				<p>
+					<span class="num">24</span>
+					<span class="name">刁桂华</span>
+					<span id="dw">商超配送</span>
+					<span id="gs">苏州英飞迪物流有限公司</span>
+					<span style="color:#0DC3FF;">2'10"01</span>
+				</p>
+				<p>
+					<span class="num">25</span>
+					<span class="name">陈廷林</span>
+					<span id="dw">商超配送</span>
+					<span id="gs">苏州英飞迪物流有限公司</span>
+					<span style="color:#0DC3FF;">2'10"91</span>
+				</p>
+				<p>
+					<span class="num">26</span>
+					<span class="name">李元</span>
+					<span id="dw">家具家电</span>
+					<span id="gs">苏州58搬家</span>
+					<span style="color:#0DC3FF;">2'11"52</span>
+				</p>
+				<p>
+					<span class="num">27</span>
+					<span class="name">谢贻龙</span>
+					<span id="dw">家具家电</span>
+					<span id="gs">苏州58搬家</span>
+					<span style="color:#0DC3FF;">2'11"92</span>
+				</p>
+				<p>
+					<span class="num">28</span>
+					<span class="name">张庆伟</span>
+					<span id="dw">叶菜运输</span>
+					<span id="gs">申通苏州公司</span>
+					<span style="color:#0DC3FF;">2'12"34</span>
+				</p>
+				<p>
+					<span class="num">29</span>
+					<span class="name">陈虎</span>
+					<span id="dw">叶菜运输</span>
+					<span id="gs">申通苏州公司</span>
+					<span style="color:#0DC3FF;">2'12"86</span>
+				</p>
+				<p>
+					<span class="num">30</span>
+					<span class="name">徐淼</span>
+					<span id="dw">医疗器械</span>
+					<span id="gs">苏州启洋国际物流有限公司</span>
+					<span style="color:#0DC3FF;">2'13"14</span>
+				</p>
+				<p>
+					<span class="num">31</span>
+					<span class="name">戴胜芳</span>
+					<span id="dw">医疗器械</span>
+					<span id="gs">苏州启洋国际物流有限公司</span>
+					<span style="color:#0DC3FF;">2'13"48</span>
+				</p>
+				<p>
+					<span class="num">32</span>
+					<span class="name">陆永康</span>
+					<span id="dw">叶菜运输</span>
+					<span id="gs">苏州启洋国际物流有限公司</span>
+					<span style="color:#0DC3FF;">2'14"16</span>
+				</p>
+				<p>
+					<span class="num">33</span>
+					<span class="name">范家强</span>
+					<span id="dw">商超配送</span>
+					<span id="gs">上海东琛物流</span>
+					<span style="color:#0DC3FF;">2'15"32</span>
+				</p>
+				<p>
+					<span class="num">34</span>
+					<span class="name">韩裕江</span>
+					<span id="dw"></span>
+					<span id="gs">个人运输</span>
+					<span style="color:#0DC3FF;">2'16"47</span>
+				</p>
+			</div>
+			<div class="fengcai w30">
+				<img class="w100"  style="width:60%!important;" src="__INDEX__/hd1/2019/lm/img/img-Bd/saishoufengcai.png" alt="">
+			</div>
+			<div class="swiper-container swiper-container1ss">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide saishou">
+						<img src="/public/static/index/mobile/hd1/2019/lm/img1/11s.jpg" alt="">
+						<img src="/public/static/index/mobile/hd1/2019/lm/img1/22s.jpg" alt="">
+						<img src="/public/static/index/mobile/hd1/2019/lm/img1/33s.jpg" alt="">
+					</div>
+					<div class="swiper-slide saishou">
+							<img src="/public/static/index/mobile/hd1/2019/lm/img1/11s.jpg" alt="">
+							<img src="/public/static/index/mobile/hd1/2019/lm/img1/22s.jpg" alt="">
+							<img src="/public/static/index/mobile/hd1/2019/lm/img1/33s.jpg" alt="">
+					</div>
+					<div class="swiper-slide saishou">
+							<img src="/public/static/index/mobile/hd1/2019/lm/img1/11s.jpg" alt="">
+							<img src="/public/static/index/mobile/hd1/2019/lm/img1/22s.jpg" alt="">
+							<img src="/public/static/index/mobile/hd1/2019/lm/img1/33s.jpg" alt="">
+					</div>
+				</div>
+			</div>
+			<div class="mt80 guanjunshuo mb105">
+				<div class="w30">
+					<img class="w100" style="width:60%!important;" src="__INDEX__/hd1/2019/lm/img/img-Bd/guanjunshuo.png" alt="">
+				</div>
+				<div class="mt30">
+					<dl class="w80">
+						<dt>
+							<img class="w100" src="__INDEX__/hd1/2019/lm/img/img-Bd/zu10132.png" alt="">
+						</dt>
+						<dd>
+							<h1>冠军李晓东的致胜秘诀</h1>
+							<p>奥铃速运起步快，提速快，有劲！开了这么多年的策划就数它舒适安全，开一天也不累，轻拉快跑，城配明星，搬家版的，好开又省油，每公里省两毛，奥铃速运就是不一样。</p>
+						</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+		<!-- <div class="foot">
+			<img src="__INDEX__/hd1/2019/lm/img/dibu.png" alt="">
+		</div> -->
+
+	</div>
+	<script>
+		var mySwiper = new Swiper('.swiper-container1', {
+			autoplay: true, //可选选项，自动滑动
+			observer: true,
+			observeParents: true,
+			pagination: {
+				el: '.swiper-pagination',
+			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			}
+		})
+
+		var mySwiper = new Swiper('.swiper-container2', {
+			autoplay: true, //可选选项，自动滑动
+			observer: true,
+			observeParents: true,
+			pagination: {
+				el: '.swiper-pagination',
+			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			}
+		})
+
+				var mySwiper = new Swiper('.swiper-container1ss', {
+			autoplay: true, //可选选项，自动滑动
+			observer: true,
+			observeParents: true,
+			pagination: {
+				el: '.swiper-pagination',
+			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			}
+		})
+		var mySwiper3 = new Swiper('.swiper-container3', {
+			effect: 'coverflow',
+			observer: true,
+			observeParents: true,
+			slidesPerView: 1,
+			centeredSlides: true,
+			coverflowEffect: {
+				rotate: 100,
+				stretch: 0,
+				depth: 0,
+				modifier: 2,
+				slideShadows: true
+			},
+		})
+		// $('#xs').click(function () {
+		// 	alert('敬请期待')
+		// })
+		$('.saishizhongxing').click(function () {
+			$('#index').show();
+			$('#indexbangdan').hide();
+			$('#xxbj').show();
+			$('#fzbj').hide();
+
+		})
+		$('.saishizhongxingbangdan').click(function () {
+			$('#index').hide();
+			$('#indexbangdan').show();
+			$('#xxbj').hide();
+			$('#fzbj').show();
+		})
+
+
+
+
+		$('.tu22').click(function () {
+            $('.motai').show();
+            $('.xinxi').show();
+            $('.warp').css('position', 'fixed');
+        })
+
+
+        var yz;
+
+        function tjs() {
+            var phone = $('#in1').val(); //手机号
+            var yz = $('#in2').val(); //验证
+            var name = $('#in').val(); //名字
+            var che = $('#in3').val(); //车架号
+            var che1 = $('#in5').val(); //车牌号
+            var prov = $("#in7 option:selected").text(); //获取选中的项
+            var city = $("#city option:selected").text(); //获取选中的项
+            // console.log(options)
+            if (name == '') {
+                alert("请输入您的姓名");
+                return false;
+            }
+            if (phone == '') {
+                alert('请输入您的电话！')
+                return;
+            }
+            var reg = /^0?1[3|4|5|7|8][0-9]\d{8}$/;
+            if (!reg.test(phone)) {
+                alert("请输入正确的手机号");
+                return false;
+            }
+            if (yz == '') {
+                alert("请输入验证码");
+                return false;
+            }
+
+            if (che == '') {
+                alert("请输入您的车架号");
+                return false;
+            }
+            if (che1 == '') {
+                alert("请输入您的车牌号");
+                return false;
+            }
+            $.ajax({
+                type: "POST",
+                url: "{:url('hd1/lz')}",
+                data: {
+                    type: 1,
+                    phone: phone, //手机号
+                    yz: yz, //验证码
+                    name: name, //名字
+                    che: '', //车架号
+                    che1: '', //车牌号
+                    options: prov, //站期
+                    city: city //站期
+                },
+                dataType: "json",
+                success: function (data) {
+                    if (data == 1) {
+                        alert('请输入姓名');
+                        return false;
+                    }
+                    if (data == 2) {
+                        alert('请输入电话');
+                        return false;
+                    }
+                    if (data == 3) {
+                        alert('验证码不正确');
+                        return false;
+                    }
+                    if (data == 4) {
+                        alert('验证码不正确');
+                        return false;
+                    }
+                    if (data == 6) {
+                        alert('vin错误');
+                        return false;
+                    }
+                    if (data == 7) {
+                        alert('vin已存在');
+                        return false;
+                    }
+                    if (data == 8) {
+                        alert('报名成功');
+                        location.reload();
+
+                        return false;
+                    }
+                }
+            });
+        }
+        $('.motai').click(function(){
+            $('.motai').hide();
+            $('.xinxi').hide();
+            $('.warp').css('position','');
+        });
+		var mySwiper3s = new Swiper('.swiper-container3s', {
+			observer: true,
+			observeParents: true,
+			pagination: {
+				el: '.swiper-pagination',
+			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			}
+        })
+
+
+
+
+        $('#video_1').click(function(){
+        	$('#video_1').trigger('play');
+        })
+        $('#video_2').click(function(){
+        	$('#video_2').trigger('play');
+        })
+        $('#video_3').click(function(){
+        	$('#video_3').trigger('play');
+        })
+
+
+        //省市联动
+function getCitys(){
+    var provincesobj=document.getElementById("in7");
+    var cityobj=document.getElementById("city");
+    var index=provincesobj.selectedIndex;
+    var value=provincesobj[index].value;;
+    var cityName=cityArr[value];
+    cityobj.length=1;
+    for(var i=1;i<cityArr[value].length;i++){
+        cityobj.options[cityobj.options.length]=new Option(cityName[i],i);
+    }
+}
+	</script>
+</body>
+
+</html>

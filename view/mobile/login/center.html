@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {include file="mobile/public/resource" /}    
+    <link rel="stylesheet" href="__INDEX__/mobile/css/gerzxsy.css">
+    <title>个人中心</title>
+</head>
+
+<body>
+   {include file="mobile/public/header" /}  
+<!--     <div class="grxx">
+        <dl>
+            <dt>
+                <img src="__INDEX__/mobile/img/gerzxsy/tx.png">
+            </dt>
+
+            <dd>
+                <h1>炎亚纶</h1>
+                <p>手机号：135965958648</p>
+                当前积分：2654分
+                <button class="btn">签到</button>
+            </dd>
+
+        </dl>
+    </div> -->
+    <div class="y_main" onclick="alert('敬请期待！');return false;" style="padding-top: 2rem;">
+        <div id="b1">
+
+            <dl>
+                <a href="{:url('Login/personal')}">
+                    <dt><img src="__INDEX__/mobile/img/gerzxsy/re1.png"></dt>
+                    <dd>个人资料</dd>
+                </a>
+            </dl>
+
+            <dl>
+                <a href="{:url('Login/pass_edit')}">
+                    <dt><img src="__INDEX__/mobile/img/gerzxsy/re2.png"></dt>
+                    <dd>登录密码修改</dd>
+                </a>
+            </dl>
+            <dl>
+
+                <a href="{:url('Login/phone_edit')}">
+                    <dt><img src="__INDEX__/mobile/img/gerzxsy/re4.png"></dt>
+                    <dd>手机号码修改</dd>
+                </a>
+            </dl>
+        </div>
+        <div id="b2">
+            <dl>
+                <a href="{:url('Login/member_edit')}">
+                    <dt><img src="__INDEX__/mobile/img/gerzxsy/re5.png"></dt>
+                    <dd>会员积分查询</dd>
+                </a>
+            </dl>
+            <dl>
+                <a href="{:url('Login/order_select')}">
+                    <dt><img src="__INDEX__/mobile/img/gerzxsy/re6.png"></dt>
+                    <dd>工单线索查询</dd>
+                </a>
+            </dl>
+            <dl>
+                <dt><img src="__INDEX__/mobile/img/gerzxsy/re7.png"></dt>
+                <dd>车主有礼</dd>
+            </dl>
+        </div>
+        <div id="b3">
+            <dl>
+                <dt><img src="__INDEX__/mobile/img/gerzxsy/re8.png"></dt>
+                <dd>积分商城</dd>
+            </dl>
+            <dl style="border:none;">
+                <dt></dt>
+                <dd></dd>
+            </dl>
+            <dl style="border:none;">
+                <dt></dt>
+                <dd></dd>
+            </dl>
+        </div>
+    </div>
+
+    </div>
+  {include file="mobile/public/footer" /} 
+
+
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <link rel="stylesheet" href="__INDEX__/mobile/css/dtzk.css">
+{include file="mobile/public/resource" /}   
+</head>
+
+<body>
+    {include file="mobile/public/header" /} 
+    <div class="a_banner" style="margin-top: 2.5rem">
+        <img src="__INDEX__/mobile/img/zx/newbanner.jpg" >
+    </div>
+    <ul class="al">
+        {volist name="news_cate" id="vo"}
+        <li><a href="{:url('News/index')}?id={$vo.id}">{$vo['name']}</a></li>
+        {/volist}
+    </ul>
+    <div class="d_main">
+        <h1>{$detail['title']}</h1>
+        <p id="d_p">时间：{$detail['add_date']}</p>
+        <div class="d_center">
+            <span>{$detail['content']|raw}
+            </span>
+        </div>
+    </div>
+  {include file="mobile/public/footer" /}   
+</body>
+
+</html>
